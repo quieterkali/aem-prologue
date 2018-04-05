@@ -1,0 +1,43 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.guidePanelNode {
+  background-color: @panel-background-color;
+  font-size: @panel-font-size;
+  color: @panel-font-color;
+  padding: @panel-padding;
+  width: 100%;
+}
+
+.guidePanelDescription {
+  font-size: @panel-description-font-size;
+  color: @panel-font-color;
+  padding:  @panel-description-padding;
+  margin-bottom: 10px;
+  &.long{
+    display:none;
+	background-color: @panel-help-bg-color;
+    border-top-color: @panel-help-border-indicator-color;
+    border-top-style: ridge;
+    font-size: 15px;
+  }
+  & >.glyphicon {
+    .color-hover-normal(@questionmark-font-color,inherit,@questionmark-hover-font-color,inherit);
+  }
+}

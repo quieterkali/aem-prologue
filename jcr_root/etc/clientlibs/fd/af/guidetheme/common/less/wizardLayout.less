@@ -1,0 +1,145 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.wizard-navigators {
+  counter-reset: item;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  font-size: @wizard-tabs-font-size;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: default;
+  > li {
+    counter-increment: item;
+    display: inline-block;
+    border: solid @wizard-tabs-border-thickness @tabs-border-color;
+    .rounded-corners(200px);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-right: 10px;
+    position: relative;
+    .bg-font-color(@wizard-tabs-font-color, @wizard-tabs-bg-color);
+    &:before {
+      content: counter(item) ".";
+      float: left;
+      border: 1px solid @wizard-nav-bullet-border;
+      .rounded-corners(200px);
+      padding: 2px 2px 2px 4px;
+      font-size: 10px;
+      position: absolute;
+      bottom: 12px;
+    }
+    .indicator {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      margin-left: 6px;
+      border-radius: 0;
+      margin-top: -39px;
+      z-index: 20;
+    }
+    > a {
+      color: inherit; // override browser default blue color
+      display: table;
+      padding: @wizard-tabs-padding;
+      font-size: inherit;
+      text-decoration: none;
+      word-break: break-word;
+      white-space: normal;
+    }
+    &.stepped {
+      .bg-font-color(@wizard-tabs-stepped-font-color, @wizard-tabs-stepped-bg-color);
+    }
+    &.completed {
+      .bg-font-color(@wizard-tabs-completed-font-color, @wizard-tabs-completed-bg-color);
+    }
+    &.active {
+      .bg-font-color(@wizard-tabs-active-font-color, @wizard-tabs-active-bg-color);
+      .indicator {
+        border-bottom-color: @wizard-tabs-active-font-color;
+      }
+    }
+  }
+}
+
+[id$="_guide-item-container"] > [id$="_guide-item"] {
+  display: none;
+}
+
+[id$="_guide-item-container"] > [id$="_guide-item"].active {
+  display: block;
+}
+
+.wizard .progress {
+  height: 3px;
+  margin-top: 9px;
+  margin-right: 3px;
+  background: @wizard-progress-bg-color;
+  border-radius: 0;
+}
+
+.wizard .progress-bar-warning {
+  background: @wizard-progress-color;
+}
+
+.wizard-nav-arrow {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 200px;
+  cursor: pointer;
+}
+
+.wizard-nav-prev {
+  background-image: url('../../../images/previous-page.png');
+}
+
+.wizard-nav-next {
+  background-image: url('../../../images/next-page.png');
+}
+
+.wizard-tab-disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: @screen-sm-max) {
+  .wizard-nav-arrow {
+    display: none;
+  }
+}
+
+.wizard-navigators  > li.af-widget-itemnav-4 {
+  width:23%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-3 {
+  width:31%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-2 {
+  width:47%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-1 {
+  width:94%;
+}

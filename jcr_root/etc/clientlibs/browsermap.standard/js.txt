@@ -1,0 +1,7 @@
+#base=libs
+browsermap/bmaputil.js
+browsermap/bmap.js
+externals/matchMedia/matchMedia.js
+externals/modernizr/modernizr.custom.js
+browsermap/probes.js
+browsermap/devicegroups.js

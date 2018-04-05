@@ -1,0 +1,97 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.symmetricContainer .symmetricFieldRightContentWrapper, .symmetricContainer .symmetricFieldLeftContentWrapper{
+  padding-bottom: 16px;
+  margin: 0px;
+  //float: left;
+  width: 50%;
+  background-color: white;
+}
+.symmetricFieldLockContainer {
+  text-align: center;
+  clear: both;
+}
+.symmetricContainer label {
+  display: block;
+  padding-left: 26px;
+  margin : 0px!important;
+}
+
+.symmetricContainer .symmetricFieldLeftContent {
+  padding-left: 0;
+  float: left !important;
+  text-align: left;
+}
+.symmetricFieldLeftContent input {
+  text-align: left!important;
+}
+.symmetricFieldRightContentWrapper label {
+  float: right!important;
+  text-align: right;
+  padding-right: 26px;
+  margin: 0px;
+}
+.symmetricFieldLeftContent input {
+  float: left!important;
+  margin-left: 16px;
+  clear: both;
+}
+.symmetricFieldLeftContent button {
+  margin-left: 100px!important;
+  right: inherit!important;
+}
+.symmetricContainer {
+  background-color: white;
+  width: 279px;
+  padding-top: 16px;
+}
+
+.symmetricFieldButton coral-button-label{
+  float: left;
+  padding-right: 8px;
+  font-family: adobe-clean,Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: .8125rem;
+  color: rgba(0,0,0,0.8);
+}
+
+.symmetricContainer .symmetricFieldLeftContentWrapper, .symmetricContainer .symmetricFieldRightContentWrapper{
+  display:inline-block !important;
+}
+
+.symmetricFieldButton {
+  float: right;
+  margin-right: 16px;
+}
+
+.symmetricFieldButton coral-button-label {
+  float: right;
+}
+
+.symmetricFieldRightContent button {
+  margin-left: 15px;
+}
+.style-propertySheetContainer coral-select.symmetricFieldSelect {
+  background: #f5f5f5;
+  width: 233px;
+  margin-top: 16px;
+  border-radius: 6px;
+}

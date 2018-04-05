@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[cq.social.enablement.hbs.catalog]"
+    dependencies="[cq.social.base,cq.social.commons,cq.shared,cq.social.scf,cq.social.commons.infiniscroll,cq.social.bootstrap.3,typekit,cq.social.enablement.hbs.resource.content-card,cq.social.enablement.hbs.catalog.toolbar,cq.social.enablement.hbs.resourcecardlist]"
+    embed="[cq.social.author.enablement.hbs.catalog]"/>

@@ -1,0 +1,36 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.STATEMENT > .choice-view {
+    background-color: rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+    color: #4b4b4b;
+    font-size: 0.625rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.STATEMENT > .choice-view > .child-choice-name {
+    padding: 0.375rem;
+    letter-spacing: 1px;
+}
+
+.STATEMENT > .choice-view > .coral-Icon {
+    color: #4b4b4b;
+    font-size: 8px;
+}

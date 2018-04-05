@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[cq.social.hbs.communitygroups]"
+    dependencies="[cq.shared,cq.jquery,jquery-ui,cq.social.scf]"
+    embed="[cq.social.base,cq.social.author.hbs.comments,cq.social.author.hbs.communitygroups,cq.social.author.hbs.groupMemberList,cq.social.author.hbs.socialgraph.following]"/>

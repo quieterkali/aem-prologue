@@ -1,0 +1,10 @@
+#base=js/field
+common.js
+linkIcon.js
+sliderInput.js
+symmetricPopover.js
+backgroundFieldAdapter.js
+shadowFieldAdapter.js
+backgroundImageUploadAdapter.js
+numericSpinnerInput.js
+fontFieldAdapter.js

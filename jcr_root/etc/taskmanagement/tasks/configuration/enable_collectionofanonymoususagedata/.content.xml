@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="granite:Task"
+    jcr:uuid="912228f5-c1b7-485e-9cb4-e16bb0489111"
+    assignee="administrators"
+    createdBy="admin"
+    description="You can opt in for aggregated usage statistics collection by enabling it for all users"
+    name="Enable Aggregated Usage Statistics Collection"
+    nameHierarchy="Enable Aggregated Usage Statistics Collection"
+    priority="{Long}0"
+    status="ACTIVE"
+    taskTypeName="config:usage-data-collection"/>

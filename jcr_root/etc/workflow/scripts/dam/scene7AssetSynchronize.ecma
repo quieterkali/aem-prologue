@@ -1,0 +1,19 @@
+var workflowData = workItem.getWorkflowData();
+
+if (workflowData.getPayloadType() == "JCR_PATH") {        
+    try {
+        var path = workflowData.getPayload().toString();
+        var scene7 = sling.getService(Packages.com.day.cq.dam.scene7.api.Scene7UploadService);
+        if (workflowSession.getSession().itemExists(path) && scene7 !== null) {
+            path = path.substring(0, path.indexOf("/jcr:content"));
+            var result = scene7.synchronizeFile(path, resource.getResourceResolver());              
+            if (result == "success") {
+                log.info("file " + path + " sync'd successfully back into scene7");
+            }
+        }else {
+            log.error("Workflow Session invalid"); 
+        }
+    } catch(err) {
+        log.error("Synchoronizing to Scene7 failed " + ((err) ? err : ""));
+    }
+}

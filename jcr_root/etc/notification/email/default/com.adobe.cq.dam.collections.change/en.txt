@@ -1,0 +1,22 @@
+subject=${hostUserFullName} has changed your role in collection "${folderTitle}" 
+
+header=\ -------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=\ Hi ${inviteeFirstName}, \n \
+ \n \
+Your role has been changed in the collection "${folderTitle}" from ${previousRole} to ${currentRole}.\n \
+Please login with your account, and navigate to the links mentioned below to view or directly download the collection.\n \
+\n \
+View: ${viewCollection} \n \
+\n \
+Download: ${downloadCollection} \n \
+\n \
+\n \
+Thanks, \n \
+${hostUserFullName} \n \
+ \n\n
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

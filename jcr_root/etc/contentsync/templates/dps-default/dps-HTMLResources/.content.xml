@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <foundation.main.css
+        jcr:primaryType="nt:unstructured"
+        extension="css"
+        path="/etc/clientlibs/foundation/main"
+        type="clientlib"/>
+    <design
+        jcr:primaryType="nt:unstructured"
+        path="\{design.path}"
+        type="copy"/>
+</jcr:root>

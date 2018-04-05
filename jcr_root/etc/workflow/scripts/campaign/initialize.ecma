@@ -1,0 +1,11 @@
+var path = workItem.getWorkflowData().getPayload().toString();
+var session = workflowSession.getSession();
+var pageManager = resource.getResourceResolver().adaptTo(Packages.com.day.cq.wcm.api.PageManager);
+var page = pageManager.getPage(path);               
+
+var nlMgr = sling.getService(Packages.com.adobe.cq.mcm.campaign.NewsletterManager);
+try {
+	nlMgr.disapprove(page);
+} catch (e) {
+	// do nothing (happens if newsletter is not yet approved)
+}

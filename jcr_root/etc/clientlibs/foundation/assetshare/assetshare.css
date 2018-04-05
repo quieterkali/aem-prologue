@@ -1,0 +1,2259 @@
+/******************************************************************************/
+/* DAM Common
+/******************************************************************************/
+
+.assetshare H1,
+.asseteditor H1 {
+    /* overwrite setting in ui.widgets.css */
+    display:block;
+    font-size:2em;
+    font-weight:bold;
+    margin-top:6px;
+    margin-bottom:23px;
+}
+
+.assetshare .line,
+.asseteditor .line {
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    height:1px;
+    line-height:1px;
+    width:100%;
+}
+
+.assetshare .line_gray,
+.asseteditor .line_gray {
+    background-color:#DDDDDD;
+    height:1px;
+    line-height:1px;
+    width:100%;
+}
+
+
+
+/******************************************************************************/
+/* DAM Asset Editor
+/******************************************************************************/
+
+.asseteditor .parsys,
+.asseteditor .parsys A,
+.asseteditor .parsys SPAN,
+.asseteditor .parsys DIV,
+#licensebox-download-assetlist .asset_licenselist .rendition-item TD.title-cell DIV,
+.asseteditor .parsys TD,
+.assetedtitor .parsys TH {
+    /* overwrite common styles */
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+
+.asseteditor div.footer a {
+    color:#FFF;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    padding:0 0 0 17px;
+}
+
+.asseteditor div.disclaimer a {
+    color:#14729E;
+    padding:0;
+    background:0;
+}
+
+.asseteditor.contentpage .par div.section {
+    padding:0;
+    margin:0;
+}
+
+
+.asseteditor .box .title,
+.asseteditor .parsys FORM .title {
+    font-weight:bold;
+}
+
+.asseteditor div.assetTitle {
+    padding:8px 16px 6px 16px;
+    background-color:#DDDDDD;
+    margin:2px 0;
+}
+
+.asseteditor .box .title TABLE,
+.asseteditor div.assetTitle TABLE {
+    border-collapse:collapse;
+    width:100%;
+}
+
+.asseteditor div.assetTitle TABLE TD {
+    font-size:16px;
+    font-weight:bold;
+}
+
+.asseteditor .box .title TABLE TD {
+    font-size:12px;
+    font-weight:bold;
+}
+
+.asseteditor .assetTitleLine {
+    margin-bottom:10px;
+}
+
+#CQ .rendition-item {
+	border-spacing:10px;
+	font-weight:normal;
+	font-size:18px;
+}
+#CQ .rendition-item .thumbnail{
+	width:80px;
+	height:60px;
+	background:none no-repeat center scroll transparent;
+}
+#CQ .rendition-item td {
+	width:150px;
+}
+
+#CQ .x-view-selected {
+	background-color:#DDDDDD;
+}
+
+#CQ .x-view-over {
+	background-color:#F1F0F1;
+}
+
+
+.asseteditor .box .title,
+.asseteditor .parsys FORM .title {
+    font-size:12px;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted_offset.gif) bottom repeat-x;
+    padding-bottom:4px;
+    margin-bottom:9px;
+}
+
+.asseteditor .parsys .filename {
+    clear:both;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted_offset.gif) top repeat-x;
+    padding-top:5px;
+    margin-top:30px;
+    margin-bottom:5px;
+}
+
+.asseteditor .parsys .filename,
+.asseteditor .parsys .filename SPAN {
+    font-weight:bold;
+    font-size:14px;
+    line-height:20px;
+}
+
+.asseteditor .parsys .filename SPAN.readonly {
+    color:#CCCCCC;
+}
+
+.asseteditor IMG.locked {
+    position:relative;
+    top:3px;
+    margin-right:1px;
+    margin-left:3px;
+}
+
+.asseteditor .parsys .filename SPAN.locked {
+    font-size:11px;
+    font-weight:normal;
+}
+
+.asseteditor .editicon {
+    background:url(../../../../etc/designs/default/images/dam/asseteditor/edit.png) no-repeat;
+    width:16px;
+    height:16px;
+    cursor:pointer;
+    float:right;
+}
+
+.asseteditor .box,
+.asseteditor .parsys FORM {
+    border:1px solid #dddddd;
+    padding:10px 13px 14px 13px;
+    margin-bottom:10px
+}
+
+.asseteditor .box.noborders {
+    border-color:transparent;
+}
+
+/* thumbnail component */
+.asseteditor .thumbnail {
+}
+
+.asseteditor .thumbnailwrapper {
+    text-align:center;
+}
+
+/* wrapper of small thumbnails (multiple resources) */
+.asseteditor .smallwrapper {
+    float:left;
+    text-align:center;
+    width:63px;
+    height:63px;
+}
+
+
+/* actions */
+.asseteditor .actions {
+    text-align:right;
+    width:100%;
+    margin-top:9px;
+}
+
+.asseteditor .actions .section {
+    float:left;
+}
+
+.asseteditor .action {
+    cursor:pointer;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    margin-right:8px;
+}
+
+.asseteditor .action:hover {
+    text-decoration:underline;
+}
+
+.asseteditor.cq-wcm-edit .actions .section,
+.asseteditor.cq-wcm-design .actions .section {
+    float:none;
+}
+
+/* subassets component */
+
+.asseteditor .subassets-wrapper {
+    /*height:120px;*/
+    width:100%;
+    overflow-x:auto;
+    padding:7px 0 9px 0;
+    border:1px solid #dddddd;
+    border-top:none;
+    border-bottom:none;
+}
+
+.asseteditor .subasset {
+    text-align:center;
+    width:140px;
+    padding-left:15px;
+    padding-right:18px;
+}
+
+/* form */
+
+.asseteditor .form_row {
+    clear: both;
+    margin-bottom:2px;
+    width: 538px;
+}
+
+.asseteditor .form_leftcol {
+    float: left;
+    width:179px;
+}
+
+.asseteditor .form_leftcollabel {
+    float: left;
+    width:167px;
+    font-weight:bold;
+    overflow:hidden;
+}
+.asseteditor .form_leftcolmark {
+    float: right;
+    padding-left:0;
+    width:12px;
+}
+
+.asseteditor form .form_rightcol {
+    clear:none;
+    padding-left:179px;
+}
+
+.asseteditor .form_rightcol.form_error {
+    color:#ff0000;
+}
+
+.asseteditor .form_rightcol_wrapper {
+    width:359px;
+}
+
+.asseteditor INPUT.text,
+.asseteditor TEXTAREA {
+    border:solid 1px #dddddd;
+    width:329px;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:1px 2px;
+}
+
+.asseteditor INPUT.text.mv,
+.asseteditor TEXTAREA.mv {
+    width:308px;
+    margin-bottom:2px;
+}
+
+.asseteditor .mv_add {
+    cursor:pointer;
+    display:inline-block;
+    width:18px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.asseteditor .mv_remove {
+    cursor:pointer;
+    display:inline-block;
+    width:18px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.asseteditor .section.end INPUT {
+    /*submit button*/
+    margin-top:10px;
+}
+
+.asseteditor .form_error {
+    padding-bottom:10px;
+}
+
+/* tags metadata component */
+
+.asseteditor div.tags_titles_partial {
+	font-style: italic;
+}
+
+.asseteditor .form_rightcol .tags_table {
+	width: 100%;
+    border-collapse:collapse;
+}
+
+.asseteditor .form_rightcol .tags_table td.mr_write {
+    width: 16px;
+    padding-right: 3px;
+}
+
+.asseteditor .form_rightcol .tags_table td {
+    vertical-align:top;
+}
+
+/* column control layouts */
+
+.asseteditor div.parsys_column {
+    height:100%;
+    width:100%;
+    float:left;
+    border:0;
+    vertical-align:top;
+    padding:0;
+    margin:5px 0 5px 0;
+}
+
+.asseteditor div.cq-colctrl-default { width: 100%; }
+
+.asseteditor div.cq-colctrl-lt0 { background:none;}
+.asseteditor div.cq-colctrl-lt0-c0 { width:346px; padding-right:15px; }
+.asseteditor div.cq-colctrl-lt0-c1 { width: 566px; }
+
+
+
+/******************************************************************************/
+/* DAM Asset Share
+/******************************************************************************/
+
+.assetshare .querybuilder,
+.assetshare .querybuilder A,
+.assetshare .querybuilder SPAN,
+.assetshare .querybuilder DIV,
+.assetshare .querybuilder TD,
+.assetshare .querybuilder TH {
+    /* overwrite common styles */
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+
+.assetshare .querybuilder-wrapper {
+    clear:both;
+}
+
+.assetshare TABLE.wrapper {
+    border-collapse:collapse;
+    width:942px;
+    margin-bottom:20px;
+}
+
+.assetshare TD {
+    vertical-align:top;
+    padding:0;
+}
+
+.assetshare .left-cell {
+    padding:22px 55px 10px 6px;
+    border:1px solid #dddddd;
+    border-right-width:0;
+    height:600px;
+    width:341px;
+}
+
+.assetshare .left-cell-content {
+    width:280px;
+}
+
+.assetshare .top-predicates {
+    width:100%;
+    padding-bottom:6px;
+}
+
+.assetshare.cq-wcm-edit .top-predicates,
+.assetshare.cq-wcm-design .top-predicates {
+    width:300px;
+}
+
+.assetshare TD.bar-cell {
+    border-top:solid 1px #DDDDDD;
+    padding-top:1px;
+    padding-bottom:1px;
+}
+
+.assetshare .bar {
+    width:100%;
+    height:35px;
+    background-color:#DDDDDD;
+}
+
+.assetshare .bar #fulltext-cell {
+    padding-left:4px;
+    padding-top:5px;
+    width:294px;
+}
+
+.assetshare .bar #results-cell {
+    padding-left:54px;
+}
+.assetshare .bar #paging-cell {
+    padding-left:20px;
+}
+.assetshare .bar #results-cell,
+.assetshare .bar #paging-cell {
+    padding-top:8px;
+    white-space:nowrap;
+    font-size:12px;
+}
+
+.assetshare .bar #paging-cell SPAN {
+    font-size:12px;
+}
+
+.assetshare .bar #results-cell #results,
+.assetshare .bar #paging-cell #current-page,
+.assetshare .bar #paging-cell #total-pages,
+.assetshare .bar #paging-cell #forward,
+.assetshare .bar #paging-cell #backward {
+    font-weight:bold;
+}
+
+.assetshare .bar #paging-cell #forward {
+    display:inline-block;
+    margin-left:10px;
+    cursor:pointer;
+}
+.assetshare .bar #paging-cell #backward {
+    display:inline-block;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.assetshare .bar .buttons-cell {
+    padding-right:20px;
+    padding-top:4px;
+    white-space:nowrap;
+    width:60px;
+}
+
+.assetshare .bar-search #fulltext-wrapper {
+    display:inline;
+}
+
+.assetshare .bar-paging {
+    /*width:100%;*/
+}
+
+.assetshare .left-predicates {
+    width:280px;
+}
+
+.assetshare .actions {
+    width:280px;
+}
+
+.assetshare.cq-wcm-preview .editonly {
+    display:none;
+}
+
+.lightboxrenditions .predicatebox .title,
+.assetshare .left-predicates .predicatebox .title,
+.assetshare .actions .title {
+    font-size:12px;
+    background-color:#bebebe;
+    margin-bottom:5px;
+    padding-bottom:2px;
+    padding-top:1px;
+    padding-left:5px;
+    font-weight:bold;
+}
+
+.assetshare .actions .title.level1 {
+    margin-top:10px;
+    background-color:#dddddd;
+}
+
+.assetshare .actions .section {
+    margin-bottom:2px;
+    padding-bottom:0;
+    padding-top:0;
+    padding-left:20px;
+}
+
+.assetshare .actions .section.new {
+    margin-top:10px;
+    padding-left:0;
+}
+
+
+/* top predicates */
+.assetshare .top-predicates .section {
+    /*overwrite common div.left selector*/
+    display:block;
+    float:left;
+    height:100px;
+    padding-right:40px;
+    padding-left:26px;
+    background:url(../../../../etc/designs/default/images/dam/vline_dotted.gif) repeat-y right;
+}
+
+.assetshare.cq-wcm-edit .top-predicates .section,
+.assetshare.cq-wcm-design .top-predicates .section {
+    float:none;
+}
+
+.assetshare .top-predicates .section.new {
+    display:none;
+    padding-right:0;
+    padding-left:0;
+}
+
+.assetshare.cq-wcm-edit .top-predicates .section.new,
+.assetshare.cq-wcm-design .top-predicates .section.new {
+    background:none;
+    display:block;
+}
+
+.assetshare .top-predicates .predicatebox .title {
+    font-weight:bold;
+    padding-top:5px;
+}
+
+.assetshare .top-predicates .predicatebox .title.default {
+    display:none;
+}
+
+.assetshare .top-predicates .predicatebox .x-form-text {
+    width:150px;
+    margin-bottom:2px;
+}
+
+.assetshare .top-predicates .predicatebox .content {
+    margin-bottom:5px;
+    padding-bottom:5px;
+    padding-top:2px;
+    padding-left:0;
+    width:auto;
+}
+
+.assetshare .top-predicates .section.path .predicatebox .x-form-check-wrap {
+    padding-left:0;
+}
+
+/* top options predicate */
+.assetshare .top-predicates .optionspredicatebox .x-toolbar {
+    background-color:#ffffff;
+    padding:0;
+}
+
+.assetshare .top-predicates .optionspredicatebox .x-panel-tbar LABEL {
+    font-weight:bold;
+}
+
+.assetshare .top-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    margin-bottom:0;
+    background-image:none;
+    border:none;
+    padding-bottom:0;
+}
+
+
+/* left predicates */
+.assetshare  .left-predicates DIV.section.options {
+    margin-bottom:0;
+}
+
+.assetshare .left-predicates div.left {
+    /*overwrite common div.left selector*/
+    display:block;
+    float:none;
+    width:auto;
+}
+
+.assetshare .left-predicates .predicatebox .x-form-text {
+    width:252px;
+    margin-bottom:2px;
+}
+
+.assetshare .left-predicates .predicatebox .content {
+    margin-bottom:5px;
+    padding-bottom:5px;
+    padding-top:5px;
+    padding-left:20px;
+    width:auto;
+}
+
+.assetshare .left-predicates .section.path .predicatebox .x-form-check-wrap {
+    padding-left:4px;
+}
+/* left options predicate */
+.assetshare .left-predicates .optionspredicatebox .leftpadding {
+    padding-left:20px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .leftpadding.level0 {
+    padding-left:0;
+}
+
+.assetshare .left-predicates .optionspredicatebox .level0 .x-toolbar {
+    background-color:#bebebe;
+}
+.assetshare .left-predicates .optionspredicatebox .level1 .x-toolbar {
+    background-color:#d6d6d6;
+}
+.assetshare .left-predicates .optionspredicatebox .level2 .x-toolbar {
+    /* default bg for level 2+ */
+    background-color:#e9e8e9;
+    /*padding:0;*/
+}
+.assetshare .left-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    margin-bottom:5px;
+    background-image:none;
+    border:none;
+    padding-bottom:0;
+    padding-left:0;
+}
+.assetshare .left-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar .x-toolbar-cell .x-form-checkbox {
+    margin:0;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar LABEL {
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+/*.assetshare .left-predicates .optionspredicatebox .x-panel-tbar LABEL {*/
+    /*font-size:11px;*/
+/*}*/
+
+.assetshare .left-predicates .optionspredicatebox .level0 .x-toolbar LABEL {
+    font-weight:bold;
+}
+
+.assetshare .left-predicates .optionspredicatebox .level1 .x-toolbar LABEL {
+    font-weight:normal;
+}
+
+/* toggle button */
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-ml,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mr {
+    background:none;
+    height:12px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tl, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tc, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tr,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bl, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bc, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-br {
+    height: 0;
+    background: none;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tr i, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tl i,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-br i, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bl i {
+    height: 0;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc EM {
+    display:block;
+    height:12px;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .collapse .x-btn-mc BUTTON {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/predicates/collapse.gif) no-repeat;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .expand .x-btn-mc BUTTON {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/predicates/expand.gif) no-repeat;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc BUTTON {
+    height:12px;
+    width:12px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-form-check-wrap {
+    border-bottom:none;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:4px;
+    height:18px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-form-check-wrap {
+    border-bottom:solid 1px #dddddd;
+    padding-left:6px;
+    padding-top:4px;
+    padding-bottom:1px;
+    height:17px;
+}
+
+.assetshare .left-predicates .optionspredicatebox LABEL {
+    margin-left:15px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-form-check {
+    position:relative;
+    top:1px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .subpanel {
+    margin-bottom:18px;
+}
+
+
+.assetshare .actions {
+    clear:both;
+    width:280px;
+}
+
+.assetshare .lensdeck-cell {
+    width:600px;
+    border:1px solid #dddddd;
+    border-left-width:0;
+}
+
+.assetshare .lensdeck {
+    width:600px;
+}
+
+.assetshare .lensdeck .x-panel-bwrap,
+.assetshare .lensdeck .x-panel-body {
+    overflow:visible;
+    height:auto;
+}
+
+.assetshare .bar .buttons-cell .section {
+    float:left;
+    margin-left:1px;
+    width:24px;
+    height:21px;
+    overflow:hidden;
+    margin-bottom:0;
+}
+
+.assetshare.cq-wcm-edit .bar .buttons-cell .section,
+.assetshare.cq-wcm-design .bar .buttons-cell .section {
+    float:none;
+}
+
+.assetshare .bar .buttons-cell .section.new {
+    display:none;
+}
+
+.assetshare.cq-wcm-edit .bar .buttons-cell .section.new,
+.assetshare.cq-wcm-design .bar .buttons-cell .section.new {
+    display:block;
+}
+
+.assetshare #CQ  .cq-editrollover-insert-container {
+    overflow:hidden;
+}
+
+.assetshare .bar .buttons-cell .x-btn-tl, .assetshare .bar .buttons-cell .x-btn-tc, .assetshare .bar .buttons-cell .x-btn-tr,
+.assetshare .bar .buttons-cell .x-btn-bl, .assetshare .bar .buttons-cell .x-btn-bc, .assetshare .bar .buttons-cell .x-btn-br {
+    height: 0;
+    background: none;
+}
+
+.assetshare .bar .buttons-cell .x-btn-tr i, .assetshare .bar .buttons-cell .x-btn-tl i,
+.assetshare .bar .buttons-cell .x-btn-br i, .assetshare .bar .buttons-cell .x-btn-bl i {
+    height: 0;
+}
+
+.assetshare .bar .buttons-cell .x-btn-ml{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 0;
+}
+.assetshare .bar .buttons-cell .x-btn-mr{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -21px;
+}
+.assetshare .bar .buttons-cell .x-btn-mc{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -42px;
+}
+
+/* Toggle button styles */
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-ml{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -63px;
+}
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-mr{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -84px;
+}
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-mc{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -126px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-icon .x-btn-text {
+    width:17px;
+    height:21px;
+}
+
+.assetshare .bar .buttons-cell .x-btn .mosaic {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/mosaic/btn_icon.png) no-repeat 2px 4px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-pressed .mosaic {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/mosaic/btn_icon_pressed.png) no-repeat 1px 3px;
+}
+
+.assetshare .bar .buttons-cell .x-btn .list {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/btn_icon.png) no-repeat 2px 4px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-pressed .list {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/btn_icon_pressed.png) no-repeat 1px 3px;
+}
+
+.assetshare .line.postbar {
+    height:29px;
+}
+
+.assetshare #prebar {
+    /* workaround to get a 1px line above the border */
+    border-top:solid 1px transparent;
+}
+
+/* lens data view */
+
+/* data view */
+.assetshare .lens-dataview {
+}
+
+
+/* mosaic lens */
+.assetshare .lens-dataview.mosaic {
+    padding:7px 0 7px 7px;
+    font-size:10px;
+    /*border:1px solid #DFDFDF;*/
+}
+
+.assetshare .lens-dataview.mosaic .wrapper {
+    float:left;
+    padding-right:20px;
+    margin-bottom:20px;
+    padding-bottom:21px;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x bottom;
+}
+
+.assetshare .lens-dataview.mosaic .item {
+    padding:10px;
+}
+
+
+/* mosaic lens */
+.assetshare .lens-dataview.mosaic .thumbnail {
+    height:100px;
+    width:140px;
+    background:no-repeat bottom center;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-selected .thumbnail {
+    background-color:transparent;
+}
+
+.assetshare .lens-dataview.mosaic .thumbnail img {
+    height:100px;
+    width:140px;
+    background-repeat:no-repeat;
+}
+
+.assetshare .lens-dataview.mosaic .item .title,
+.assetshare .lens-dataview.mosaic .item .text {
+    overflow:hidden;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    width:140px;
+    padding-top:6px;
+}
+
+.assetshare .lens-dataview.mosaic .item .title {
+    height:14px;
+    margin-top:10px;
+    margin-bottom:4px;
+}
+
+.assetshare .lens-dataview.mosaic .item .text {
+    height:47px;
+    margin-top:3px;
+    line-height:15px;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-over {
+    background-color:#F1F0F1;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-selected {
+    background-color:#DDDDDD;
+}
+
+/* lightbox action dataview */
+.assetshare #cq-dam-lightbox .x-panel-body {
+    margin-top:3px;
+    width:254px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border-color:#dddddd;
+}
+
+.assetshare .lightbox {
+    padding:4px;
+    font-size:10px;
+}
+
+.assetshare .lightbox TABLE {
+    width:245px;
+    border-collapse:collapse;
+    margin-top:5px;
+    /*border:1px solid #DFDFDF;*/
+}
+
+
+#licensebox-download-assetlist .asset_licenselist .rendition-item,
+.lightboxrenditions .rendition-item {
+ 	border-bottom:solid 1px #d0d0d0;
+	padding:10px;
+	border-spacing:10px;
+}/******************************************************************************/
+/* DAM Common
+/******************************************************************************/
+
+.assetshare H1,
+.asseteditor H1 {
+    /* overwrite setting in ui.widgets.css */
+    display:block;
+    font-size:2em;
+    font-weight:bold;
+    margin-top:6px;
+    margin-bottom:23px;
+}
+
+.assetshare .line,
+.asseteditor .line {
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    height:1px;
+    line-height:1px;
+    width:100%;
+}
+
+.assetshare .line_gray,
+.asseteditor .line_gray {
+    background-color:#DDDDDD;
+    height:1px;
+    line-height:1px;
+    width:100%;
+}
+
+
+
+/******************************************************************************/
+/* DAM Asset Editor
+/******************************************************************************/
+
+.asseteditor .parsys,
+.asseteditor .parsys A,
+.asseteditor .parsys SPAN,
+.asseteditor .parsys DIV,
+.asseteditor .parsys TD,
+.assetedtitor .parsys TH {
+    /* overwrite common styles */
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+
+.asseteditor div.footer a {
+    color:#FFF;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    padding:0 0 0 17px;
+}
+
+.asseteditor div.disclaimer a {
+    color:#14729E;
+    padding:0;
+    background:0;
+}
+
+.asseteditor.contentpage .par div.section {
+    padding:0;
+    margin:0;
+}
+
+
+.asseteditor .box .title,
+.asseteditor .parsys FORM .title {
+    font-weight:bold;
+}
+
+.asseteditor div.assetTitle {
+    padding:8px 16px 6px 16px;
+    background-color:#DDDDDD;
+    margin:2px 0;
+}
+
+.asseteditor .box .title TABLE,
+.asseteditor div.assetTitle TABLE {
+    border-collapse:collapse;
+    width:100%;
+}
+
+.asseteditor div.assetTitle TABLE TD {
+    font-size:16px;
+    font-weight:bold;
+}
+
+.asseteditor .box .title TABLE TD {
+    font-size:12px;
+    font-weight:bold;
+}
+
+.asseteditor .assetTitleLine {
+    margin-bottom:10px;
+}
+
+#CQ .rendition-item {
+	border-spacing:10px;
+	font-weight:normal;
+	font-size:18px;
+}
+#CQ .rendition-item .thumbnail{
+	width:80px;
+	height:60px;
+	background:none no-repeat center scroll transparent;
+}
+#CQ .rendition-item td {
+	width:150px;
+}
+
+#CQ .x-view-selected {
+	background-color:#DDDDDD;
+}
+
+#CQ .x-view-over {
+	background-color:#F1F0F1;
+}
+
+
+.asseteditor .box .title,
+.asseteditor .parsys FORM .title {
+    font-size:12px;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted_offset.gif) bottom repeat-x;
+    padding-bottom:4px;
+    margin-bottom:9px;
+}
+
+.asseteditor .parsys .filename {
+    clear:both;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted_offset.gif) top repeat-x;
+    padding-top:5px;
+    margin-top:30px;
+    margin-bottom:5px;
+}
+
+.asseteditor .parsys .filename,
+.asseteditor .parsys .filename SPAN {
+    font-weight:bold;
+    font-size:14px;
+    line-height:20px;
+}
+
+.asseteditor .parsys .filename SPAN.readonly {
+    color:#CCCCCC;
+}
+
+.asseteditor IMG.locked {
+    position:relative;
+    top:3px;
+    margin-right:1px;
+    margin-left:3px;
+}
+
+.asseteditor .parsys .filename SPAN.locked {
+    font-size:11px;
+    font-weight:normal;
+}
+
+.asseteditor .editicon {
+    background:url(../../../../etc/designs/default/images/dam/asseteditor/edit.png) no-repeat;
+    width:16px;
+    height:16px;
+    cursor:pointer;
+    float:right;
+}
+
+.asseteditor .box,
+.asseteditor .parsys FORM {
+    border:1px solid #dddddd;
+    padding:10px 13px 14px 13px;
+    margin-bottom:10px
+}
+
+.asseteditor .box.noborders {
+    border-color:transparent;
+}
+
+/* thumbnail component */
+.asseteditor .thumbnail {
+}
+
+.asseteditor .thumbnailwrapper {
+    text-align:center;
+}
+
+/* wrapper of small thumbnails (multiple resources) */
+.asseteditor .smallwrapper {
+    float:left;
+    text-align:center;
+    width:63px;
+    height:63px;
+}
+
+
+/* actions */
+.asseteditor .actions {
+    text-align:right;
+    width:100%;
+    margin-top:9px;
+}
+
+.asseteditor .actions .section {
+    float:left;
+}
+
+.asseteditor .action {
+    cursor:pointer;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    margin-right:8px;
+}
+
+.asseteditor .action:hover {
+    text-decoration:underline;
+}
+
+.asseteditor.cq-wcm-edit .actions .section,
+.asseteditor.cq-wcm-design .actions .section {
+    float:none;
+}
+
+/* subassets component */
+
+.asseteditor .subassets-wrapper {
+    /*height:120px;*/
+    width:100%;
+    overflow-x:auto;
+    padding:7px 0 9px 0;
+    border:1px solid #dddddd;
+    border-top:none;
+    border-bottom:none;
+}
+
+.asseteditor .subasset {
+    text-align:center;
+    width:140px;
+    padding-left:15px;
+    padding-right:18px;
+}
+
+/* form */
+
+.asseteditor .form_row {
+    clear: both;
+    margin-bottom:2px;
+    width: 538px;
+}
+
+.asseteditor .form_leftcol {
+    float: left;
+    width:179px;
+}
+
+.asseteditor .form_leftcollabel {
+    float: left;
+    width:167px;
+    font-weight:bold;
+    overflow:hidden;
+}
+.asseteditor .form_leftcolmark {
+    float: right;
+    padding-left:0;
+    width:12px;
+}
+
+.asseteditor form .form_rightcol {
+    clear:none;
+    padding-left:179px;
+}
+
+.asseteditor .form_rightcol.form_error {
+    color:#ff0000;
+}
+
+.asseteditor .form_rightcol_wrapper {
+    width:359px;
+}
+
+.asseteditor INPUT.text,
+.asseteditor TEXTAREA {
+    border:solid 1px #dddddd;
+    width:329px;
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:1px 2px;
+}
+
+.asseteditor INPUT.text.mv,
+.asseteditor TEXTAREA.mv {
+    width:308px;
+    margin-bottom:2px;
+}
+
+.asseteditor .mv_add {
+    cursor:pointer;
+    display:inline-block;
+    width:18px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.asseteditor .mv_remove {
+    cursor:pointer;
+    display:inline-block;
+    width:18px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.asseteditor .section.end INPUT {
+    /*submit button*/
+    margin-top:10px;
+}
+
+.asseteditor .form_error {
+    padding-bottom:10px;
+}
+
+/* tags metadata component */
+
+.asseteditor div.tags_titles_partial {
+	font-style: italic;
+}
+
+.asseteditor .form_rightcol .tags_table {
+	width: 100%;
+    border-collapse:collapse;
+}
+
+.asseteditor .form_rightcol .tags_table td.mr_write {
+    width: 16px;
+    padding-right: 3px;
+}
+
+.asseteditor .form_rightcol .tags_table td {
+    vertical-align:top;
+}
+
+/* column control layouts */
+
+.asseteditor div.parsys_column {
+    height:100%;
+    width:100%;
+    float:left;
+    border:0;
+    vertical-align:top;
+    padding:0;
+    margin:5px 0 5px 0;
+}
+
+.asseteditor div.cq-colctrl-default { width: 100%; }
+
+.asseteditor div.cq-colctrl-lt0 { background:none;}
+.asseteditor div.cq-colctrl-lt0-c0 { width:346px; padding-right:15px; }
+.asseteditor div.cq-colctrl-lt0-c1 { width: 566px; }
+
+
+
+/******************************************************************************/
+/* DAM Asset Share
+/******************************************************************************/
+
+.assetshare .querybuilder,
+.assetshare .querybuilder A,
+.assetshare .querybuilder SPAN,
+.assetshare .querybuilder DIV,
+.assetshare .querybuilder TD,
+.assetshare .querybuilder TH {
+    /* overwrite common styles */
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+
+.assetshare .querybuilder-wrapper {
+    clear:both;
+}
+
+.assetshare TABLE.wrapper {
+    border-collapse:collapse;
+    width:942px;
+    margin-bottom:20px;
+}
+
+.assetshare TD {
+    vertical-align:top;
+    padding:0;
+}
+
+.assetshare .left-cell {
+    padding:22px 55px 10px 6px;
+    border:1px solid #dddddd;
+    border-right-width:0;
+    height:600px;
+    width:341px;
+}
+
+.assetshare .left-cell-content {
+    width:280px;
+}
+
+.assetshare .top-predicates {
+    width:100%;
+    padding-bottom:6px;
+}
+
+.assetshare.cq-wcm-edit .top-predicates,
+.assetshare.cq-wcm-design .top-predicates {
+    width:300px;
+}
+
+.assetshare TD.bar-cell {
+    border-top:solid 1px #DDDDDD;
+    padding-top:1px;
+    padding-bottom:1px;
+}
+
+.assetshare .bar {
+    width:100%;
+    height:35px;
+    background-color:#DDDDDD;
+}
+
+.assetshare .bar #fulltext-cell {
+    padding-left:4px;
+    padding-top:5px;
+    width:294px;
+}
+
+.assetshare .bar #results-cell {
+    padding-left:54px;
+}
+.assetshare .bar #paging-cell {
+    padding-left:20px;
+}
+.assetshare .bar #results-cell,
+.assetshare .bar #paging-cell {
+    padding-top:8px;
+    white-space:nowrap;
+    font-size:12px;
+}
+
+.assetshare .bar #paging-cell SPAN {
+    font-size:12px;
+}
+
+.assetshare .bar #results-cell #results,
+.assetshare .bar #paging-cell #current-page,
+.assetshare .bar #paging-cell #total-pages,
+.assetshare .bar #paging-cell #forward,
+.assetshare .bar #paging-cell #backward {
+    font-weight:bold;
+}
+
+.assetshare .bar #paging-cell #forward {
+    display:inline-block;
+    margin-left:10px;
+    cursor:pointer;
+}
+.assetshare .bar #paging-cell #backward {
+    display:inline-block;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.assetshare .bar .buttons-cell {
+    padding-right:20px;
+    padding-top:4px;
+    white-space:nowrap;
+    width:60px;
+}
+
+.assetshare .bar-search #fulltext-wrapper {
+    display:inline;
+}
+
+.assetshare .bar-paging {
+    /*width:100%;*/
+}
+
+.assetshare .left-predicates {
+    width:280px;
+}
+
+.assetshare .actions {
+    width:280px;
+}
+
+.assetshare.cq-wcm-preview .editonly {
+    display:none;
+}
+
+.lightboxrenditions .predicatebox .title,
+.assetshare .left-predicates .predicatebox .title,
+.assetshare .actions .title {
+    font-size:12px;
+    background-color:#bebebe;
+    margin-bottom:5px;
+    padding-bottom:2px;
+    padding-top:1px;
+    padding-left:5px;
+    font-weight:bold;
+}
+
+.assetshare .actions .title.level1 {
+    margin-top:10px;
+    background-color:#dddddd;
+}
+
+.assetshare .actions .section {
+    margin-bottom:2px;
+    padding-bottom:0;
+    padding-top:0;
+    padding-left:20px;
+}
+
+.assetshare .actions .section.new {
+    margin-top:10px;
+    padding-left:0;
+}
+
+
+/* top predicates */
+.assetshare .top-predicates .section {
+    /*overwrite common div.left selector*/
+    display:block;
+    float:left;
+    height:100px;
+    padding-right:40px;
+    padding-left:26px;
+    background:url(../../../../etc/designs/default/images/dam/vline_dotted.gif) repeat-y right;
+}
+
+.assetshare.cq-wcm-edit .top-predicates .section,
+.assetshare.cq-wcm-design .top-predicates .section {
+    float:none;
+}
+
+.assetshare .top-predicates .section.new {
+    display:none;
+    padding-right:0;
+    padding-left:0;
+}
+
+.assetshare.cq-wcm-edit .top-predicates .section.new,
+.assetshare.cq-wcm-design .top-predicates .section.new {
+    background:none;
+    display:block;
+}
+
+.assetshare .top-predicates .predicatebox .title {
+    font-weight:bold;
+    padding-top:5px;
+}
+
+.assetshare .top-predicates .predicatebox .title.default {
+    display:none;
+}
+
+.assetshare .top-predicates .predicatebox .x-form-text {
+    width:150px;
+    margin-bottom:2px;
+}
+
+.assetshare .top-predicates .predicatebox .content {
+    margin-bottom:5px;
+    padding-bottom:5px;
+    padding-top:2px;
+    padding-left:0;
+    width:auto;
+}
+
+.assetshare .top-predicates .section.path .predicatebox .x-form-check-wrap {
+    padding-left:0;
+}
+
+/* top options predicate */
+.assetshare .top-predicates .optionspredicatebox .x-toolbar {
+    background-color:#ffffff;
+    padding:0;
+}
+
+.assetshare .top-predicates .optionspredicatebox .x-panel-tbar LABEL {
+    font-weight:bold;
+}
+
+.assetshare .top-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    margin-bottom:0;
+    background-image:none;
+    border:none;
+    padding-bottom:0;
+}
+
+
+/* left predicates */
+.assetshare  .left-predicates DIV.section.options {
+    margin-bottom:0;
+}
+
+.assetshare .left-predicates div.left {
+    /*overwrite common div.left selector*/
+    display:block;
+    float:none;
+    width:auto;
+}
+
+.assetshare .left-predicates .predicatebox .x-form-text {
+    width:252px;
+    margin-bottom:2px;
+}
+
+.assetshare .left-predicates .predicatebox .content {
+    margin-bottom:5px;
+    padding-bottom:5px;
+    padding-top:5px;
+    padding-left:20px;
+    width:auto;
+}
+
+.assetshare .left-predicates .section.path .predicatebox .x-form-check-wrap {
+    padding-left:4px;
+}
+/* left options predicate */
+.assetshare .left-predicates .optionspredicatebox .leftpadding {
+    padding-left:20px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .leftpadding.level0 {
+    padding-left:0;
+}
+
+.assetshare .left-predicates .optionspredicatebox .level0 .x-toolbar {
+    background-color:#bebebe;
+}
+.assetshare .left-predicates .optionspredicatebox .level1 .x-toolbar {
+    background-color:#d6d6d6;
+}
+.assetshare .left-predicates .optionspredicatebox .level2 .x-toolbar {
+    /* default bg for level 2+ */
+    background-color:#e9e8e9;
+    /*padding:0;*/
+}
+.assetshare .left-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    margin-bottom:5px;
+    background-image:none;
+    border:none;
+    padding-bottom:0;
+    padding-left:0;
+}
+.assetshare .left-predicates .optionspredicatebox .x-panel-noborder .x-panel-tbar-noborder .x-toolbar .x-toolbar-cell .x-form-checkbox {
+    margin:0;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar LABEL {
+    font:normal 11px Tahoma, Geneva, Arial, Helvetica, sans-serif;
+}
+/*.assetshare .left-predicates .optionspredicatebox .x-panel-tbar LABEL {*/
+    /*font-size:11px;*/
+/*}*/
+
+.assetshare .left-predicates .optionspredicatebox .level0 .x-toolbar LABEL {
+    font-weight:bold;
+}
+
+.assetshare .left-predicates .optionspredicatebox .level1 .x-toolbar LABEL {
+    font-weight:normal;
+}
+
+/* toggle button */
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-ml,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mr {
+    background:none;
+    height:12px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tl, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tc, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tr,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bl, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bc, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-br {
+    height: 0;
+    background: none;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tr i, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-tl i,
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-br i, .assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-bl i {
+    height: 0;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc EM {
+    display:block;
+    height:12px;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .collapse .x-btn-mc BUTTON {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/predicates/collapse.gif) no-repeat;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .expand .x-btn-mc BUTTON {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/predicates/expand.gif) no-repeat;
+}
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-btn-mc BUTTON {
+    height:12px;
+    width:12px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-toolbar .x-form-check-wrap {
+    border-bottom:none;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:4px;
+    height:18px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-form-check-wrap {
+    border-bottom:solid 1px #dddddd;
+    padding-left:6px;
+    padding-top:4px;
+    padding-bottom:1px;
+    height:17px;
+}
+
+.assetshare .left-predicates .optionspredicatebox LABEL {
+    margin-left:15px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .x-form-check {
+    position:relative;
+    top:1px;
+}
+
+.assetshare .left-predicates .optionspredicatebox .subpanel {
+    margin-bottom:18px;
+}
+
+
+.assetshare .actions {
+    clear:both;
+    width:280px;
+}
+
+.assetshare .lensdeck-cell {
+    width:600px;
+    border:1px solid #dddddd;
+    border-left-width:0;
+}
+
+.assetshare .lensdeck {
+    width:600px;
+}
+
+.assetshare .lensdeck .x-panel-bwrap,
+.assetshare .lensdeck .x-panel-body {
+    overflow:visible;
+    height:auto;
+}
+
+.assetshare .bar .buttons-cell .section {
+    float:left;
+    margin-left:1px;
+    width:24px;
+    height:21px;
+    overflow:hidden;
+    margin-bottom:0;
+}
+
+.assetshare.cq-wcm-edit .bar .buttons-cell .section,
+.assetshare.cq-wcm-design .bar .buttons-cell .section {
+    float:none;
+}
+
+.assetshare .bar .buttons-cell .section.new {
+    display:none;
+}
+
+.assetshare.cq-wcm-edit .bar .buttons-cell .section.new,
+.assetshare.cq-wcm-design .bar .buttons-cell .section.new {
+    display:block;
+}
+
+.assetshare #CQ  .cq-editrollover-insert-container {
+    overflow:hidden;
+}
+
+.assetshare .bar .buttons-cell .x-btn-tl, .assetshare .bar .buttons-cell .x-btn-tc, .assetshare .bar .buttons-cell .x-btn-tr,
+.assetshare .bar .buttons-cell .x-btn-bl, .assetshare .bar .buttons-cell .x-btn-bc, .assetshare .bar .buttons-cell .x-btn-br {
+    height: 0;
+    background: none;
+}
+
+.assetshare .bar .buttons-cell .x-btn-tr i, .assetshare .bar .buttons-cell .x-btn-tl i,
+.assetshare .bar .buttons-cell .x-btn-br i, .assetshare .bar .buttons-cell .x-btn-bl i {
+    height: 0;
+}
+
+.assetshare .bar .buttons-cell .x-btn-ml{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 0;
+}
+.assetshare .bar .buttons-cell .x-btn-mr{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -21px;
+}
+.assetshare .bar .buttons-cell .x-btn-mc{
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -42px;
+}
+
+/* Toggle button styles */
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-ml{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -63px;
+}
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-mr{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -84px;
+}
+.assetshare .bar .buttons-cell .x-btn-pressed .x-btn-mc{
+    background: url(../../../../etc/designs/default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -126px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-icon .x-btn-text {
+    width:17px;
+    height:21px;
+}
+
+.assetshare .bar .buttons-cell .x-btn .mosaic {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/mosaic/btn_icon.png) no-repeat 2px 4px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-pressed .mosaic {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/mosaic/btn_icon_pressed.png) no-repeat 1px 3px;
+}
+
+.assetshare .bar .buttons-cell .x-btn .list {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/btn_icon.png) no-repeat 2px 4px;
+}
+
+.assetshare .bar .buttons-cell .x-btn-pressed .list {
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/btn_icon_pressed.png) no-repeat 1px 3px;
+}
+
+.assetshare .line.postbar {
+    height:29px;
+}
+
+.assetshare #prebar {
+    /* workaround to get a 1px line above the border */
+    border-top:solid 1px transparent;
+}
+
+/* lens data view */
+
+/* data view */
+.assetshare .lens-dataview {
+}
+
+
+/* mosaic lens */
+.assetshare .lens-dataview.mosaic {
+    padding:7px 0 7px 7px;
+    font-size:10px;
+    /*border:1px solid #DFDFDF;*/
+}
+
+.assetshare .lens-dataview.mosaic .wrapper {
+    float:left;
+    padding-right:20px;
+    margin-bottom:20px;
+    padding-bottom:21px;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x bottom;
+}
+
+.assetshare .lens-dataview.mosaic .item {
+    padding:10px;
+}
+
+
+/* mosaic lens */
+.assetshare .lens-dataview.mosaic .thumbnail {
+    height:100px;
+    width:140px;
+    background:no-repeat bottom center;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-selected .thumbnail {
+    background-color:transparent;
+}
+
+.assetshare .lens-dataview.mosaic .thumbnail img {
+    height:100px;
+    width:140px;
+    background-repeat:no-repeat;
+}
+
+.assetshare .lens-dataview.mosaic .item .title,
+.assetshare .lens-dataview.mosaic .item .text {
+    overflow:hidden;
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    width:140px;
+    padding-top:6px;
+}
+
+.assetshare .lens-dataview.mosaic .item .title {
+    height:14px;
+    margin-top:10px;
+    margin-bottom:4px;
+}
+
+.assetshare .lens-dataview.mosaic .item .text {
+    height:47px;
+    margin-top:3px;
+    line-height:15px;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-over {
+    background-color:#F1F0F1;
+}
+
+.assetshare .lens-dataview.mosaic .x-view-selected {
+    background-color:#DDDDDD;
+}
+
+/* lightbox action dataview */
+.assetshare #cq-dam-lightbox .x-panel-body {
+    margin-top:3px;
+    width:254px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border-color:#dddddd;
+}
+
+.assetshare .lightbox {
+    padding:4px;
+    font-size:10px;
+}
+
+.assetshare .lightbox TABLE {
+    width:245px;
+    border-collapse:collapse;
+    margin-top:5px;
+    /*border:1px solid #DFDFDF;*/
+}
+
+
+#licensebox-download-assetlist .asset_licenselist .rendition-item,
+.lightboxrenditions .rendition-item {
+ 	border-bottom:solid 1px #d0d0d0;
+	padding:10px;
+	border-spacing:10px;
+}
+
+
+.lightboxrenditions TD.line,
+.assetshare .lightbox TD.line {
+    /*background:url(../../designs/default/images/dam/line_dotted.gif)repeat-x;*/
+    height:1px;
+    line-height:1px;
+    padding:0;
+    margin:0;
+}
+
+#licensebox-download-assetlist .asset_licenselist TD.line {
+    background:url(../../../designs/default/images/dam/line_dotted.gif)repeat-x;
+    height:1px;
+    line-height:1px;
+    padding:0;
+    margin:0;
+}
+
+#licensebox-download-assetlist .asset_licenselist TD.title-cell,
+.lightboxrenditions TD.title-cell {
+    padding-top:0;
+    padding-right:0;
+    padding-left:10px;
+    line-height:23px;
+	width:250px;
+    word-wrap:break-word;
+    white-space:nowrap;
+}
+
+.lightboxrenditions TD.title-cell DIV
+{
+	height:60px;
+}
+
+.assetshare .lightbox TD.title-cell {
+    padding-top:0;
+    padding-right:0;
+    padding-left:2px;
+    line-height:23px;
+    width:175px;
+    white-space:normal;
+	word-wrap:break-word;
+}
+
+#licensebox-download-assetlist .asset_licenselist TD.title-cell DIV,
+.lightboxrenditions TD.title-cell DIV {
+	overflow:hidden;
+}
+
+
+.assetshare .lightbox TD.title-cell DIV {
+    width:175px;
+    overflow:hidden;
+}
+
+
+.lightboxrenditions TD.thumbnail-cell {
+    line-height:normal;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    background-image:none;
+}
+#licensebox-download-assetlist .asset_licenselist TD.thumbnail-cell {
+    line-height:normal;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    width:70px;
+    background-image:none;
+}
+.assetshare .lightbox TD.thumbnail-cell {
+    line-height:normal;
+    width:70px;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    background-image:none;
+}
+
+
+.lightboxrenditions TD.thumbnail-cell DIV,
+.assetshare .lightbox TD.thumbnail-cell DIV {
+    /* thumbnail; image is bg */
+    background:center 4px no-repeat;
+    width:60px;
+    height:60px;
+}
+
+#licensebox-download-assetlist .asset_licenselist TD.thumbnail-cell DIV {
+    background:none no-repeat center scroll transparent;
+    width:60px;
+    height:60px;
+}
+
+#licensebox-download-assetlist .asset_licenselist TR.x-view-over,
+.lightboxrenditions TR.x-view-over,
+.assetshare .lightbox TR.x-view-over {
+    background-color:#F1F0F1;
+}
+
+#licensebox-download-assetlist .asset_licenselist TR.x-view-over TD.padding-cell,
+.lightboxrenditions TR.x-view-over TD.padding-cell,
+.assetshare .lightbox TR.x-view-over TD.padding-cell {
+    background-color:white;
+}
+
+#licensebox-download-assetlist .asset_licenselist TR.x-view-selected TD.thumbnail-cell,
+.lightboxrenditions TR.x-view-selected TD.thumbnail-cell,
+.assetshare .lightbox TR.x-view-selected TD.thumbnail-cell DIV {
+    background-color:#DDDDDD;
+}
+
+#licensebox-download-assetlist .asset_licenselist TR.x-view-selected TD.title-cell,
+.lightboxrenditions TR.x-view-selected TD.title-cell {
+	background-color:#F1F0F1;
+}
+
+/* list lens */
+.assetshare .lens-dataview.list {
+    width:600px;
+    font-size:10px;
+}
+
+.assetshare .lens-dataview.list TABLE {
+    width:600px;
+    border-collapse:collapse;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell,
+.assetshare .lens-dataview.list TD.padding-cell DIV {
+    padding:0;
+    width:9px;
+    height:1px;
+    line-height:1px;
+    background-image:none;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell.top DIV {
+    height:19px;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell.bottom DIV {
+    height:9px;
+}
+
+.assetshare .lens-dataview.list TD.line {
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    height:1px;
+    line-height:1px;
+    padding:0;
+    margin:0;
+}
+
+.assetshare .lens-dataview.list TD {
+    padding-top:3px;
+    padding-right:18px;
+    padding-left:2px;
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/item_bg.gif) repeat-x 0 26px;
+    white-space:nowrap;
+}
+
+.assetshare .lens-dataview.list TD DIV{
+    line-height:23px;
+}
+
+.assetshare .lens-dataview.list TD.thumbnail-cell {
+    line-height:normal;
+    width:78px;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    background-image:none;
+}
+
+.assetshare .lens-dataview.list TD.title-cell DIV {
+    width:208px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD.format-cell DIV {
+    width:100px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD span.title {
+    display:block;
+    line-height:23px;
+    padding-top:0;
+    font-weight:bold;
+    vertical-align:baseline;
+}
+
+.assetshare .lens-dataview.list TD.last DIV {
+    width:150px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD.last {
+    text-align:right;
+    padding-right:2px;
+}
+
+.assetshare .lens-dataview.list TD.thumbnail-cell DIV {
+    /* thumbnail; image is bg */
+    background:center 8px no-repeat;
+    width:68px;
+    height:68px;
+}
+
+.assetshare .lens-dataview.list TR.x-view-over {
+    background-color:#F1F0F1;
+}
+
+.assetshare .lens-dataview.list TR.x-view-over TD.padding-cell {
+    background-color:white;
+}
+
+.assetshare .lens-dataview.list TR.x-view-selected TD.thumbnail-cell DIV {
+    background-color:#DDDDDD;
+}
+
+
+#licensebox-download-assetlist .asset_licenselist TD.line,
+.lightboxrenditions TD.line,
+.assetshare .lightbox TD.line {
+    /*background:url(../../designs/default/images/dam/line_dotted.gif)repeat-x;*/
+    height:1px;
+    line-height:1px;
+    padding:0;
+    margin:0;
+}
+
+
+.assetshare .lightbox TD.title-cell {
+    padding-top:0;
+    padding-right:0;
+    padding-left:2px;
+    line-height:23px;
+    width:175px;
+    white-space:normal;
+	word-wrap:break-word;
+}
+
+.assetshare .lightbox TD.title-cell DIV {
+    width:175px;
+    overflow:hidden;
+}
+
+.assetshare .lightbox TD.thumbnail-cell {
+    line-height:normal;
+    width:70px;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    background-image:none;
+}
+
+.assetshare .lightbox TD.thumbnail-cell DIV {
+    /* thumbnail; image is bg */
+    background:center 4px no-repeat;
+    width:60px;
+    height:60px;
+}
+
+.assetshare .lightbox TR.x-view-over {
+    background-color:#F1F0F1;
+}
+
+.assetshare .lightbox TR.x-view-over TD.padding-cell {
+    background-color:white;
+}
+
+.assetshare .lightbox TR.x-view-selected TD.thumbnail-cell DIV {
+    background-color:#DDDDDD;
+}
+
+/* list lens */
+.assetshare .lens-dataview.list {
+    width:600px;
+    font-size:10px;
+}
+
+.assetshare .lens-dataview.list TABLE {
+    width:600px;
+    border-collapse:collapse;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell,
+.assetshare .lens-dataview.list TD.padding-cell DIV {
+    padding:0;
+    width:9px;
+    height:1px;
+    line-height:1px;
+    background-image:none;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell.top DIV {
+    height:19px;
+}
+
+.assetshare .lens-dataview.list TD.padding-cell.bottom DIV {
+    height:9px;
+}
+
+.assetshare .lens-dataview.list TD.line {
+    background:url(../../../../etc/designs/default/images/dam/line_dotted.gif) repeat-x;
+    height:1px;
+    line-height:1px;
+    padding:0;
+    margin:0;
+}
+
+.assetshare .lens-dataview.list TD {
+    padding-top:3px;
+    padding-right:18px;
+    padding-left:2px;
+    background:url(../../../../etc/designs/default/images/dam/assetshare/lenses/list/item_bg.gif) repeat-x 0 26px;
+    white-space:nowrap;
+}
+
+.assetshare .lens-dataview.list TD DIV{
+    line-height:23px;
+}
+
+.assetshare .lens-dataview.list TD.thumbnail-cell {
+    line-height:normal;
+    width:78px;
+    padding-top:0;
+    padding-right:10px;
+    padding-left:0;
+    background-image:none;
+}
+
+.assetshare .lens-dataview.list TD.title-cell DIV {
+    width:208px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD.format-cell DIV {
+    width:100px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD span.title {
+    display:block;
+    line-height:23px;
+    padding-top:0;
+    font-weight:bold;
+    vertical-align:baseline;
+}
+
+.assetshare .lens-dataview.list TD.last DIV {
+    width:150px;
+    overflow:hidden;
+}
+
+.assetshare .lens-dataview.list TD.last {
+    text-align:right;
+    padding-right:2px;
+}
+
+.assetshare .lens-dataview.list TD.thumbnail-cell DIV {
+    /* thumbnail; image is bg */
+    background:center 8px no-repeat;
+    width:68px;
+    height:68px;
+}
+
+.assetshare .lens-dataview.list TR.x-view-over {
+    background-color:#F1F0F1;
+}
+
+.assetshare .lens-dataview.list TR.x-view-over TD.padding-cell {
+    background-color:white;
+}
+
+.assetshare .lens-dataview.list TR.x-view-selected TD.thumbnail-cell DIV {
+    background-color:#DDDDDD;
+}

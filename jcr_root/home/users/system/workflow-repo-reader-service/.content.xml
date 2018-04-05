@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="77431bf3-4593-3197-9ee4-e96ca9cd19de"
+    rep:authorizableId="workflow-repo-reader-service"
+    rep:principalName="workflow-repo-reader-service"/>

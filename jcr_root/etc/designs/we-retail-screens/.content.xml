@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:doctype="html_5"
+        cq:lastModified="{Date}2015-07-16T11:46:23.790+02:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="We.Retail In-Store Design"
+        sling:resourceType="wcm/core/components/designer">
+        <channel jcr:primaryType="nt:unstructured">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/channel/sequence"
+                components="[group:Screens]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <cq:authoring jcr:primaryType="nt:unstructured">
+                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="image/*"
+                            droptarget="image"
+                            resourceType="screens/core/components/content/image"
+                            type="Images"/>
+                        <video
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="video/*"
+                            droptarget="video"
+                            resourceType="screens/core/components/content/video"
+                            type="Images"/>
+                        <page
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="pages"
+                            assetMimetype=".*"
+                            droptarget="page"
+                            resourceType="screens/core/components/content/iframe"
+                            type="Pages"/>
+                    </assetToComponentMapping>
+                </cq:authoring>
+                <video
+                    jcr:lastModified="{Date}2015-08-27T11:16:40.447+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    flashPlayer="flvfallback"
+                    loop="{Boolean}false"
+                    noControls="{Boolean}true"
+                    preload="auto"
+                    profiles="hq"
+                    wmode="opaque"/>
+            </par>
+        </channel>
+        <page
+            jcr:primaryType="nt:unstructured"
+            aspectRatio="16x10"
+            columns="1"
+            rows="1">
+            <content
+                jcr:lastModified="{Date}2013-01-14T12:40:00.741+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="screens/core/components/content/tile"
+                components="[group:Screens]">
+                <cq:authoring jcr:primaryType="nt:unstructured">
+                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="image/*"
+                            droptarget="image"
+                            resourceType="screens/core/components/content/image"
+                            type="Images"/>
+                        <video
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="video/*"
+                            droptarget="video"
+                            resourceType="screens/core/components/content/video"
+                            type="Images"/>
+                        <page
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="pages"
+                            assetMimetype=".*"
+                            droptarget="page"
+                            resourceType="screens/core/components/content/iframe"
+                            type="Pages"/>
+                    </assetToComponentMapping>
+                </cq:authoring>
+            </content>
+        </page>
+        <display jcr:primaryType="nt:unstructured">
+            <tile1 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:lastModified="{Date}2015-05-29T10:05:57.587+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    flashPlayer="flvfallback"
+                    profiles="hq"
+                    wmode="opaque"/>
+            </tile1>
+            <tile0 jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:lastModified="{Date}2015-05-29T10:53:31.564+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    autoplay="{Boolean}true"
+                    flashPlayer="flvfallback"
+                    profiles="hq"
+                    wmode="opaque"/>
+            </tile0>
+        </display>
+        <sequencechannel jcr:primaryType="nt:unstructured">
+            <par jcr:primaryType="nt:unstructured">
+                <video
+                    jcr:lastModified="{Date}2015-08-27T11:16:40.447+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    flashPlayer="flvfallback"
+                    loop="{Boolean}false"
+                    noControls="{Boolean}true"
+                    preload="auto"
+                    profiles="[fullhd-hp,fullhd-bp,hq]"
+                    wmode="opaque"/>
+            </par>
+        </sequencechannel>
+    </jcr:content>
+</jcr:root>

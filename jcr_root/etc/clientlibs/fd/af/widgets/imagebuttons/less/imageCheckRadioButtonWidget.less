@@ -1,0 +1,116 @@
+/*******************************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ * Copyright 2016 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by all applicable intellectual property
+ * laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+/** Guide Image Check Button Widget Specific Variables **/
+@imageCheckButtonHeight: 80px;
+@imageCheckButtonWidth: 120px;
+@imageCheckButtonBackgroundColor: transparent;
+@imageCheckButtonBackgroundCheckedColor: blue;
+@imageCheckButtonBackgroundPosUnitX: 126px;
+@imageCheckButtonBackgroundPosUnitY: 0px;
+@imageCheckButtonBackgroundPosCheckedUnitX: px;
+@imageCheckButtonBackgroundPosCheckedUnitY: -80px;
+
+/** Guide Image Check Button Widget Specific Styles **/
+.widget_imageCheckRadioButtonWidget, .guideImageChoice {
+  &.guideRadioButtonGroupItems,
+  &.guideCheckBoxGroupItems {
+    color: @imageCheckButtonBackgroundColor;
+    display: block;
+  }
+
+  /** Keeping this for backward compatibility **/
+  .guideRadioButtonGroupItems,
+  .guideCheckBoxGroupItems {
+    color: @imageCheckButtonBackgroundColor;
+    display: block;
+  }
+
+  .guideRadioButtonItem,
+  .guideCheckBoxItem {
+    border-radius: 2px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    width: @imageCheckButtonWidth;
+    height: @imageCheckButtonHeight;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    font-size: .01em;
+    margin-right: 10px;
+    &.guideFieldVerticalAlignment {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &.imageCheckButtonDisabled {
+      opacity: 0.5;
+    }
+  }
+  .guideWidgetLabel  {
+    content: "  ";
+    width: inherit;
+    height: inherit;
+    padding: inherit;
+    margin: inherit;
+  }
+
+  .guideWidgetLabel label {
+    width: 0px;
+    height: 0px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"],
+  .guideFieldWidget {
+    width: 0px;
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+
+.widget_imageCheckRadioButtonWidget {
+  .guideRadioButtonItem,
+  .guideCheckBoxItem {
+    &.imageCheckButtonChecked {
+      opacity: 0.5;
+      background-color: #176be6;
+    }
+  }
+}
+
+.guideImageChoice {
+  .guideRadioButtonItem, .guideCheckBoxItem {
+    width: 80px;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+  .guideRadioButtonItem,.guideCheckBoxItem {
+    &.imageCheckButtonChecked .guideWidgetLabel {
+      background: url("/etc/clientlibs/fd/af/widgets/imagebuttons/assets/ImageChoiceSelectIcon.svg") no-repeat center, rgba(23, 107, 230, .5);
+    }
+  }
+}
+
+.guideImageChoice.guideCheckBoxGroupItems .guideCheckBoxItem, .guideImageChoice.guideRadioButtonGroupItems .guideRadioButtonItem {
+  .guideFieldWidget {
+    display: none;
+  }
+}

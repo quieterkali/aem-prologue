@@ -1,0 +1,97 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@charset "utf-8";
+/* LESS Document for iPhone */
+
+@media (max-width: @screen-xs-max) {
+  html,
+  body {
+    font-size:14px;
+  }
+
+  .upperToolbar {
+    display: none;
+  }
+  .mobileToolbar {
+    width: 100%;
+  }
+  .bottomToolbar {
+    margin-left: 0px;
+  }
+
+  /** Search box css **/
+  .search-box { position:absolute; right:40px; top:0; padding:18px 0px; margin-right:-30px; }
+  .navbar-default .search-toggle{ margin-right:0px; }
+  /** Search box css **/
+
+  /** navbar styling **/
+  .bg-blue{ height: 62px; }
+  .navbar-header{ margin-right: 0px !important; padding-right:0px; margin-left:-27px; }
+  .navbar-default .navbar-brand { font-size:18px; padding:20px 0; position: fixed; }
+  .navbar-default .navbar-toggle { margin-top:14px; margin-left: -36px; float:left; }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{ background:rgb(61, 61, 61); }
+  .navbar-collapse { width:250px; margin-top: 3px; border:none; }
+  .navbar-nav > li > a{ padding-left:0px; }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{ color: rgb(0, 121, 193); }
+  .navbar-collapse .nav > li{ border-bottom:1px solid rgb(143, 147, 153); }
+  .navbar-collapse .nav > li:last-child{ border:none; margin-left:0px; }
+  .navbar-collapse ul.navbar-nav{ margin:0px; }
+  .menu-item-toggle { background: rgb(0, 121, 193); border:none; padding:0px; margin-right:5px; }
+  /** navbar styling **/
+
+  /** page title section **/
+  .assistance{ margin-bottom:0px; padding-left: 5px; }
+  .assistance div:nth-child(1){ padding:0px; }
+  .assistance .text-blue{ margin-top:5px; }
+  .assistance .col-lg-8 h6.col-lg-5 { margin-top:0px; }
+  .thank_assistance .btn-default, .btn-primary{padding:5px 13px;}
+  /** page title section **/
+
+  /** Styling specific for iphone **/
+  .iphone-nopad{ padding:0; }
+  .iphone-pad{ padding:0 15px; }
+  .iphone.img-block{ display:inline-block; color: rgb(0,0,0); font-size:12px; margin: 0 15px 0 0; padding: 0 6px 0; vertical-align: bottom; }
+  /** Styling specific for iphone **/
+
+  /*** Stying for active steps dropin ***/
+  .btn-detail{ margin-top:7px; }
+  .detail-toggle{ padding-right:0px; position:fixed; right:0; z-index:55; }
+  .detail-collapse { width:250px; background-color:rgb(61, 61, 61); padding-bottom:20px; z-index:1030; position:fixed; right:0px; top:104px;   }
+  .detail-collapse > ul{ padding:0px 15px; }
+  .detail-collapse > ul > li > a{ color:rgb(255, 255, 255);padding-left:0px; }
+  .detail-collapse > ul > li:last-child{ border-bottom:1px solid rgb(143, 147, 153); margin-left:0px; }
+  .detail-collapse > li > a:focus,.detail-collapse li  a:hover{ color: rgb(0, 121, 193);background-color:rgb(61, 61, 61); }
+  .detail-collapse > ul > li > a:hover, .detail-collapse > ul  > li > a:focus{ background-color:rgb(61, 61, 61); color: rgb(0, 121, 193); }
+
+  .general-img{ margin-right:8px; display:inline-block !important; }
+  .detail-collapse > ul > li > a.active{ color:rgb(0, 121, 193); }
+  a.active:after{ display:none; }
+  a.active .disp-block{ padding:0; }
+  a.active span.iphone.img-block { background-color: rgb(0, 121, 193); border-radius:0; color:rgb(255,255,255); }
+  a.active span.iphone.img-block:after { position:absolute; content:""; width:0; height:0; border-top:0px solid transparent; border-bottom:20px solid rgb(0, 121, 193); border-left:0px solid transparent; border-right:10px solid transparent; margin-top:0; left:0;margin-left:19px; border-radius:0; }
+  .success, .success a:hover{ background: url('../images/tick.png') no-repeat right center rgb(61, 61, 61); }
+  .text-blue{ font-size:17px; }
+  .nav > li.terms-iphone{ background: url('../images/terms-iphone.png') no-repeat 2px 50%; padding-left:35px; }
+  .nav > li.demo-iphone{ background: url('../images/demo-iphone.png') no-repeat 2px 50%; padding-left:35px; }
+  .nav > li.help-iphone{ background: url('../images/help-iphone.png') no-repeat 2px 50%; padding-left:35px; }
+  .nav > li.need-iphone{ background: url('../images/need-iphone.png') no-repeat 2px 50%; padding-left:35px; }
+  .nav > li.menu-iphone{ background: url('../images/menu-iphone.png') no-repeat 2px 50%; padding-left:35px; visibility:hidden; height:0px; }
+  /*** Stying for active steps dropin ***/
+}

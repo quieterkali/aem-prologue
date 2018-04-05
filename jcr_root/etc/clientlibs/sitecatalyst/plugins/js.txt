@@ -1,0 +1,9 @@
+#
+# Add SiteCatalyst plugins here
+#
+# example: <path to file>.js
+
+getQueryParam.js
+getPreviousValue.js
+split.js
+

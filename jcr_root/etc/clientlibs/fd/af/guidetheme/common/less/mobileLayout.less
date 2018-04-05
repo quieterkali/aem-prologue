@@ -1,0 +1,94 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@media (max-width: @screen-xs-max) {
+  .guideMenuIcon {
+    .glyphicon();
+    .glyphicon-justify-sign();
+  }
+
+  .mobileScrollIndicator {
+    position: fixed;
+    bottom: @scrollIndicatorBottom;
+    right: @scrollIndicatorRight;
+    width: @scrollIndicatorWidth;
+    height: @scrollIndicatorHeight;
+    background-image: url("../../../images/more-arrow.png");
+    background-repeat: no-repeat;
+    z-index: 55;
+  }
+
+  .mobileToolbar {
+    position: fixed;
+    bottom: @mobileToolbarBottom;
+    top: @mobileToolbarTop;
+    left: @mobileToolbarLeft;
+    right: @mobileToolbarRight;
+    background-color: @mobile-fixed-toolbar-bg-color;
+    margin-bottom: 0px;
+    width: 100%;
+    z-index: 100;
+    .guideButton {
+      padding:0px 5px;
+      button {
+        background-color: transparent; // icons have to be displayed only for mobileToolbar
+        padding-top: 5px;
+      }
+      .submit {
+        .iconButton-icon {
+          background-position-y: center;
+        }
+      }
+      // have to make the rule specific to override the default behavior
+      // due to different icon size of reset, save and submit button changing the background position
+      .save {
+        .iconButton-icon {
+          background-position-y: -1px;
+        }
+      }
+      .iconButton-icon {
+        display: inline-block;
+        margin-top: @mobileButtonIconTopMargin;
+        background-position: center bottom;
+      }
+      .iconButton-label {
+        display: none;
+      }
+    }
+  }
+
+  .guideContainerNode {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .menuModuleSeperator {
+    width: 100%;
+    border-bottom-width: 2px;
+    border-bottom-color: @tabs-active-bg-color;
+    margin-bottom: 2px;
+    border-bottom-style: dashed;
+  }
+
+  .guideFieldWidget {
+    input[type="date"], input[type="text"], input[type="password"], select, textarea {
+      font-size: 16px;
+    }
+  }
+}

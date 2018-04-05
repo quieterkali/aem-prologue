@@ -1,0 +1,87 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.choice-view {
+    padding: 0.375rem 0.3125rem 0.375rem 0;
+    cursor: pointer;
+    max-width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+.choice-view.default {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0 0.3125rem;
+}
+.child-choice-name {
+    float:left;
+    padding: 0.425rem;
+    line-height: 0.75rem;
+}
+.choice-view > .child-selected-view {
+    display: inline-block;
+    float:left;
+    padding-right: 0.15rem;
+    width: auto;
+    max-width: 100%;
+}
+
+.choice-view > .coral-Icon {
+    font-size: 0.5625rem;
+    color: #969696;
+    line-height: 0.3125rem;
+    -ms-flex-item-align: center;
+}
+
+.choice-view-default {
+    font-style: italic;
+    line-height: 0.5675rem;
+    padding-right: 0.325rem;
+    color: #969696;
+    font-size: 0.8125rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+}
+
+.choice-view.default.is-draggedOver {
+    background-color: #96c8ff;
+    border-radius: 4px;
+}
+
+.choice-view.default.is-draggedOver .choice-view-default,
+.choice-view.default.is-draggedOver .coral-Icon {
+    color: white;
+}
+
+.BLOCK_STATEMENT > .choice-view.choice-SET_VALUE_STATEMENT,
+.BLOCK_STATEMENT > .choice-view.choice-SET_PROPERTY {
+    -ms-flex-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.empty-list,
+.empty-list coral-selectlist{
+    border: none !important;
+    height: 0 !important;
+}
+

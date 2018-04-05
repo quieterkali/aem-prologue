@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="909a9ab3-9d46-30a9-98a8-457a3fce3219"
+    rep:authorizableId="community-community-vdfvb-running-l0olp-communitymanagers"
+    rep:members="{WeakReference}[c1af6152-4494-3b1b-97e2-834321df3ea4]"
+    rep:principalName="community-community-vdfvb-running-l0olp-communitymanagers"
+    liveCopyPath="/content/we-retail/us/en/community/groups/running">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        givenName="Community Community Running L0olp Communitymanagers"/>
+</jcr:root>

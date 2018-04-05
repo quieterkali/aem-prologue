@@ -1,0 +1,111 @@
+/*******************************************************************************
+ * ADOBE CONFIDENTIAL
+ *  ___________________
+ *
+ *   Copyright 2013 Adobe Systems Incorporated
+ *   All Rights Reserved.
+ *
+ *  NOTICE:  All information contained herein is, and remains
+ *  the property of Adobe Systems Incorporated and its suppliers,
+ *  if any.  The intellectual and technical concepts contained
+ *  herein are proprietary to Adobe Systems Incorporated and its
+ *  suppliers and are protected by all applicable intellectual property
+ *  laws, including trade secret and copyright laws.
+ *  Dissemination of this information or reproduction of this material
+ *  is strictly forbidden unless prior written permission is obtained
+ *  from Adobe Systems Incorporated.
+ ******************************************************************************/
+.toolbarheader {
+    width: 100%;
+    height: 39px;
+    background-repeat: repeat-x;
+    background-color: #C790F4;
+    position: fixed;
+    border: 1px solid rgba(0,0,0, 0.5);
+    vertical-align: middle;
+    z-index: 2;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.toolbarformslogo {
+    background: url("../images/AX_Form_Lg_N.png") no-repeat;
+    width: 28px;
+    height: 28px;
+    border: none;
+    margin-top:5px;
+    vertical-align: middle;
+    float: left;
+}
+
+.toolbarfieldhighlight {
+    background: url("../images/AX_HighlightFields_Lg_N.png") no-repeat;
+    width: 50px;
+    height: 28px;
+    margin-top:5px;
+    border: none;
+    vertical-align: middle;
+    float: right;
+    /*border: 1px solid #ffffff;*/
+}
+.toolbarfileattachment {
+    background: url("../images/Attach.png") no-repeat;
+    width: 35px;
+    height: 32px;
+    margin-top:5px;
+    border: none;
+    vertical-align: middle;
+    float: right;
+    margin-right: 10px;
+    /*border: 1px solid #ffffff;*/
+}
+.toolbarlogger {
+    background-color: #C790F4 ;
+    width: 120px;
+    height: 28px;
+    margin-top:5px;
+    border: none;
+    vertical-align: middle;
+    float: right;
+    text-align:center;
+}
+
+.toolbartext {
+    font-family: Arial, Helvetica;
+    font-size: 12px;
+}
+
+.widgetBackGroundColorHighlight:not(.widgetreadonly) {
+    background-color: #DEE3FF !important;
+}
+
+.widgetBackGroundColorHighlight:not(.widgetreadonly):not(.widgetMandatoryBorder):not(.dataInvalid) {
+    outline: none ;
+}
+
+#loadingPage {
+    background: url("../images/busy-state.gif") no-repeat fixed center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    cursor: wait; /* busy cursor */
+    z-index: 100000;
+}
+
+.loadingBody {
+    background-color: rgb(255, 255, 255);
+}
+
+#loadText {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 35px);
+    font-size: 150%;
+    z-index: 1000000;
+}

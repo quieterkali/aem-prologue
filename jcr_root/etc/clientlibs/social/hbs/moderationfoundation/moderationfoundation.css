@@ -1,0 +1,1378 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+
+/**
+ * @see http://www.whatwg.org/specs/web-apps/current-work/multipage/rendering.html#hidden-elements
+ */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2013 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-ui-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    background-color: rgba(60, 60, 60, 0.4);
+    /* @coral */
+}
+
+.foundation-ui-notification {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    -webkit-transform: translate(-50%, 0);
+    /* @polyfill Safari */
+    transform: translate(-50%, 0);
+    z-index: 9999;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2012 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-content >:not(.foundation-content-current):not(.foundation-ui-mask) {
+    display: none;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-collection-quickactions {
+    /* By default quickactions are hidden. The layout is the one who show them accordingly. */
+    display: none;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-editable-control {
+    cursor: pointer;
+}
+
+.foundation-editable-control:empty {
+    min-height: 1rem;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2012 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-mode-switcher-item:not(.foundation-mode-switcher-item-active) {
+    display: none;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-layout-masonry coral-masonry-item {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    /* So far the text selection context menu only happens in iOS, hence -webkit only. */
+}
+
+.foundation-layout-masonry coral-card.foundation-collection-navigator {
+    cursor: pointer;
+}
+
+.foundation-layout-masonry-empty {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-layout-table .foundation-collection-item.foundation-collection-navigator {
+    cursor: pointer;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-layout-wizard2 {
+    height: 100%;
+}
+
+.foundation-layout-wizard2-header {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    padding: 0 0.9375rem;
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.05);
+    height: 4.125rem;
+    background-color: #FAFAFA;
+}
+
+.foundation-layout-wizard2-title {
+    line-height: 4.125rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.foundation-layout-wizard2-controls {
+    margin-top: 0.875rem;
+}
+
+.foundation-layout-wizard2-steplist {
+    -webkit-flex: 1;
+    flex: 1;
+    margin-top: 0.875rem;
+}
+
+coral-steplist.foundation-layout-wizard2-steplist coral-step:only-child {
+    display: none;
+}
+
+.foundation-layout-wizard2-contents {
+    position: relative;
+    height: calc(100% - 4.25rem) !important;
+    /* Always overrule the actual widget's height. */
+    overflow: auto;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/**
+ * The layout for panel pattern, where the content/body area is maximized.
+ * By default the panel has 100% height.
+ *
+ * It has two possible scenarios:
+ *
+ * A. Header - Body - Footer
+ *
+ * <div class="foundation-layout-panel">
+ *   <div class="foundation-layout-panel-header"></div>
+ *   <div class="foundation-layout-panel-bodywrapper">
+ *     <div class="foundation-layout-panel-body"></div>
+ *   </div>
+ *   <div class="foundation-layout-panel-footer"></div>
+ * </div>
+ *
+ * B. Header - Body (Rail - Content) - Footer
+ *
+ * <div class="foundation-layout-panel">
+ *   <div class="foundation-layout-panel-header"></div>
+ *   <div class="foundation-layout-panel-bodywrapper">
+ *     <div class="foundation-layout-panel-body">
+ *       <div class="foundation-layout-panel-rail"></div>
+ *       <div class="foundation-layout-panel-content"></div>
+ *     </div>
+ *   </div>
+ *   <div class="foundation-layout-panel-footer"></div>
+ * </div>
+ */
+
+.foundation-layout-panel {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/**
+ * Need to create a wrapper due to Chrome, Safari bug.
+ * We are using absolute position as the workaround.
+ * https://github.com/philipwalton/flexbugs/issues/84
+ */
+
+.foundation-layout-panel-bodywrapper {
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+}
+
+.foundation-layout-panel-body {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.foundation-layout-panel-content {
+    overflow: auto;
+    position: relative;
+    height: 100%;
+}
+
+.foundation-layout-panel-rail {
+    float: left;
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: -15.625rem;
+    width: 15.625rem;
+    height: 100%;
+    transition: margin-left 0.5s ease 0s;
+}
+
+.foundation-layout-panel-rail.foundation-layout-panel-rail-active {
+    margin-left: 0;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2013 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-layout-form.foundation-layout-form-mode-default .foundation-field-edit {
+    display: none !important;
+}
+
+.foundation-layout-form.foundation-layout-form-mode-default .foundation-field-hide-in-default {
+    display: none !important;
+}
+
+.foundation-layout-form.foundation-layout-form-mode-edit .foundation-field-readonly {
+    display: none !important;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2012 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-layout-inline2 {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    -webkit-align-items: flex-start;
+    /* @polyfill Safari */
+    align-items: flex-start;
+}
+
+.foundation-layout-inline2.foundation-layout-inline2-gap > .foundation-layout-inline2-item {
+    margin-right: 0.625rem;
+}
+
+.foundation-layout-inline2.foundation-layout-inline2-gap > .foundation-layout-inline2-item:last-child {
+    margin-right: 0;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2013 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/**
+    Indicates the layout root element.
+
+    Examples:
+    <div class="foundation-layout-thumbnail">
+        <div class="foundation-layout-thumbnail-image grid">
+            <article class="card-page"></article>
+        </div>
+    </div>
+ */
+
+.foundation-layout-thumbnail {
+    padding: 1rem;
+}
+
+.foundation-layout-thumbnail:not(.foundation-layout-thumbnail-quiet) {
+    background-color: #FFF;
+    box-shadow: 0 0.09375rem 0.09375rem rgba(0, 0, 0, 0.25);
+}
+
+
+/**
+    Indicates the thumbnail element.
+ */
+
+.foundation-layout-thumbnail-image {
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/*
+foundation-layout-actionfield is a layout to display a field and its action button next to it.
+The action is put to the edge and the field will expand to the remaining space.
+
+Example:
+
+<form class="foundation-layout-actionfield">
+    <div class="foundation-layout-actionfield-field"></div>
+    <button type="submit" class="foundation-layout-actionfield-action">OK</button>
+</form>
+*/
+
+.foundation-layout-actionfield {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+}
+
+.foundation-layout-actionfield-field {
+    -webkit-flex: 1;
+    /* @polyfill Safari */
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/**
+    A layout for media object: https://github.com/stubbornella/oocss/wiki/Content
+    
+    Examples:
+    <div class="foundation-layout-media">
+        <img class="foundation-layout-media-img">
+        <div class="foundation-layout-media-bd"></div>
+    </div>
+ */
+
+.foundation-layout-media {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    -webkit-align-items: flex-start;
+    /* @polyfill Safari */
+    align-items: flex-start;
+}
+
+.foundation-layout-media-img {
+    margin-right: 0.625rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.foundation-layout-media-bd {
+    -webkit-flex: 1;
+    /* @polyfill Safari */
+    flex: 1;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/**
+    Alternative media layout, with the ability to set vertical alignment.
+    MUST have no whitespace between child elements of .foundation-layout-flexmedia
+
+    Examples:
+
+    <div class="foundation-layout-flexmedia">
+        <img class="foundation-layout-flexmedia-img">
+        <div class="foundation-layout-flexmedia-bd"></div>
+    </div>
+
+    // foundation-layout-flexmedia-middle: Vertically center elements relative to each other
+    <div class="foundation-layout-flexmedia foundation-layout-flexmedia-middle">
+        <img class="foundation-layout-flexmedia-img">
+        <div class="foundation-layout-flexmedia-bd"></div>
+    </div>
+
+    // foundation-layout-flexmedia-bottom: Vertically bottom elements relative to each other
+    <div class="foundation-layout-flexmedia foundation-layout-flexmedia-bottom">
+        <img class="foundation-layout-flexmedia-img">
+        <div class="foundation-layout-flexmedia-bd"></div>
+    </div>
+
+    // foundation-layout-flexmedia-bd-singleline: Restrict description to single line (ellipsis applied on overflow)
+    <div class="foundation-layout-flexmedia foundation-layout-flexmedia-bottom">
+        <img class="foundation-layout-flexmedia-img">
+        <div class="foundation-layout-flexmedia-bd foundation-layout-flexmedia-bd-singleline"></div>
+    </div>
+
+    <div class="foundation-layout-flexmedia foundation-layout-flexmedia-bottom">
+        <img class="foundation-layout-flexmedia-img">
+        <div class="foundation-layout-flexmedia-bd">
+            <span class="foundation-layout-flexmedia-bd-singleline">Clark Kent</span>
+            <span class="foundation-layout-flexmedia-bd-singleline">clark.kent@superman.ct</span>
+        </div>
+    </div>
+ */
+
+.foundation-layout-flexmedia {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    -webkit-align-items: flex-start;
+    /* @polyfill Safari */
+    align-items: flex-start;
+}
+
+.foundation-layout-flexmedia.foundation-layout-flexmedia-middle {
+    -webkit-align-items: center;
+    /* @polyfill Safari */
+    align-items: center;
+}
+
+.foundation-layout-flexmedia.foundation-layout-flexmedia-bottom {
+    -webkit-align-items: flex-end;
+    /* @polyfill Safari */
+    align-items: flex-end;
+}
+
+.foundation-layout-flexmedia-img {
+    margin-right: 0.625rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.foundation-layout-flexmedia-bd {
+    overflow: hidden;
+    -webkit-flex: 1;
+    /* @polyfill Safari */
+    flex: 1;
+}
+
+.foundation-layout-flexmedia-bd-singleline {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2013 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/**
+    Add vertical margin (top and bottom) to the container.
+    The margin size is 1rem;
+ */
+
+.foundation-layout-util-vmargin {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/**
+    Set the min-width to zero.
+ */
+
+.foundation-layout-util-nominwidth {
+    min-width: 0;
+}
+
+
+/**
+    Set the width to 18.75rem (300px using 16px base).
+    This width value is good for use case to make sure that the element is not larger than smartphone width e.g. 320px.
+ */
+
+.foundation-layout-util-width300 {
+    width: 18.75rem;
+}
+
+
+/*
+    Set the max-height = 80vh and overflow = auto.
+    This is mainly used to restrict the overlay component for not exceeding viewport.
+ */
+
+.foundation-layout-util-maxheight80vh {
+    overflow: auto;
+    max-height: 80vh;
+}
+
+
+/**
+    Expand the element to fill available content.
+    This is done by using absolute positioning.
+ */
+
+.foundation-layout-util-maximized {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 1px;
+    overflow-y: auto;
+}
+
+
+/**
+    Expand the element to fill available content.
+    This is done by using 100% width and height.
+ */
+
+.foundation-layout-util-maximized-alt {
+    width: 100%;
+    height: 100%;
+}
+
+
+/**
+    Expand the element to fill available content and establish overflow context.
+    This is done by using 100% height and overflow = auto.
+ */
+
+.foundation-layout-util-maximized-container {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+
+/**
+    Indicates that normally unbreakable words may be broken at
+    arbitrary points if there are no otherwise acceptable
+    break points in the line.
+    This is done by using `word-wrap: break-word`.
+ */
+
+.foundation-layout-util-breakword {
+    word-wrap: break-word;
+}
+
+
+/**
+    Sets text to faded (mid-gray).
+    @coral Text Style: Body - Secondary
+ */
+
+.foundation-layout-util-subtletext {
+    color: #969696;
+}
+
+
+/**
+    Set the box-sizing to border-box.
+ */
+
+.foundation-layout-util-borderbox {
+    box-sizing: border-box;
+}
+
+.foundation-layout-util-resizable {
+    resize: both;
+}
+
+.foundation-layout-util-resizable-none {
+    resize: none;
+}
+
+.foundation-layout-util-resizable-x {
+    resize: horizontal;
+}
+
+.foundation-layout-util-resizable-y {
+    resize: vertical;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.foundation-nestedcheckboxlist {
+    list-style: none;
+    padding: 0;
+}
+
+.foundation-nestedcheckboxlist .foundation-nestedcheckboxlist {
+    padding-left: 1.625rem;
+}
+
+.foundation-nestedcheckboxlist .coral-Form-fieldwrapper {
+    margin: 0;
+}
+
+.foundation-nestedcheckboxlist .coral-Form-field {
+    margin: 0 0 0.5rem;
+    /* margin-botton is the same as .coral-Form--vertical .coral-Form-fieldwrapper--singleline */
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-collection-deselect {
+    color: rgb(150, 150, 150);
+    /* $coral-color-text-secondary */
+}
+
+.granite-collection-deselect > span {
+    vertical-align: middle;
+}
+
+.granite-collection-deselect > coral-icon {
+    margin-left: 0.5rem;
+    color: rgba(0, 0, 0, 0.60);
+    /* $coral-color-icon */
+}
+
+.granite-collection-deselect > span:active + coral-icon,
+.granite-collection-deselect:active > coral-icon {
+    color: rgba(0, 0, 0, 0.8);
+    /* $coral-color-icon-hover */
+}
+
+.granite-collection-deselect:focus > coral-icon {
+    color: rgb(50, 110, 200);
+    /* $coral-color-primary */
+}
+
+.granite-collection-deselect > coral-icon:last-child {
+    margin-right: 0;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-collection-navigator {
+    min-width: 13.125rem;
+    /* 210px */
+    border-width: 1px;
+    /* shows the round borders correctly */
+    overflow: hidden;
+}
+
+.granite-collection-navigator coral-selectlist {
+    border: none;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-collection-selectionbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/*
+granite-actionbar is a toolbar that can hold arbitrary items.
+An item can either be added to the left, the right side or the center of the actionbar.
+
+Example:
+
+<div class="granite-actionbar">
+    <div class="granite-actionbar-left"></div>
+    <div class="granite-actionbar-centerwrapper">
+        <div class="granite-actionbar-center"></div>
+    </div>
+    <div class="granite-actionbar-right"></div>
+</div>
+*/
+
+.granite-actionbar {
+    border-bottom: 0.0625rem solid rgb(230, 230, 230);
+    padding-top: 0.3125rem;
+    min-height: 2.6875rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.granite-actionbar:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.granite-actionbar-left,
+.granite-actionbar-right {
+    float: left;
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    max-width: calc(50% - 100px);
+}
+
+.granite-actionbar-right {
+    float: right;
+    -webkit-flex-flow: row wrap-reverse;
+    flex-flow: row wrap-reverse;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.granite-actionbar-left > .granite-actionbar-item {
+    margin-left: 0.5rem;
+}
+
+.granite-actionbar-left > .granite-actionbar-item:first-child {
+    margin-left: 0.4375rem;
+}
+
+.granite-actionbar-right > .granite-actionbar-item {
+    margin-right: 0.5rem;
+}
+
+.granite-actionbar-right > .granite-actionbar-item:last-child {
+    margin-right: 0.4375rem;
+}
+
+.granite-actionbar-item:empty {
+    margin: 0;
+}
+
+.granite-actionbar-centerwrapper {
+    display: -webkit-flex;
+    /* @polyfill Safari */
+    display: flex;
+    height: 0;
+}
+
+.granite-actionbar-centerwrapper > .granite-actionbar-center {
+    margin: auto;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/*
+  A custom style to override coral-ActionBar for the purpose of AEM Shell selection bar.
+  @coral
+*/
+
+.granite-selectionbar {
+    border-bottom: 0.0625rem solid rgb(230, 230, 230);
+    padding: 0.4375rem 0 0.375rem;
+    height: 3.25rem;
+    background-color: #FAFAFA;
+}
+
+.granite-selectionbar coral-actionbar-container:nth-of-type(1) {
+    left: 0;
+}
+
+.granite-selectionbar coral-actionbar-container:nth-of-type(2) {
+    right: 0.5rem;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-rail {
+    border-right: 0.0625rem solid rgba(0, 0, 0, 0.05);
+    background-color: rgb(240, 240, 240);
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-title {
+    display: inline-block;
+    margin-top: 0.6875rem;
+    color: rgb(120, 120, 120);
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-breadcrumb-button {
+    font-size: 1.125rem;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+.granite-pulldown-overlay {
+    border: 0.0625rem solid rgba(0, 0, 0, 0.15);
+}
+
+.granite-pulldown-overlay coral-anchorlist {
+    max-width: 12.5rem;
+    /* 200px */
+}
+
+.granite-pulldown-overlay coral-list-item-content coral-icon:first-child {
+    vertical-align: middle;
+    margin-right: 0.4375rem;
+    /* 7px */
+}
+
+.granite-pulldown-overlay a[is='coral-anchorlist-item'].coral-Link {
+    text-decoration: none;
+}
+
+
+/*
+  ADOBE CONFIDENTIAL
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and may be covered by U.S. and Foreign Patents,
+  patents in process, and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/
+
+
+/*
+  Modal dialogs with wait cursors (for instance, foundation-ui.waitTicker)
+*/
+
+coral-dialog coral-wait {
+    margin-right: 0.5rem;
+}
+
+coral-panelstack[maximized],
+coral-panelstack[maximized] > coral-panel {
+    height: 100%;
+}
+
+coral-panelstack[maximized] > coral-panel > coral-panel-content {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+
+/*
+  Handles the case of the statusIcons both inside the select and the selectlist
+*/
+
+coral-select .granite-Select-statusIcon {
+    float: right;
+}
+
+coral-select .granite-Select-statusIcon:last-child {
+    margin-right: 0;
+}
+
+coral-select .granite-Select-statusIcon--error {
+    color: rgb(250, 105, 95);
+}
+
+coral-select .granite-Select-statusIcon--warning {
+    color: rgb(245, 195, 70);
+}
+
+coral-select .granite-Select-statusIcon--success {
+    color: rgb(140, 195, 95);
+}
+
+coral-select .granite-Select-statusIcon--help,
+coral-select .granite-Select-statusIcon--info {
+    color: rgb(120, 175, 255);
+}
+
+
+/*
+  GRANITE-7969 - Ensure that foundation subtletext picks up highlighted state color in SelectList option.
+*/
+
+.coral-SelectList-item--option.is-highlighted .foundation-layout-util-subtletext {
+    color: #fff;
+}
+
+.coral-Form--vertical .foundation-field-readonly span.coral-Form-field {
+    display: block;
+}
+
+.coral-Form--vertical .coral-Form-fieldwrapper .granite-coral-Form-fieldlongdesc {
+    display: block;
+    margin: 0.5rem 0;
+    color: #969696;
+}
+
+.coral-Form--aligned .coral-Form-fieldwrapper .granite-coral-Form-fieldlongdesc {
+    display: inline-block;
+    margin: 0.5rem 0 0 6.5rem;
+    padding-left: .5rem;
+    color: #969696;
+}
+
+
+/* TODO It makes sense to migrate `.coral-Button--graniteActionBar` to CoralUI as `.coral-Button--iconBar`. */
+
+.coral-Button--graniteActionBar {
+    min-width: 0;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: subpixel-antialiased;
+}
+
+.coral-Button--graniteActionBar > coral-icon {
+    font-size: 1.125rem;
+    /* $icon-small-size */
+}
+
+.coral-Button--graniteActionBar > coral-button-label,
+.coral-Button--graniteActionBar > coral-anchorbutton-label {
+    font-size: 0.8125rem;
+    /* 13*$px; */
+}
+
+.coral-Button--graniteActionBar > coral-icon + coral-button-label:not(:empty),
+.coral-Button--graniteActionBar > coral-icon + coral-anchorbutton-label:not(:empty) {
+    margin-left: 0.5rem;
+    /* 8*$px; */
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected) {
+    color: rgb(150, 150, 150);
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected):hover {
+    color: rgb(75, 75, 75);
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected):active {
+    color: rgb(50, 110, 200);
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected) > coral-Icon {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected):hover > coral-Icon {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.coral-Button--graniteActionBar:not(:disabled):not(.is-disabled):not(.is-selected):active > coral-Icon {
+    color: rgb(50, 110, 200);
+}
+
+coral-popover-content .coral-Button--graniteActionBar {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.coral-Pathbrowser-picker {
+    z-index: 11010;
+}
+
+
+/* CUI-5399: Coral.Table: [iPad/iPhone][Safari] sticky header cells are hidden with -webkit-overflow-scrolling: touch; */
+
+coral-shell-content {
+    -webkit-overflow-scrolling: auto !important;
+}

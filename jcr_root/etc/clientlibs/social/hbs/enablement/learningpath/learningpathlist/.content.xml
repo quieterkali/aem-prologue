@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[cq.social.enablement.hbs.learningpath.learningpathlist]"
+    embed="[cq.social.author.enablement.hbs.learningpath.learningpathlist,cq.social.thirdparty.datatables,cq.social.thirdparty.datatables.bootstrap,cq.social.author.reporting.hbs.reporting.datatable,cq.social.author.reporting.hbs.reporting.datatable.bootstrap.pagination,cq.social.author.reporting.hbs.reporting.datatable.pagination,cq.social.author.enablement.hbs.resource.content-card,cq.social.author.enablement.hbs.resource.table-cell]"/>

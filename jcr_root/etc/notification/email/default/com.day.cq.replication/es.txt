@@ -1,0 +1,15 @@
+subject=[CQ Replication Notification]
+
+header=-------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+User: ${userFullName} (${userId})\n \
+Path: ${path}\n \
+Type: ${type}\n \
+Revision: ${revision}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Page: ${externalUrl}\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

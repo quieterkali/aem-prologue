@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:description="Featured Content"
+    jcr:mixinTypes="[mix:lockable]"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Featured Content"
+    sling:resourceType="social/console/components/hbs/communityfunctions/communityfunction"
+    component="social/commons/components/hbs/featuredcontent"
+    functionicon="starburst"
+    sitePath="/content/communities/templates/functions/featuredcontent"/>

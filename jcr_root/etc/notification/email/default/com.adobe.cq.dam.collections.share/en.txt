@@ -1,0 +1,22 @@
+subject=${hostUserFullName} has shared collection "${folderTitle}" with you
+
+header=\ -------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=\ Hi ${inviteeFirstName}, \n \
+ \n \
+The collection "${folderTitle}" has been shared with you.\n \
+Please login with your account, and navigate to the links mentioned below to view or directly download the collection.\n \
+\n \
+View: ${viewCollection} \n \
+\n \
+Download: ${downloadCollection} \n \
+\n \
+\n \
+Thanks, \n \
+${hostUserFullName} \n \
+ \n\n
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

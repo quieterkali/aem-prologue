@@ -6,7 +6,7 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>`com.adobe.prologue</groupId>
+        <groupId>com.adobe.prologue</groupId>
         <artifactId>prologue</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -21,7 +21,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>`com.adobe.prologue</groupId>
+            <groupId>com.adobe.prologue</groupId>
             <artifactId>prologue.core</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -62,6 +62,11 @@
             <artifactId>uber-jar</artifactId>
             <classifier>apis</classifier>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.all</artifactId>
+            <type>zip</type>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -72,6 +77,11 @@
                     <exclude>**/.vlt</exclude>
                     <exclude>**/.vltignore</exclude>
                 </excludes>
+            </resource>
+
+            <resource>
+                <directory>src/main/content/META-INF/vault/definition</directory>
+                <targetPath>../vault-work/META-INF/vault/definition</targetPath>
             </resource>
         </resources>
 
@@ -116,11 +126,19 @@
                     <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                     <embeddeds>
                         <embedded>
-                            <groupId>`com.adobe.prologue</groupId>
+                            <groupId>com.adobe.prologue</groupId>
                             <artifactId>prologue.core</artifactId>
                             <target>/apps/prologue/install</target>
                         </embedded>
                     </embeddeds>
+
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.all</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
 
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                     <properties>

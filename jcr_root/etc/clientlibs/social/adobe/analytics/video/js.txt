@@ -1,0 +1,9 @@
+main.js
+lib/VisitorAPI.js
+lib/VideoHeartbeat.js
+lib/AdobeAnalyticsPlugin.js
+heartbeat/default.comm.center.js
+heartbeat/configuration.js
+heartbeat/player/video.player.js
+heartbeat/video.player.delegate.js
+heartbeat/video.analytics.provider.js

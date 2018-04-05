@@ -1,0 +1,48 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.FUNCTION_CALL {
+    display : block;
+}
+.FunctionName {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.FunctionName > .terminal-view .no-selection {
+    margin-bottom: -10px;
+}
+
+.Parameters {
+    display: block;
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 5px;
+    padding: 10px 30px 10px 10px;
+}
+
+.Parameters .input-label {
+    padding: 8px;
+    width: 108%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.Parameters .param-description {
+    font-style:italic;
+    color: #969696;
+    padding: 16px 5px 5px 8px;
+}

@@ -1,0 +1,213 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+ .guides-common-actions {
+      background-color: transparent;
+      border-style: none;
+      height:16px;
+      width:16px
+ }
+
+ .afFragmentMarker .guidePanelNode {
+       background-color:#f6f6f6;
+    }
+
+ .afFragmentMarker .panel{
+      margin:0px;
+      border: 0px;
+ }
+
+ .guides-action-accept {
+     background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/remove.png');
+ }
+
+ .guides-action-edit{
+       background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/add.gif');
+ }
+
+ .guides-action-edit-layout {
+    background-image: url('/libs/fd/af/components/guidescribble/icon.png');
+ }
+
+ .guides-action-add {
+    background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/add.gif');
+    background-color: transparent;
+    border-style: none;
+    height:16px;
+    width:16px
+}
+
+.guides-action-remove {
+    background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/remove.png');
+    background-color: transparent;
+    border-style: none;
+    height:16px;
+    width:16px
+}
+
+.guides-action-up {
+    background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/up.gif');
+    background-color: transparent;
+    border-style: none;
+    height:16px;
+    width:16px
+}
+
+.guides-action-down {
+    background-image:url('/libs/cq/ui/widgets/themes/default/icons/16x16/down.gif');
+    background-color: transparent;
+    border-style: none;
+    height:16px;
+    width:16px
+}
+
+.alert_indicator {
+    background-image: url(../../images/alert_indicator.bmp);
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    display: none;
+    z-index: 10;
+}
+
+.guidevalid_indicator {
+    display: none;
+}
+
+.guide-som-popover {
+    position: absolute;
+    z-index: 10000;
+    display: none;
+    max-width: 350px;
+    min-width: 200px;
+    padding: 1px;
+    text-align: left;
+    white-space: normal;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    word-wrap:break-word;
+    margin-left: 10px;
+}
+
+.guide-som-popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.guide-som-popover-content {
+    padding: 9px 14px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.guide-som-popover-close {
+    float: right;
+    margin-top: -4px;
+    margin-right: -8px;
+}
+
+.guideChartCombo .x-form-field-wrap,
+.guideChartCombo input{
+    width: 170px !important;
+}
+
+.guideChartTooltipText .x-html-editor-wrap,
+.guideChartTooltipText textarea {
+    width: 90% !important;
+    min-width: 370px !important;
+    height: 100px;
+}
+#af-expression-editor {
+    display:none;
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:999999;
+    background-color: white !important;
+}
+#close-editor {
+    float:right;
+}
+html {
+    font-size:16px;
+}
+
+.fragmentPlaceholderContainer {
+    background-color: #f0f0f0;
+    border-opacity: 0.1;
+    border-width: 1px;
+    padding: 15px;
+    font-family: Adobe Clean;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: left;
+    color: #969696;
+    border-color:rgba(0,0,0,0.15);
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:4px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(255,255,255,0.05),rgba(0,0,0,0.05)),linear-gradient(90deg,rgba(0,0,0,0.05),rgba(255,255,255,0.05),rgba(0,0,0,0.05));
+}
+
+.fragmentTitle {
+    background-image: url("../../images/fragmentPlaceholderIcon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+.fragmentSeparator{
+    width: auto;
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.25;
+    margin: 15px 0px;
+}
+
+.fragmentTitle{
+    text-align: left;
+    color: #4b4b4b;
+}
+
+.authoring-errormsg {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.guideFieldError {
+    visibility:hidden;
+}
+
+.validation-failure .guideFieldError {
+    visibility:visible;
+}

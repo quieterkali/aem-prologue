@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="1a1c4599-125a-3104-aa0e-472dfd741b63"
+    rep:authorizableId="projects-users"
+    rep:members="{WeakReference}[cd497a0e-033d-3337-82af-090041afb2c8]"
+    rep:principalName="projects-users"/>

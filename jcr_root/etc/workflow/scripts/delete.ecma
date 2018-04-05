@@ -1,0 +1,13 @@
+var workflowData = workItem.getWorkflowData();
+if (workflowData.getPayloadType() == "JCR_PATH") {
+    var path = workflowData.getPayload().toString();
+    if (workflowSession.getSession().itemExists(path)) { 
+        var node = workflowSession.getSession().getItem(path);
+        var parent = node.getParent();
+        node.remove();
+        parent.save();
+        log.debug("Removed: " + path);
+    } else {
+        log.warn("Item does not exist: " + path);
+    }
+}

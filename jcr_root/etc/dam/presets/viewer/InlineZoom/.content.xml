@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <jcr:content
+        dam:s7damType="ViewerPreset"
+        jcr:primaryType="nt:unstructured"
+        category="FLYOUT_ZOOM"
+        isactive="{Boolean}true"
+        platform="HTML5">
+        <userdata
+            jcr:primaryType="nt:unstructured"
+            i18n.FlyoutZoomView.TIP_BUBBLE_OVER="Mouse over image for a closer look."
+            i18n.FlyoutZoomView.TIP_BUBBLE_TAP="Drag image to explore."
+            style="etc/dam/presets/css/html5_inlinezoomviewer.css"/>
+    </jcr:content>
+</jcr:root>

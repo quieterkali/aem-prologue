@@ -1,0 +1,15 @@
+#base=javascript
+GuideStyleLayerConstants.js
+GuideStyleLayer.js
+GuideStyleLayerUtils.js
+GuideStyleLayerOverlays.js
+GuideStyleLayerUI.js
+
+#base=javascript/formObjectsTree
+StyleLayerFormObjects.js
+StyleLayerObjectsRenderer.js
+StyleLayerObjectsDataModel.js
+
+#base=javascript/stylableConfigsTree
+GuideStylableConfigs.js
+GuideStylableConfigsRenderer.js

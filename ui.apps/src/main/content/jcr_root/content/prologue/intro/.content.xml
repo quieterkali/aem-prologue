@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-04-05T12:39:25.243-03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/prologue/settings/wcm/templates/prologue-first-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Intro"
+        sling:resourceType="prologue/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:created="{Date}2018-04-05T11:45:34.092-03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-04-05T11:48:10.669-03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    jcr:created="{Date}2018-04-05T12:39:02.662-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-04-05T12:39:25.240-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="My intro page"
+                    sling:resourceType="prologue/components/content/title"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

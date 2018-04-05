@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2009-07-23T22:07:07.430+02:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Calendar Design"
+        sling:resourceType="wcm/core/components/designer">
+        <page jcr:primaryType="nt:unstructured">
+            <calendar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="collab/calendar/components/calendar">
+                <lenses
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys"
+                    components="[/libs/collab/calendar/components/lenses/agenda,/libs/collab/calendar/components/lenses/day,/libs/collab/calendar/components/lenses/month,/libs/collab/calendar/components/lenses/week]">
+                    <section jcr:primaryType="nt:unstructured"/>
+                </lenses>
+                <querybuilder jcr:primaryType="nt:unstructured">
+                    <predicates
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[/libs/cq/search/components/predicates/category,/libs/cq/search/components/predicates/date,/libs/cq/search/components/predicates/path,/libs/cq/search/components/predicates/property,/libs/cq/search/components/predicates/type]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                    </predicates>
+                </querybuilder>
+            </calendar>
+        </page>
+        <formpage jcr:primaryType="nt:unstructured">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Form,group:Event Form]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </formpage>
+    </jcr:content>
+    <static.css/>
+    <resources/>
+    <ui.widgets.css/>
+</jcr:root>

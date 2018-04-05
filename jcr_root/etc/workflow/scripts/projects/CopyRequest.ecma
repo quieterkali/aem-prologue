@@ -1,0 +1,13 @@
+
+log.info("assigning request copy step");
+
+// todo: get this value from a custom wizard step. Would simply have hard coded metadata value for whom to assign to
+var groupId = "project.group.editor";
+
+log.info("SELECTED THE FOLLOWING GROUP: " + groupId )
+
+if (groupId) {
+    log.info("GROUP RESOLVES TO: " + workflowData.getMetaDataMap().get(groupId, ""));
+    task.setCurrentAssignee(workflowData.getMetaDataMap().get(groupId, ""));
+}
+

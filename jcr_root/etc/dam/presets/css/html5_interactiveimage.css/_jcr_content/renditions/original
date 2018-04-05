@@ -1,0 +1,137 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2013 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+
+/*
+	CSS for desktop systems goes here.
+	This section is always processed by the web browser, both for desktop systems and touch devices. Touch-specific
+	CSS rules should be defined in the sections below.
+*/
+
+.s7interactiveimage{
+    width:100%;
+    height:100%;
+}
+
+.s7interactiveimage .s7zoomview {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:1;
+}
+
+/* SimpleToolTip - common styles */
+.s7tooltip {
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    border-color:#999999;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+
+/*************************************************************************/
+/* ImageMapEffect - common styles */
+.s7interactiveimage .s7imagemapeffect .s7icon {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/imagemap/ImageMapEffect_icon1_light_up_touch.png);
+	width: 56px;
+	height: 56px;
+	background-size: 100% 100%;
+}
+.s7interactiveimage .s7imagemapeffect .s7icon:hover {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/imagemap/ImageMapEffect_icon1_light_over_touch.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7interactiveimage .s7imagemapeffect .s7icon {
+		background-image: url(../../viewers/s7viewers/html5/images/v2/imagemap/ImageMapEffect_icon1_light_up_touch_2x.png);	
+	}
+	.s7interactiveimage .s7imagemapeffect .s7icon:hover {
+		background-image: url(../../viewers/s7viewers/html5/images/v2/imagemap/ImageMapEffect_icon1_light_over_touch_2x.png);	
+	}
+}
+/*************************************************************************/
+/* InfoPanelPopup - common styles */ 
+.s7interactiveimage .s7infopanelpopup {
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	background-color : rgba(0,0,0,0.5);
+	z-index: 6000;
+}
+.s7interactiveimage .s7infopanelpopup .s7overlay {
+	padding:0;
+	background-color:rgb(255,255,255);
+	background-size: 100% 100%;
+	background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_ProductDescription.png);
+	margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	width: 980px;
+	height: 610px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.s7interactiveimage .s7infopanelpopup .s7overlay .s7assetpreview {
+	position:absolute;
+	left: 1.6%;
+	top: 2.295%;
+	width: 50%;
+	height: 95.58%;
+}
+
+.s7interactiveimage .s7infopanelpopup .s7closebutton {
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: 5px;
+	right: 5px;
+	padding: 0px;
+	visibility:inherit;
+	z-index:1;
+}
+.s7interactiveimage .s7infopanelpopup .s7closebutton[state="up"]{ background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_QuickViewCloseButton_up.png); }
+.s7interactiveimage .s7infopanelpopup .s7closebutton[state="over"]{ background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_QuickViewCloseButton_up.png); }
+.s7interactiveimage .s7infopanelpopup .s7closebutton[state="down"]{ background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_QuickViewCloseButton_up.png); }
+.s7interactiveimage .s7infopanelpopup .s7closebutton[state="disabled"]{ background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_QuickViewCloseButton_up.png); }
+
+.s7interactiveimage .s7infopanelpopup .s7overlay .s7assetpreview.s7genericimage {
+	background-image:url(../../viewers/s7viewers/html5/images/v2/InfoPanelPopup_GenericImage.png);
+	background-size: 100% 100%;
+}
+.s7interactiveimage .s7infopanelpopup .s7overlay .s7assetpreview .s7assetpreviewimg{
+	position:absolute;
+	max-width:100%; 
+	max-height:100%;
+	margin: auto;
+	display: block;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.s7interactiveimage .s7infopanelpopup .s7overlay .s7disclaimer {
+	position: absolute;
+	left: 52.5%;
+	top: 7px;
+	width:44%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #FF0000;
+    font-family:sans-serif;
+	font-size:18px;
+}
+

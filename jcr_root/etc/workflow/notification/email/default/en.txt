@@ -1,0 +1,16 @@
+subject=Workflow notification: ${event.EventType}
+
+header=-------------------------------------------------------------------------------------\n \
+Time: ${event.TimeStamp}\n \
+Step: ${item.node.title}\n \
+User: ${participant.name} (${participant.id})\n \
+Workflow: ${model.title}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Content: ${host.prefix}${payload.path.open}\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+View the overview in your ${host.prefix}/aem/inbox\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

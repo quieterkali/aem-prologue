@@ -1,0 +1,32 @@
+
+// load the user who completed the previous task
+var previousItem = workItem.getMetaDataMap().get("historyEntryPath");
+var previousId = null;
+
+var copywriter = workItem.getWorkflowData().getMetaDataMap().get("copywriter");
+if (copywriter) {
+    previousId = copywriter;
+} else if (previousItem) {
+    // load previous item and look for a completed by user
+    var history = workflowSession.getHistory(workItem.getWorkflow());
+
+    if (history != null) {
+        for (var i=0 ; i < history.size(); i++) {
+            wi = history.get(i).getWorkItem();
+
+            if (wi != null && wi.getId().equals(previousItem + "/workItem")){
+                previousId = history.get(i).getWorkItem().getMetaDataMap().get("completedBy");
+                break;
+            }
+        }
+
+    }
+}
+
+if (previousId) {
+    task.setCurrentAssignee(previousId);
+    workItem.getWorkflowData().getMetaDataMap().put("copywriter", previousId);
+    //workflowSession.updateWorkflowData(workItem.getWorkflow(), workItem.getWorkflowData());
+} else {
+    task.setCurrentAssignee("no user was found");
+}

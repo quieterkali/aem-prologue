@@ -1,0 +1,5 @@
+#base=source
+
+Array.indexOf.js
+namespace.js
+CQ_Analytics.SiteCatalyst.js

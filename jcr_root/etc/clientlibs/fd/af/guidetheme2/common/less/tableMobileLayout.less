@@ -1,0 +1,209 @@
+/*
+ * Mobile layout table is not exposed in Theme Editor (because of the complex nature and inline computation of width/etc).
+ * What can be done for such scenarios?
+ */
+
+/*
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: @screen-sm-min) and (max-device-width: 1024px)  {
+
+  .headersLeft {
+    &.nonIETable {
+      /* Force table to not be like tables anymore */
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr { border: 1px solid #ccc; }
+
+      td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td:not(.child){
+        // In headers on left, we show border around input tag
+        input {
+          border: solid 1px #bbb !important;
+        }
+      }
+
+      // todo: have to set height of this based on content
+      td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: normal;
+      }
+      // Adjust the height of widget in mobile layout
+      .guideFieldWidget {
+        height: 40px;
+      }
+
+      /**
+      ** Hide tableRuntimeControls
+      **/
+      .guideTableRuntimeControls {
+        display : none;
+      }
+      /*
+      Label the data
+      */
+      td:before { content: attr(guide-data-header); }
+
+    }
+  }
+}
+
+/**
+** Defines mobile layout of collapsible columns
+**
+**/
+.collapsibleColumns {
+  &.nonIETable{
+    &.collapsed {
+      tbody {
+        td:first-child, th:first-child {
+          position: relative;
+          padding-left: 5px;
+          cursor: pointer;
+        }
+        .guideTableRuntimeEditControl {
+          display: inline-block;
+        }
+        .guideTableRuntimeLeftControls {
+          display: inline-block;
+          .guideTableRuntimeAddControl{
+            margin-left: 30px;
+            display: none;
+          }
+          .guideTableRuntimeDeleteControl{
+            display: none;
+          }
+
+        }
+        .guideTableRuntimeRightControls {
+          display: inline-block;
+          .guideTableRuntimeEditControl {
+            display: none;
+          }
+        }
+        tr.child {
+          td {
+            &.child {
+                padding-left: 10px;
+            }
+          }
+          ul {
+            display: inline-block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li:last-child {
+              border-bottom: none;
+            }
+            li:first-child {
+              padding-top: 15px;
+            }
+            li {
+              border-bottom: 1px solid #efefef;
+              padding: 0.5em 0;
+            }
+          }
+          div.rtp-title {
+            float:left;
+            width: 50%;
+            font-weight: bold;
+            line-height: 38px;
+            word-wrap: break-word;
+            height: auto;
+          }
+          div.rtp-data {
+            float:left;
+            width: 50%;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Large Desktop
+  Show six columns in desktop
+*/
+@media screen and (min-width:  @screen-lg)  {
+  .collapsibleColumns {
+    th {
+      min-width: @table-collapsible-cell-desktop-min-width;
+    }
+  }
+}
+
+/* Medium Desktop
+  Show four columns in medium desktop
+*/
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-lg) {
+
+  .collapsibleColumns {
+    th {
+      min-width: @table-collapsible-cell-medium-desktop-min-width;
+    }
+  }
+}
+
+// Small screen / tablet
+/* iPads (portrait and landscape) -----------
+  Show four columns in ipad
+*/
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+  .collapsibleColumns {
+    th {
+      min-width: @table-collapsible-cell-tablet-min-width;
+    }
+  }
+}
+
+
+/* Nexus Tablet -----------
+  Show two columns in nexus tablet
+*/
+@media screen and (min-width: @screen-xs) and (max-width: @screen-sm-min) {
+  .collapsibleColumns {
+    th {
+      min-width: @table-collapsible-cell-medium-tablet-min-width;
+    }
+  }
+}
+
+/* Smartphones (portrait and landscape) ---
+  Show max two columns here
+-------- */
+@media screen and (min-width : 320px) and (max-width :@screen-xs) {
+  .collapsibleColumns {
+    th {
+      min-width: @table-collapsible-cell-mobile-min-width;
+    }
+  }
+}
+
+

@@ -1,0 +1,74 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+/*
+ * Ideally we should try to move below CSS to Theme, and remove it from here (move to legacy)
+ * But we do not want to expose everything, so some things may remain here...
+ * Tooltip - only tooltip.bottom is used, so other rules can be removed (moved to legacy)
+ */
+.guideContainerWrapperNode {
+  .tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-family: @font-family-sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.4;
+    opacity: 0;
+  }
+
+  .tooltip.in {
+    opacity: 0.9;
+  }
+
+  .tooltip.bottom {
+    margin-top: 3px;
+    padding: 5px 0;
+  }
+
+  //TODO: move to theme
+  .tooltip-inner {
+    padding: 3px 8px;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  .tooltip.bottom .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+  }
+
+  .fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+  }
+  .fade.in {
+    opacity: 1;
+  }
+
+}

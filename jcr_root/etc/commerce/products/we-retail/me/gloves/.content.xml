@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Gloves">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <meotwicls
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:gender/men,we-retail:apparel/gloves,we-retail:season/winter,we-retail:activity/others]"
+        jcr:description="gloves"
+        jcr:lastModified="{Date}2016-01-11T16:16:25.071-08:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Classic Leather Gloves"
+        sling:resourceType="commerce/components/product"
+        features="&lt;ul>&lt;li>&#x9;Elastic at the wrists helps seal out wind and snow&#xd;&#xa;&lt;/li>&lt;li>&#x9;Polyester lining helps wick sweat off your hands to keep them dry&#xd;&#xa;&lt;/li>&lt;/ul>"
+        identifier="meotwicls"
+        inventory="234"
+        margin="0.65"
+        price="{Decimal}38"
+        rating="4"
+        reviews="By Janet&#xa;from St Paul&#xa;&#xa;Ordered these gloves for my husband and he likes them. The leather is soft and polished and the lining is nice and soft."
+        summary="Leather gloves offer a low-bulk fit for excellent dexterity and a classic look that can be dressed up or down."
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-11T16:16:25.048-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/gloves/Classic Leather.jpg"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.399-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.399-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.400-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+    </meotwicls>
+    <meskwimis
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:activity/skiing,we-retail:gender/men,we-retail:apparel/gloves,we-retail:season/winter]"
+        jcr:description="gloves"
+        jcr:lastModified="{Date}2016-01-11T16:22:48.315-08:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Midweight Fleece Gloves"
+        sling:resourceType="commerce/components/product"
+        features="&lt;ul>&lt;li>&#x9;Fleece contours comfortably to your hands, blocks wind and allows excellent freedom of movement&#xd;&#xa;&lt;/li>&lt;li>&#x9;Suede palms with silicon dots on thumbs and fingertips provide a sure grip and remain supple, even in wet weather&#xd;&#xa;&lt;/li>&lt;li>&#x9;Elasticized wristbands keep the weather out and your body heat in&#xd;&#xa;&lt;/li>&lt;/ul>"
+        identifier="meskwimis"
+        inventory="28"
+        margin="0.61"
+        price="{Decimal}30"
+        rating="4"
+        reviews="By WoodsDude&#xa;from Maryland&#xa;&#xa;I got these a few years back, and they are just now starting to wear out. They had little bumps on the fingers, but those were gone in about 5 minutes as soon as I climbed something. So even without the grippy bumps they work fantastic! These are the only gloves I've owned that have long enough fingers. My hands aren't that large(I don't think), but whatever hand they use to size most gloves must be missing the top half-inch of fingertip it seems. The between finger seam on these actually goes down to where my fingers meet! I was amazed with that. My area just got pounded with snow, and after days and days of shoveling/snowball fights, well it's about time for new gloves. I shouldn't have used these as snow gloves, but I don't have a decent pair other than these, so the constant soaking/drying has left them in need of replacement. Not the glove's fault, they just aren't meant for heavy snow use."
+        summary="Form-fitting, breathable fleece gloves are designed to keep hands warm while allowing maximum digital dexterity."
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-11T16:22:48.289-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/gloves/Midweight Fleece.jpg"/>
+        <size-one-size
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.408-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="One size"/>
+    </meskwimis>
+</jcr:root>

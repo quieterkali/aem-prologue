@@ -1,0 +1,15 @@
+subject=[CQ Replikations-Notifikation]
+
+header=-------------------------------------------------------------------------------------\n \
+Zeit: ${time}\n \
+Benutzer: ${userFullName} (${userId})\n \
+Pfad: ${path}\n \
+Typ: ${type}\n \
+Revision: ${revision}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Seite: ${externalUrl}\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+Dies ist eine automatisch generierte Nachricht. Bitte nicht antworten.

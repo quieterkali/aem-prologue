@@ -1,0 +1,23 @@
+subject={{#if this.target.properties.[jcr:title]}}[Blog Comment] {{{target.displayName}}}{{else}}[Blog Comment]{{/if}} \
+
+message=<!doctype html>\n \
+<html>\n \
+<head>\n \
+<meta name="viewport" content="width=device-width">\n \
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n \
+</head>\n \
+<body>\n \
+<div>\n \
+{{#equals this.verb "add"}}\
+    A new blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was added by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+    The blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was updated by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+    The blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was deleted by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+<br><a href="{{objectUrl}}">Click this link</a> to view all blog comments to this article or modify your notification preferences.\n \
+</div>\n \
+</body>\n \
+</html>\n \

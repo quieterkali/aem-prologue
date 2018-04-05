@@ -1,0 +1,7 @@
+#base=js
+GuideBindRefConstants.js
+BindRefSelector.js
+
+#base=js/bindRefDataObjectsTree
+GuideBindRefDataObjects.js
+GuideBindRefDataObjectsRenderer.js

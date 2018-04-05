@@ -1,0 +1,352 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.terminal-view .coral-Select-button:after {
+    display: none;
+}
+
+.terminal-view .no-selection{
+    background-color: rgba(0,0,0,0.02);
+    font-style: italic;
+    color: #868686;
+}
+
+.terminal-view .coral-Select-button.is-draggedOver {
+    background-color: #96c8ff !important;
+    width: 10rem;
+    text-align: center;
+}
+
+.terminal-view .coral-Select-button.is-draggedOver coral-button-label {
+    color: #ffffff;
+}
+
+.terminal-view .selection{
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    background-color: rgba(30, 95, 192, 0.15) !important;
+    border-radius: 4px;
+    height: 2.5rem;
+    padding: 12px 0;
+}
+
+.terminal-view .selection coral-button-label {
+    vertical-align: top;
+}
+
+coral-selectlist-item .type {
+    font-size: 10px;
+    padding-left: 5px;
+    line-height: 28px;
+}
+
+coral-SelectList-item .path {
+    font-size: 13px;
+    color: #868686;
+    width: 10rem;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+}
+
+coral-SelectList-item .path > span {
+    width: 92%;
+    float: right;
+    direction: rtl;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+coral-SelectList-item .path:after {
+    content: '...';
+    display: inline-block;
+}
+
+.terminal-view .coral-Select-button {
+    width: auto;
+    min-width: 0;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.terminal-view coral-autocomplete.terminal-view-hide-suggestions .coral-Autocomplete-trigger,
+.custom-selectlist coral-autocomplete.terminal-view-hide-suggestions .coral-Autocomplete-trigger,
+.terminal-view coral-autocomplete.terminal-view-hide-suggestions coral-overlay,
+.custom-selectlist coral-autocomplete.terminal-view-hide-suggestions coral-overlay{
+   display:none;
+}
+
+.terminal-view coral-button-label {
+    line-height: 1rem;
+    font-size: 0.8125rem;
+    color: #4B4B4B;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 15rem;
+    font-weight: normal;
+}
+.terminal-view coral-autocomplete coral-button-label,
+.terminal-view coral-datepicker coral-button-label
+{
+    margin:0px;
+}
+.terminal-view coral-autocomplete {
+    display:inline-block;
+}
+.term-view-container coral-datepicker input.coral-Textfield {
+   display:none;
+}
+.term-view-container coral-datepicker {
+   width: auto;
+   display:inline-block;
+}
+.term-view-container.expression-selectlist {
+    height: 38px;
+}
+
+.term-view-container.expression-selectlist .coral-InputGroup-button {
+   width: auto;
+}
+.term-view-container button {
+    background: none;
+    border-width: 0 0 1px 0;
+}
+
+.term-view-container.expression-selectlist coral-autocomplete {
+    display:inline-block;
+    width: 100%;
+}
+
+.remove-selection.VARIABLE {
+    width: 45px;
+    height: 60px;
+    float: right;
+    border-image: none;
+    padding: 0 3px;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px 0 1px 1px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border: solid rgba(0, 0, 0, 0.05) !important;
+    background-color: rgba(30, 95, 192, 0.15) !important;
+}
+
+.terminal-view .selection.is-highlighted {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 60px;
+    padding: 0 10px 0 5px;
+}
+
+.terminal-view .selection.read-only {
+    border-radius: 4px !important;
+}
+
+.terminal-view .read-only {
+    background-color: rgba(30,95,192,0.05) !important;
+}
+
+.terminal-view.VARIABLE {
+    display: inline-block;
+}
+
+.remove-selection.LITERAL {
+    width: 42px;
+    min-height: 2.5rem;
+    height: calc(100% + 0.1rem);
+    margin-left: -1px;
+    padding: 0 3px;
+    border-style: solid;
+    background-color: rgba(140, 195, 95, 0.1) !important;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1px 1px 1px 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    vertical-align: top;
+}
+
+.terminal-view .value-entered.is-highlighted {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.terminal-view .coral-Textfield {
+    width: 140px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #C2C5CA;
+    background: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.terminal-view .coral-Form-field {
+    line-height: 47px;
+    display: inline-block;
+}
+
+.terminal-view .value-entered {
+    background-color: rgba(140, 195, 95, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-radius: 4px;
+    padding: 0;
+    display: inline-block;
+    min-height: 2.5rem;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.terminal-view .value-entered-input {
+    display: none;
+}
+
+.terminal-view .value-entered:focus {
+    -webkit-box-shadow: 0 0 .1875rem rgba(140, 195, 95, 0.5) !important;
+    box-shadow: 0 0 .1875rem rgba(140, 195, 95, 0.5);
+}
+
+.terminal-view .value-entered > span {
+    padding: 11px 16px;
+    outline: none;
+    display: inline-block;
+    line-height: 16px;
+    font-size: 0.8125rem;
+    color: rgb(75,75,75);
+    max-width: 25rem;
+    word-wrap: break-word;
+}
+
+.terminal-view .value-entered > span:focus {
+    outline: 2px solid rgba(140, 195, 95, 0.5);
+}
+
+.terminal-view .value-entered .remove-selection {
+    border-right: none;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    border-left: 1px solid rgba(140,195,95,0.5);
+}
+
+.terminal-view .coral-Select-select--native {
+    display: none;
+}
+
+.terminalview-input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+coral-select-listoverlay.custom-selectlist > .terminalview-input {
+    width: 100%;
+    height:100%;
+}
+
+.variable-path {
+    font-size: 13px;
+    color: #868686;
+    max-width: 140px;
+    text-align: left;
+    margin: 0 10px;
+    height: 20px;
+    display: none;
+    font-weight: normal;
+}
+
+.variable-path.visibility-hidden {
+    visibility: hidden;
+    height: 15px;
+    overflow: hidden;
+}
+
+.variable-path > span {
+    width: 92%;
+    float: right;
+    direction: rtl;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 25px;
+    line-height: 25px;
+}
+
+.variable-path:after {
+    content: '...';
+    display: block;
+    line-height: 25px;
+}
+
+.variable-type {
+    font-size: 10px;
+    vertical-align: top;
+    line-height: 45px;
+    color: #868686;
+    display: none;
+}
+
+.terminal-view .is-highlighted .variable-path {
+    display: block;
+}
+
+.terminal-view .is-highlighted .variable-type {
+    display: inline-block;
+}
+
+.terminal-view .is-highlighted coral-button-label {
+    width: auto;
+    display: inline-block !important;
+    float: left;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.coral-Select-button.undefined-variable,
+.remove-selection.undefined-variable {
+    background: rgba(255,0,0,0.1) !important;
+    color: black;
+}
+
+.operator-highlighted {
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.05);
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.remove-selection.OPERATOR {
+    border-left: 1px solid rgba(0,0,0,0.05);
+    padding: 14px 10px!important;
+    display: inline;
+    margin-left: 10px;
+}
+
+.OPERATOR.is-focused > .choice-view{
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.OPERATOR.is-focused > .choice-view > .coral-Icon {
+    display: inline-block !important;
+}
+
+/*To set the height of remove button same as that of literal label
+ in case the literal is very long and flows to the next line*/
+.terminal-view.STRING_LITERAL,
+.terminal-view.NUMERIC_LITERAL,
+.terminal-view.DATE_LITERAL {
+    display: table;
+}

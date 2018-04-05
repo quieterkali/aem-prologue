@@ -1,0 +1,17 @@
+<table class="m-tab __FP_grid-table __FP_single-color" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+        <tr>
+            <th class="__FP_grid_overflow-control-th __FP_grid-name __FP_grid_sort" tabindex="0" data-sortKey="name">${localize-Title}</th>
+            <th class="__FP_grid_overflow-control-th __FP_grid-description __FP_grid_sort" tabindex="0" data-sortKey="description">${localize-Description}</th>
+            <th class="__FP_grid_overflow-control-th __FP_grid-description" tabindex="0">${localize-Actions}</th>
+        </tr>
+    </thead>
+    <tr data-repeatable="true">
+            <td class="__FP_grid_overflow-control" title="${name}" tabindex="0" data-label="${localize-Title}">${name}</td>
+            <td class="__FP_grid_overflow-control" title="${description}" tabindex="0" data-label="${localize-Description}">${description}</td>
+            <td class="__FP_grid_open-download-image" data-label="${localize-Actions}">
+                <a href="${formUrl}" target="_blank" class="__FP_panel-html-open ${htmlStyle}" title="${config-htmlLinkText}"></a>
+                <a href="${pdfUrl}" target="_blank" class="__FP_panel-pdf-open ${pdfStyle}" title="${config-pdfLinkText}"></a>
+            </td>
+        </tr>
+</table>

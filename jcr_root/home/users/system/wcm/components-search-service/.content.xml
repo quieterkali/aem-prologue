@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="e5d9e3ac-9823-307a-8fd5-27f70ea0b7b1"
+    rep:authorizableId="components-search-service"
+    rep:principalName="components-search-service"/>

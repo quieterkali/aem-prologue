@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        html5.basiczoom="BasicZoomViewer.js"
+        html5.carousel="CarouselViewer.js"
+        html5.ecatalog="eCatalogViewer.js"
+        html5.flyout="FlyoutViewer.js"
+        html5.image="../../libs/responsive_image.js"
+        html5.interactiveimage="InteractiveImage.js"
+        html5.interactivevideo="InteractiveVideoViewer.js"
+        html5.mixedmedia="MixedMediaViewer.js"
+        html5.spin="SpinViewer.js"
+        html5.video="VideoViewer.js"
+        html5.zoom="ZoomViewer.js"
+        sdkRootPath="/etc/dam/viewers/s7sdk/"
+        sdkVersion="3.2"
+        viewerRootPath="/etc/dam/viewers/"
+        viewerVersion="s7viewers"/>
+</jcr:root>

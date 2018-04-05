@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="21232f29-7a57-35a7-8389-4a0e4a801fc3"
+    rep:authorizableId="admin"
+    rep:password="\{SHA-256}dafe9b1165d8b518-1000-1abab254f15482866ab932004bb969e9980dea322c972319a241653b35021e54"
+    rep:principalName="admin">
+    <_x002e_tokens jcr:primaryType="rep:Unstructured">
+        <_x0032_018-04-05T07.47.32.358-03.00
+            jcr:primaryType="rep:Token"
+            jcr:uuid="b8a40a01-8934-4d43-81ea-ffa959b51317"
+            rep:token.exp="{Date}2018-04-05T19:47:32.358-03:00"
+            rep:token.key="\{SHA-256}c1d1e226833c2322-fd467ed0d17cc3077cf8b28cd3048adc291a99f037dc85650fd8851b8b70cdd1"
+            ip="0:0:0:0:0:0:0:1"
+            referer="http://localhost:4502/libs/granite/core/content/login.html?resource=%2F&amp;$$login$$=%24%24login%24%24&amp;j_reason=unknown&amp;j_reason_code=unknown"
+            useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"/>
+    </_x002e_tokens>
+    <preferences
+        jcr:primaryType="nt:unstructured"
+        cq.authoring.editor.page.showOnboarding62="false"
+        cq.authoring.editor.template.showOnboarding="false"
+        granite.shell.showonboarding620="false"/>
+    <profile
+        jcr:mixinTypes="[rep:AccessControllable]"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/security/components/profile"
+        familyName="Administrator"/>
+</jcr:root>

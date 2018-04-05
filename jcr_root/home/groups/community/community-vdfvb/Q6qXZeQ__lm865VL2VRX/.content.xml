@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="6ea6d057-0383-3ed2-8a67-084a8ad6e765"
+    rep:authorizableId="community-community-vdfvb-members"
+    rep:members="{WeakReference}[5e9e6224-74f7-319e-b614-eb097b85c774,69bb6b5d-7e97-3387-a70a-b3829f80778e,60abaad7-81ef-3c4c-9dd1-32583d45360b,5e090a1e-03b5-3a86-8222-62ecf1c9824e,bc6c86f2-2e12-38f7-92ca-dae57072c513,c4b813b7-0de5-3241-acf1-64f800f592e2,53001999-54b4-37f4-988e-21159ef15a30,efddfb1d-2053-325c-8c42-6a7168f0e5a1,5b025a83-7512-33f7-8331-54ab1b97a501]"
+    rep:principalName="community-community-vdfvb-members"
+    path="/content/we-retail/us/en/community">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        aboutMe="members for site /content/we-retail/us/en/community"
+        givenName="Community Community Members"/>
+</jcr:root>

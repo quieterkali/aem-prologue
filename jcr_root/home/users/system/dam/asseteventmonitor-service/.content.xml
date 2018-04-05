@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="7539a4ed-1444-32aa-ab43-bcb6e96db8fd"
+    rep:authorizableId="dam-asseteventmonitor-service"
+    rep:principalName="dam-asseteventmonitor-service"/>

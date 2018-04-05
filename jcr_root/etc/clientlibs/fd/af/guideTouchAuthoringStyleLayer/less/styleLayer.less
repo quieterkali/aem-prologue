@@ -1,0 +1,153 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+@import "../../guideCommonAuthoring/less/coralClassConstants.less";
+
+.mode-select span {
+    vertical-align : super
+}
+
+coral-icon.styleLayerSidePanelIcon,
+{
+    float: right;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    line-height: 2.5rem;
+}
+
+#guideStyleLayerObjects .sidepanel-tree-item-div,
+#guideStylableConfigs .sidepanel-tree-item-div {
+    cursor: auto;
+}
+
+#guideStyleLayerSidePanel{
+    border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    background-color: #f0f0f0;
+}
+
+#guideStylableConfigs {
+    border-top:.0625rem solid #e1e1e1;
+}
+
+#guideStyleConfigBackButton {
+    margin-top: 0.25rem;
+}
+
+#guideStyleLayerObjectsContainer{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#guideStylableConfigs .toplevel-element > div.sidepanel-tree-item-div{
+    display: none;
+}
+
+.sidepanel-content .sidepanel-tab-configs-title {
+    height: 2.5rem;
+    line-height: 3rem;
+    padding-left: 0.5rem;
+    font-weight: normal;
+    font-size: 15px;
+    color: #707070;
+    width: calc(100% - 5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+}
+
+.styleLayerSidePanelIconHide {
+    visibility: hidden;
+}
+
+.styleMoreActionIcon {
+    display: block;
+}
+
+.sidepanel-tree-item:not(.toplevel-element) > .sidepanel-tree-item-div:hover > .styleLayerSidePanelIcon {
+    visibility: visible;
+}
+
+#guideStyleLayerObjectsContainer .toplevel-element > .sidepanel-tree-item-div:hover {
+    background-color: inherit;
+}
+
+#guideStylableConfigs .sidepanel-tree-component-items {
+    margin-top : 0rem;
+}
+
+.af-overlay-selector-parent-hidden {
+    display: none !important;
+}
+
+.styleMoreButtonPopover {
+    min-width: 0px;
+}
+.styleMoreButtonPopover [coral-tabcapture] {
+    display : none;
+}
+
+.styleMoreButtonPopover .@{coral-Popover-content} {
+    height : auto;
+}
+.styleMoreButtonPopover .@{coral-BasicList-item-outerContainer} {
+    display : none;
+}
+
+#guideStyleLayerObjectsContainer.copyMode {
+    .styleEditIcon, .styleMoreIcon {
+        display: none;
+    }
+}
+
+#guideStyleLayerObjectsContainer .styleLayerHidden {
+    display : none;
+}
+
+#guideStyleLayerObjectsContainer .sidepanel-tree-item:not(.toplevel-element)>.copyModeNode {
+    label.name {
+        width: calc(~"100% - 8rem");
+    }
+    .stylePasteIcon {
+        display: block;
+    }
+}
+
+#guideStyleLayerObjectsContainer .guideStyleLayerSidePanelTabTitle {
+    display: inline-block;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#guideStyleLayerObjectsContainer .guideStyleLayerSidePanelHeaderContainer {
+    border-bottom: .0625rem solid #e1e1e1;
+}
+
+#guideStyleLayerObjectsContainer .sidepanel-tree-component {
+    margin-top: 1rem;
+}
+
+#guideStyleLayerObjectsContainer .guideStyleLayerSidePanelCopyCancelButton {
+    float: right;
+    margin-top: .5rem;
+}
+
+#guideStyleLayerObjectsContainer .copyModeLeafNode .sidepanel-tree-item-button {
+    visibility: hidden;
+}

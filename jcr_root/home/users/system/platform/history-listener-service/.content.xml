@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="1ea4e1db-3e27-35cf-8969-f3c5c03f81b7"
+    rep:authorizableId="history-listener-service"
+    rep:principalName="history-listener-service"/>

@@ -1,0 +1,5 @@
+# cq-mobile-sdk-content-1.1.12 - 20161212-1542
+
+#base=js
+
+mobileapps.js

@@ -1,0 +1,6 @@
+#base=javascript
+jquery-2.1.4.min.js
+jquery.ui.widget.js
+underscore-min.js
+xbe4x.js
+wgxpath.install.js

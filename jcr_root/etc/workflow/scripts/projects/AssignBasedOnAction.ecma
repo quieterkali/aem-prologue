@@ -1,0 +1,35 @@
+log.info("we are going to assign based on the last action: ");
+
+var lastAction = workflowData.getMetaDataMap().get("lastTaskAction","");
+var dueDate = workflowData.getMetaDataMap().get("taskDueDate", Packages.java.util.Date);
+
+if (dueDate != null) {
+    task.setProperty("taskDueDate", dueDate);
+}
+
+var groupId;
+
+if (lastAction == "Owner") {
+
+	groupId = "project.group.owner";
+
+} else if (lastAction == "Observer") {
+
+	groupId = "project.group.observer";
+
+
+} else if (lastAction == "Editor") {
+
+   	groupId = "project.group.editor";
+
+} else {
+    // no idea what to
+    assignee = "admin";
+    task.setName("user was not set!");
+}
+
+if (groupId) {
+	task.setCurrentAssignee(workflowData.getMetaDataMap().get(groupId, ""));
+}
+
+

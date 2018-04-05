@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="granite:Task"
+    jcr:uuid="d1699e99-5cda-4c86-9c7b-dee90d8881f0"
+    assignee="administrators"
+    createdBy="admin"
+    description="You can opt in for Analytics and Targeting by selecting your configuration and then adding it to your pages."
+    name="Configure Analytics &amp; Targeting"
+    nameHierarchy="Configure Analytics &amp; Targeting"
+    priority="{Long}0"
+    status="ACTIVE"
+    taskTypeName="config:analytics-targeting"/>

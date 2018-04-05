@@ -1,0 +1,113 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2013 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+
+/* Scene7 HTML5 Viewer SDK */
+.s7flyoutviewer {
+	position:relative;
+	width:260px;
+	height:500px;
+}
+
+
+.s7tooltip {
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border-color:#999999;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.s7flyoutviewer .s7flyoutzoomview .s7highlight {
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	cursor: pointer;
+}
+
+.s7flyoutviewer .s7flyoutzoomview .s7cursor { 
+	width: 80px;
+	height: 80px;
+	background-size: 100% 100%;
+}
+
+.s7flyoutviewer .s7flyoutzoomview .s7flyoutzoom {
+    width: 140%;
+	height: 100%;
+	left: 112%;
+	border: 1px solid #dddddd;
+	z-index:999;
+}
+
+/*************************************************************************/
+/* Swatches component - common styles */
+.s7flyoutviewer .s7swatches {
+    width: 260px;
+	height: 100px;
+	bottom: 0px;
+	background: transparent; 
+}
+.s7flyoutviewer .s7swatches .s7thumb { 
+	width: 56px;
+	height: 56px;
+	background-color : #ffffff;
+	margin : 0px;
+	border: 1px solid #dddddd;
+}
+.s7flyoutviewer .s7swatches .s7thumb[state="default"] {
+	margin : 0px;
+	border: 1px solid #dddddd;
+}
+.s7flyoutviewer .s7swatches .s7thumb[state="selected"] {
+	margin : 0px;
+	border: 1px solid #666666;
+}
+
+/**
+ * Swatches scroll left button  
+ */
+.s7flyoutviewer .s7swatches .s7scrollleftbutton {
+    width: 56px;
+    height: 56px;
+	background-size:112px;
+}
+
+.s7flyoutviewer .s7swatches .s7scrollleftbutton[state]  {
+    background-image: url(../../viewers/s7viewers/html5/images/v2/ScrollLeftButton_light_sprite.png);
+}
+
+.s7flyoutviewer .s7swatches .s7scrollleftbutton[state="up"]{ background-position: -56px -504px; }
+.s7flyoutviewer .s7swatches .s7scrollleftbutton[state="over"]{ background-position: -0px -504px; }
+.s7flyoutviewer .s7swatches .s7scrollleftbutton[state="down"]{ background-position: -56px -448px; }
+.s7flyoutviewer .s7swatches .s7scrollleftbutton[state="disabled"]{ background-position: -0px -448px; }
+
+/**
+ * Swatches scroll right button  
+ */
+.s7flyoutviewer .s7swatches .s7scrollrightbutton {
+    width: 56px;
+    height: 56px;
+	background-size:112px;
+}
+
+.s7flyoutviewer .s7swatches .s7scrollrightbutton[state]  {
+    background-image: url(../../viewers/s7viewers/html5/images/v2/ScrollRightButton_light_sprite.png);
+}
+
+.s7flyoutviewer .s7swatches .s7scrollrightbutton[state="up"]{ background-position: -56px -504px; }
+.s7flyoutviewer .s7swatches .s7scrollrightbutton[state="over"]{ background-position: -0px -504px; }
+.s7flyoutviewer .s7swatches .s7scrollrightbutton[state="down"]{ background-position: -56px -448px; }
+.s7flyoutviewer .s7swatches .s7scrollrightbutton[state="disabled"]{ background-position: -0px -448px; }

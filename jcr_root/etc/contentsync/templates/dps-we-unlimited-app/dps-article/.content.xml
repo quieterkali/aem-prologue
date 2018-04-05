@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <page
+        jcr:primaryType="nt:unstructured"
+        extension="html"
+        path="\{page.path}"
+        type="publish-pages"/>
+    <manifest-xml
+        jcr:primaryType="nt:unstructured"
+        order="{Long}100"
+        path="\{page.path}"
+        type="publish-manifest-xml"/>
+    <toc
+        jcr:primaryType="nt:unstructured"
+        path="\{page.path}"
+        type="publish-toc"/>
+</jcr:root>

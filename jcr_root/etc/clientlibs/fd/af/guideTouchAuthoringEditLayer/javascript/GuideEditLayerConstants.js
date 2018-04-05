@@ -1,0 +1,92 @@
+(function (guideEditLayer, window) {
+
+    /**
+     * Constants for guide edit layer access
+     * @type {Object}
+     */
+    guideEditLayer.constants = {
+        GUIDE_SIDE_PANEL_PROPERTIES_ID : "guideSidePanelProperties",
+        // to align with existing class, the name is aligned
+        GUIDE_SIDE_PANEL_PROPERTIES_CLASS : "sidepanel-tab-guideProperties",
+        GUIDE_SIDE_PANEL_PROPERTIES_TAB : "Properties",
+        GUIDE_SIDE_PANEL_FORMTREE_TAB : "Form Objects",
+        GUIDE_SIDE_PANEL_DATATREE_TAB : "Data Model Objects",
+        GUIDE_SIDE_PANEL_FORMOBJECTS_CONTAINER_ID : "guideSidePanelFormObjectsContainer",
+        GUIDE_SIDE_PANEL_DATAOBJECTS_CONTAINER_ID : "guideSidePanelDataObjectsContainer",
+        GUIDE_SIDE_PANEL_OBJECTS_ID : "guideSidePanelObjects",
+        GUIDE_SIDE_PANEL_TREE_CLASS : "sidepanel-tab-guideTree",
+        SIDE_PANEL_EDIT_SELECTOR  : ".js-SidePanel-content--edit",
+        SIDE_PANEL_EDIT_PROPERTIES_TAB_SELECTOR : 'coral-tab[title="' + Granite.I18n.get("Properties") + '"]',
+        DOR_SIDE_PANEL_EDIT_PROPERTIES_TAB_SELECTOR : 'coral-tab[title="' + Granite.I18n.get("Document of Record") + '"]',
+        SIDE_PANEL_VIEW_ERRORS_TAB_SELECTOR : 'coral-tab[title="' + Granite.I18n.get("Errors") + '"]',
+        PLACEHOLDER_OVERLAY_SELECTOR : ".currentDialogEditable",
+        PLACEHOLDER_OVERLAY_BUTTON_HTML : "<button class='placeholderOverlayButton' is='coral-button' icon='wrench' iconsize='S'></button>",
+        PLACEHOLDER_OVERLAY_BUTTON_SELECTOR : ".placeholderOverlayButton",
+        PLACEHOLDER_OVERLAY_BUTTON_CURRENT_CLASS : "placeholderOverlayButton-current",
+        PLACEHOLDER_OVERLAY_CLASS : "currentDialogEditable",
+        SIDEPANEL_DIALOG_SUBMIT_BUTTON_SELECTOR  : ".enableAfTouchDialogSubmitButton",
+        SIDEPANEL_DIALOG_CANCEL_BUTTON_SELECTOR : ".afTouchDialogCancelButton",
+        UNDO_BUTTON_SELECTOR : "[data-history-control='undo']",
+        REDO_BUTTON_SELECTOR : "[data-history-control='redo']",
+        SEARCHBOX_CLASS_SELECTOR : ".sidepanel-tree-searchField",
+        CONFUGURE_BUTTON_SELECTOR : "[data-action='CONFIGURE']",
+        TOOLBAR_CONFUGURE_BUTTON_SELECTOR : "[data-action='editToolbar']",
+        RULE_EDITOR_BUTTON_SELECTOR : "[data-action='editexpression']",
+        EDITABLE_TOOLBAR_ID : "#EditableToolbar:visible",
+        TOOLBAR_INSERT_COMPONENT_BUTTON_SELECTOR : "[data-action='addToolbarButtonAction']",
+        INSERT_COMPONENT_BUTTON_SELECTOR : "[data-action='INSERT']",
+        TOOLBAR_DELETE_BUTTON_SELECTOR : "[data-action='deleteToolbar']",
+        DELETE_BUTTON_SELECTOR : "[data-action='DELETE']"
+    };
+
+    guideEditLayer.dialogUtils.constants = {
+
+        TOUCH_SIDE_PANEL_SELECTOR : "#sidepanel-guide-properties",
+        DOR_TOUCH_SIDE_PANEL_SELECTOR : "#sidepanel-dor-properties",
+        DOR_MASTER_PAGE_CONTENT_SELECTOR : "#sidepanel-dortab-masterpagecontent",
+        DOR_CONFIG_PROPERTIES_SELECTOR : "#sidepanel-dortab-config-properties",
+        PROPERTIES_WARNING_MESSAGE : "Changes need to be either canceled or committed before navigating away.",
+        SUBMIT_CLASS_SELECTOR : 'button.cq-dialog-submit',
+        CANCEL_CLASS_SELECTOR : 'button.cq-dialog-cancel',
+        HELP_CLASS_SELECTOR : 'button.cq-dialog-help',
+        DIALOG_CLASS_SELECTOR : 'coral-tabview.cq-dialog-content',
+        DISPLAY_PATTERN : 'displayPattern',
+        DISPLAY_PATTERN_TYPE_SELECT : "./displayPatternType",
+        DISPLAY_PATTERN_TYPE_CLAUSE : "./displayPictureClause",
+        VALIDIATION_PATTERN : 'validationPattern',
+        VALIDIATION_PATTERN_TYPE_SELECT : "./validationPatternType",
+        VALIDIATION_PATTERN_TYPE_CLAUSE : "./validatePictureClause",
+        EDIT_PATTERN : 'editPattern',
+        EDIT_PATTERN_TYPE_SELECT : "./editPatternType",
+        EDIT_PATTERN_TYPE_CLAUSE : "./editPictureClause",
+        CORAL_TOOLTIP : 'coral-tooltip',
+        SECTION_FIELDSET : 'section.borderFieldSet',
+        CORAL_TOOLTIP_ARROW_RIGHT : 'coral3-Tooltip--arrowRight',
+        SUBMIT_ACTION : 'submitAction',
+        SUBMIT_ACTION_TYPE_SELECT : './actionType',
+        SUBMIT_ACTION_FIELD_SET : 'submitActionSet',
+        AUTO_SAVE_ACTION : 'autoSaveAction',
+        AUTO_SAVE_STRATEGY_TYPE_SELECT : './autoSaveStrategyType',
+        AUTO_SAVE_STRATEGY_FIELD_SET : 'autoSaveStrategySet',
+        CAPTCHA_SERVICE : 'captchaService',
+        CAPTCHA_SERVICE_TYPE_SELECT : './captchaService',
+        CAPTCHA_SERVICE_CONFIGURATION_FIELD_SET : 'captchaConfigurationSet',
+        NAME_VALIDATION_MESSAGE : "Element name should only contain characters, numbers or _-",
+        SUBMIT_ACTION_VALIDATION_MESSAGE : "Adobe Sign is enabled for the form, so only Adobe Sign compatible submit action can be selected",
+        BINDREF_VALIDATION_MESSAGE : "A valid bindRef can have alphanumeric characters, parenthesis, dot, hyphen, at the rate, forward slash, asterisk, dollar and underscore.",
+        RADIO_BUTTON_VALIDATION_MESSAGE : "Radio Button Group must have at least 2 items.",
+        DATAMODEL_VALIDATION_MESSAGE : "Selected bindRef should be of complex type",
+        FIELD_VALIDATION_MESSAGE : "Selected bindRef should be of simple type",
+        TOUCH_AUTHORING_ALERT_CLASS : "touchAuthoringComponentChangeAlert",
+        TOUCH_AUTHORING_HIDE_ALERT_CLASS : "touchAuthoringHideComponentChangeAlert",
+        PROPERTYSHEET_SELECTOR : 'coral-accordion, coral-tablist',
+        DOR_PROPERTIES_COMPONENT_RELATIVE_PATH : "fd/af/authoring/components/dor/dorProperties",
+        PRINT_NODE_RELATIVE_PATH : "/jcr:content/guideContainer/view/print",
+        BRANDING_NODE_RELATIVE_PATH : "/jcr:content/guideContainer/view/print/branding",
+        REQUIRED_FIELD_PROPERTY_SELECTOR : ".requiredFieldProperty",
+        HIDE_FIELD_PROPERTY_SELECTOR : ".hideFormObjectProperty",
+        DISABLE_FIELD_PROPERTY_SELECTOR : ".disableFormObjectProperty",
+        SIGNER_VALIDATION_MESSAGE : "Signers details are incomplete."
+    };
+
+}(window.guidelib.touchlib.editLayer, this));

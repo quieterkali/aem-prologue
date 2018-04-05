@@ -1,0 +1,14 @@
+#base=../javascript
+FileAttachmentListing.js
+GuideAddRemove.js
+TableLayoutPlugin.js
+WizardNavigator.js
+GlobalMobileNavigator.js
+GuideDynamicContent.js
+ProgressiveNavigator.js
+ChartUtils.js
+WsdlUtils.js
+GuideDirtyMarkerAndVisitor.js
+afDocReady.js
+GuideDateCombWidget.js
+

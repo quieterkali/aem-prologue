@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="nt:unstructured">
+    <gadgets jcr:primaryType="nt:unstructured">
+        <translationsummary
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="translationsummary">
+            <jcr:content
+                jcr:description="Shows translation project summary"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Translation Summary"
+                sling:resourceType="cq/gui/components/projects/admin/pod/translationprojectsummarypod"
+                cardWeight="90"
+                gadgetSortOrder="{Long}10">
+                <image/>
+            </jcr:content>
+        </translationsummary>
+        <translationjob
+            jcr:primaryType="nt:unstructured"
+            type="translationjob">
+            <jcr:content
+                jcr:description="Translation Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Translation Job"
+                sling:resourceType="cq/gui/components/projects/admin/pod/translationjobpod"
+                cardWeight="90"
+                gadgetSortOrder="{Long}1">
+                <image/>
+            </jcr:content>
+        </translationjob>
+        <asset
+            jcr:primaryType="nt:unstructured"
+            type="asset">
+            <jcr:content
+                jcr:description="Assets Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Assets"
+                sling:resourceType="cq/gui/components/projects/admin/pod/assetpod"
+                cardWeight="90">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </asset>
+        <assetcollection
+            jcr:primaryType="nt:unstructured"
+            type="assetcollection">
+            <jcr:content
+                jcr:description="Asset Collection Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Asset Collection"
+                sling:resourceType="cq/gui/components/projects/admin/pod/collectionspod"
+                cardWeight="90">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </assetcollection>
+        <experiences
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="experience">
+            <site
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Site"
+                icon="globe"
+                type="site"/>
+            <publication
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Publication"
+                icon="book"
+                type="publication">
+                <granite:rendercondition
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/renderconditions/feature"
+                    feature="com.adobe.cq.media.publications.feature.flag"/>
+            </publication>
+            <mobile
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mobile Application"
+                icon="phoneGap"
+                type="mobileapp"/>
+            <jcr:content
+                jcr:description="Experiences Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Experiences"
+                sling:resourceType="cq/gui/components/projects/admin/pod/channelpod"
+                cardWeight="90">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </experiences>
+        <externallinks
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="externallinks">
+            <jcr:content
+                jcr:description="Links Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Links"
+                sling:resourceType="cq/gui/components/projects/admin/pod/externallinkspod"
+                cardWeight="90">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </externallinks>
+        <team
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="team">
+            <jcr:content
+                jcr:description="Team Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Team"
+                sling:resourceType="cq/gui/components/projects/admin/pod/teampod"
+                cardWeight="60">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </team>
+        <projectinfo
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="projectinfo">
+            <jcr:content
+                jcr:description="Project Info Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Project Info"
+                sling:resourceType="cq/gui/components/projects/admin/pod/projectinfopod"
+                cardWeight="100">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </projectinfo>
+        <work
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="work">
+            <jcr:content
+                jcr:description="Workflow Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Workflows"
+                sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                cardWeight="80">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </work>
+        <launch
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="launch">
+            <jcr:content
+                jcr:description="Launches Work Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Launches"
+                sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                cardWeight="80"
+                tags="[projects.wcm.launch]">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </launch>
+        <email
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="email">
+            <jcr:content
+                jcr:description="Email Campaign Work Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Emails"
+                sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                cardWeight="80"
+                tags="[projects.wcm.email]">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </email>
+        <landing
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="landing">
+            <jcr:content
+                jcr:description="Landing Page Work Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Landing Pages"
+                sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                cardWeight="80"
+                tags="[projects.wcm.landingpage]">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </landing>
+        <tasks
+            jcr:primaryType="nt:unstructured"
+            allow="1"
+            type="tasks">
+            <jcr:content
+                jcr:description="Tasks Status Tile"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tasks"
+                sling:resourceType="cq/gui/components/projects/admin/pod/taskpod"
+                cardWeight="70">
+                <image jcr:primaryType="nt:unstructured">
+                    <file/>
+                </image>
+            </jcr:content>
+        </tasks>
+    </gadgets>
+    <rep:policy/>
+</jcr:root>

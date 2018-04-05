@@ -1,0 +1,18 @@
+/*!************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2011 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+(function(a){a.pkg("s7sdk.rgn");a.Util.require("s7sdk.common.Geometry");a.Util.require("s7sdk.event.Event");if(!a.rgn.Resolution){a.rgn.Resolution=function(g,d,f,e,c,b){this.view=b;this.level=g;this.w=d;this.h=f;this.regions=new Array();this.url=e+(e.indexOf("?")>=0?"&":"?")+"scl="+Math.pow(2,g);this.fmt=c;this.transparent=((this.fmt.indexOf("png")!=-1||this.fmt.indexOf("gif")!=-1)&&(this.fmt.indexOf("-alpha")>0))?true:false;this.currentRgn=null;this.resToRgn=null};a.rgn.Resolution.prototype.getRegionImage=function(){if(this.currentRgn){return this.currentRgn.image}return null};a.rgn.Resolution.prototype.getResToRgn=function(){return this.resToRgn};a.rgn.Resolution.prototype.intersect=function(g){var i=new a.Rectangle(0,0,this.w,this.h);i=i.intersection(g);this.currentRgn=null;var b;for(var h=0;h<this.regions.length;h++){b=this.regions[h];if(b.rect.containsRect(i)){this.currentRgn=b;break}}if(this.currentRgn==null){var e=Math.floor(i.x/256)*256;var f=Math.floor(i.y/256)*256;var c=f;while(c<i.y+i.height&&c<this.h){c+=Math.min(this.h-c,256)}var d=e;while(d<i.x+i.width&&d<this.w){d+=Math.min(this.w-d,256)}var j=new a.Rectangle(e,f,d-e,c-f);this.currentRgn=new a.Region(this,this.level,j,this.url,this.fmt);this.regions.push(this.currentRgn)}this.resToRgn=new a.Matrix2D(1,0,0,1,-1*this.currentRgn.rect.x,-1*this.currentRgn.rect.y)};a.rgn.Resolution.prototype.release=function(){};a.rgn.Resolution.prototype.invalidate=function(){this.view.invalidated=true};a.rgn.Resolution.prototype.loaded=function(){if(this.currentRgn==null){return false}return this.currentRgn.loaded}}if(!a.Region){a.Region=function(d,f,e,c,b){this.res=d;this.fmt=a.Util.checkDefault(b,"jpg");this.transparent=((this.fmt.indexOf("png")!=-1||this.fmt.indexOf("gif")!=-1)&&(this.fmt.indexOf("-alpha")>0))?true:false;this.url=c;this.level=f;this.rect=e;this.loaded=false;this.image=new Image();this.load()};a.Region.prototype.load=function(){var c=Math.pow(2,this.level);var b=this.url+(this.url.indexOf("?")<0?"?":"&");b+="req=tile&rect="+this.rect.x+","+this.rect.y+",";b+=this.rect.width+","+this.rect.height;b+="&fmt="+this.fmt;this.image.onload=this.onLoadImage;this.image.onerror=this.onErrorImage;this.image.onabort=this.onAbortImage;this.image.imageRegion=this;this.image.src=b;a.Logger.log(a.Logger.FINER,"Region.load %0",b)};a.Region.prototype.onLoadImage=function(b){this.startWidth=this.width;this.startHeight=this.height;this.imageRegion.loaded=true;this.imageRegion.res.invalidate()};a.Region.prototype.onErrorImage=function(b){a.Logger.log(a.Logger.WARNING,"Region image failed to load")};a.Region.prototype.onAbortImage=function(b){a.Logger.log(a.Logger.WARNING,"Region image failed to load")}}})(s7getCurrentNameSpace());

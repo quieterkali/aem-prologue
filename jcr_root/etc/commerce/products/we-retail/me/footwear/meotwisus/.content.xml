@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:apparel/footwear,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
+    jcr:description="footwear"
+    jcr:lastModified="{Date}2016-01-11T16:16:07.917-08:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Sussex Rain Boots"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&lt;li>&#x9;Mid-height natural rubber uppers form a tough waterproof barrier to keep slush and puddles at bay&#xd;&#xa;&lt;/li>&lt;li>&#x9;Shaft circumference is 15 in. and based on size 7; measurement is for the outside of the boot shaft and, in general, the internal measurement is roughly 1 in. shorter&#xd;&#xa;&lt;/li>&lt;li>&#x9;Polyester microfleece linings are soft to the touch, wick moisture to regulate foot temperature and add insulation in cold weather&#xd;&#xa;&lt;/li>&lt;/ul>"
+    identifier="meotwisus"
+    inventory="43"
+    margin="0.59"
+    price="{Decimal}65"
+    rating="4"
+    reviews="This item is not yet reviewed.  Be the first to write a review."
+    summary="Classic in style, the Sussex Rain Boots provide excellent waterproof protection and great traction."
+    textIsRich="[true,true]">
+    <size-7
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.273-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="7"/>
+    <size-8
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.273-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="8"/>
+    <size-9
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.274-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="9"/>
+    <size-10
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.274-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="10"/>
+    <size-11
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.274-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="11"/>
+    <size-12
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.274-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="12"/>
+    <image
+        jcr:lastModified="{Date}2016-01-11T16:16:07.888-08:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Sussex.jpg"
+        height="300"
+        jpegQuality="85"
+        unsharpMaskAmount="0"
+        unsharpMaskRadius="0"
+        unsharpMaskThreshold="0"
+        width="300"/>
+</jcr:root>

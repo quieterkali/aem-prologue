@@ -1,0 +1,346 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+/* Tree view */
+.tree{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
+    line-height: 1.5rem;
+}
+.firstlevel-list,
+.firstlevel-element {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.firstlevel-element {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.tree li.parent.firstlevel-element > .tree-item {
+    padding-left: 25px;
+    width: calc(100% - 32px);
+}
+
+.firstlevel-element > .tree-item .type {
+    display: none;
+}
+
+.tree li.parent.firstlevel-element > .tree-item:after {
+    width: calc(100% + 50px);
+    margin-left: -45px;
+}
+
+.tree li.firstlevel-element > ul {
+    background-color: #F2F2F2;
+    margin-left: -16px;
+    padding-left: 32px;
+}
+
+.tree li ul {
+    padding-left: 16px;
+    min-width: 14rem;
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+    position:relative;
+    display: block;
+    min-width: 210px;
+}
+
+.tree li button {
+    min-width: 1.5rem;
+    padding: 0 0 6px 0;
+    height: 1.5rem;
+}
+
+.tree li .tree-item {
+    display: inline-block;
+    padding: 0 5px 0 20px;
+    vertical-align: middle;
+    width: calc(100% - 25px);
+    line-height: 2.5rem;
+}
+/** Highlight tree item on hover **/
+.tree-item:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.tree li .tree-item:after {
+    content: '';
+    display: block;
+    width: calc(100% + 24px);
+    height: 1px;
+    background-color: rgba(0,0,0,0.05);
+    margin-left: -19px;
+}
+
+.tree li label,
+.tree-search-panel label{
+    vertical-align: middle;
+    font-size: 0.8125rem;
+    color: black;
+    font-weight: normal;
+    padding-right: 6px;
+}
+
+.tree li label.name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8rem;
+    display: inline-block;
+    margin-top: -0.25rem;
+}
+
+.tree li label.type,
+.tree-search-panel label.type{
+     color: #969696;
+     font-size: 0.625rem;
+    margin-bottom: 1px;
+    float: right;
+    font-weight: bold;
+}
+
+.tree li .coral-Icon--circle {
+    font-size: 0.3rem;
+    display: none;
+    color: #969696;
+}
+
+.tree coral-cyclebutton coral-icon {
+    font-size: 0.6rem;
+    color: #4B4B4B;
+}
+
+.tree coral-cyclebutton coral-icon.coral-Icon--chevronRight {
+    color: #969696;
+}
+
+.tree-searchfield .coral-DecoratedTextfield-icon {
+    left: 1rem;
+    top: 2px;
+}
+
+.tree-searchfield .coral-Icon--close {
+    font-size: 12px;
+}
+
+.tree-searchfield .coral-DecoratedTextfield {
+     width: 100%;
+}
+
+.tree-searchfield button {
+    padding: 0 0.1875rem;
+    height: 2.75rem;
+    display: none;
+}
+
+.tree-searchfield input {
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-left: 2.25rem !important;
+    border-color: rgba(0,0,0,0.05);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 2.75rem;
+}
+
+#exp-main-container input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+#exp-main-container input::-moz-placeholder {
+    font-style: italic;
+}
+
+#exp-main-container input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.tree-search-panel .drag-element {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 5px 15px;
+    vertical-align: middle;
+    margin: 15px 0 0;
+}
+
+.tree .drag-element {
+    display: inline-block;
+    width: calc(100% - 1.5rem);
+}
+
+.drag-element * {
+    cursor: pointer;
+}
+
+.tree li .tree-item.is-focused {
+    background-color: rgba(50,110,200,0.08);
+}
+
+.tree li .tree-item.is-focusedSearch {
+    background-color: rgba(250,210,105,0.5) !important;
+}
+
+.tree li .tree-item.is-searchResult {
+    background-color: rgba(250,210,105,0.2);
+}
+
+.tree li .tree-item.is-focused:after {
+    margin-left: 0;
+    width: 100%;
+}
+
+.tree .is-focused .drag-element > *,
+.tree li .tree-item.tree-draggable.is-focusedSearch .drag-element > * {
+    color: #326EC8;
+}
+
+.tree .is-focused .type {
+    opacity: 0.75;
+}
+
+.tree li.parent > .tree-item {
+    padding-left: 10px;
+    width: calc(100% - 42px);
+}
+
+.tree li.parent > .tree-item:after {
+    margin-left: -28px;
+    width: calc(100% + 35px);
+}
+
+.click-disabled > .tree-item label.name {
+    color: #969696;
+}
+
+.click-disabled > .tree-item,
+.click-disabled > .tree-item label {
+    cursor: not-allowed;
+}
+
+/*** Indicates whether form object has valid/invalid rules***/
+.tree-item-status {
+    float: right;
+    height: 7px;
+    width: 7px;
+    border-radius: 0.5rem;
+    margin-right: 5px;
+    margin-top: 1rem;
+}
+
+/** For Valid rules **/
+.tree-item-status.valid {
+    background-color: #8cc35f;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/** For invalid rules **/
+.tree-item-status.invalid {
+    background-color: #f5c346;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.tree li label.tree-expand-collapse-all {
+    color: #707070;
+    font-size: 0.725rem;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.tree-searchfield .search-cancel {
+    position: absolute;
+    right: 0;
+}
+
+.tree-searchfield .search-next {
+    position: absolute;
+    right: 2.5rem;
+}
+
+.tree-searchfield .search-previous {
+    position: absolute;
+    right: 5rem;
+}
+
+.tree-item-icon {
+    margin-right: 1rem;
+    float: left;
+    color: #969696;
+    font-size: 1rem;
+}
+
+.tree-item .drag-icon {
+    display: none;
+    height: 2.4rem;
+    vertical-align: middle;
+}
+
+/**** Visual/Code Editor tree focused node****/
+.tree li .tree-item.tree-draggable.is-focused {
+    background-color: #fafafa;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+    border-radius: 4px;
+}
+
+.tree-item.tree-draggable.is-focused .drag-element > * {
+    color: #4B4B4B;
+}
+
+/***** Visual/Code editor tree on node hover *****/
+
+.tree-item.tree-draggable:hover {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    width: calc(100% - 27px);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+}
+.tree-item.tree-draggable.is-focused .drag-icon,
+.tree-item.tree-draggable:hover .drag-icon {
+    display: inline-block;
+}
+
+.tree-item.is-disabled {
+    background-color: #f0f0f0 !important;
+    border-color: #e6e6e6 !important;
+}
+
+/** Disable tree node while dragging**/
+.tree-item.is-disabled coral-icon {
+    color: #eaeaea;
+}
+
+.tree-item.is-disabled label {
+    color: #bebebe;
+}
+.tree .tree-expand-icon {
+    position: relative;
+    top:5px;
+    padding: 2px;
+    width: 10px;
+}

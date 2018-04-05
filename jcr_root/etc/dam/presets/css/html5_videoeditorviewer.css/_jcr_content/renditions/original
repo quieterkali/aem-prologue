@@ -1,0 +1,247 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+.s7videoeditorviewer {
+	width:100%;
+	height:100%;
+}
+.s7videoeditorviewer .s7videoplayer {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+}
+
+/*************************************************************************/
+/* VideoControlBar - common styles */
+.s7videoeditorviewer .s7controlbar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 36px;
+	background-image:url(../../viewers/s7viewers/html5/images/v2/Dot0x000000opacity75.png);
+	background-color: transparent;
+}
+
+/* VideoControlBar - desktop size and art */
+.s7videoeditorviewer.s7mouseinput .s7controlbar {
+	height: 36px;
+}
+
+/* VideoControlBar - touch device size and art */
+.s7videoeditorviewer.s7touchinput .s7controlbar {
+	height: 72px;
+}
+
+
+/*************************************************************************/
+/* VideoScrubber - common styles */
+.s7videoeditorviewer .s7videoscrubber  {
+	position:absolute;
+	left:0px;
+	right: 0px;
+}
+.s7videoeditorviewer .s7videoscrubber .s7videotime, .s7videoeditorviewer .s7videoscrubber .s7navigation[state], .s7videoeditorviewer .s7videoscrubber .s7knob {
+    background-image: url(../../viewers/s7viewers/html5/images/v2/VideoScrubber_sprite.png);
+    background-size: 60px;
+}
+.s7videoeditorviewer .s7videoscrubber .s7videotime {
+	position:absolute;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	width:58px;
+	padding:0px;
+	background-position: -0px -288px;
+	align:center;
+	text-align:center;
+	vertical-align:middle;
+	line-height:24px;		/* centers the text vertically in the bubble */
+	color:#ffffff;
+}
+.s7videoeditorviewer .s7videoscrubber .s7track {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	height:8px;
+	background-color:#555555;
+}
+.s7videoeditorviewer .s7videoscrubber .s7trackloaded {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	height:8px;
+	background-color:#666666;
+}
+.s7videoeditorviewer .s7videoscrubber .s7trackplayed {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	height:8px;
+	background-color:#999999;
+}
+.s7videoeditorviewer .s7videoscrubber .s7navigation {
+	position:absolute;
+	top:0px;
+	height:8px;
+}
+
+.s7videoeditorviewer .s7videoscrubber .s7chapter {
+	max-width:235px;
+	bottom:8px;
+}
+.s7videoeditorviewer .s7videoscrubber .s7chapter .s7header {
+	height:22px;
+	background-color:rgb(51,51,51,0.8);
+}
+.s7videoeditorviewer .s7videoscrubber .s7chapter .s7header .s7starttime {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	color:#dddddd;
+	padding-right: 10px;
+}
+.s7videoeditorviewer .s7videoscrubber .s7chapter .s7header .s7title {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#ffffff;
+}
+.s7videoeditorviewer .s7videoscrubber .s7chapter .s7description {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	background-color:rgba(221,221,221,0.9);
+	padding:12px 12px 9px 12px;
+	line-height:15px;
+}
+.s7videoeditorviewer .s7videoscrubber .s7knob {
+	position:absolute;
+	width:14px;
+	height:24px;
+	top:-8px;
+}
+
+/* VideoScrubber - desktop size and art */
+.s7videoeditorviewer.s7mouseinput .s7videoscrubber  {
+	top:14px;
+	height:8px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7videotime {
+	height:35px;
+}
+.s7videoeditorviewer.s7mouseinput .s7videoscrubber .s7knob {
+	left:-3px;
+	background-position: -0px -389px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7navigation {
+	width:5px;
+}
+.s7videoeditorviewer.s7mouseinput .s7videoscrubber .s7navigation[state='default'] { background-position: -28px -389px; }
+.s7videoeditorviewer.s7mouseinput .s7videoscrubber .s7navigation[state='over'] { background-position: -33px -389px; }
+
+/* VideoScrubber - touch device size and art */
+.s7videoeditorviewer.s7touchinput .s7videoscrubber {
+	top:32px;
+	height:8px;
+}
+.s7videoeditorviewer.s7touchinput .s7videoscrubber .s7videotime {
+	/*height:29px; Make the height taller than the image so it floats above the scrubber knob by a few px*/
+	height:40px;
+}
+
+.s7videoeditorviewer.s7touchinput .s7videoscrubber .s7knob {
+	left:0px;
+	background-position: -14px -389px;
+}
+
+.s7videoeditorviewer.s7touchinput .s7videoscrubber .s7navigation {
+	width:30px;
+	height:72px;
+	margin:-32px 0px 0px 0px;
+}
+.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='default'] {	background-position: -30px -317px;}
+.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='over'] { background-position: -0px -317px;}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation {
+		background-size:30px;
+	}
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='default'] { background-position: -0px -72px; }
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='over'] { background-position: -0px -0px; }
+}
+
+/*************************************************************************/
+/* VideoTime - common styles */
+.s7videoeditorviewer .s7videotime {
+	position:absolute;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999999;
+	line-height: normal;		
+	/* Need to add an explicit width to enable scrubber resizing due to getComputedStyle not working in IE8 (IE uses currentStyle, which returns "auto" and breaks our layout math) */
+	/* Info on this hack here: http://webdesignerwall.com/tutorials/css-specific-for-internet-explorer */
+	width:60px\9;
+	left:50%;
+	margin-left:-30px;
+	background-color:rgba(0,0,0,0.75);
+}
+
+/* VideoTime - desktop size and art */
+.s7videoeditorviewer.s7mouseinput .s7videotime {
+	top:-20px;
+	font-size:10px;
+}
+
+/* VideoTime - touch device size and art */
+.s7videoeditorviewer.s7touchinput .s7videotime {
+	top:-50px;
+	font-size:18px;
+}
+
+/*************************************************************************/
+/* Caption - common styles */
+.s7videoeditorviewer .s7videoplayer .s7caption {
+	background-color: rgba(0,0,0,0.75);
+	color: #e6e6e6;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+/*************************************************************************/
+/* IconEffect - common styles */
+.s7videoeditorviewer .s7videoplayer .s7iconeffect {
+	width:80px;
+	height:80px;
+	background-size: 160px;
+}
+.s7videoeditorviewer .s7videoplayer .s7iconeffect[state] {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/IconEffect_video_sprite.png);
+}
+
+/* IconEffect - desktop size and art */
+.s7videoeditorviewer.s7mouseinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -320px; }
+.s7videoeditorviewer.s7mouseinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -80px -320px; }
+
+/* IconEffect - touch device size and art */
+.s7videoeditorviewer.s7touchinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -320px; }
+.s7videoeditorviewer.s7touchinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -80px -320px; }	
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoeditorviewer.s7touchinput .s7videoplayer .s7iconeffect{
+		background-size:80px;	
+	}
+	.s7videoeditorviewer.s7touchinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -0px; }
+	.s7videoeditorviewer.s7touchinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -0px -80px; }		
+}
+

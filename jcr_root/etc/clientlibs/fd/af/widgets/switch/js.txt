@@ -1,0 +1,7 @@
+#base=third-party/javascript
+
+jquery.tmpl.min.js
+jquery.switchbutton.js
+
+#base=js
+guideSwitchWidget.js

@@ -1,0 +1,3 @@
+#base=js
+FormAssetFinder.js
+FormAssetFinderDnd.js

@@ -1,0 +1,18 @@
+subject=Update Email Request
+message=<!doctype html>\n \
+<html>\n \
+<head>\n \
+<meta name="viewport" content="width=device-width">\n \
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n \
+<title>Update Email Request</title>\n \
+</head>\n \
+<body>\n \
+<div>\n \
+<p>Hello {{{givenName}}}</p>\n \
+<p>A request has been made to change the email address associated with your account.</p>\n \
+<p>An email should be waiting for you at the address {{{newEmail}}}. Once the address has been verified (by clicking the link in the email), it will become the new email associated with your account.</p>\n \
+<p>If the link is not pressed by {{dateUtil emailVericationTTL format="EEE, d MMM yyyy HH:mm:ss z"}}, the link will expire and your current email address will continue to receive all correspondence.</p>\n \
+<p>If you did not make this request, it means that someone else has taken control of your account.</p>\n \
+</div>\n \
+</body>\n \
+</html>\n \

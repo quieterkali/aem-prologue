@@ -1,0 +1,4 @@
+#base=jqueryplugin/javascript
+jquery-ui.js
+#base=javascript
+GuideNumericStepperWidget.js

@@ -1,0 +1,135 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ *
+ *************************************************************************/
+
+.input-label {
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.vertical-top,
+td.vertical-top td {
+    vertical-align: top;
+}
+
+.vertical-top-margin-less {
+    vertical-align: top;
+    padding-top: 3px;
+}
+
+.vertical-top-margin {
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.center-div {
+    margin: auto;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.noshow {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.page-content-wrapper {
+    padding: 3.57142857rem 0 0 0.9375rem;
+}
+
+.top-margin {
+    margin-top: 0.75rem;
+}
+
+.floatleft {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.zero-padding {
+    padding: 0;
+}
+
+.mode-change-show {
+    display: none;
+}
+
+.hidden,
+.ec-card img.hidden {
+    display: none;
+}
+
+.coral-DatePicker .coral-InputGroup-button {
+    float: left;
+}
+
+.endor-Panel-content--actionBarHeight {
+    top: 3.25rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.endor-BlackBar {
+    text-shadow: 0 .0625rem 0 #000000;
+}
+
+.no-underline,
+.no-underline:hover {
+    text-decoration: none;
+}
+
+.coral-ColumnView-item--title {
+    line-height: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-after:after {
+    content: "";
+}
+
+.endor-Account-name {
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.u-line {
+    border-bottom: 0.0625rem solid #e4e4e4;
+    margin-bottom: 10px;
+}

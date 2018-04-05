@@ -1,0 +1,13 @@
+subject: Transient Workflow Completed Notification
+
+<div style="font-family:Calibri;font-size:11.0pt">
+    -------------------------------------------------------------------------------------
+    Time: ${Time}
+    Step: ${Step}
+    User: ${User}
+    Workflow: ${Workflow}
+    -------------------------------------------------------------------------------------
+    Content: ${host.prefix}${Content}
+    -------------------------------------------------------------------------------------<br/>
+    This is an automatically generated message. Please do not reply.
+</div>

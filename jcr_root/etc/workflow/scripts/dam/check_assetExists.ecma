@@ -1,0 +1,10 @@
+function check() {
+    if (workflowData.getPayloadType() == "JCR_PATH") {
+        var path = workflowData.getPayload().toString();
+        var assetPath = Packages.com.day.cq.dam.commons.util.DamUtil.binaryToAssetPath(path);
+        return (null != assetPath) ? workflowSession.getSession().itemExists(assetPath) : false;
+    } else {
+        // should not happen
+        return false;
+    }
+}

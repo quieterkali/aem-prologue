@@ -1,0 +1,110 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.guide-header-bar {
+  background-color: @headerbar-background-color;
+  color: @headerbar-font-color;
+  padding: @headerbar-padding;
+  .clearfix();
+}
+
+.guide-header-bar {
+  .guide-breadcrumb {
+    float: left;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    .clearfix();
+  }
+  .guide-nav-toolbar {
+    float: right;
+    .clearfix();
+    .guide-nav-toolbar-button {
+      float: left;
+    }
+  }
+}
+.navigator-toggle {
+  margin-bottom: 13px;
+}
+
+.guide-nav-toolbar-button {
+  margin-right: 0px;
+  margin-left: 0px;
+  overflow: hidden;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  color: @gray-light;
+  &:hover {
+    color: @gray-dark;
+  }
+  .glyphicon();
+}
+
+.guide-nav-prev {
+  .glyphicon-chevron-left-sign();
+}
+.guide-nav-next {
+  .glyphicon-chevron-right-sign();
+}
+
+.guide-tab-scroller {
+  background-repeat: no-repeat;
+  height: 44px;
+  cursor: pointer;
+}
+
+.guide-tab-scroller-previous {
+  background-image: url('../../../images/previous.png');
+  background-position: left bottom;
+}
+
+.guide-tab-scroller-next {
+  background-image: url('../../../images/next.png');
+  background-position: right bottom;
+}
+
+.hide-tab-scroll {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .tab-navigators-stamped {
+    .guide-tab-stamp-list {
+      width: 30px;
+      .transition(width 1s);
+      &:hover {
+        width: 16.66666667%;
+      }
+    }
+
+    .tab-navigators > li {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  [id$="_guide-item-container"] {
+    overflow-x: auto;
+  }
+}

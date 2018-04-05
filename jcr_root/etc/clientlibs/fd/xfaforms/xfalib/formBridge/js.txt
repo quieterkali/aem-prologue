@@ -1,0 +1,3 @@
+#base=../javascript
+FormBridge.js
+FormBridgeInternal.js

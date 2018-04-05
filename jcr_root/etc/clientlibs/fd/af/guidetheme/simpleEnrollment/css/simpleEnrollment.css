@@ -1,0 +1,225 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/***** For Grid *****/
+
+a, a:link {
+    outline: none;
+    text-decoration: none;
+}
+
+.bg-link-blue {
+	background-color: rgb(0, 127, 162);
+}
+.bg-link-blue:hover {
+ 	background-color: rgb(1, 110, 143);
+}
+.bg-link-maroon {
+    background-color: rgb(213, 48, 88);
+}
+.bg-link-maroon:hover {
+   	background-color: rgb(198, 38, 76);
+}
+.bg-link-green {
+	background-color: rgb(2, 135, 78);
+}
+.bg-link-green:hover {
+    background-color: rgb(20, 112, 91);
+}
+
+/* navbar-header bg color */
+.bg-blue {
+    background-color: rgb(0, 121, 193);
+    color: rgb(255, 255, 255);
+    height: 75px;
+}
+
+.bg-dk-grey {
+    background: rgb(72, 72, 72);
+    color: rgb(255, 255, 255);
+}
+
+.bg-dk-grey:hover {
+    background: rgb(106, 106, 106);
+}
+
+.navbar-default .navbar-toggle {
+    margin-top: 20px;
+    margin-right: 5px;
+    background-color: rgb(5, 89, 132);
+    border: none;
+    padding: 8px;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background: rgb(1, 56, 83);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgb(163, 194, 210);
+    height: 3px;
+}
+
+.navbar-default .col-xs-2 {
+    float: right;
+    background: none;
+    padding: 0;
+    border: none;
+    margin-left: 5px;
+}
+
+.navbar-default .form-control {
+    float: right;
+    margin-top: 21px;
+    margin-right: 5px;
+    height: 32px;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.navbar-default .search-toggle {
+    background: rgb(5, 89, 132) url('../images/s-icon.png') no-repeat 50%;
+    border-radius: 4px;
+    float: right;
+    margin: 20px 5px 0 0;
+    padding: 17px 20px;
+    position: relative;
+    margin-top: 20px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.right-images div.bordered {
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.right-images a {
+    color: rgb(255, 255, 255);
+}
+
+.right-images a div.small {
+    padding: 5px 0;
+}
+
+/* navbar-brand text color */
+.navbar-default .navbar-brand {
+    color: rgb(255, 255, 255);
+    padding: 25px 15px;
+    font-size: 28px;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+/** search on full width **/
+.navbar-default .hidden-sm.hidden-xs .search-toggle {
+    margin-top: 5px;
+}
+
+.navbar-default .hidden-sm.hidden-xs .form-control {
+    margin-top: 6px;
+}
+
+/** search on full width **/
+
+/** Padding styles **/
+.nopad {
+    padding: 0;
+}
+
+.nopad-right {
+    padding-right: 0;
+}
+
+.nopad-left {
+    padding-left: 0;
+}
+
+.nobrdbg {
+    background: none;
+    border: none;
+}
+
+/** Padding styles **/
+
+.col-xs-1.reduce {
+    width: 6.99%;
+}
+
+.text-white {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav > li:last-child {
+    margin-left: 35px;
+}
+
+html,
+body {
+/*    height: 100%; */
+    color: rgb(90, 90, 90);
+    font-size: 16px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.terms {
+    background: url('../images/terms.png') no-repeat 50%;
+}
+
+.demo {
+    background: url('../images/demo.png') no-repeat 50%;
+}
+
+.help {
+    background: url('../images/help.png') no-repeat 50%;
+}
+
+.icon {
+    vertical-align: middle;
+    border: 0;
+}
+
+.right-images .icon {
+    padding: 34px 0px 0px 0px;
+}

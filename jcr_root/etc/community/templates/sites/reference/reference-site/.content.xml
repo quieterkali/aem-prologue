@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="“Uber” site template that contains one instance of each of the community functions"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Reference Site"
+    sling:resourceType="social/console/components/hbs/sitetemplates/sitetemplate"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="5b025a83-7512-33f7-8331-54ab1b97a501"
+    rep:authorizableId="community-community-vdfvb-surfing-kqrxs-members"
+    rep:members="{WeakReference}[69bb6b5d-7e97-3387-a70a-b3829f80778e,be246051-828f-3467-aa61-3dc3672a7005]"
+    rep:principalName="community-community-vdfvb-surfing-kqrxs-members"
+    liveCopyPath="/content/we-retail/us/en/community/groups/surfing">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        givenName="Community Community Surfing Kqrxs Members"/>
+</jcr:root>

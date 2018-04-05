@@ -1,0 +1,22 @@
+subject=[CQ Forum] ${topic.subject}
+
+header=<html>\n \
+<head>\n \
+<title>CQ Forum Update</title> \n \
+</head>\n \
+
+message=<body>\n \
+<P> \n \
+Time: ${time}<br>\n \
+Forum URL: ${host.prefix}${forum.url}\n \
+</P>\n \
+A new reply was posted by ${modifiedBy.fullname} for CQ Forum topic "${topic.subject}".<br><br>\n \
+-------------------------------------------------------------------------------------<br>\n \
+${post.message} <br>\n \
+-------------------------------------------------------------------------------------<br><br>\n \
+This is an automatically generated message. Please do not reply.<br> \
+Please follow this link to view all replies to this topic.<br>\n \
+${host.prefix}${topic.url}<br><br>\n \
+</body>
+
+footer=</html>

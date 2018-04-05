@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2011 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
+		<meta name="viewport" content="user-scalable=no, height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<!-- Hiding the Safari on iPhone OS UI components -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+		<meta name="apple-touch-fullscreen" content="YES" />
+		<!-- Specifying a per-page Home screen icon -->
+		<link rel="apple-touch-icon" href=""/>
+	    <link rel="apple-touch-startup-image" href="" />
+        
+		<title></title>
+		<!-- check with Vadym about where this should go -->
+		<script language="javascript" type="text/javascript" src="/s7sdk/2.4/js/s7sdk/utils/Utils.js"></script>
+		<script language="javascript" type="text/javascript">
+			s7sdk.Util.lib.include('s7sdk.set.SpinView');
+			s7sdk.Util.lib.include('s7sdk.common.Button');
+			s7sdk.Util.lib.include('s7sdk.common.Container');
+			s7sdk.Util.lib.include('s7sdk.set.MediaSet');	
+			s7sdk.Util.css.defaultCSS = "genericSpinMobile.css";
+		</script>
+
+	</head>
+	<body>	
+		<!--div id="s7container" style="position:relative;"></div-->		
+		<script language="JavaScript" type="text/javascript">
+								   	
+			s7sdk.Util.init();
+			var s7params = new s7sdk.ParameterManager();	//Parameter Manager	
+			s7params.setViewer("503,5.7.1");					
+			var s7viewer, s7closeButton, s7container, s7visibility, s7mediaset, mediaSet;
+									
+			var trackingManager = new s7sdk.TrackingManager();
+
+		    function initViewer(){	
+				s7params.push("title", "Adobe Scene7 Spin");	
+				s7container = new s7sdk.Container(null,s7params,"container");
+				s7container.addEventListener(s7sdk.ResizeEvent.COMPONENT_RESIZE,resizeViewer,false);
+				
+            	s7mediaset = new s7sdk.MediaSet(null, s7params, null);
+	            s7mediaset.addEventListener(s7sdk.AssetEvent.NOTF_SET_PARSED,onSetParsed, false);				
+								
+				s7viewer = new s7sdk.SpinView("container",s7params,"spinView");
+				trackingManager.attach(s7viewer);
+				s7viewer.setDragToSpin(true);
+				
+				s7closeButton = new s7sdk.CloseButton("container", s7params, "closeButton");
+				s7closeButton.addEventListener("click", closeWindow);
+				
+				s7visibility = new s7sdk.VisibilityManager();//initialize visibility manager
+				s7visibility.reference(s7viewer); //reference it to the viewer click
+				s7visibility.attach(s7closeButton);//attach the close button component with visibility manager
+				s7visibility.attach(s7viewer.iconEffectVisibility);//attach icon effect						
+			}		
+            function onSetParsed(event) {
+	            	// Save reference to parsed media-set
+	            	mediaSet = event.s7event.asset;	            	
+	            	// set media-set on components
+					s7viewer.setMediaSet(mediaSet);
+	            }			
+			function resizeViewer(e){
+				s7viewer.resize(e.s7event.w, e.s7event.h);
+			}
+			
+			function closeWindow() {
+				try{
+					if(s7sdk.browser.name != "firefox") {
+						window.open("s7sdkclose.html","_self"); //workaround for close self window with JS
+					} else {
+						window.close(); // Firefox does not allow workaround so we fall back to window.close to cover pop-up case
+					} 
+				}
+				catch(e){
+					s7sdk.Logger.log(s7sdk.Logger.WARN,"Cannot close the window");
+				}
+			}
+			
+			s7params.addEventListener(s7sdk.Event.SDK_READY,initViewer,false);
+			s7params.init();	
+
+			//integrate SiteCatalyst logging
+			//strip modifier from asset and take the very first entry from the image list, and the first element in combination from that entry
+			var siteCatalystAsset = s7params.get("asset").split(',')[0].split(':')[0];
+			var isConfig2Exist = false;
+			if (siteCatalystAsset.indexOf('/') != -1) {
+				var company = siteCatalystAsset.split('/')[0];
+				var config2 = s7params.get("config2");
+				isConfig2Exist = (config2 != '' && typeof config2 != "undefined");
+				if (isConfig2Exist){
+					document.write('<script type="text/javascript" src="../s_code.jsp?company=' + company + (config2 == '' ? '' : '&preset=' + config2) +  '"><\/script>');
+				}	
+			}
+
+			// s7ComponentEvent function handles all the output from the SDK viewers.  The user can directly access
+			// the tracking events if lower level control is desired - see UserEvent documentation.  
+			//
+			function s7ComponentEvent(objID, compClass, instName, timeStamp, eventData) {
+				//console.log("s7ComponentEvent(" + objID + ", " + compClass + ", " + instName + ", " + timeStamp + ", " + eventData + ")");
+				// s7track() passes the eventData param to SiteCatalyst tracking through s_code.jsp
+				if (typeof s7track == "function"){
+					s7track(eventData);
+				}
+			}
+			
+		</script>		
+	</body>
+</html>

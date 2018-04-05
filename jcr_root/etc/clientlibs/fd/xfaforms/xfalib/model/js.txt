@@ -1,0 +1,9 @@
+#if you are adding any file here please add the entry in xfalib/js.txt as well
+#and also in the relevant clientlib formBridge, formcalc, coremodel or dommodel
+#base=../javascript
+FormBridge.js
+FormBridgeInternal.js
+FormCalc.js
+#base=javascript
+xfalibCoreModel.js
+xfalibDomModel.js

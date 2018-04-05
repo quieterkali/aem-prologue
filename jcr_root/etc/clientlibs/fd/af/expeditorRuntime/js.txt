@@ -1,0 +1,9 @@
+#base=js
+AFRootModel.js
+ExpressionGrammar.js
+TypesConfig.js
+FunctionsConfig.js
+RuntimeUtil.js
+AFScriptMerger.js
+AFTransformer.js
+SuffixTrieStorage.js

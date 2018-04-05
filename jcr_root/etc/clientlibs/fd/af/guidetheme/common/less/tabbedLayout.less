@@ -1,0 +1,99 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.navigator-toggle {
+  border:none;
+  float:right;
+  cursor:pointer;
+  padding:@padding-small-vertical @padding-small-horizontal @padding-small-vertical @padding-small-horizontal;
+  .color-hover-normal(@tabs-font-color,@tabs-bg-color,@tabs-hover-font-color,@tabs-hover-bg-color);
+}
+
+.tab-navigators {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  cursor: pointer;
+  overflow:hidden; // navigator-toggle sets the height to 0
+  background-color: @navigator-bg-color;
+
+  // which doesn't hides the list items. Hence
+  // overflow hidden is required.
+  .clearfix;
+  > li {
+
+    position: relative;
+    float: left;
+    display: block;
+    border: solid @tabs-border-thickness @tabs-border-color;
+
+    &.stepped {
+      > a {
+        .bg-font-color(@tabs-stepped-font-color,@tabs-stepped-bg-color);
+      }
+    }
+    &.completed {
+      > a {
+        .bg-font-color(@tabs-completed-font-color,@tabs-completed-bg-color);
+      }
+    }
+    &.active {
+      > a {
+        .bg-font-color(@tabs-active-font-color,@tabs-active-bg-color);
+      }
+    }
+    > a {
+      margin: @tabs-margin;
+      display: block;
+      padding: @tabs-padding;
+      font-size: @tabs-font-size;
+      text-decoration: none;
+      .color-hover-normal(@tabs-font-color,@tabs-bg-color,@tabs-hover-font-color,
+                          @tabs-hover-bg-color);
+    }
+    &.active {
+      >ul.tab-navigators {
+        display:block;
+      }
+    }
+    > ul.tab-navigators {
+      display:none;
+    }
+  }
+}
+// make tabs vertical for small and xs screen devices
+.makeVerticalTabs(tab-navigators-mobile);
+.makeVerticalTabs(tab-navigators-vertical);
+
+#guide-mobile-navigator-wrapper {
+   position: relative;
+}
+
+#guide-mobile-navigator {
+   position:absolute;
+   left:60%;
+   right:0px;
+   z-index: 1000;
+   overflow: hidden;
+   height:0px;
+}
+
+.tab-pane .panel{
+  margin-bottom:0px;
+}

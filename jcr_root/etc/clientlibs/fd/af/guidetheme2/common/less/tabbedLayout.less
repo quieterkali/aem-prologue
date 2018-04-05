@@ -1,0 +1,97 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/*
+ * Most of the styling would be moved to themes, but what about clearfix?
+ */
+.tab-navigators {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow:hidden; // navigator-toggle sets the height to 0
+  background-color: @navigator-bg-color;
+
+  // which doesn't hides the list items. Hence
+  // overflow hidden is required.
+  .clearfix;
+  > li {
+
+    position: relative;
+    display: inline-block;
+    &.stepped {
+      > a {
+        .bg-font-color(@tabs-stepped-font-color,@tabs-stepped-bg-color);
+      }
+    }
+    &.completed {
+      > a {
+        .bg-font-color(@tabs-completed-font-color,@tabs-completed-bg-color);
+      }
+    }
+    &.active {
+      > a {
+        .bg-font-color(@tabs-active-font-color,@tabs-active-bg-color);
+      }
+    }
+    > a {
+      margin: @tabs-margin;
+      display: block;
+      padding: @tabs-padding;
+      font-size: @tabs-font-size;
+      text-decoration: none;
+      .color-hover-normal(@tabs-font-color,@tabs-bg-color,@tabs-hover-font-color,
+                          @tabs-hover-bg-color);
+    }
+    &.active {
+      >ul.tab-navigators {
+        display:block;
+      }
+    }
+    > ul.tab-navigators {
+      display:none;
+    }
+  }
+}
+
+.tab-navigators-vertical > li{
+  width: 100%;
+  display: block;
+}
+
+// make tabs vertical for small and xs screen devices
+.makeVerticalTabs(tab-navigators-mobile);
+
+#guide-mobile-navigator-wrapper {
+   position: relative;
+}
+
+#guide-mobile-navigator {
+   position:absolute;
+   left:60%;
+   right:0px;
+   z-index: 1000;
+   overflow: hidden;
+   height:0px;
+}
+
+.tab-pane .panel{
+  margin-bottom:0px;
+}

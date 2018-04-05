@@ -1,0 +1,117 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---- dark tabs ----*/
+.tabs-dark > .tabs,
+.tabs.tabs-dark {
+    background-color: #000;
+}
+
+.tab-item .icon {
+    color: #fff;
+}
+
+ion-tabs.tabs-color-active-dark .tab-item {
+    color: #fff;
+}
+
+ion-tabs.tabs-color-active-dark .tab-item.tab-item-active,
+ion-tabs.tabs-color-active-dark .tab-item.active,
+ion-tabs.tabs-color-active-dark .tab-item.activated {
+    color: #ffffff;
+}
+
+/* ---- end dark tabs ----*/
+
+/* ---- dark header ----*/
+.bar.bar-dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ---- end dark header ----*/
+
+video {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ng-text p, .text p, .dps-display p,
+.ionic-inappbrowser-button {
+    padding: 0.5em 1em 0 1em;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.ionic-scroll .scroll {
+    height: 100%;
+}
+
+
+/*
+* Button Overrides
+*/
+.button {
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: bold;
+    line-height: 2.5rem;
+    min-height: 42px;
+}
+
+.button.button-assertive {
+    background-color: #ed1c24;
+    border: 1px solid #DE1219;
+}
+
+.button-wide {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+}
+
+button.button-assertive.button-outline.active,
+.button.button-assertive.button-outline.activated {
+    background-color: #ed1c24;
+    box-shadow: none;
+    color: #fff;
+}
+
+body, ion-tabs, .pane, ion-content {
+    background-color: #111;
+}
+
+.product-item-details {
+    background-color: #FFF;
+}

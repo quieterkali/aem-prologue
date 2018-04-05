@@ -1,0 +1,1031 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2016 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@import "../../../af/guideCommonAuthoring/less/coralClassConstants.less";
+
+/*
+ * The height of style propertysheet height needs to be updated if height of elements inside
+ * propertySheet Container are updated.
+ */
+
+#style-statescontainer,
+#style-propertysheet {
+  .@{coral-form-field} {
+    float: right;
+    padding-right: 0.5rem;
+  }
+}
+/*
+ * Default value is clear:left for form-field as label is the leftmost element
+ * but as we need a button to the left of label,
+ * we are overriding it to clear none.
+ */
+
+#style-propertysheet-container .propertySheetCssProperty label {
+  clear: none;
+}
+
+#style-propertysheet-container .propertySheetCssProperty .stylePropertySheetMaskButton {
+  float: left;
+  padding-right: 0.625rem;
+}
+
+#style-propertySheetContainer .@{coral-form-field}.cssOverrides,
+#style-propertySheetContainer .@{coral-form-field}.beforePseudoElement,
+#style-propertySheetContainer .@{coral-form-field}.afterPseudoElement {
+  width:calc(~"100% - 16px");
+  left:16px;
+  float:none;
+  margin-bottom:0px;
+  margin-top: 8px;
+}
+
+#style-propertySheetContainer coral-select.@{coral-form-field} {
+  max-width: 47%;
+  width:47%;
+}
+
+#generatedCompleteCSSDialog .@{coral-dialog-wrapper},
+#generatedCSSDialog .@{coral-dialog-wrapper} {
+  min-width: 620px;
+}
+
+#style-propertysheet-container label.@{coral-form-fieldlabel} {
+  color: #707070;
+  max-width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.stylePropertySheet coral-select:not(.assetLibraryImagesSelect):not(.assetLibraryTextStylesSelect):not(.symmetricFieldSelect) button.@{coral-button}.@{coral-button--block} {
+  border: none;
+  background-color: transparent;
+}
+
+.stylePropertySheet coral-select.symmetricFieldSelect button.@{coral-button}.@{coral-button--block} {
+  background-color: transparent;
+}
+
+#style-propertysheet .symmetricFieldSelect {
+  padding-right: 0px;
+}
+
+#style-stateName button {
+  font-style: normal;
+}
+
+.stylePropertySheet .@{coral-button}.@{coral-button--quiet} {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.stylePropertySheet input.@{coral-form-field}.@{coral-textfield} {
+  padding-right: 5px;
+  width: 51%;
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+  border: none;
+  text-align: right;
+}
+
+.stylePropertySheet input.@{coral-form-field}.@{coral-textfield}:hover {
+  background: white;
+}
+
+.stylePropertySheet span.@{coral-form-fieldinfo}.@{coral-icon}.@{coral-icon-info-circle}.@{coral-icon--sizeS} {
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+
+.stylePropertySheet .@{coral-icon--preview} {
+  padding-top: 8px;
+}
+
+.stylePropertySheet .@{coral-tabpanel-content} {
+  width: 95%;
+}
+
+#style-propertySheetContainer a.styleComponentHeader.@{coral-button}.@{coral-button--block}.@{coral-button--quiet}:focus {
+  color: grey;
+  box-shadow: none;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#style-propertySheetContainer a.styleComponentHeader.@{coral-button}.@{coral-button--block}.@{coral-button--quiet}:hover {
+  color: grey;
+  box-shadow: none;
+}
+
+#style-propertySheetContainer a.styleComponentHeader.@{coral-button}.@{coral-button--block}.@{coral-button--quiet}:active  {
+  color: grey;
+  box-shadow: none;
+}
+
+#style-propertySheetContainer a.styleComponentHeader coral-icon.@{coral-icon}.@{coral-icon--close}.@{coral-icon--sizeXS} {
+  float: right;
+  padding-right: 16px;
+  margin: 0;
+}
+
+#style-propertySheetContainer a.styleComponentHeader.@{coral-button}.@{coral-button--quiet} coral-anchorbutton-label.@{coral-button-label} {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+#style-statescontainer button.@{coral-button}.@{coral-button--block} {
+  border: none;
+  background-color: transparent;
+}
+
+#style-propertysheet .style-propertysheet-colorpicker form .@{coral-form-fieldwrapper} {
+  margin: 0;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker form .@{coral-form-fieldwrapper} input {
+  margin: 0;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker form .@{coral-form-fieldwrapper} coral-colorInput-slider {
+  margin: 0 1rem;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker form .@{coral-form-fieldwrapper} .@{coral-form-field} {
+  float: none;
+  vertical-align: top;
+  text-align: justify;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker .@{coral-colorinput-swatches} {
+  display: table;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker .@{coral-colorinput-swatches} .@{coral-colorinput-swatchessubview}  {
+  padding-left: 0px;
+  padding-top: 16px;
+  width: 12.25rem;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker coral-colorInput-colorproperties .@{coral-colorinput-propertiessubview} {
+  border: none;
+  padding-right: 0px;
+  border-bottom: .125rem solid rgba(0,0,0,0.05);
+  padding-bottom: 1rem;
+}
+
+#style-propertySheetContainer coral-select .@{coral-select-label} {
+  text-align: right;
+}
+
+#style-propertysheet .@{coral-accordion-content} {
+  background-color: rgba(0, 0, 0, .02);
+  padding-right: 0px;
+  padding-left: 0px;
+}
+//Padding left is same as default accordion padding.
+#style-propertysheet .stylePropertySheetAdvanced {
+  padding-left: .9375rem;
+}
+
+#style-propertysheet-container .symmetricFieldButton coral-icon {
+  float:right;
+}
+
+#style-propertysheet-container coral-select#position coral-selectlist-item,
+#style-propertysheet-container coral-select#position .@{coral-select-label} {
+  text-align: left;
+}
+
+#style-propertySheetContainer a.styleComponentHeader.@{coral-button}.@{coral-button--quiet}{
+  width: calc(~"100% - 120px");
+  text-align: left;
+}
+
+#style-propertysheet .@{coral-accordion-header} {
+  background-color: rgba(0, 0, 0, .02);
+}
+
+#style-propertysheet input.@{coral-textfield}.@{coral-colorinput-input}:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 .1875rem #326ec8;
+  box-shadow: 0 0 .1875rem #326ec8;
+  border: .0625rem solid #326ec8;
+}
+
+#style-propertysheet input.@{coral-textfield}.@{coral-colorinput-input} {
+  background: transparent;
+  border-style: none;
+  min-width: 5.5rem;
+  text-align: right;
+  padding-right: 40px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+#style-propertysheet button.coral-Button.coral-Button--secondary.coral-ColorInput-button.coral-ColorInput-preview {
+    margin-right: 8px;
+}
+
+#style-buttongroupfield {
+  position: absolute;
+  right: 0.5rem;
+}
+
+#style-propertysheet input.@{coral-textfield}.@{coral-colorinput-input}:hover {
+  background-color: white;
+  border-style: solid;
+}
+
+#style-propertysheet .afterPseudoElementWrapper label,
+#style-propertysheet .beforePseudoElementWrapper label,
+#style-propertysheet .cssOverridesWrapper label {
+  margin-left: 4px;
+}
+.cssOverrideHelp,
+.beforeElementHelp,
+.afterElementHelp {
+  background-color:transparent;
+  color: #969696;
+}
+
+#themeLock {
+  margin-bottom: 16px;
+}
+
+#style-propertysheet .stylePropertySheet>coral-accordion-item:last-of-type {
+  border-top: 8px;
+  border-color: #e9e9e9;
+  border-top-style: solid;
+}
+
+#style-propertysheet label {
+  margin-left: .5rem;
+}
+
+.stylePropertySheet coral-switch {
+  display: inline-block;
+}
+
+/*(style-propertySheetContainerHeight - (styleSidePanelHeaderHeight + breakPointInfoHeaderHeight + statesHeight)).*/
+#style-propertysheet-container {
+  overflow: auto;
+  height: calc(~"100% - 142px");
+}
+
+
+.stylePropertySheet .themeToggleLock:focus {
+  box-shadow: none;
+}
+
+.stylePropertySheet .themeToggleLock {
+  border: none;
+  background: white;
+}
+
+.stylePropertySheet coral-numericspinner {
+  float: right;
+}
+
+#style-propertysheet coral-popover {
+  border-radius: 4px;
+}
+
+.stylePropertySheet .symmetricFieldSelect button coral-icon {
+  text-align: center;
+}
+
+#style-propertySheetContainer {
+  height: 100vh;
+}
+
+.styleSelectorChangeAlert,
+.styleValidationAlert,
+.styleCopyModeSwitchAlert {
+  position: absolute;
+  width:100%;
+  opacity: 0;
+  z-index: 2;
+  display: none;
+}
+
+.styleBreakPointInfoHeader coral-anchorbutton-label{
+  font-size: small;
+  word-spacing: 4px;
+}
+
+#style-propertySheetContainer .symmetricFieldButton coral-button-label {
+  margin-left: .3125rem;
+  max-width: calc(~"100% - 1.5rem");
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.styleBreakPointInfoHeader{
+  height: 2.5rem;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  font-weight: normal;
+  color: #707070;
+  font-size: 13px;
+  line-height: 2.5rem;
+  padding: 0px;
+  padding-left: 16px;
+}
+.styleSidePanelHeader {
+  padding-top: 8px;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  line-height: 0px;
+  padding-bottom: .5rem;
+}
+
+.js-sidePanel-theme .stylesidePanelHeader .styleSaveButton,
+.js-sidePanel-theme .stylesidePanelHeader .styleCancelButton {
+  width: 38px;
+  text-align: center;
+}
+
+.hideAlertComponentChange {
+  z-index: -100;
+}
+.style-propertySheetContainer {
+  height: 100%;
+}
+
+#viewGeneratedCSS{
+  font-size: .7375rem;
+}
+
+#viewGeneratedCSS:focus{
+  box-shadow: none;
+  border: none;
+}
+
+#viewGeneratedCSS coral-button-label:hover{
+  text-decoration: underline;
+}
+
+#generatedCompleteCSSDialog .generateCSSPre,
+#generatedCSSDialog .generateCSSPre {
+  background-color: #f0f0f0;
+  margin: 0px;
+  height: 250px;
+  padding: 1rem;
+}
+
+.symmetricFieldLockContainer coral-icon {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#style-propertysheet .style-propertysheet-colorpicker form label {
+  margin-left: 0px;
+}
+
+#style-propertySheetContainer .style-propertysheet-colorpicker coral-overlay {
+  min-width: 15rem;
+  width: 15rem;
+  border: .125rem solid #c8c8c8;
+}
+
+#style-propertySheetContainer .style-fdImageAssetBrowser {
+  margin-left: 6rem;
+}
+
+#style-propertySheetContainer .fd-InputGroup-button button.fd-pathbrowser-button {
+    border-radius: .25rem 0px 0px .25rem
+}
+
+#style-propertysheet-container coral-slider.af-custom-slider {
+  max-width:30%;
+}
+#style-propertysheet-container .style-gradientpopover {
+  width: 378px;
+}
+#style-propertySheetContainer .style-stateNameWrapper {
+  padding-left: 16px;
+  margin: 0;
+  height: 2.5rem;
+}
+#style-propertySheetContainer .style-stateNameWrapper label {
+  font-weight: bold;
+  font-size: .625rem;
+  color: #969696;
+  letter-spacing: 1px;
+}
+
+div#themeEditorForm {
+  border-left: 1px solid #E1E1E1;
+  border-right: 1px solid #E1E1E1;
+}
+#style-propertysheet .stylePropertySheet {
+  border-top: 0px;
+}
+#style-propertySheetContainer .style-stateNameWrapper {
+  border-bottom: 1px solid #E1E1E1;
+}
+
+#style-propertysheet button.symmetricFieldButton {
+    padding-right: 1rem;
+    padding-left: 0;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 47%;
+    width:50%;
+}
+#guideStylableConfigs .sidepanel-tree-item-label,
+#guideStyleLayerObjects .sidepanel-tree-item-label,
+#theme-objectHierarchy .sidepanel-tree-item-label {
+  width: calc(~"100% - 7rem");
+}
+
+#style-propertysheet coral-colorinput.style-propertysheet-colorpicker,
+#style-propertysheet .coral-Autocomplete{
+    max-width: 47%;
+    margin-right: 0;
+    padding-right:0.5rem;
+    box-sizing: border-box;
+}
+
+#style-propertysheet .symmetricFieldButton:hover coral-button-label {
+  text-decoration: underline;
+}
+#style-propertysheet-container coral-popover-content coral-select#position {
+  max-width: 100%;
+  width: 90%;
+  float: left;
+  left: 5%;
+}
+
+#style-propertysheet .style-shadowTable thead,
+#style-propertysheet .style-multivalueFieldContainer thead {
+  display: none;
+}
+/*
+* margin half of default margin.(.935rem ) as table will have half margin
+* from top and bottom.
+*/
+#style-propertysheet .style-buttongroupfield,
+#style-propertysheet .shadowWrapper {
+  margin-bottom: .4675rem;
+}
+#style-propertysheet .style-propertysheet-backgroundColorWrapper,
+#style-propertysheet .opacityWrapper {
+  margin-top: .4675rem;
+}
+#style-propertySheetContainer .styleSaveButton {
+  width: 2.685rem;
+  height: 38px;
+  padding: 0px;
+  border-radius: 4px;
+  margin-right: 16px;
+  float: right;
+}
+#style-propertySheetContainer .styleCancelButton {
+  margin-right: 16px;
+  float: right;
+}
+#style-propertySheetContainer .saveCancelContainer {
+  display: inline-block;
+}
+#style-propertySheetContainer .sidepanel-tree-searchField {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#themeEditorForm .sidepanel-tree-searchField {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+#style-propertySheetContainer coral-select coral-icon {
+  line-height: 4.5;
+}
+
+#style-propertysheet .symmetricContainerWrapper .symmetricFieldButton coral-icon {
+  line-height: 4.6;
+}
+
+#style-propertysheet .cssOverridesWrapper coral-icon[icon="infoCircle"],
+#style-propertysheet .beforePseudoElementWrapper coral-icon[icon="infoCircle"],
+#style-propertysheet .afterPseudoElementWrapper  coral-icon[icon="infoCircle"] {
+  position: absolute;
+  top: 37px;
+  right: 16px;
+  font-size: 1rem;
+}
+
+#style-propertysheet .style-fdImageUploadTable {
+  margin-left: 6px;
+}
+#style-propertysheet .style-fdImageFileUpload button:focus,
+#style-propertysheet .style-fdImageFileUpload button.is-focused {
+  margin-right: .6px;
+}
+
+#style-propertySheetContainer .styleCancelButton coral-icon {
+  color: rgba(0, 0, 0, .6);
+}
+
+#style-propertySheetContainer .styleCancelButton:hover coral-icon {
+  color: rgba(0, 0, 0, .7);
+}
+
+#style-propertysheet .style-reversebutton coral-icon {
+  transform: rotate(90deg);
+}
+
+#style-propertysheet .styleImageUploadComponent label {
+  min-width: 1.4rem;
+}
+
+.CodeMirror {
+  width: 750px;
+  min-width: 750px;
+}
+
+.CodeMirror.maximized {
+  width: 100%;
+  min-width: 100%;
+  height: calc(100vh - 100px);
+
+}
+
+.CodeMirror-hints {
+  z-index:99999;
+}
+
+.searchRawCss {
+  float: right;
+  margin-top: 10px;
+  border-color: #f9f9f9;
+}
+
+.simulateSuccessWrapper label,
+.simulateErrorWrapper label {
+  max-width: 50%;
+  margin-top: 0;
+  margin-right: .5rem;
+  margin-bottom: 0;
+  margin-left: 16px;
+  float: left;
+  clear: left;
+  line-height: 2.375rem;
+  min-width: 6.5rem;
+  color: white;
+}
+
+.simulateSuccess,
+.simulateError {
+  float: right;
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.simulateErrorWrapper,
+.simulateSuccessWrapper {
+  clear: left;
+  display: table;
+  margin: 0;
+  zoom: 1;
+  padding-bottom: 0;
+  width: 100%;
+}
+.errorSimulationContainer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.disablePointerEvents {
+  pointer-events: none;
+}
+
+.rawCssActions button,
+.viewCssActions button {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+}
+
+.rawCssActions,
+.viewCssActions {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#rawCSSFullScreenExit,
+#viewCSSFullScreenExit {
+  display:none;
+}
+
+#rawCSSFullScreen coral-icon,
+#rawCSSFullScreenExit coral-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.coral-Dialog--fullscreen {
+  overflow-y: hidden;
+}
+#style-propertySheetContainer coral-select.coral-Form-field {
+  max-width:50%;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+.coral-Pathbrowser-picker {
+  z-index: 10100;
+}
+
+#style-propertysheet .js-coral-Autocomplete-textfield:focus {
+  box-shadow: 0 0 .1875rem #326ec8;
+  border: .0625rem solid #326ec8;
+  outline: none;
+}
+
+#style-propertysheet .js-coral-Autocomplete-textfield {
+  background: transparent;
+  border-style: none;
+  text-align: right;
+  float: right;
+}
+
+#style-propertysheet .js-coral-Autocomplete-inputGroup button {
+  background: transparent;
+  border-style: none;
+}
+
+#style-propertySheetContainer .maskOn {
+  color: rgba(190, 190, 190, 1);
+}
+
+//to get mask button inLine with the div container.
+#style-propertySheetContainer .style-multivalueFieldContainer>.@{coral-form-fieldwrapper} {
+  display: inline;
+}
+
+//disable child mask button in multivalue field container when parent is masked.
+#style-propertySheetContainer .style-multivalueFieldContainer .maskOn~table[is="coral-table"] .style-multifield-item-mask {
+  pointer-events: none;
+  color: rgba(190, 190, 190, 1);
+}
+
+//to seperate mask button border from the table border.
+#style-propertySheetContainer .style-multivalueFieldContainer table[is="coral-table"] {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: calc(~"100% - 2rem");
+  margin-left: 1rem;
+}
+
+#style-propertySheetContainer  {
+  .beforePseudoElementWrapper,
+  .afterPseudoElementWrapper {
+    padding-left: 16px;
+  }
+}
+
+#style-propertySheetContainer{
+  .style-backgroundImageGradient>label,
+  .style-imagepopover label,
+  .style-gradientpopover label,
+  .style-shadowPopover label {
+    margin-left: 1.12rem;
+  }
+}
+
+#style-propertySheetContainer {
+  .assetLibraryTextStylesSelect, .assetLibraryImagesSelect {
+    float: none;
+  }
+
+  .textStylesSaveContainer,
+  .assetLibraryImagesSaveContainer {
+    display: inline;
+  }
+
+  .assetLibraryTextStylesSelect,
+  .assetLibraryImagesSelect {
+    width: calc(~"100% - 5rem");
+    max-width: 100%;
+    margin-left: 8px;
+  }
+
+  input.textStylesSaveInput,
+  input.assetLibraryImagesSaveInput {
+    width: calc(~"100% - 32px");
+    margin-right: 16px;
+    margin-left: 16px;
+    text-align: left;
+  }
+
+  .textStylesSaveInputWrapper label,
+  .assetLibraryImagesSaveInputWrapper label {
+    margin-left: 16px;
+  }
+
+  button.textStylesSaveButton,
+  button.assetLibraryImagesSaveButton {
+    float: right;
+    margin-right: 16px;
+  }
+
+  .assetLibraryTextStylesSelect .@{coral-select-label},
+  .assetLibraryImagesSelect .@{coral-select-label} {
+    text-align: left;
+  }
+
+  .assetLibraryImagesSelect,
+  button.assetLibraryImagesSaveButton,
+  .style-imagepopover .dd.ddcommon{
+    margin-top: 16px;
+  }
+
+  .assetLibraryImagesSelect .@{coral-select-label} .assetLibraryImageTagWrapper {
+    display : none;
+  }
+
+  .assetLibraryImagesSelect coral-selectlist-item .assetLibraryImageElementWrapper {
+    display : table;
+  }
+
+  .assetLibraryImagesSelect coral-selectlist-item .assetLibraryTitle {
+    display : table-cell;
+    vertical-align : middle;
+    padding-left : 8px;
+  }
+
+  .assetLibraryImagesSelect coral-selectlist-item.@{coral-selectlist-item-selected},
+  .assetLibraryImagesSelect coral-selectlist-item.@{coral-selectlist-item-selected} .assetLibraryImageTagWrapper {
+    background-color: rgba(50,110,200,0.5);
+  }
+
+  .assetLibraryImagesSelect .assetLibraryImageTagWrapper,
+  .assetLibraryImagesSelect .assetLibraryImageTag {
+    height: 30px;
+    width: 30px;
+  }
+
+  .style-fdImageAssetBrowser button {
+      width: 100%;
+  }
+}
+
+
+#guideStyleLayerSidePanel {
+  button.textStylesSaveButton,
+  button.assetLibraryImagesSaveButton,
+  button.assetLibraryColorSaveButton {
+    display : none;
+  }
+}
+
+.assetLibraryManagementTextStyleDeleteButton:not([disabled]),
+.assetLibraryManagementImageStyleDeleteButton:not([disabled]),
+.assetLibraryManagementColorsDeleteButton:not([disabled]) {
+  cursor: pointer;
+}
+
+.assetLibraryManagementImagePreviewImageTag {
+  height: 20px;
+  width: 20px;
+}
+
+#assetLibraryManagementDialog {
+  .@{coral-dialog-wrapper} {
+    min-height: 20rem;
+    max-height: 40rem;
+    min-width: 40rem;
+    overflow: auto;
+    coral-dialog-content {
+      padding-top: 0px;
+    }
+  }
+  coral-panel-content {
+    padding-top : 1rem;
+  }
+  .styleCustomColorSwatch {
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    margin: 0px;
+  }
+  coral-tablist {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  table coral-table-headercell-content {
+    background-color: #f5f5f5;
+    min-width: 65px;
+  }
+  .@{coral-Table-headerCell} {
+    min-width: 38px !important;
+  }
+  td, td .assetLibraryTextStyleTitle {
+    max-width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.styleCustomColorSwatch .coral-Icon {
+  display: none;
+}
+
+.styleCustomColorSwatch[checked] .coral-Icon {
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+}
+
+.styleCustomColorSwatch.styleCustomNoColorSwatch[checked] .coral-Icon {
+  color: #000;
+}
+.assetLibraryColorSaveButton {
+  float: right;
+}
+
+.styleCustomColorSwatch {
+  display: inline-block;
+  margin: 8px 4px 0 4px;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  padding-top: 7px;
+  padding-right: 10px;
+}
+
+.styleCustomNoColorSwatch {
+  background-image : url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iOTYgLTI5NiAxMTUyIDExNTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgOTYgLTI5NiAxMTUyIDExNTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9Cgkuc3Qxe2ZpbGw6I0ZGMDAwMDt9PC9zdHlsZT4KPHJlY3QgeD0iOTYiIHk9Ii0yOTYiIGNsYXNzPSJzdDAiIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjExNTIiLz4KPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjE3LjgsLTI5NiA5Niw4MjUuOCA5Niw4NTYgMTI2LjIsODU2IDEyNDgsLTI2NS44IDEyNDgsLTI5NiAiLz4KPC9zdmc+');
+}
+#style-propertysheet coral-colorinput {
+  coral-accordion {
+      background: transparent;
+      border: none;
+  }
+  .colorInputRecentlyUsedColorsAccordion {
+    border-bottom: .0625rem solid #e9e9e9;
+  }
+  .@{coral-accordion-content} {
+    background: transparent;
+    max-height: 10rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .@{coral-accordion-header} {
+    background: transparent;
+    padding-left: 15px;
+    coral-icon {
+      left: 0;
+    }
+  }
+  coral-accordion-item-content {
+    white-space: normal;
+  }
+  coral-colorinput-colorproperties {
+    display: inline-block;
+  }
+}
+
+#style-propertysheet {
+    .ddChild {
+        li {
+            border : 0px;
+            border-radius : 0px;
+        }
+
+        li.hover {
+            background-color : rgba(49,109,200,0.08);
+        }
+
+        li.selected {
+           background-color : rgb(49,109,200);
+        }
+
+        li.optgroup .optgroupTitle {
+            display: block;
+            font-size: .625rem;
+            text-transform: uppercase;
+            padding: .0625rem .625rem;
+            color: #707070;
+            background-color: rgba(0, 0, 0, .05);
+            font-weight: 700;
+            font-family: adobe-clean, Helvetica, Arial, sans-serif;
+            font-style: normal;
+        }
+    }
+
+    .borderRadiusTp {
+        border-radius : 0px;
+        ul li:last-child {
+            border : 0px;
+        }
+    }
+
+    .dd {
+        border : 0px;
+        .ddArrow {
+            width : 16px;
+            height: 16px;
+            margin-top: 0px;
+            background: url(/etc/clientlibs/fd/af/guidetheme2/images/Custom_Dropdown_Chevron_Default.svg) no-repeat;
+        }
+        .divider {
+            border : 0px;
+        }
+    }
+   .symmetricFieldSelect {
+     margin-right: 1rem;
+   }
+   coral-tooltip {
+     margin-left: 1rem;
+     margin-right: 1rem;
+   }
+  .dd.ddcommon {
+    max-width: 100%;
+    margin-left: 8px;
+    height: 2.375rem;
+    width: calc(~"100% - 5rem") !important;
+    .ddTitle {
+      height: inherit;
+    }
+    .ddTitleText {
+      color : #323232;
+      font-family : adobe-clean, Helvetica, Arial, sans-serif;
+      background-color : #fafafa;
+      border: .0625rem solid #d0d0d0;
+      border-radius: .25rem;
+      padding : 0.625rem;
+      img {
+        padding-right: 16px;
+      }
+
+      &:hover {
+         background-color: #ffffff;
+         cursor : pointer;
+      }
+
+      &:active {
+         background-color: #ebebeb;
+      }
+
+      &:focus {
+         outline: 0;
+         webkit-box-shadow: 0 0 .1875rem #326ec8;
+         box-shadow: 0 0 .1875rem #326ec8;
+         border: .0625rem solid #326ec8;
+         background-color: #fff;
+         text-decoration: none;
+      }
+    }
+    .ddlabel {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+      max-height: 3rem;
+    }
+    .ddChild .ddlabel {
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+   .stylePropertySheet .textStylesSaveInputWrapper input.@{coral-form-field}.@{coral-textfield} {
+     padding: .625rem;
+     display: inline-block;
+     vertical-align: middle;
+     border : .0625rem solid #d0d0d0;
+   }
+}

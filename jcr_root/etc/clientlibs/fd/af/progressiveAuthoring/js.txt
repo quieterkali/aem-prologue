@@ -1,0 +1,6 @@
+#base=../guideClassicAuthoring/javascript/extjs
+GuideActionTypeSelection.js
+
+#base=js
+GuideProgressiveStrategySelection.js
+ProgressiveAuthorUtils.js

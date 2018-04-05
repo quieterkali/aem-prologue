@@ -1,0 +1,25 @@
+CACHE MANIFEST
+#version=6.0.44
+#added this version number string to make sure for every new version this file is changed with every version
+/lc/etc/clientlibs/fd/xfaforms/I18N/en_US.js
+/lc/etc/clientlibs/fd/xfaforms/I18N/en_US.min.js
+/lc/etc/clientlibs/fd/xfaforms/profile.js
+/lc/etc/clientlibs/fd/xfaforms/profile.min.js
+/lc/etc/clientlibs/fd/xfaforms/profile.css
+/lc/etc/clientlibs/fd/xfaforms/profile.min.css
+/lc/etc/clientlibs/fd/xfaforms/toolbar/images/AX_Form_Lg_N.png
+/lc/etc/clientlibs/fd/xfaforms/toolbar/images/AX_HighlightFields_Lg_N.png
+/lc/etc/clientlibs/fd/xfaforms/toolbar/images/busy-state.gif
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/leftnav.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/rightnav.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/iEBox_brush.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/iEBox_clear.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/iEBox_geo.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/iEBox_no.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/iEBox_ok.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/signature.png
+/lc/etc/clientlibs/fd/xfaforms/xfalib/images/calendar.png
+/lc/etc/clientlibs/fd/xfaforms/I18N/en.js
+
+NETWORK:
+/lc/libs/granite/csrf/token.json

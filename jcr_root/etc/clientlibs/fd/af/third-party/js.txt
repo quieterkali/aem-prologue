@@ -1,0 +1,4 @@
+#base=javascript
+bootstrap.js
+jquery.tmpl.js
+swipe.js

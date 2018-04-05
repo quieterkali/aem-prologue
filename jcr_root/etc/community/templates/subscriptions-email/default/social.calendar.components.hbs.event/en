@@ -1,0 +1,19 @@
+subject=[Calendar Event] {{{object.displayName}}}
+
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{objectUrl}}\n\n \
+{{#equals this.verb "post"}}\
+A new calendar event "{{{object.displayName}}}" was posted by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+The calendar event "{{{object.displayName}}}" was updated by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+The calendar event "{{{object.displayName}}}" was deleted by {{{user.name}}}.\n \
+{{/equals}}\
+-------------------------------------------------------------------------------------\n \
+{{{object.content}}}\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all calendar events or modify your subscription.\n \
+{{targetUrl}}\n \

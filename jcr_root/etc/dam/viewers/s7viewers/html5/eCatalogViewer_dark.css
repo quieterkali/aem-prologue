@@ -1,0 +1,1990 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2013 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+
+	/*** Container ***/
+.s7ecatalogviewer .s7container {
+	background-color: rgb(221, 221, 221);
+}
+
+.s7tooltip {
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border-color:#999999;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.s7ecatalogviewer{
+	width:100%;
+	height:100%;
+}
+
+/*************************************************************************/
+/* PageView - common styles */
+.s7ecatalogviewer .s7pageview {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+}
+
+/*************************************************************************/
+/* ThumbnailGridView - common styles */
+.s7ecatalogviewer .s7thumbnailgridview {
+	position: absolute;	
+	background-color: rgb(221, 221, 221);
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.s7ecatalogviewer .s7thumbnailgridview .s7thumb {
+	width: 120px;
+	height: 85px;
+	background-color: rgb(255, 255, 255);
+	border: solid 1px #999999;
+}
+.s7ecatalogviewer .s7thumbnailgridview .s7thumb[state="selected"] {
+	border: solid 2px #666666;
+}
+.s7ecatalogviewer .s7thumbnailgridview .s7thumbcell {
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+.s7ecatalogviewer .s7thumbnailgridview .s7scrollbar {
+	background-color:rgba(102, 102, 102, 0);
+	position:absolute;
+	top:8px;
+	bottom:8px;
+	right:8px;
+}
+.s7ecatalogviewer .s7thumbnailgridview .s7scrollbar .s7scrolltrack {
+	background-color:rgba(102, 102, 102, 0.5);
+}
+
+/* ThumbnailGridView - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview {
+	top: 32px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.s7ecatalogviewer.s7mouseinput.s7size_medium .s7thumbnailgridview {
+	top: auto;
+	bottom: 32px;
+	margin-top: 8px;
+	margin-bottom: 0px;		
+}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar {
+	width:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb {
+	width:28px;
+	height:45px;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='up'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='over'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='down'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='disabled'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up.png);}
+
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolltrack {
+	width:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton {
+	width:28px;
+	height:32px;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton[state='up'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton[state='over'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton[state='down'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton[state='disabled'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_up.png);}
+
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton {
+	width:28px;
+	height:32px;
+ }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton[state='up'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton[state='over'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton[state='down'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton[state='disabled'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_up.png);}
+
+/* ThumbnailGridView - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview {
+	top: 64px;
+	margin-top: 0px;
+	margin-bottom: 8px;		
+}	
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7thumbnailgridview {
+	top: auto;
+	bottom: 60px;
+	margin-top: 8px;
+	margin-bottom: 0px;		
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar {
+	width:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb {
+	width:56px;
+	height:90px;
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='up'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='over'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='down'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollthumb[state='disabled'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrolltrack {
+	width:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrollupbutton {
+	visibility:hidden;
+	width:0px;
+	height:0px;
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailgridview .s7scrollbar .s7scrolldownbutton {
+	visibility:hidden;
+	width:0px;
+	height:0px;
+
+}
+
+/*************************************************************************/
+/* ControlBar - common styles */
+.s7ecatalogviewer .s7controlbar {
+	left: 0;
+	position: absolute;
+	display:block;
+	z-index: 2;
+	background-color: rgb(0, 0, 0);/*whithout alpha*/
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ControlBar - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7controlbar {
+	height: 36px;
+}
+
+/* ControlBar - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7controlbar {
+	height: 64px;
+}
+
+/* ControlBar - large size */
+
+.s7ecatalogviewer.s7size_large .s7controlbar {
+	top: auto;
+	top: 0px;
+}
+
+/* ControlBar - medium size */
+.s7ecatalogviewer.s7size_medium .s7controlbar {
+	top: auto;
+	bottom: 0px;
+}
+
+/* ControlBar - small size */
+.s7ecatalogviewer.s7size_small .s7controlbar {
+	bottom: auto;
+	top: 0px;
+}
+
+/* NEWSCROLL */
+.s7ecatalogviewer.s7size_small .s7controlbar .s7innercontrolbarcontainer {
+	position: absolute;	
+}
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7controlbar .s7innercontrolbarcontainer {
+	position: static;	
+}
+.s7ecatalogviewer.s7size_small .s7controlbar .s7scrollbuttoncontainer {
+	width:36px;
+	background-color: rgb(0, 0, 0);/*whithout alpha*/
+}
+.s7ecatalogviewer.s7size_small .s7controlbar .s7scrollleftrightbutton {
+	width:36px;
+	height:36px;
+}
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollbuttoncontainer {
+	width:64px;
+}
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton {
+	width:64px;
+	height:64px;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='up'] { background-image:url(images/v2/ControlBarLeftButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='over'] { background-image:url(images/v2/ControlBarLeftButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='down'] { background-image:url(images/v2/ControlBarLeftButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='disabled'] { background-image:url(images/v2/ControlBarLeftButton_dark_disabled.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='up'] { background-image:url(images/v2/ControlBarRightButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='over'] { background-image:url(images/v2/ControlBarRightButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='down'] { background-image:url(images/v2/ControlBarRightButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='disabled'] { background-image:url(images/v2/ControlBarRightButton_dark_disabled.png); }
+
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='up'] { background-image:url(images/v2/ControlBarLeftButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='over'] { background-image:url(images/v2/ControlBarLeftButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='down'] { background-image:url(images/v2/ControlBarLeftButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='disabled'] { background-image:url(images/v2/ControlBarLeftButton_dark_disabled_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='up'] { background-image:url(images/v2/ControlBarRightButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='over'] { background-image:url(images/v2/ControlBarRightButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='down'] { background-image:url(images/v2/ControlBarRightButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='disabled'] { background-image:url(images/v2/ControlBarRightButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='up'] { background-image:url(images/v2/ControlBarLeftButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='over'] { background-image:url(images/v2/ControlBarLeftButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='down'] { background-image:url(images/v2/ControlBarLeftButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='true'][state='disabled'] { background-image:url(images/v2/ControlBarLeftButton_dark_disabled_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='up'] { background-image:url(images/v2/ControlBarRightButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='over'] { background-image:url(images/v2/ControlBarRightButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='down'] { background-image:url(images/v2/ControlBarRightButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7controlbar .s7scrollleftrightbutton[selected='false'][state='disabled'] { background-image:url(images/v2/ControlBarRightButton_dark_disabled_touch_2x.png); }
+} 
+
+/*************************************************************************/
+/* Secondary ControlBar - large size */
+.s7ecatalogviewer.s7size_large .s7secondarycontrols .s7controlbar {	
+	display: none;
+}
+
+/* Secondary ControlBar - medium size */
+.s7ecatalogviewer.s7size_medium .s7secondarycontrols .s7controlbar {	
+	display: none;
+}	
+
+/* Secondary ControlBar - small size */
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7controlbar {	
+	top: auto;
+	bottom: 0px;
+}
+
+/*************************************************************************/
+/* ImageMapEffect - common styles */
+.s7ecatalogviewer .s7imagemapeffect .s7mapoverlay {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	display:block;
+}
+.s7ecatalogviewer .s7imagemapeffect .s7mapoverlay[state="default"] {
+	opacity: 0.5;
+}
+
+.s7ecatalogviewer .s7imagemapeffect .s7mapoverlay[state="active"] {
+    opacity: 1;
+}
+
+/* ImageMapEffect - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7imagemapeffect .s7mapoverlay {
+	height: 28px;
+	width: 28px;	
+	background-image: url(images/v2/ImageMapEffect_dark_up.png);
+}
+
+/* ImageMapEffect - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7imagemapeffect .s7mapoverlay {
+	height:56px;
+	width:56px;	
+	background-image: url(images/v2/ImageMapEffect_dark_up_touch.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput .s7imagemapeffect .s7mapoverlay {background-image: url(images/v2/ImageMapEffect_dark_up_touch_2x.png);	}
+}
+
+/*************************************************************************/
+/* ZoomInButton - common styles */
+.s7ecatalogviewer .s7zoominbutton  {
+	position:absolute;
+	background-size:contain;
+	bottom: 4px;
+}
+ 
+/* ZoomInButton - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7zoominbutton  {
+	right: 131px;
+	width:28px;
+	height:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7zoominbutton[state='up'] { background-image:url(images/v2/ZoomInButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoominbutton[state='over'] { background-image:url(images/v2/ZoomInButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoominbutton[state='down'] { background-image:url(images/v2/ZoomInButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoominbutton[state='disabled'] { background-image:url(images/v2/ZoomInButton_dark_disabled.png); }
+
+/* ZoomInButton - touch device size and art */
+
+.s7ecatalogviewer.s7touchinput .s7zoominbutton  {
+	right: 127px;
+	width:56px;
+	height:56px;
+}
+/*touch large size */
+.s7ecatalogviewer.s7touchinput.s7size_large .s7zoominbutton  {
+	right: 188px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7zoominbutton  {
+	right: 188px;
+}
+.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='up'] { background-image:url(images/v2/ZoomInButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='over'] { background-image:url(images/v2/ZoomInButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='down'] { background-image:url(images/v2/ZoomInButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-image:url(images/v2/ZoomInButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='up'] { background-image:url(images/v2/ZoomInButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='over'] { background-image:url(images/v2/ZoomInButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='down'] { background-image:url(images/v2/ZoomInButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-image:url(images/v2/ZoomInButton_dark_disabled_touch_2x.png); }
+}	
+
+/* ZoomInButton - small size - hide on smartphone */
+.s7ecatalogviewer.s7size_small .s7zoominbutton  {
+	visibility:hidden;
+} 
+
+/*************************************************************************/
+/* ZoomOutButton - common styles */
+.s7ecatalogviewer .s7zoomoutbutton  {
+	position:absolute;
+	bottom: 4px;
+	background-size:contain;
+ }
+/* ZoomOutButton - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7zoomoutbutton  {
+	right: 103px;
+	width:28px;
+	height:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7zoomoutbutton[state='up'] { background-image:url(images/v2/ZoomOutButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomoutbutton[state='over'] { background-image:url(images/v2/ZoomOutButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomoutbutton[state='down'] { background-image:url(images/v2/ZoomOutButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomoutbutton[state='disabled'] { background-image:url(images/v2/ZoomOutButton_dark_disabled.png); }
+
+/* ZoomOutButton - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7zoomoutbutton  {
+	width:56px;
+	height:56px;
+} 
+.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-image:url(images/v2/ZoomOutButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-image:url(images/v2/ZoomOutButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-image:url(images/v2/ZoomOutButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-image:url(images/v2/ZoomOutButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-image:url(images/v2/ZoomOutButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-image:url(images/v2/ZoomOutButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-image:url(images/v2/ZoomOutButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-image:url(images/v2/ZoomOutButton_dark_disabled_touch_2x.png); }
+}
+/* ZoomOutButton - large size */
+.s7ecatalogviewer.s7touchinput.s7size_large .s7zoomoutbutton  {
+	right: 127px;	
+ } 
+/* ZoomOutButton - medium size */
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7zoomoutbutton  {
+	right: 127px;	
+ }  
+/* ZoomOutButton - small size - hide on smartphone */
+.s7ecatalogviewer.s7size_small .s7zoomoutbutton  {
+	visibility:hidden;
+
+}
+
+/*************************************************************************/
+/* ZoomResetButton - common styles */  
+
+.s7ecatalogviewer .s7zoomresetbutton  {
+	position:absolute;
+	bottom: 4px;
+	background-size:contain;
+ }
+/* ZoomResetButton - button visibility based on the size */
+.s7ecatalogviewer.s7size_small .s7zoomresetbutton  {
+	display: none;
+}
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7zoomresetbutton  {
+	display: block;
+}
+.s7ecatalogviewer.s7size_large .s7secondarycontrols .s7zoomresetbutton, .s7ecatalogviewer.s7size_medium .s7secondarycontrols .s7zoomresetbutton {
+	display: none;
+}
+
+/* ZoomResetButton - secondary zoom reset button - hide in reset state */
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7zoomresetbutton[state='disabled'] {
+	visibility:hidden;
+}
+
+/* ZoomResetButton - secondary (small size) button position - common */
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7zoomresetbutton  {
+	left:50%;
+	right: auto;
+	z-index: 1;
+} 
+/* ZoomResetButton - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton  {
+	width:28px;
+	height:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton  {
+	right: 75px;
+}
+.s7ecatalogviewer.s7mouseinput .s7secondarycontrols .s7zoomresetbutton  {
+	margin-left: -14px;
+	bottom: 50px;
+}
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton[state='up'] { background-image:url(images/v2/ZoomResetButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton[state='over'] { background-image:url(images/v2/ZoomResetButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton[state='down'] { background-image:url(images/v2/ZoomResetButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7zoomresetbutton[state='disabled'] { background-image:url(images/v2/ZoomResetButton_dark_disabled.png); }
+ 
+/* ZoomResetButton - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton  {
+	width:56px;
+	height:56px;
+}
+
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton  {
+	right: 5px;
+}
+/* ZoomResetButton - touch device large size */
+.s7ecatalogviewer.s7touchinput.s7size_large .s7zoomresetbutton  {
+	right: 66px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7zoomresetbutton  {
+	right: 66px;
+}
+.s7ecatalogviewer.s7touchinput .s7secondarycontrols .s7zoomresetbutton  {
+	margin-left: -28px;
+	bottom: 92px;
+} 
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-image:url(images/v2/ZoomResetButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-image:url(images/v2/ZoomResetButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-image:url(images/v2/ZoomResetButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-image:url(images/v2/ZoomResetButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-image:url(images/v2/ZoomResetButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-image:url(images/v2/ZoomResetButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-image:url(images/v2/ZoomResetButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-image:url(images/v2/ZoomResetButton_dark_disabled_touch_2x.png); }
+}
+
+/*************************************************************************/
+/* FullScreenButton - common styles */   
+.s7ecatalogviewer .s7fullscreenbutton{
+	position:absolute;
+	bottom: 4px;
+	right: 5px;
+	background-size:contain;
+ }
+/* FullScreenButton - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton{
+	width:28px;
+	height:28px;
+	margin-top: 4px;
+	margin-left: 10px;
+}
+.s7ecatalogviewer.s7size_small .s7fullscreenbutton{
+	position:relative;
+	display: inline-block;
+	bottom: auto;
+	right: auto;
+}
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='up'] { background-image:url(images/v2/MinScreenButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='over'] { background-image:url(images/v2/MinScreenButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='down'] { background-image:url(images/v2/MinScreenButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-image:url(images/v2/MinScreenButton_dark_disabled.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='up'] { background-image:url(images/v2/FullScreenButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='over'] { background-image:url(images/v2/FullScreenButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='down'] { background-image:url(images/v2/FullScreenButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-image:url(images/v2/FullScreenButton_dark_disabled.png); }
+
+
+/* FullScreenButton - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7fullscreenbutton{
+	display: none;
+ }
+ 
+/*************************************************************************/
+/* ThumbnailPageButton - common styles */   
+.s7ecatalogviewer .s7thumbnailpagebutton{
+	position:relative;
+	left: 0px;
+	display: inline-block;
+	background-size:contain;
+ }
+/* ThumbnailPageButton - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton{
+    margin-top: 4px;
+    margin-left: 5px;
+	width:28px;
+	height:28px;	
+ }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='false'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='false'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='false'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='false'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='true'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='true'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='true'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7thumbnailpagebutton[selected='true'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled.png); }
+
+/* ThumbnailPageButton - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton{
+	width:56px;
+	height:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='false'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='up'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='over'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='down'] { background-image:url(images/v2/ThumbnailPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7thumbnailpagebutton[selected='true'][state='disabled'] { background-image:url(images/v2/ThumbnailPageButton_dark_disabled_touch_2x.png); }
+} 
+/* ThumbnailPageButton - touch device medium and large size */
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7thumbnailpagebutton, .s7ecatalogviewer.s7touchinput.s7size_large .s7thumbnailpagebutton{
+    margin-top: 4px;
+    margin-left: 0px;
+ } 
+/* ThumbnailPageButton - touch device small size */
+.s7ecatalogviewer.s7touchinput.s7size_small .s7thumbnailpagebutton{
+    margin-top: 4px;
+    margin-left: 7px;
+ }
+ 
+/*************************************************************************/
+/* TableOfContents - common styles */   
+.s7ecatalogviewer .s7tableofcontents{
+	position:relative;
+	display: inline-block;
+	background-size:contain;
+ }
+.s7ecatalogviewer .s7tableofcontents .s7panel .s7scrollbar {
+	background-color:rgba(102, 102, 102, 0);
+	top:0px;
+	bottom:0px;
+	right:0px;
+}
+.s7ecatalogviewer .s7tableofcontents .s7panel .s7scrollbar .s7scrolltrack {
+	background-color:rgba(102, 102, 102, 0.5);
+}
+.s7ecatalogviewer .s7tableofcontents .s7panel{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgba(221,221,221,0.5);
+}
+.s7ecatalogviewer .s7tableofcontents .s7panel .s7item{
+	box-sizing: content-box;
+	 -moz-box-sizing: content-box;
+	 -webkit-box-sizing: content-box;
+    line-height: 1;
+	color: #FFFFFF;
+	vertical-align:text-bottom;
+}
+.s7ecatalogviewer .s7tableofcontents .s7panel .s7label{
+	float: left;
+	text-align: left;
+}
+/* TableOfContents - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents{
+    margin-top: 4px;
+    margin-left: 10px;
+	width:28px;
+	height:28px;	
+ }
+.s7ecatalogviewer .s7tableofcontents .s7panel .s7item{
+    line-height: 19px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar {
+	width:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollthumb {
+	width:28px;
+	height:45px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolltrack {
+	width:28px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollupbutton {
+	width:28px;
+	height:32px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolldownbutton {
+	width:28px;
+	height:32px;
+ }
+/* TableOfContents - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7tableofcontents{
+	width:56px;
+	height:56px;
+    margin-top: 4px;
+    margin-left: 0px;
+ }
+
+.s7ecatalogviewer.s7touchinput.s7size_small .s7tableofcontents{
+    margin-left: 7px;
+ }
+
+.s7ecatalogviewer.s7touchinput .s7tableofcontents .s7panel .s7item{
+	font-size:25px;
+    height: 30px;
+	line-height:30px;
+}
+.s7ecatalogviewer.s7touchinput .s7tableofcontents .s7panel .s7index{
+	min-width: 70px;
+	max-width: 130px;
+}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents[state='up'] {background-image:url(images/v2/TableOfContents_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents[state='over'] {background-image:url(images/v2/TableOfContents_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents[state='down'] {background-image:url(images/v2/TableOfContents_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents[state='disabled'] {background-image:url(images/v2/TableOfContents_dark_disabled.png);}
+
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollthumb[state='up'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollthumb[state='over'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollthumb[state='down'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollthumb[state='disabled'] {background-image:url(images/v2/ThumbnailScrollThumb_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollupbutton[state='up'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollupbutton[state='over'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollupbutton[state='down'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrollupbutton[state='disabled'] {background-image:url(images/v2/ThumbnailScrollUpButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolldownbutton[state='up'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolldownbutton[state='over'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolldownbutton[state='down'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7tableofcontents .s7panel .s7scrollbar .s7scrolldownbutton[state='disabled'] {background-image:url(images/v2/ThumbnailScrollDownButton_dark_up.png);}
+
+.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='up'] {background-image:url(images/v2/TableOfContents_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='over'] {background-image:url(images/v2/TableOfContents_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='down'] {	background-image:url(images/v2/TableOfContents_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='disabled'] {background-image:url(images/v2/TableOfContents_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='up'] {background-image:url(images/v2/TableOfContents_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='over'] {background-image:url(images/v2/TableOfContents_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='down'] {	background-image:url(images/v2/TableOfContents_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7tableofcontents[state='disabled'] {background-image:url(images/v2/TableOfContents_dark_disabled_touch_2x.png);}
+}
+
+/*************************************************************************/
+/* Left Button - common styles */   
+ .s7ecatalogviewer .s7ecatleftbutton .s7panleftbutton {
+	position:absolute;
+	bottom: 50%;
+	left: 0px;
+	background-size:contain;
+	z-index: 1;
+ }
+/* Left Button - desktop size and art */ 
+.s7ecatalogviewer.s7mouseinput .s7ecatleftbutton .s7panleftbutton {
+	width:40px;
+	height:40px;
+	margin-bottom: -20px;
+}
+.s7ecatalogviewer.s7mouseinput .s7ecatleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/SmallLeftButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/SmallLeftButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/SmallLeftButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/SmallLeftButton_dark_disabled.png); }
+
+/* Left Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton {
+	width:70px;
+	height:70px;
+	margin-bottom: -35px;
+}
+.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/SmallLeftButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/SmallLeftButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/SmallLeftButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/SmallLeftButton_dark_disabled_touch.png); } 
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/SmallLeftButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/SmallLeftButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/SmallLeftButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/SmallLeftButton_dark_disabled_touch_2x.png); } 
+}
+
+/* Left Button - small size - hide */ 
+.s7ecatalogviewer.s7size_small .s7ecatleftbutton .s7panleftbutton {
+	visibility:hidden;
+
+}
+
+/*************************************************************************/
+/* Right Button - common styles */
+	
+.s7ecatalogviewer .s7ecatrightbutton .s7panrightbutton{
+	position:absolute;
+	bottom: 50%;
+	right: 0px;
+	background-size:contain;
+	z-index: 1;
+ }
+ 
+/* Right Button - desktop size and art */  
+.s7ecatalogviewer.s7mouseinput .s7ecatrightbutton .s7panrightbutton {
+	width:40px;
+	height:40px;
+	margin-bottom: -20px;
+}
+.s7ecatalogviewer.s7mouseinput .s7ecatrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/SmallRightButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/SmallRightButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/SmallRightButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7ecatrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/SmallRightButton_dark_disabled.png); }
+
+/* Right Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton {
+	width:70px;
+	height:70px;
+	margin-bottom: -35px;
+}
+.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/SmallRightButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/SmallRightButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/SmallRightButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/SmallRightButton_dark_disabled_touch.png); }
+ 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/SmallRightButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/SmallRightButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/SmallRightButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7ecatrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/SmallRightButton_dark_disabled_touch_2x.png); }
+}
+
+/* Right Button - small size - hide */ 
+.s7ecatalogviewer.s7size_small .s7ecatrightbutton .s7panrightbutton {
+	visibility:hidden;
+} 
+
+/*************************************************************************/
+/* First Page Button - common styles */
+.s7ecatalogviewer .s7firstpagebutton .s7panleftbutton{
+	position:absolute;
+	bottom: 4px;
+	background-size:contain;
+	z-index: 1;
+}
+
+/* First Page Button - desktop size and art */ 
+.s7ecatalogviewer.s7mouseinput .s7firstpagebutton .s7panleftbutton {
+	width:28px;
+	height:28px;
+    left: 50%;
+    margin-left: -58px;
+} 
+.s7ecatalogviewer.s7mouseinput .s7firstpagebutton .s7panleftbutton[state='up']{ background-image:url(images/v2/FirstPageButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7firstpagebutton .s7panleftbutton[state='over'] { background-image:url(images/v2/FirstPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7firstpagebutton .s7panleftbutton[state='down']{ background-image:url(images/v2/FirstPageButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7firstpagebutton .s7panleftbutton[state='disabled']{ background-image:url(images/v2/FirstPageButton_dark_disabled.png); }
+
+/* First Page Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton {
+	width:56px;
+	height:56px;
+    left: 50%;
+    margin-left: -114px;
+}
+.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='up'] { background-image:url(images/v2/FirstPageButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='over'] { background-image:url(images/v2/FirstPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='down'] { background-image:url(images/v2/FirstPageButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/FirstPageButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='up'] { background-image:url(images/v2/FirstPageButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='over'] { background-image:url(images/v2/FirstPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='down'] { background-image:url(images/v2/FirstPageButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7firstpagebutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/FirstPageButton_dark_disabled_touch_2x.png); }
+}
+
+/* First Page Button - small*/
+.s7ecatalogviewer.s7size_small .s7firstpagebutton .s7panleftbutton{
+	left: 8px;
+	margin-left: auto;
+}
+/* First Page Button - hide secondary first page button */
+.s7ecatalogviewer.s7size_small .s7controlbar .s7firstpagebutton .s7panleftbutton{
+	visibility: hidden;
+}
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7controlbar .s7firstpagebutton .s7panleftbutton{
+	visibility: inherit;
+}
+
+ 
+/*************************************************************************/
+/* Last Page Button - common styles */ 
+.s7ecatalogviewer .s7lastpagebutton .s7panrightbutton{
+	position:absolute;
+	bottom: 4px;
+	background-size:contain;
+	z-index: 1;
+ }
+/* Last Page Button - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7lastpagebutton .s7panrightbutton{
+	width:28px;
+	height:28px;
+    left: 50%;
+    margin-left: 30px;
+}
+.s7ecatalogviewer.s7mouseinput .s7lastpagebutton .s7panrightbutton[state='up']{ background-image:url(images/v2/LastPageButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7lastpagebutton .s7panrightbutton[state='over']{ background-image:url(images/v2/LastPageButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7lastpagebutton .s7panrightbutton[state='down']{ background-image:url(images/v2/LastPageButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7lastpagebutton .s7panrightbutton[state='disabled']{ background-image:url(images/v2/LastPageButton_dark_disabled.png); } 
+ 
+/* Last Page Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton{
+	width:56px;
+	height:56px;
+    left: 50%;
+    margin-left: 58px;
+} 
+.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='up'] { background-image:url(images/v2/LastPageButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='over'] { background-image:url(images/v2/LastPageButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='down'] { background-image:url(images/v2/LastPageButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='disabled']{ background-image:url(images/v2/LastPageButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='up'] { background-image:url(images/v2/LastPageButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='over'] { background-image:url(images/v2/LastPageButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='down']{ background-image:url(images/v2/LastPageButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7lastpagebutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/LastPageButton_dark_disabled_touch_2x.png); }
+}
+
+/* Last Page Button - small size */ 
+.s7ecatalogviewer.s7size_small .s7lastpagebutton .s7panrightbutton{
+	right: 8px;
+	margin-left: auto;
+}
+/* Last Page Button - hide component */
+.s7ecatalogviewer.s7size_small .s7controlbar .s7lastpagebutton .s7panrightbutton{
+	visibility: hidden;
+}
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7controlbar .s7lastpagebutton .s7panrightbutton{
+	visibility: inherit;
+}
+
+/*************************************************************************/
+/* Toolbar Right Button - common styles */  
+.s7ecatalogviewer .s7toolbarrightbutton .s7panrightbutton{
+	position:absolute;
+	bottom: 4px;
+	background-size:contain;
+	z-index: 1;
+ }
+
+.s7ecatalogviewer.s7size_medium .s7toolbarrightbutton .s7panrightbutton{
+	display: none;
+ }
+.s7ecatalogviewer.s7size_small .s7toolbarrightbutton .s7panrightbutton{
+	display: none;
+ }
+ 
+/* Toolbar Right Button - desktop size and art */ 
+.s7ecatalogviewer.s7mouseinput .s7toolbarrightbutton .s7panrightbutton{
+	width:28px;
+	height:28px;	
+    left: 50%;
+    margin-left: 60px;
+ }
+.s7ecatalogviewer.s7mouseinput .s7toolbarrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/ToolBarRightButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/ToolBarRightButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/ToolBarRightButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/ToolBarRightButton_dark_disabled.png); }
+
+/* Toolbar Right Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton{
+	width:56px;
+	height:56px;
+    left: 50%;
+    margin-left: 116px;
+ }
+.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/ToolBarRightButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/ToolBarRightButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/ToolBarRightButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/ToolBarRightButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='up'] { background-image:url(images/v2/ToolBarRightButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='over'] { background-image:url(images/v2/ToolBarRightButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='down'] { background-image:url(images/v2/ToolBarRightButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7toolbarrightbutton .s7panrightbutton[state='disabled'] { background-image:url(images/v2/ToolBarRightButton_dark_disabled_touch_2x.png); }
+}
+/*************************************************************************/
+/* Toolbar Left Button - common styles */   
+.s7ecatalogviewer .s7toolbarleftbutton .s7panleftbutton{
+	position:absolute;
+	background-size:contain;
+	z-index: 1;
+	bottom: 4px;
+ }
+.s7ecatalogviewer.s7size_medium .s7toolbarleftbutton .s7panleftbutton{
+	display: none;
+ }
+.s7ecatalogviewer.s7size_small .s7toolbarleftbutton .s7panleftbutton{
+	display: none;
+ } 
+/* Toolbar Left Button - desktop size and art */  
+.s7ecatalogviewer.s7mouseinput .s7toolbarleftbutton .s7panleftbutton{
+	width:28px;
+	height:28px;
+	left: 50%;
+    margin-left: -88px;	
+ }
+.s7ecatalogviewer.s7mouseinput .s7toolbarleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/ToolBarLeftButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/ToolBarLeftButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/ToolBarLeftButton_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7toolbarleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/ToolBarLeftButton_dark_disabled.png); }
+
+/* Toolbar Left Button - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7toolbarleftbutton .s7panleftbutton{
+	width:56px;
+	height:56px;
+    left: 50%;
+    margin-left: -172px;
+ } 
+.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/ToolBarLeftButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/ToolBarLeftButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/ToolBarLeftButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/ToolBarLeftButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='up'] { background-image:url(images/v2/ToolBarLeftButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='over'] { background-image:url(images/v2/ToolBarLeftButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='down'] { background-image:url(images/v2/ToolBarLeftButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput  .s7toolbarleftbutton .s7panleftbutton[state='disabled'] { background-image:url(images/v2/ToolBarLeftButton_dark_disabled_touch_2x.png); }
+}
+/*************************************************************************/
+/* Page Indicator - common styles */ 
+.s7ecatalogviewer .s7pageindicator {
+	bottom: 4px;
+	position:absolute;
+	left: 50%;
+	color: rgba(221,221,221,0.5);
+	font-family: Helvetica;	
+	text-align: center;
+}
+/* Page Indicator - component visibility based on the size */
+.s7ecatalogviewer.s7size_small .s7secondarycontrols .s7pageindicator  {
+	display: block;
+	left: 50%;
+}
+.s7ecatalogviewer.s7size_small .s7pageindicator  {
+	display: none;
+}
+.s7ecatalogviewer.s7size_large .s7secondarycontrols .s7pageindicator, .s7ecatalogviewer.s7size_medium .s7secondarycontrols .s7pageindicator {
+	display: none;
+}
+/* Page Indicator - desktop size and art */ 
+.s7ecatalogviewer.s7mouseinput .s7pageindicator {
+	font-size:14px;
+	line-height: 28px;
+	height:28px;
+	margin-left: -28px;	
+	width:56px;	
+}
+/* Page Indicator - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7pageindicator{
+	font-size:25px;
+	line-height: 56px;
+	height:56px;
+	margin-left: -56px;	
+	width:112px;	
+}
+
+/*************************************************************************/
+/* InfoPanelPopup - common styles */ 
+.s7ecatalogviewer .s7infopanelpopup {
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	background-color : rgba(0,0,0,0.75);
+	z-index: 6000;
+}
+.s7ecatalogviewer .s7infopanelpopup .s7overlay {
+	left: 50%;
+	top: 50%;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color:rgb(221,221,221);
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	background-size: 100% 100%;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+	   -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+			box-shadow: 0 0 5px rgba(0,0,0,0.25);	
+}
+/* InfoPanelPopup - desktop size and art */ 
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7overlay {
+	margin-left: -150px;
+	margin-top: -100px;
+	width: 300px;
+	height: 200px;
+	padding-top: 40px;
+}
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7closebutton {
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: 5px;
+	right: 5px;
+	padding: 0px;
+	visibility:inherit;
+}
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7closebutton[state="up"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7closebutton[state="over"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7closebutton[state="down"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7infopanelpopup .s7closebutton[state="disabled"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+
+/* Page Indicator - touch device size and art */
+.s7ecatalogviewer.s7touchinput.s7size_medium .s7infopanelpopup .s7overlay {
+	margin-left: -300px;
+	margin-top: -200px;
+	width: 600px;
+	height: 400px;
+	padding-top: 66px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7infopanelpopup .s7overlay {
+	margin-left: -125px;
+	margin-top: -100px;
+	width: 220px;
+	height: 180px;
+	padding-top: 40px;
+}
+.s7ecatalogviewer.s7touchinput .s7infopanelpopup .s7closebutton {
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	top: 5px;
+	right: 5px;
+	padding: 0px;
+}
+.s7ecatalogviewer.s7touchinput .s7infopanelpopup .s7closebutton[state="up"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+.s7ecatalogviewer.s7touchinput .s7infopanelpopup .s7closebutton[state="over"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_over.png); }
+.s7ecatalogviewer.s7touchinput .s7infopanelpopup .s7closebutton[state="down"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+.s7ecatalogviewer.s7touchinput .s7infopanelpopup .s7closebutton[state="disabled"]{ background-image:url(images/v2/InfoPanelPopup_CloseButton_dark_up.png); }
+
+/*************************************************************************/
+
+/* Download - common styles */
+.s7ecatalogviewer .s7download  {
+	position:relative;
+	display: inline-block;
+	background-size:contain;
+    margin-top: 4px;
+}
+
+/* Download - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7download  {
+    margin-left: 10px;
+	width:28px;
+	height:28px;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7download[state='up'] { background-image:url(images/v2/Download_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7download[state='over'] { background-image:url(images/v2/Download_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7download[state='down'] { background-image:url(images/v2/Download_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7download[state='disabled'] { background-image:url(images/v2/Download_dark_disabled.png); }
+
+/* Download - touch device size and art */
+
+.s7ecatalogviewer.s7touchinput .s7download  {
+    margin-left: 0px;
+	width:56px;
+	height:56px;
+}
+
+/*touch small size */
+.s7ecatalogviewer.s7touchinput.s7size_small .s7download  {
+    margin-left: 7px;
+}
+
+.s7ecatalogviewer.s7touchinput .s7download[state='up'] { background-image:url(images/v2/Download_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7download[state='over'] { background-image:url(images/v2/Download_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7download[state='down'] { background-image:url(images/v2/Download_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7download[state='disabled'] { background-image:url(images/v2/Download_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7download[state='up'] { background-image:url(images/v2/Download_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7download[state='over'] { background-image:url(images/v2/Download_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7download[state='down'] { background-image:url(images/v2/Download_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7download[state='disabled'] { background-image:url(images/v2/Download_dark_disabled_touch_2x.png); }
+}
+/*************************************************************************/
+
+/* Print - common styles */
+.s7ecatalogviewer .s7print  {
+	position:relative;
+	display: inline-block;
+	background-size:contain;
+    margin-top: 4px;
+}
+
+/* Print - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7print  {
+    margin-left: 10px;
+	width:28px;
+	height:28px;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7print[state='up'] { background-image:url(images/v2/Print_dark_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7print[state='over'] { background-image:url(images/v2/Print_dark_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7print[state='down'] { background-image:url(images/v2/Print_dark_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7print[state='disabled'] { background-image:url(images/v2/Print_dark_disabled.png); }
+
+/* Print - touch device size and art */
+
+.s7ecatalogviewer.s7touchinput .s7print  {
+	display: none;
+    margin-left: 10px;
+	width:56px;
+	height:56px;
+}
+/*touch large size */
+.s7ecatalogviewer.s7touchinput.s7size_large .s7print  {
+	display: none;
+}
+
+.s7ecatalogviewer.s7touchinput .s7print[state='up'] { background-image:url(images/v2/Print_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7print[state='over'] { background-image:url(images/v2/Print_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7print[state='down'] { background-image:url(images/v2/Print_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7print[state='disabled'] { background-image:url(images/v2/Print_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7print[state='up'] { background-image:url(images/v2/Print_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7print[state='over'] { background-image:url(images/v2/Print_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7print[state='down'] { background-image:url(images/v2/Print_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7print[state='disabled'] { background-image:url(images/v2/Print_dark_disabled_touch_2x.png); }
+}
+
+/*************************************************************************/
+/* SocialShare - common styles */
+.s7ecatalogviewer .s7socialshare {
+	position:absolute;
+	display: inline-block;
+}
+.s7ecatalogviewer .s7socialshare .s7socialsharepanel {
+	background-color: rgb(231, 231, 231);/*whithout alpha*/
+	background-color: rgba(231, 231, 231, 0);
+}
+.s7ecatalogviewer .s7socialshare .s7socialbutton {
+	background-color: transparent;
+}
+
+/*************************************************************************/
+/* SocialShare - desktop size and art */
+
+.s7ecatalogviewer.s7mouseinput .s7socialshare {
+    margin-top: 4px;
+    margin-left: 10px;
+	width:28px;
+	height:28px;
+	right:38px;
+ }
+/* SocialShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7socialshare  {
+	width:56px;
+	height:56px;
+    margin-top: 4px;
+    margin-left: 0px;
+	right:5px;
+ }
+
+.s7ecatalogviewer.s7size_small .s7socialshare{
+	position:relative;
+	right:auto;
+ }
+.s7ecatalogviewer.s7touchinput.s7size_small .s7socialshare{
+    margin-left: 7px;
+ }
+
+ .s7ecatalogviewer.s7touchinput .s7socialbutton {
+ 	width:56px;
+	height:56px;
+ }
+.s7ecatalogviewer.s7mouseinput .s7socialshare .s7socialbutton[state='up'] {background-image:url(images/v2/SocialShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7socialshare .s7socialbutton[state='over'] {background-image:url(images/v2/SocialShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7socialshare .s7socialbutton[state='down'] {background-image:url(images/v2/SocialShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7socialshare .s7socialbutton[state='disabled'] {background-image:url(images/v2/SocialShare_dark_disabled.png);}
+
+.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='up'] {background-image:url(images/v2/SocialShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='over'] {background-image:url(images/v2/SocialShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='down'] {	background-image:url(images/v2/SocialShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='disabled'] {background-image:url(images/v2/SocialShare_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='up'] {background-image:url(images/v2/SocialShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='over'] {background-image:url(images/v2/SocialShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='down'] {	background-image:url(images/v2/SocialShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7socialshare .s7socialbutton[state='disabled'] {background-image:url(images/v2/SocialShare_dark_disabled_touch_2x.png);}
+}
+
+/*************************************************************************/
+/* EmailShare - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7emailshare[state='up'] {background-image:url(images/v2/EmailShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7emailshare[state='over'] {background-image:url(images/v2/EmailShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7emailshare[state='down'] {background-image:url(images/v2/EmailShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7emailshare[state='disabled'] {background-image:url(images/v2/EmailShare_dark_disabled.png);}
+
+/* EmailShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7emailshare{
+	width:56px;
+	height:56px;
+}	
+.s7ecatalogviewer.s7touchinput .s7emailshare[state='up'] {background-image:url(images/v2/EmailShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7emailshare[state='over'] {background-image:url(images/v2/EmailShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7emailshare[state='down'] {background-image:url(images/v2/EmailShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7emailshare[state='disabled'] {background-image:url(images/v2/EmailShare_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7emailshare[state='up'] {background-image:url(images/v2/EmailShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7emailshare[state='over'] {background-image:url(images/v2/EmailShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7emailshare[state='down'] {background-image:url(images/v2/EmailShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7emailshare[state='disabled'] {background-image:url(images/v2/EmailShare_dark_disabled_touch_2x.png);}
+}
+
+/*************************************************************************/
+/* EmbedShare - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7embedshare[state='up'] {background-image:url(images/v2/EmbedShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7embedshare[state='over'] {background-image:url(images/v2/EmbedShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7embedshare[state='down'] {background-image:url(images/v2/EmbedShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7embedshare[state='disabled'] {background-image:url(images/v2/EmbedShare_dark_disabled.png);} 
+
+/* EmbedShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7embedshare{
+	width:56px;
+	height:56px;
+}	
+.s7ecatalogviewer.s7touchinput .s7embedshare[state='up'] {background-image:url(images/v2/EmbedShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7embedshare[state='over'] {background-image:url(images/v2/EmbedShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7embedshare[state='down'] {background-image:url(images/v2/EmbedShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7embedshare[state='disabled'] {background-image:url(images/v2/EmbedShare_dark_disabled_touch.png);} 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7embedshare[state='up'] {background-image:url(images/v2/EmbedShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7embedshare[state='over'] {background-image:url(images/v2/EmbedShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7embedshare[state='down'] {background-image:url(images/v2/EmbedShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7embedshare[state='disabled'] {background-image:url(images/v2/EmbedShare_dark_disabled_touch_2x.png);} 
+}
+
+/*************************************************************************/
+/* LinkShare - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7linkshare[state='up'] {background-image:url(images/v2/LinkShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7linkshare[state='over'] {background-image:url(images/v2/LinkShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7linkshare[state='down'] {background-image:url(images/v2/LinkShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7linkshare[state='disabled'] {background-image:url(images/v2/LinkShare_dark_disabled.png);}
+
+/* LinkShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7linkshare{
+	width:56px;
+	height:56px;
+}	
+.s7ecatalogviewer.s7touchinput .s7linkshare[state='up'] {background-image:url(images/v2/LinkShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7linkshare[state='over'] {background-image:url(images/v2/LinkShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7linkshare[state='down'] {background-image:url(images/v2/LinkShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7linkshare[state='disabled'] {background-image:url(images/v2/LinkShare_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7linkshare[state='up'] {background-image:url(images/v2/LinkShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7linkshare[state='over'] {background-image:url(images/v2/LinkShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7linkshare[state='down'] {background-image:url(images/v2/LinkShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7linkshare[state='disabled'] {background-image:url(images/v2/LinkShare_dark_disabled_touch_2x.png);}
+}
+
+/*************************************************************************/
+/* FacebookShare - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7facebookshare[state='up'] {background-image:url(images/v2/FacebookShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7facebookshare[state='over'] {background-image:url(images/v2/FacebookShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7facebookshare[state='down'] {background-image:url(images/v2/FacebookShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7facebookshare[state='disabled'] {background-image:url(images/v2/FacebookShare_dark_disabled.png);}
+
+/* FacebookShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7facebookshare{
+	width:56px;
+	height:56px;
+}	
+.s7ecatalogviewer.s7touchinput .s7facebookshare[state='up'] {background-image:url(images/v2/FacebookShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7facebookshare[state='over'] {background-image:url(images/v2/FacebookShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7facebookshare[state='down'] {background-image:url(images/v2/FacebookShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7facebookshare[state='disabled'] {background-image:url(images/v2/FacebookShare_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7facebookshare[state='up'] {background-image:url(images/v2/FacebookShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7facebookshare[state='over'] {background-image:url(images/v2/FacebookShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7facebookshare[state='down'] {background-image:url(images/v2/FacebookShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7facebookshare[state='disabled'] {background-image:url(images/v2/FacebookShare_dark_disabled_touch_2x.png);}
+}
+
+/*************************************************************************/
+/* TwitterShare - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7twittershare[state='up'] {background-image:url(images/v2/TwitterShare_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7twittershare[state='over'] {background-image:url(images/v2/TwitterShare_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7twittershare[state='down'] {background-image:url(images/v2/TwitterShare_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7twittershare[state='disabled'] {background-image:url(images/v2/TwitterShare_dark_disabled.png);}  
+
+/* TwitterShare - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7twittershare {
+	width:56px;
+	height:56px;
+}	
+.s7ecatalogviewer.s7touchinput .s7twittershare[state='up'] {background-image:url(images/v2/TwitterShare_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7twittershare[state='over'] {background-image:url(images/v2/TwitterShare_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7twittershare[state='down'] {background-image:url(images/v2/TwitterShare_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7twittershare[state='disabled'] {background-image:url(images/v2/TwitterShare_dark_disabled_touch.png);}  	 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7twittershare[state='up'] {background-image:url(images/v2/TwitterShare_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7twittershare[state='over'] {background-image:url(images/v2/TwitterShare_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7twittershare[state='down'] {background-image:url(images/v2/TwitterShare_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7twittershare[state='disabled'] {background-image:url(images/v2/TwitterShare_dark_disabled_touch_2x.png);} 
+}
+
+
+/*************************************************************************/
+/* LinkDialog - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7linkdialog .s7closebutton {
+	width: 28px;
+	height: 28px;
+} 
+.s7ecatalogviewer.s7mouseinput .s7linkdialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7linkdialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7linkdialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7linkdialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled.png); }
+
+/* LinkDialog - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialog {
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+} 
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton {
+	width: 56px;
+	height: 56px;
+} 	
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch.png); }	
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7linkdialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch_2x.png); }	 	
+}
+
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogheader{
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogheadertext {
+	font-size: 26pt;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialoginputcontainer {
+	padding: 15px 10px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialoginputwide {
+	font-size: 16pt;
+	width: 590px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialoglink {
+	font-size: 20pt;
+	width: 578px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogfooter {
+	bottom: 0px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogfooter .s7button {
+	font-size: 26pt;
+	line-height: 80px;
+	margin-right:20px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogcancelbutton {
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput .s7linkdialog .s7dialogactionbutton {
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+
+/* LinkDialog - touch device/mobile phones size and art */
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7closebutton {
+	padding: 0;
+} 	
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialogheadertext {
+	font-size: 21pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialogbody {
+	width: 90%;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialoginputcontainer {
+	width: 90%;
+	overflow: hidden;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialoginputwide {
+	font-size: 16pt;
+	width: 100%;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialogfooter .s7button {
+	font-size: 18pt;
+	line-height: 40px;
+	margin-right: 10px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialogcancelbutton {
+	width: 145px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialogactionbutton {
+	width: 120px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7linkdialog .s7dialoglink {
+	font-size: 16pt;
+}	
+
+/*************************************************************************/
+/* Emaildialog - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7emaildialog .s7closebutton {
+	width: 28px;
+	height: 28px;
+} 
+.s7ecatalogviewer.s7mouseinput .s7emaildialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7emaildialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7emaildialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7emaildialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled.png); }
+
+/* Emaildialog - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7closebutton {
+	width: 56px;
+	height: 56px;
+} 	
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput	.s7emaildialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput	.s7emaildialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput	.s7emaildialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput	.s7emaildialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch_2x.png); }
+}
+
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialog {
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	border-radius: 0px;
+} 
+
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogheader {
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogheadertext {
+	font-size: 26pt;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogviewarea {
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogbody {
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogerrormessage {
+	font-size: 16pt;
+}		
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialoginputlabel {
+	font-size: 18pt;	
+	width: 100px;	
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogaddemailbutton {
+	font-size: 16pt;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialoginputcontainer {
+	padding: 15px 10px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialoginputshort {
+	font-size: 20pt;
+	width: 400px;
+}		
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialoginputwide {
+	font-size: 20pt;
+	width: 430px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogthumbnail {
+	width: 180px;
+	height: 120px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialoginfopanel {
+	width: 390px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogtitle {
+	font-size: 24pt;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogorigin {
+	font-size: 19pt;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogdescription {
+	font-size: 17pt;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogremoveemailbutton {
+	height: 35px;
+	width: 35px;
+	background-position	: center;
+	background-repeat: no-repeat;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogfooter {
+	position: absolute;
+	bottom: 0px;
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogfooter .s7button {
+	font-size: 32pt;
+	font-size: 26pt;
+	line-height: 80px;
+	margin-right:20px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogcancelbutton {
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput .s7emaildialog .s7dialogactionbutton {
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+
+/* EmailDialog - touch device/mobile phones size and art */
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7closebutton {
+	padding:0px;
+}	
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginputwide {
+	border: none;
+	width: 140px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginfopanel {
+	width: 180px;
+}	
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogheadertext {
+	font-family: Helvetica;
+	font-size: 16pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginputlabel {
+	font-size: 12pt;	
+	width: 50px;	
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogaddemailbutton {
+	font-size: 12pt;	
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogmessage {
+	font-family: Helvetica;
+	height: 55px;
+	font-size: 17pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginputcontainer {
+	padding: 5px 5px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginputshort {
+	font-size: 20pt;
+	width: 120px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialoginputwide {
+	font-size: 20pt;
+	width: 160px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogthumbnail {
+	width: 90px;
+	height: 60px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogtitle {
+	font-size: 24pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogorigin {
+	font-size: 13pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogdescription {
+	font-size: 17pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogremoveemailbutton {
+	height: 35px;
+	width: 35px;
+	background-position	: center;
+	background-repeat: no-repeat;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogfooter .s7button {
+	font-family: Helvetica;
+	font-size: 16pt;
+	line-height: 40px;
+	margin-right:10px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogcancelbutton{
+	width: 120px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dialogactionbutton {
+	width: 120px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7emaildialog .s7dlgdescrline {
+	width: 260px;
+}	
+/*************************************************************************/
+/* Embeddialog - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7embeddialog .s7closebutton {
+	width: 28px;
+	height: 28px;
+} 
+.s7ecatalogviewer.s7mouseinput .s7embeddialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up.png); }
+.s7ecatalogviewer.s7mouseinput .s7embeddialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over.png); }
+.s7ecatalogviewer.s7mouseinput .s7embeddialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down.png); }
+.s7ecatalogviewer.s7mouseinput .s7embeddialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled.png); }
+
+/* Embeddialog - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton {
+	width: 56px;
+	height: 56px;
+} 	
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch.png); }	
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_light_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_light_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_light_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7embeddialog .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_light_disabled_touch_2x.png); }	 	
+}
+
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialog {
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	border-radius: 0px;
+} 
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogviewarea {
+	overflow:scroll;
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogheader {
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogbody {
+	padding: 0;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogheadertext {
+	font-size: 26pt;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialoginputwide {
+	font-size: 16pt;
+	width: 600px;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialoginputcontainer {
+	width: 578px;
+	font-size: 14pt;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogembedsizelabel {
+	font-size: 16pt;
+	width: 120px;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dropdownitemanchor {
+	font-size: 16pt;
+}
+.s7ecatalogviewer.s7touchinput .s7combobox[expanded="false"] {
+	width: 180px;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogfooter {
+	position: absolute;
+	bottom: 0px;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogfooter .s7button {
+	font-size: 26pt;
+	line-height: 80px;
+	margin-right:20px;
+}
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogcancelbutton{
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+
+.s7ecatalogviewer.s7touchinput .s7embeddialog .s7dialogactionbutton {
+	width: 240px; 
+	height: 80px; 
+	margin-right: 20px;
+}
+/* EmbedDialog - touch device/mobile phones size and art */
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7closebutton {
+	padding: 0;
+} 	
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogembedsizepanel {
+	font-size: 16pt;
+}	
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialoginputwide {
+	font-size: 12pt;
+	width: 90%;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialoginputcontainer {
+	width: 90%;
+	font-size: 14pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogbody {
+	width: 100%;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogheadertext {
+	font-size: 16pt;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogembedsizelabel {
+	font-size: 14pt;
+	width: 100px;
+	line-height: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogfooter .s7button {
+	font-size: 18pt;
+	line-height: 40px;
+	margin-right: 10px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogcancelbutton {
+	width: 145px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+.s7ecatalogviewer.s7touchinput.s7size_small .s7embeddialog .s7dialogactionbutton {
+	width: 120px; 
+	height: 40px; 
+	margin-right: 20px;
+}
+
+/* Close Button*/
+.s7ecatalogviewer .s7closebutton {
+	width:56px;
+	height:56px;
+	position:absolute;
+	background-size:contain;
+	z-index:1;	
+}
+.s7ecatalogviewer.s7mouseinput .s7closebutton{
+	visibility:hidden;
+}
+.s7ecatalogviewer.s7touchinput .s7closebutton{
+	top: 4px;
+	right: 4px;
+}
+
+.s7ecatalogviewer.s7touchinput .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_dark_up_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_dark_over_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_dark_down_touch.png); }
+.s7ecatalogviewer.s7touchinput .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_dark_disabled_touch.png); }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput .s7closebutton[state='up'] { background-image:url(images/v2/CloseButton_dark_up_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7closebutton[state='over'] { background-image:url(images/v2/CloseButton_dark_over_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7closebutton[state='down'] { background-image:url(images/v2/CloseButton_dark_down_touch_2x.png); }
+	.s7ecatalogviewer.s7touchinput .s7closebutton[state='disabled'] { background-image:url(images/v2/CloseButton_dark_disabled_touch_2x.png); }
+}
+/*************************************************************************/
+/* Icon effect - common styles */
+.s7ecatalogviewer .s7pageview .s7iconeffect {
+	width:100px;
+	height:100px;
+	background-size:contain;
+}
+.s7ecatalogviewer .s7pageview .s7iconeffect[media-type='standard'] {
+	background-image:url(images/v2/IconEffect_zoom.png);
+}
+.s7ecatalogviewer .s7pageview .s7iconeffect[media-type='multitouch'] {
+	background-image:url(images/v2/IconEffect_pinch.png);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) { 
+	.s7ecatalogviewer .s7pageview .s7iconeffect[media-type='standard'] {	background-image:url(images/v2/IconEffect_zoom_2x.png);	}
+	.s7ecatalogviewer .s7pageview .s7iconeffect[media-type='multitouch'] { background-image:url(images/v2/IconEffect_pinch_2x.png);}
+}
+
+/*************************************************************************************************************************/
+.s7ecatalogviewer .s7favoriteseffect .s7icon[state='default']{
+   background-color: transparent;
+}
+
+/* FavoritesEffect - desktop size and art */
+.s7ecatalogviewer.s7mouseinput .s7favoriteseffect .s7icon {
+	height: 36px;
+	width: 36px;	
+	background-image: url(images/v2/FavoriteEffect_dark_up.png);
+}
+
+/* FavoritesEffect - touch device size and art */
+.s7ecatalogviewer.s7touchinput .s7favoriteseffect .s7icon {
+	height:56px;
+	width:56px;	
+	background-image: url(images/v2/FavoriteEffect_dark_up_touch.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7ecatalogviewer.s7touchinput .s7favoriteseffect .s7icon {background-image: url(images/v2/FavoriteEffect_dark_up_touch_2x.png);	}
+}
+
+/* Favorites - common styles */   
+.s7ecatalogviewer .s7favoritesmenu{
+	position:relative;
+	display: inline-block;
+	background-size:contain;
+ }
+
+.s7ecatalogviewer .s7favoritesmenu .s7favoritesmenupanel {
+	background-color: rgb(231, 231, 231);/*whithout alpha*/
+	background-color: rgba(231, 231, 231, 0);
+}
+
+.s7ecatalogviewer .s7favoritesmenu .s7favoritesbutton {
+	background-color: transparent;
+}
+
+.s7ecatalogviewer.s7mouseinput .s7favoritesmenu{
+    margin-top: 4px;
+    margin-left: 10px;
+	width:28px;
+	height:28px;	
+ }
+
+.s7ecatalogviewer.s7touchinput .s7favoritesmenu{
+	width:56px;
+	height:56px;
+    margin-top: 4px;
+    margin-left: 0px;
+ }
+
+.s7ecatalogviewer.s7touchinput.s7size_small .s7favoritesmenu{
+    margin-left: 7px;
+ }
+
+ .s7ecatalogviewer.s7touchinput .s7favoritesbutton {
+ 	width:56px;
+	height:56px;
+ }
+
+.s7ecatalogviewer.s7mouseinput .s7favoritesmenu .s7favoritesbutton[state='up'] {background-image:url(images/v2/FavoritesMenu_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7favoritesmenu .s7favoritesbutton[state='over'] {background-image:url(images/v2/FavoritesMenu_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7favoritesmenu .s7favoritesbutton[state='down'] {background-image:url(images/v2/FavoritesMenu_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7favoritesmenu .s7favoritesbutton[state='disabled'] {background-image:url(images/v2/FavoritesMenu_dark_disabled.png);}
+
+.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='up'] {background-image:url(images/v2/FavoritesMenu_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='over'] {background-image:url(images/v2/FavoritesMenu_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='down'] {	background-image:url(images/v2/FavoritesMenu_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='disabled'] {background-image:url(images/v2/FavoritesMenu_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='up'] {background-image:url(images/v2/FavoritesMenu_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='over'] {background-image:url(images/v2/FavoritesMenu_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='down'] {	background-image:url(images/v2/FavoritesMenu_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7favoritesmenu .s7favoritesbutton[state='disabled'] {background-image:url(images/v2/FavoritesMenu_dark_disabled_touch_2x.png);}
+}
+
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='false'][state='down'] {background-image:url(images/v2/AddFavoriteButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='true'][state='down'] {background-image:url(images/v2/AddFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7addfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled.png);}
+
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton {
+ 	width:56px;
+	height:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/AddFavoriteButton_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/AddFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/AddFavoriteButton_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/AddFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/AddFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7addfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/AddFavoriteButton_dark_disabled_touch_2x.png);}
+}
+
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='false'][state='down'] {background-image:url(images/v2/RemoveFavoriteButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='true'][state='down'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7removefavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled.png);}
+
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton{
+ 	width:56px;
+	height:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/RemoveFavoriteButton_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/RemoveFavoriteButton_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/RemoveFavoriteButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7removefavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/RemoveFavoriteButton_dark_disabled_touch_2x.png);}
+}
+
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_up.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='false'][state='down'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_down.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='true'][state='down'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over.png);}
+.s7ecatalogviewer.s7mouseinput .s7viewallfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled.png);}
+
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton{
+ 	width:56px;
+	height:56px;
+}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_up_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/ViewAllFavoritesButton_dark_down_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch.png);}
+.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled_touch.png);}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_up_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='down'] {	background-image:url(images/v2/ViewAllFavoritesButton_dark_down_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='false'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='up'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='over'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='down'] {	background-image:url(images/v2/ViewAllFavoritesButton_dark_over_touch_2x.png);}
+	.s7ecatalogviewer.s7touchinput .s7viewallfavoritebutton[selected='true'][state='disabled'] {background-image:url(images/v2/ViewAllFavoritesButton_dark_disabled_touch_2x.png);}
+}
+
+/* Favoritesview - common styles */
+.s7ecatalogviewer .s7favoritesview {
+	position: absolute;	
+	background-color: rgb(221, 221, 221);/*whithout alpha*/
+	background-color: rgba(221, 221, 221, 0.5);
+	width:100px;
+	z-index: 1;
+}

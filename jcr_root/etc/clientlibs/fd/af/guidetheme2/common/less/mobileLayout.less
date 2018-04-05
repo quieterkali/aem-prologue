@@ -1,0 +1,48 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@media (max-width: @screen-xs-max) {
+  /*
+   * Exposed in theme already, can be moved there...
+   */
+  .guideContainerNode {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /*
+   * Need to evaluate if this needs to be exposed as a separate item in Theme Editor
+   */
+  .menuModuleSeperator {
+    width: 100%;
+    border-bottom-width: 2px;
+    border-bottom-color: @tabs-active-bg-color;
+    margin-bottom: 2px;
+    border-bottom-style: dashed;
+  }
+
+  /*
+   * Exposed in theme already, can be moved there...
+   */
+  .guideFieldWidget {
+    input[type="date"], input[type="text"], input[type="password"], select, textarea {
+      font-size: 16px;
+    }
+  }
+}

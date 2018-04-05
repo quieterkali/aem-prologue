@@ -1,0 +1,48 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/*
+ * This is only for global errors, which is not exposed OOTB (without customization). How do we handle this?
+ */
+.guideGlobalErrors {
+  background-color: @global-error-bg-color;
+  border-color: @global-error-border-color;
+  margin: 20px 0;
+  padding: @global-error-padding;
+  border-left: 3px solid @global-error-border-left-color;
+  margin: 10px 16px 10px 16px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.guideError {
+  margin-bottom: @margin-between-errors;
+}
+
+.guideError div {
+  cursor: pointer;
+  color: @global-error-text-color;
+  margin-left: 5px;
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.guideError span {
+  color: @global-error-remove-icon-color;
+}

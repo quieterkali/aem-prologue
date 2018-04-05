@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="2e5e2cf1-e21c-3a12-910e-6745ae338883"
+    rep:authorizableId="installerservice"
+    rep:principalName="installerservice"/>

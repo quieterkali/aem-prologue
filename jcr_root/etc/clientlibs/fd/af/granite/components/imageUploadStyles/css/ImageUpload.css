@@ -1,0 +1,83 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.fdImageFileUpload,
+.style-fdImageFileUpload {
+    margin-left: -1px;
+}
+
+.fdImageFileUpload button, .style-fdImageFileUpload button {
+    border-radius: 0px .25rem.25rem 0px;
+    width: 7rem;
+}
+
+.fdImageAssetBrowser,
+.style-fdImageAssetBrowser {
+    float: left;
+}
+
+.fdImageAssetBrowser .fd-InputGroup-button button.fd-pathbrowser-button {
+    border-radius: .25rem 0px 0px .25rem
+}
+
+.fdImageElementName,
+.style-fdImageElementName {
+    clear: both;
+}
+
+.fdUploadImage,
+.style-fdUploadImage {
+    max-height: 80px;
+    max-width: 80px;
+    padding: 8px;
+}
+
+.fdImageName,
+.style-fdImageName {
+    padding: 8px;
+    width: 10%;
+    color: #4B4B4B;
+    font-size: 0.675rem;
+}
+
+.fdImageCancelButton,
+.style-fdImageCancelButton {
+    padding: 8px;
+    color: #A2A2A2;
+}
+
+.fdImageCancelButton > i,
+.style-fdImageCancelButton > i {
+    font-size: 0.725rem;
+}
+
+.fdImageUploadTable,
+.style-fdImageUploadTable {
+    border-style: solid;
+    border: thick grey;
+    padding: 8px;
+    background-color: #E9E9E9;
+    width: 95%;
+}
+
+.fdImageUploadPreview,
+.style-fdImageUploadPreview {
+    clear: both;
+    padding-top: 10px
+}

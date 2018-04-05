@@ -4,6 +4,8 @@
 
 
     <filter root="/conf/prologue" mode="merge"/>
+    <filter root="/conf/prologue" mode="merge"/>
+    <filter root="/content/prologue" mode="merge"/>
 
 
 

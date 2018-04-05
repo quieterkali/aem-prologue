@@ -1,0 +1,103 @@
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* __________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+div#SidePanel {
+   height: 100%;
+}
+
+coral-accordion#objectHeirarchy {
+   overflow: auto;
+   height: calc(100% - 92.4px);
+}
+
+#theme-objectHierarchy.sidepanel-tree-component,
+.sidepanel-tree-component-items {
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+input.search-field-template {
+   float: none;
+   text-align: left;
+   width:100%;
+}
+
+.sidepanel-tree-component .toplevel-list > li > div.sidepanel-tree-item-div {
+   display: none;
+}
+
+coral-icon.themeObjectEditIcon {
+   float: right;
+   padding-top: 10px;
+   padding-right: 16px;
+   padding-left: 16px;
+}
+
+/*
+* Total Height - (height of the objHeirarchy Header.)
+*/
+#theme-objectHierarchy .sidepanel-tree-component-items {
+   height: calc(100vh - 95px - 2.0625rem);
+}
+
+.toplevel-list {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.objHierarchyHeader {
+   padding-bottom: 1rem;
+   margin-top: 0px;
+   padding-top: 16px;
+   padding-left:16px;
+   background-color:transparent;
+   border-bottom: 1px solid rgba(0,0,0,.05);
+   margin-bottom: 1rem;
+   color: #787878;
+}
+
+#themeConfigDialogColumn {
+    height:auto;
+}
+
+button#fdtheme-id-resetFormPath {
+    margin-bottom: 15px;
+}
+
+.cq-dialog-floating button#fdtheme-id-resetFormPath {
+    margin-left: 60%;
+}
+
+button.editor-GlobalBar-item.js-editor-LayerSwitcherTrigger.editor-GlobalBar-previewTrigger.js-editor-GlobalBar-previewTrigger {
+    margin-left: 2rem;
+}
+.objHierarchyContainer {
+    background-color: #f0f0f0;
+}
+#theme-objectHierarchy .sidepanel-tree-item.toplevel-element {
+    border-top: .0625rem solid #e1e1e1;
+}
+
+.editor-PageInfo-action.editRawCSS {
+   display:none;
+}
+
+.themeEditorContainer {
+    height: 100%;
+}

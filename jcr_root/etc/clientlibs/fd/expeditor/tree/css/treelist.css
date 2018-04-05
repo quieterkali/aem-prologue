@@ -1,0 +1,52 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.tree-list {
+    padding : 0;
+    list-style-type: none;
+}
+
+.tree-list li {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 8px 16px;
+}
+
+.tree-list li.is-focusedSearch {
+    background-color: rgba(50,110,200,0.15);
+}
+
+.tree-list .drag-element {
+    vertical-align: middle;
+}
+
+.tree-list label {
+    display: block;
+}
+
+.tree-list .displayName,
+.tree-search-panel .displayName {
+    font-weight: normal;
+    font-size: 0.8125rem;
+    display: block;
+}
+
+.tree-list .description,
+.tree-search-panel .description{
+    font-weight: normal;
+    font-size: 0.8125rem;
+    color: #787878;
+}

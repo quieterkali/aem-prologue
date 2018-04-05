@@ -1,0 +1,18 @@
+subject=[Answer]{{#if this.target.properties.[jcr:title]}} {{{target.displayName}}}{{/if}}
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{objectUrl}}\n\n \
+{{#equals this.verb "add"}}\
+A new answer {{#if this.target.properties.[jcr:title]}}to the question "{{{target.displayName}}}" {{/if}}was added by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+The answer {{#if this.target.properties.[jcr:title]}}to the question "{{{target.displayName}}}" {{/if}}was updated by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+The answer {{#if this.target.properties.[jcr:title]}}to the question "{{{target.displayName}}}" {{/if}}was deleted by {{{user.name}}}.\n \
+{{/equals}}\
+-------------------------------------------------------------------------------------\n \
+{{{object.content}}}\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all answers to this question or modify your subscription.\n \
+{{objectReferrer}}\n \

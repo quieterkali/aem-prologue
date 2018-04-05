@@ -1,0 +1,248 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2016 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@import "../../../af/guideCommonAuthoring/less/coralClassConstants.less";
+
+#sidepanel-guide-properties .coral-Dialog-header .coral-Dialog-title.coral-Heading.coral-Heading--2 {
+
+  padding-left : 0rem;
+  padding-right : 0rem;
+}
+
+#sidepanel-guide-properties .coral-Dialog-header:after,
+#sidepanel-dor-properties .coral-Dialog-header:after {
+  background : rgba(0,0,0,0)
+}
+
+
+#sidepanel-guide-properties .cq-dialog-actions,
+#sidepanel-dor-properties .cq-dialog-actions{
+  margin-top: 3px;
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+
+
+.sidepanel-content .coral-TabPanel--stacked .@{coral-tabpanel-navigation} {
+    padding: 0;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-navigation} {
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    margin: 0px 1rem;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-content} {
+    display: inline-block;
+    border: none;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-navigation} > .@{coral-tabpanel-tab} {
+    float: left;
+    display: inline-block;
+    margin: 0px 0.25rem;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-navigation} > .@{coral-tabpanel-tab}.is-active {
+    color: #1e5fbe;
+    border-color: transparent;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-navigation} > .@{coral-tabpanel-tab}:first-child {
+    margin-left: 0px;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-navigation} > .@{coral-tabpanel-tab}:hover {
+    border-color: transparent;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-content} .@{coral-fixedcolumn-column} {
+    width: auto;
+    margin: 0px;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-tabpanel-content} .sidepanel-tab-guideProperties {
+    text-align: left;
+}
+
+.sidepanel-content .sidepanel-tab-guideProperties .cq-dialog-content .@{coral-fixedcolumn-column} {
+    display: block;
+    width: auto;
+}
+
+.sidepanel-content.sidepanel-content-with-header div.js-SidePanel-content.js-SidePanel-content--edit {
+	height : 100%;
+}
+
+.sidepanel-opened {
+    height : 100%
+}
+
+.sidepanel-tab-guideObjects coral-tab{
+    padding-top: 0px;
+}
+
+.sidepanel-tab-guideObjects coral-tablist {
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    border-bottom: .0625rem solid #e1e1e1;
+    border-right: none;
+    width: 100%;
+}
+
+.sidepanel-tab-guideObjects coral-tab:focus {
+   text-decoration: none;
+}
+
+.sidepanel-tree-item > div .markDataObjectUsed {
+    float: right;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.4rem;
+    margin-top: 1rem;
+}
+.cg-treeview-child-added > div .markDataObjectUsed {
+    background-color: #86bdff;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+.sidepanel-tree-component li div.is-dropTarget {
+   border-bottom: thick double #2583D8;
+}
+
+.sidepanel-tree-component label.is-dropTarget {
+background-color: rgba(50,110,200,0.2);
+}
+
+.touchAuthoringPropertiesTabTitle {
+   padding-bottom: 0px;
+}
+
+.touchAuthoringHideComponentChangeAlert {
+   z-index:-100;
+}
+
+.touchAuthoringComponentChangeAlert {
+   position: absolute;
+   width:100%;
+   opacity: 0;
+   z-index: 2;
+   display: none;
+   margin-top: 50px;
+}
+
+.js-SidePanel-content--bindRef {
+   margin: 10px;
+}
+
+/*similar to Theme Editor Xd.*/
+.currentDialogEditableHeading {
+	height: 4.5rem;
+    line-height: 4.5rem;
+    display: block;
+    margin-top: 2rem;
+    font-weight: lighter;
+    font-size: 0.9375rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*CQ-4198964 component name is taking too much space on IE11.*/
+#sidepanel-guide-properties form.guide-dialog>h3.currentDialogEditableHeading {
+   margin-bottom : -50px;
+   margin-top : -30px;
+}
+
+#guideSidePanelObjects .coral-Tab:last-child {
+    margin-right: 0;
+}
+
+#guideSidePanelObjects label.sidepanel-tree-containeritem-label,
+#guideSidePanelObjects label.sidepanel-tree-expand-buttton {
+    max-width:50%;
+    margin:0;
+    box-sizing:border-box;
+    padding-right:0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#guideSidePanelDataObjectsContainer .empty-message,
+#sidepanel-guide-properties .empty-message {
+    margin: 1.5rem;
+    text-align: center;
+    color: #6f6f6f;
+}
+
+#guideSidePanelFormObjectsContainer, #guideSidePanelDataObjectsContainer,
+#guideStyleLayerObjects{
+    margin-right: -1rem;
+}
+
+.sidepanel-tab-guideObjects .sidepanel-tree-searchField,
+#guideStyleLayerObjects .sidepanel-tree-searchField{
+    margin-right: 1rem;
+}
+
+/* First item displaying Expand/Collapse */
+#guideStyleLayerSidePanel [data-elementid="StylableComponents"] > .sidepanel-tree-item-div span.sidepanel-tree-item-label{
+    width: calc(~"100% - 0.5rem");
+}
+
+/* Tabbed Layout in side panel dialog CSS */
+#guideSidePanelDataObjectsContainer.sidepanel-tree-component li label.name {
+    width: calc(~"100% - 6rem");
+}
+
+#guideSidePanelDataObjectsContainer .toplevel-element>div label.name {
+    width: calc(~"100% - 12rem");
+}
+
+#guideSidePanelFormObjectsContainer .sidepanel-tree-component-items,
+#guideSidePanelDataObjectsContainer .sidepanel-tree-component-items {
+    height: 80vh;
+}
+
+#guideStylableConfigs .sidepanel-tree-component-items {
+    height: 90vh;
+}
+
+#guideSidePanelFormObjectsContainer .toplevel-element > .sidepanel-tree-item-div,
+#guideSidePanelDataObjectsContainer .toplevel-element > .sidepanel-tree-item-div{
+    border-top: .0625rem solid #e1e1e1
+}
+.sidepanel-tree-component li .topBorder {
+    border-top: 2px solid #2583D8;
+}
+.sidepanel-tree-component li .bottomBorder {
+    border-bottom: 2px solid #2583D8;
+}
+.sidepanel-tree-component li .highlightDiv {
+	background-color: rgba(49,109,200,0.2);
+}
+
+//work around for small adobe sign icon
+.formEditorContainer .coral-Icon--adobeSign,
+[data-action="adobesignplugin#adobesigncommand"] .coral-Icon--adobeSign {
+  font-size: 1.5rem;
+}

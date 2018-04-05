@@ -1,0 +1,3 @@
+#base=js
+AdaptiveDocumentAssetFinder.js
+AdaptiveDocumentAssetFinderDnd.js

@@ -1,0 +1,14 @@
+<div class="__FP_eachSubmittedFormLink" data-repeatable="true">
+    <div tabindex='0' class='__FP_iconClass ${iconClass}'>${firstLetter}</div>
+	<div class="__FP_contentRemaining">
+		<div tabindex='0' class="__FP_submittedFormLinkTime" title="${FD.FP.Util.getLocalizedValue('At')} ${Today} ${TimeNow}">${diffTime}</div>
+		<a tabindex='0' class="__FP_submittedFormLink" title="${FD.FP.Util.getLocalizedValue('Show submitted form')}" href=${renderPath}.html/submission/${submitID}?wcmmode=disabled target="_blank">${name}</a>
+		<div tabindex='0' class="__FP_submittedFormDesc" title='${description}'>${description}</div>
+        <span class="__FP_actions">
+            <a class="__FP_deleteSubmission" tabindex='0' submitID='${submitID}' title="${FD.FP.Util.getLocalizedValue('Delete')}"></a>
+            <a class="__FP_dor ${showDorClass}" tabindex="0" href="${renderPath}.dor.pdf/${submitID}" target="_blank" title="${FD.FP.Util.getLocalizedValue('Get PDF')}"></a>
+            <a class="__FP_newInstance" tabindex="0" href="${renderPath}.html/submission/${submitID}?fpNewInstance=true&wcmmode=disabled" target="_blank" title="${FD.FP.Util.getLocalizedValue('Start a new form using this form data')}"></a>
+        </span>
+	</div>
+    <div class="__FP_horizontalRuler"></div>
+</div>

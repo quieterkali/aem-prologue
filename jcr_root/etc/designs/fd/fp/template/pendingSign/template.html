@@ -1,0 +1,15 @@
+<div class="__FP_eachPendingSignFormLink" data-repeatable="true">
+    <div tabindex='0' class='__FP_iconClassPendingSign ${iconClass}'>${firstLetter}</div>
+	<div class="__FP_contentRemaining">
+		<div tabindex='0' class="__FP_pendingSignFormLinkTime" title="${FD.FP.Util.getLocalizedValue('At')} ${Today} ${TimeNow}">${diffTime}</div>
+		<a tabindex='0' class="__FP_pendingSignFormLink" title="${FD.FP.Util.getLocalizedValue('Show Pending Sign form')}" href=${renderPath}.html/pendingSign/${pendingSignID}?wcmmode=disabled target="_blank">${name}</a>
+		<div tabindex='0' class="__FP_pendingSignFormDesc" title='${description}'>${description}</div>
+		<div tabindex='0' class="__FP_pendingSignStatus" title='${esignStatus}'><small>${esignStatus}</small></div>
+        <span class="__FP_actions">
+		<a class="__FP_cancelPendingSign ${esignStatus}" tabindex='0' formPath='${formPath}' pendingSignID='${pendingSignID}' title="${FD.FP.Util.getLocalizedValue('Cancel')}"></a>
+		<a class="__FP_dor ${showDorClass}" tabindex="0" href="${renderPath}.dor.pdf/pendingSign/${pendingSignID}" target="_blank" title="${FD.FP.Util.getLocalizedValue('Get PDF')}"></a>
+            <a class="__FP_newInstance" tabindex="0" href="${renderPath}.html/pendingSign/${pendingSignID}?fpNewInstance=true&wcmmode=disabled" target="_blank" title="${FD.FP.Util.getLocalizedValue('Start a new form using this form data')}"></a>
+        </span>
+	</div>
+    <div class="__FP_horizontalRuler"></div>
+</div>

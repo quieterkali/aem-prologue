@@ -1,0 +1,4 @@
+#base=css
+extensions/dataTables.colVis.css
+extensions/dataTables.colVis.jqueryui.css
+extensions/dataTables.responsive.css

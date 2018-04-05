@@ -1,0 +1,731 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+.BINARY_EXPRESSION .envelopeButton {
+    margin: 0 16px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.02);
+    border: 2px dashed rgba(0,0,0,0.05);
+    color: #969696;
+    display: none;
+}
+
+.BINARY_EXPRESSION {
+    background-color: rgba(0, 0, 0, 0.02);
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.BINARY_EXPRESSION .EXPRESSION > .choice-view {
+    padding: 0;
+}
+
+.BINARY_EXPRESSION table {
+    display: inline-block;
+    border: none;
+    padding: 0;
+}
+
+.BINARY_EXPRESSION td {
+    padding: 16px 0 16px 16px;
+}
+
+.BINARY_EXPRESSION .OPERATOR {
+    padding: 0 16px;
+}
+
+.endor-Page-sidepanel.exp-sidepanel {
+    background-color: #F0F0F0;
+    height: calc(100vh - 62px);
+    min-width: 300px !important;
+    max-width: none;
+    display: none;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-left: 0;
+    -webkit-transition: margin-left 0.5s ease;
+    transition: margin-left 0.5s ease;
+
+}
+
+.endor-Page-sidepanel.summaryviewtree {
+    background-color: #F0F0F0;
+    height: calc(100vh - 60px);
+    min-width: 300px !important;
+    max-width: none;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    -webkit-transition: margin-left 0.5s ease;
+    transition: margin-left 0.5s ease;
+}
+
+#objectNavigationPanel {
+    height: calc(100vh - 113px);
+    min-width: 300px !important;
+    max-width: none;
+}
+
+#objectNavigationTree {
+    height: calc(100% - 45px);
+    overflow: auto;
+}
+
+.exp-mode-edit .endor-Page-sidepanel.summaryviewtree,
+.exp-mode-edit #exp-toggle-navigationpanel-button {
+    display: none;
+}
+
+.endor-Page-sidepanel.exp-sidepanel.is-closed,
+.endor-Page-sidepanel.summaryviewtree.is-closed {
+    margin-left: -100%;
+    -webkit-transition: margin-left 2s ease-out;
+    transition: margin-left 2s ease-out;
+}
+
+.endor-Page-sidepanel.exp-sidepanel > coral-tabview,
+.endor-Page-sidepanel.exp-sidepanel coral-panelstack {
+    background-color: #F0F0F0;
+}
+
+.endor-Page-sidepanel.exp-sidepanel > coral-tabview coral-tab {
+    text-transform: capitalize !important;
+}
+.endor-Page-sidepanel.exp-sidepanel > coral-tabview {
+    height: calc(100% - 24px);
+    margin-bottom: 0;
+}
+
+.endor-Page-sidepanel.exp-sidepanel > coral-tabview > coral-panelstack {
+    height: calc(100% - 1.8rem);
+    border-right: none;
+    border-radius: 0;
+    border-color: rgba(0,0,0,0.05);
+    overflow: auto;
+}
+
+.endor-Page-sidepanel.exp-sidepanel > .coral-TabPanel > .coral-TabPanel-content > section,
+.endor-Page-sidepanel.exp-sidepanel > .coral-TabPanel > .coral-TabPanel-content > section > div {
+    height: 100%;
+}
+
+.endor-Page-sidepanel.exp-sidepanel coral-panelstack {
+    padding: 0;
+}
+#exp-toggle-sidepanel-button {
+    display:none;
+    padding-left: 16px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#exp-toggle-sidepanel-button.active,
+#exp-toggle-sidepanel-button.active > .coral-Icon,
+#exp-toggle-navigationpanel-button.active,
+#exp-toggle-navigationpanel-button.active > .coral-Icon{
+    color: rgb(50,110,200);
+}
+
+#rulebuilder-modes {
+    padding: 0.35rem 1rem;
+}
+
+.OPERATOR .choice-view {
+    float: left;
+}
+
+.BINARY_EXPRESSION .OPERATOR .choice-view,
+.COMPARISON_EXPRESSION .OPERATOR .choice-view {
+    padding: 0;
+}
+
+.choice-select {
+    margin-top: 13px;
+    width: auto;
+}
+
+.choice-select button {
+    border: none;
+    background: none !important;
+}
+
+#expression_editor > .coral-TabPanel-content {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#rulebuilder {
+    display: inline-block;
+    width: calc(100% - 1rem);
+    padding: 1rem 0 1rem 1rem;
+}
+
+#expression_editor {
+    overflow-x:hidden;
+}
+
+#expression_editor,
+#rule-summary {
+    margin-top: 0;
+    height: calc(100vh - 7rem);
+    overflow: auto;
+}
+
+#rule-summary > .list {
+    overflow-y: auto;
+    height: calc(100vh - 125px);
+}
+
+#expression_editor {
+    height: calc(100vh - 113px);
+    display: none;
+    position: relative;
+    margin: 0;
+}
+
+#expression_editor .coral-TabPanel-content {
+    width: 100%;
+}
+
+.rulebuilder-tabs {
+    float: right;
+    display: none;
+    padding-right: 11px;
+}
+
+.rulebuilder-tabs > .endor-ActionBar-item {
+    padding-right: 0;
+}
+
+.rulebuilder-tabs > .coral-TabPanel-tab {
+    float: right;
+    display: none;
+}
+
+.rulebuilder-tabs > .coral-TabPanel-tab.is-active {
+    display: block;
+    border: none;
+}
+
+#formObjectsTree {
+    height: calc(100% - 42px);
+}
+
+#formObjectsSearchPanel,
+#functionsTree,
+#functionsSearchPanel {
+    height: calc(100% - 50px);
+    overflow: auto;
+}
+
+#rulebuilder td.bin-exp-table-cell {
+    display: inline-block;
+}
+
+.binary-expression-selectlist {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -8px;
+    margin-right: -8px;
+    float: right;
+}
+
+.binary-expression-selectlist > button {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    padding: 0;
+    background: rgb(230, 230, 230);
+    color: #7A7777;
+    display: none;
+}
+
+.binary-expression-selectlist coral-icon {
+    font-size: 10px;
+    margin: 0 !important;
+    height: 1.07rem;
+    width: 10px;
+    vertical-align: top;
+}
+
+.error {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: red;
+}
+
+.coral-Button.exp-Cancel-Button,
+.coral-Button.exp-Save-Button {
+    display: none;
+    margin-left: 5px;
+}
+
+.exp-mode-edit .coral-Button.exp-Save-Button,
+.exp-mode-edit .coral-Button.exp-Cancel-Button {
+    display: inline-block;
+}
+
+.exp-mode-edit #paste-rule-button {
+    display: none !important;
+}
+.exp-mode-edit .coral-Button.exp-Close-Button,
+.exp-mode-edit #create-rule-button,
+.exp-mode-edit #edit-rule-button,
+.exp-mode-edit #copy-rule-button,
+.exp-mode-edit #delete-rule-button,
+.exp-mode-edit #rule-summary,
+.exp-mode-edit #reorder-rule-button,
+.exp-mode-edit #enable-rule-button,
+.exp-mode-edit #disable-rule-button,
+.hide-button,
+#paste-rule-button {
+    display: none;
+}
+
+.exp-mode-edit #expression_editor,
+.exp-mode-edit .exp-sidepanel,
+.exp-mode-edit #exp-toggle-sidepanel-button,
+.exp-mode-edit .rulebuilder-tabs {
+    display: block;
+}
+
+.exp-Help-Button {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+}
+.exp-Help-Button > coral-button-label {
+    margin-left: 0.5rem;
+}
+
+.BLOCK_STATEMENTS tbody > .list-view-item {
+    display: block;
+    overflow: hidden;
+}
+
+.multiple_items tbody > .list-view-item {
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 4px;
+    margin: 8px 0 16px 0;
+    overflow: visible;
+}
+
+.multiple_items .list-item-content {
+    padding: 1rem 0 0.2rem;
+}
+
+.BLOCK_STATEMENT {
+
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.BLOCK_STATEMENT > .choice-view {
+    height: 2.375rem;
+    padding-top: 1px;
+    padding-bottom: 0;
+}
+
+.BLOCK_STATEMENT > .choice-view.default {
+    padding-top: 0;
+    margin-bottom: 16px;
+}
+
+.BLOCK_STATEMENT > div {
+    margin-right: 0.5rem;
+}
+
+/* Highlight Block statements dropdown on hover*/
+.BLOCK_STATEMENT > .choice-view:hover {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.BLOCK_STATEMENT > .choice-view:hover > .coral-Icon--chevronDown {
+    display: inline-block !important;
+}
+
+.list-view > .list-view-extension {
+    border: 1px solid rgba(0,0,0,0.05);
+    border-left: none;
+    border-right: none;
+    margin: 16px 0 0 0;
+    background: none;
+    padding: 5px 0;
+}
+
+.list-view > table[is="coral-table"] {
+    display: inline;
+}
+
+.list-item-options {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin: 0 40px 8px;
+    display: none;
+
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.list-item-content {
+    display: inline-block;
+    width: 95%;
+}
+
+.list-view .reorder-button {
+    display: none;
+    margin-top: 1rem;
+}
+
+.multiple_items.list-view .reorder-button {
+    display: inline-block;
+}
+
+/** Handle to resize form objects/function tree **/
+#resize-sidepanel {
+    display: inline-block;
+    width: 2px;
+    height: calc(100vh - 60px);
+    float: left;
+    cursor: col-resize;
+    border-left: 1px solid #e1e1e1;
+}
+
+.expeditor-toolbar {
+    height: 50px;
+}
+
+.expeditor-toolbar button {
+    margin: 5px 0;
+}
+
+#exp-main-container {
+    height:100vh;
+    background-color: #f5f5f5;
+}
+
+#exp-main-container.exp-mode-edit {
+    background-color: #fafafa;
+}
+#exp-main-container .expeditor-toolbar {
+    background-color: #f0f0f0;
+    border-bottom: .0625rem solid rgba(0,0,0,0.05);
+}
+
+#exp-main-container .expeditor-toolbar, #rulebuilder-modes {
+    /** The below rules are specifically written to not conflict with bootstrap CSS **/
+    top: initial;
+    width: auto;
+    right: initial;
+    padding-top: 0px;
+    position: relative;
+    color: initial;
+    visibility: initial;
+    opacity: initial;
+    transform: initial;
+}
+
+#expeditor-panelstack {
+    border-top: .0625rem solid rgba(0,0,0,0.05);
+    background-color: #f5f5f5;
+}
+
+#exp-main-container .exp-wizard coral-steplist {
+    display: none !important;
+}
+
+.codeeditor-pane {
+    display: none;
+}
+
+/** Popover to switch between Visual/Code Editor**/
+#expeditor-Popover {
+    width: 5rem;
+    left: -1rem !important;
+}
+
+.rulebuilder-tabs > .editor-toolbar-icon:first-child {
+    display: block;
+}
+
+.rulebuilder-tabs > .editor-toolbar-icon{
+    float: right;
+    display: none;
+}
+
+.expeditor-popover {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.expeditor-popover > coral-icon {
+    font-size: 9px;
+    vertical-align: bottom;
+}
+
+.launch-code-editor,
+.launch-visual-editor {
+    padding-left: 10px;
+}
+
+#exp-main-container > .coral-Wizard-nav > .coral-Wizard-steplist {
+    text-align: left;
+    padding-left: 16px;
+}
+
+.af-wizard.coral-WizardView .wizard-FullScreenModeBar-left {
+    width: calc(100% - 17rem);
+}
+
+/* Rule editor wizard header */
+.expeditor-header {
+    line-height: 4rem;
+    height: 4rem;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.expeditor-header:not(.coral--dark) {
+    background-color: #fafafa;
+}
+
+/* Rule editor wizard control buttons */
+#expeditor-controls {
+    float: right;
+    padding-right: 1rem;
+    margin-top: -3.2rem;
+}
+.exp-wizard .exp-editmode-heading {
+    display: none;
+}
+
+.exp-mode-edit .exp-wizard .exp-editmode-heading {
+    display: inline-block;
+}
+
+.exp-mode-edit .exp-wizard .exp-main-heading {
+    display: none;
+}
+
+#exp-main-container .coral-Wizard-steplist-item {
+    width: 100%;
+    font-weight: 300;
+}
+
+#exp-main-container .coral-Wizard-steplist-item > label {
+    vertical-align: super;
+}
+
+.exp-editmode-heading > .coral-Wizard-steplist-item {
+    max-width: calc(100% - 20rem);;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.EXTENDED_EXPRESSION .choice-view {
+    padding: 0;
+}
+
+#expeditor-modaltemplate {
+    font-size: 13px;
+}
+
+#editor-view {
+    height: calc(100vh - 10.1rem);
+    overflow: auto;
+}
+
+#codeeditor {
+    height: calc(100vh - 10.1rem);
+    overflow: auto;
+}
+
+@media (max-width: 1024px) {
+    #expeditor-info-bar {
+        height: 4.125rem;
+    }
+    #editor-view {
+        height: calc(100vh - 10.375rem);
+    }
+    #codeeditor {
+        height: calc(100vh - 10.375rem);
+    }
+    #codeeditor textarea{
+        height: calc(100vh - 15rem);
+    }
+}
+
+@media (max-width: 768px) {
+    #expeditor-info-bar {
+        height: 5.125rem;
+    }
+    #editor-view {
+        height: calc(100vh - 11.375rem);
+    }
+    #codeeditor {
+        height: calc(100vh - 11.375rem);
+    }
+    #codeeditor textarea{
+        height: calc(100vh - 16rem);
+    }
+    #exp-toggle-sidepanel-button > span {
+        display: none !important;
+    }
+}
+
+#expeditor-info-bar {
+    display: none;
+    height: 1rem;
+    padding: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#expeditor-info-bar > coral-icon {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.4);
+    display: inline;
+}
+
+#expeditor-info-bar > span {
+    padding-left: 0.5rem;
+    vertical-align: top;
+    line-height: 1rem;
+    color: #969696;
+    display: inline-block;
+    width: calc(100% - 2rem);
+}
+
+.MEMBER_EXPRESSION {
+    border:1px solid rgba(0,0,0,0.05);
+    border-radius:4px;
+    background-color:rgba(0,0,0,0.02);
+    padding:16px 0 0 16px;
+}
+
+.member-exp-close-btn {
+    margin-top: -16px;
+    margin-right: -10px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    padding: 0;
+    background: rgb(230, 230, 230);
+    color: #969696;
+    -webkit-align-self: flex-start;
+    -ms-flex-align: start;
+    align-self: flex-start;
+}
+
+.member-exp-close-btn > coral-icon {
+    font-size: 10px;
+    vertical-align: top;
+    padding-top: 0.2125rem;
+}
+
+.hide-member-exp-close-btn {
+  display:none;
+}
+
+.choice-model.EXPRESSION {
+    padding-right: 16px;
+}
+
+.exp-wizard .coral-StepList {
+    text-align: left;
+    display: inline-block;
+    padding-left: 3rem;
+}
+
+.exp-main-heading,
+.exp-editmode-heading {
+    bottom: 0;
+    white-space: nowrap;
+    display: block;
+    max-width: 50vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.exp-main-heading {
+    color : #fafafa
+}
+
+#formObjectsPanel {
+    height: calc(100vh - 120px);
+}
+
+#expression_editor coral-selectlist,
+#expression_editor coral-buttonlist {
+    width: 13rem;
+    min-height: 0px;
+    max-height: 13rem;
+}
+
+#rule-summary .coral-Table-head .coral-Checkbox-checkmark {
+    margin-left: 0 !important;
+}
+
+.WSDL_STATEMENT > .list-view-item .coral-Autocomplete-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+/*** Summary view not visible in IE ***/
+#rule-summary > table[is="coral-table"] {
+    display: inline;
+}
+
+#rule-summary table[is="coral-table"] td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*** set width for the Summary ListView checkbox and drag icon***/
+#rule-summary table[is="coral-table"] td:first-of-type,
+#rule-summary table[is="coral-table"] td:last-of-type {
+    width: 3rem;
+}
+
+#rule-summary table[is="coral-table"] .reordered-table-row td:first-of-type {
+    width: 20%;
+}
+.summaryviewtree .granite-endor-Title {
+    position: relative;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05);
+    padding-left: 0.9375rem;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    font-size: 1rem;
+    z-index: 1;
+}
+#rulebuilder-modes.hide-code-editor {
+    display: none;
+}
+

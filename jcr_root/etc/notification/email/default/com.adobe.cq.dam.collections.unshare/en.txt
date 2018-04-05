@@ -1,0 +1,17 @@
+subject=${hostUserFullName} has unshared collection "${folderTitle}" with you
+
+header=\ -------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=\ Hi ${inviteeFirstName}, \n \
+ \n \
+The collection "${folderTitle}" has been unshared with you.\n \
+\n \
+\n \
+Thanks, \n \
+${hostUserFullName} \n \
+ \n\n
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

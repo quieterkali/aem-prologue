@@ -1,0 +1,6 @@
+#base=js
+configurationNamespace.js
+configurationConstants.js
+configurationUtil.js
+configurationUI.js
+configurationInit.js

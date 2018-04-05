@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:description="bootstrap-default Theme"
+    jcr:mixinTypes="[mix:lockable]"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Default Theme"
+    sling:resourceType="social/console/components/hbs/sitethemes/sitetheme"/>

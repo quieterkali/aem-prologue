@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-11-04T13:48:44.550+01:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Framework Design"
+        sling:resourceType="wcm/core/components/designer">
+        <framework jcr:primaryType="nt:unstructured">
+            <mappings
+                jcr:lastModified="{Date}2015-11-04T13:48:44.548+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/analytics/components/mappings/maparsys">
+                <section jcr:primaryType="nt:unstructured"/>
+            </mappings>
+        </framework>
+        <cbframework jcr:primaryType="nt:unstructured">
+            <mappings
+                jcr:lastModified="{Date}2015-11-04T10:08:06.870+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/analytics/components/mappings/maparsys">
+                <section jcr:primaryType="nt:unstructured"/>
+            </mappings>
+        </cbframework>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

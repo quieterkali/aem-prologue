@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Pants">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <faba_running_pants
+        cq:commerceType="product"
+        cq:tags="[we-retail:gender/women,we-retail:activity/running,we-retail:apparel/pants]"
+        jcr:created="{Date}2016-01-13T21:35:28.341-08:00"
+        jcr:description="pants"
+        jcr:lastModified="{Date}2016-01-16T16:59:01.467-05:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Faba Running Pants"
+        sling:resourceType="commerce/components/product"
+        identifier="116138647"
+        price="{Decimal}39.99"
+        summary="So versatile you'll wear it for running, yoga, or even just lounging around on the weekends.  Super cool stretch material fits your every move. "
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-16T16:59:01.425-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/pants/116138647.jpg"/>
+    </faba_running_pants>
+    <hiking_pants
+        cq:commerceType="product"
+        cq:tags="[we-retail:gender/women,we-retail:activity/hiking,we-retail:apparel/pants]"
+        jcr:created="{Date}2016-01-12T22:07:08.532-08:00"
+        jcr:description="pants"
+        jcr:lastModified="{Date}2016-01-16T16:58:25.976-05:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Hiking Pants"
+        sling:resourceType="commerce/components/product"
+        features="Stay cool, crisp and dry. High performance materials breathe well while giving you flexibility during those long treks. "
+        identifier="331050524"
+        price="{Decimal}86.99"
+        summary="&lt;p>Stay cool, crisp and dry. High performance materials breathe well while giving you flexibility during those long treks.&amp;nbsp;&lt;br>&lt;/p>"
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-16T16:58:25.953-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/pants/331050524.jpg"/>
+    </hiking_pants>
+</jcr:root>

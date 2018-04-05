@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Gloves">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <gloves
+        cq:commerceType="product"
+        cq:tags="[we-retail:apparel/gloves,we-retail:gender/women]"
+        jcr:created="{Date}2016-01-12T22:15:13.324-08:00"
+        jcr:description="gloves"
+        jcr:lastModified="{Date}2016-01-16T16:43:55.706-05:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Gloves"
+        sling:resourceType="commerce/components/product"
+        identifier="90019930"
+        price="{Decimal}24.99"
+        summary="The perfect fit keeps your hands warm but flexible. Tactile grip ensures no loss of control with sweat wicking interior. "
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-16T16:43:55.674-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/gloves/90019930.jpg"/>
+    </gloves>
+</jcr:root>

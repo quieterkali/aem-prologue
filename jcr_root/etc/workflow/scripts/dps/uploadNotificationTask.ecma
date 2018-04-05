@@ -1,0 +1,14 @@
+var resolver = graniteWorkflowSession.adaptTo(Packages.org.apache.sling.api.resource.ResourceResolver);
+var taskManager = resolver.adaptTo(Packages.com.adobe.granite.taskmanagement.TaskManager);
+
+var wfUser = workItem.getWorkflow().getInitiator();
+var wfPayload = workItem.getWorkflowData().getPayload();
+var wfTitle = workItem.getWorkflow().getMetaDataMap().get("workflowTitle");
+var wfStartComment = workItem.getWorkflow().getMetaDataMap().get("startComment");
+
+var task = taskManager.getTaskManagerFactory().newTask("DPS Upload Notification");
+task.contentPath = wfPayload;
+task.name = "Upload Successful";
+task.description = "Upload was successful, complete this task to dismiss. Workflow was started as: '"+wfTitle+"' with comment: '"+wfStartComment+"'";
+task.currentAssignee = wfUser;
+taskManager.createTask(task);

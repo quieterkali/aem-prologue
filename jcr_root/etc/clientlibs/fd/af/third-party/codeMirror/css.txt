@@ -1,0 +1,9 @@
+#base=lib
+codemirror.css
+
+#base=addon
+hint/show-hint.css
+lint/lint.css
+dialog/dialog.css
+fold/foldgutter.css
+search/matchesonscrollbar.css

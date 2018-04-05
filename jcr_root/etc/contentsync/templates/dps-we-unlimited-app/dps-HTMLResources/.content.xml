@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <foundation.main.css
+        jcr:primaryType="nt:unstructured"
+        extension="css"
+        path="/etc/clientlibs/foundation/main"
+        type="clientlib"/>
+    <we-unlimited.article.clientlibs.css
+        jcr:primaryType="nt:unstructured"
+        extension="css"
+        path="/apps/we-unlimited-app/components/pages/article/clientlibs"
+        type="clientlib"/>
+    <design
+        jcr:primaryType="nt:unstructured"
+        path="\{design.path}"
+        type="copy"/>
+    <granite-jquery
+        jcr:primaryType="nt:unstructured"
+        extension="js"
+        path="/libs/clientlibs/granite/jquery"
+        type="clientlib"/>
+    <granite-utils
+        jcr:primaryType="nt:unstructured"
+        extension="js"
+        path="/libs/clientlibs/granite/utils"
+        type="clientlib"/>
+    <granite-jquery-granite
+        jcr:primaryType="nt:unstructured"
+        extension="js"
+        path="/libs/clientlibs/granite/jquery/granite"
+        type="clientlib"/>
+    <foundation-jquery
+        jcr:primaryType="nt:unstructured"
+        extension="js"
+        path="/etc/clientlibs/foundation/jquery"
+        type="clientlib"/>
+    <we-unlimited-all
+        jcr:primaryType="nt:unstructured"
+        path="/etc/designs/we-unlimited-app/clientlibs-all"
+        type="clientlib"/>
+    <granite-legacy-shared
+        jcr:primaryType="nt:unstructured"
+        extension="js"
+        path="/libs/clientlibs/granite/legacy/shared"
+        type="clientlib"/>
+</jcr:root>

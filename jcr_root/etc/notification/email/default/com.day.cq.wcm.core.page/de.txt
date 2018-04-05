@@ -1,0 +1,14 @@
+subject=[CQ Ereignis]: Seitenereignis
+
+header=-------------------------------------------------------------------------------------\n \
+Zeit: ${time}\n \
+Benutzer: ${userFullName} (${userId})\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Die folgenden Seiten sind vom Ereignis betroffen: \n \
+ \n \
+${modifications} \n \
+ \n\n
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+Dies ist eine automatisch generierte Nachricht. Bitte nicht antworten.

@@ -1,0 +1,192 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+#CQ div.cg-data-tree > div.x-panel-bwrap > div.x-panel-body {
+    padding-left : 5px;
+    overflow : auto;
+    top : -06px;
+    left : 1px;
+    right : 15px;
+    background : rgb(240, 237, 237);
+    font : normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+
+#CQ ul.cg-treeview-children.leaf{
+    padding: 0px 0pt 0px 20px ;
+}
+
+#CQ ul.cg-treeview-children > li.cg-treeview-child {
+    display:block ;
+    margin:0px ;
+    cursor:pointer ;
+}
+
+#CQ li.cg-treeview-hoverable-li:hover,#CQ li.cg-treeview-hoverable-li-title:hover {
+	background-image: url(/libs/cq/ui/widgets/themes/default/widgets/wcm/Sidekick/item-over.gif) ;
+    background-repeat: repeat;
+	cursor: pointer ;
+}
+
+#CQ li.cg-treeview-child {
+ border-bottom: 1px solid #fff ;
+ display: block;
+}
+
+#CQ div.cg-treeview-container li.cg-treeview-child span {
+  display:block ;
+  cursor:pointer;
+  min-height: 29px;
+  padding: 6px 0pt 2px 23px ;
+  background-size: 16px 16px ;
+  background-repeat: no-repeat ;
+  background-position: 0px 5px ;
+}
+
+#CQ li.cg-treeview-child span.guideImage {
+    background-image: url(../images/C_image_md.png)  ;
+}
+
+#CQ li.cg-treeview-child span.guideTextBox {
+    background-image: url(../images/C_textfield_md.png)  ;
+}
+
+#CQ li.cg-treeview-child span.guidePasswordBox {
+    background-image: url(../images/C_textfield_md.png)  ;
+}
+
+#CQ li.cg-treeview-child > span.guideNumericBox {
+    background-image: url(../images/C_numericedit_md.png)  ;
+}
+
+#CQ li.cg-treeview-child > span.guideDatePicker {
+    background-image: url(../images/C_datetimeedit_md.png) ;
+}
+
+#CQ li.cg-treeview-child > span.guideDropDownList {
+    background-image: url(../images/C_dropdown_md.png)  ;
+}
+
+#CQ li.cg-treeview-child > span.guideRadioButton {
+    background-image: url(../images/C_radiobutton_md.png)   ;
+}
+
+#CQ li.cg-treeview-child  > span.guideCheckBox {
+    background-image: url(../images/C_checkbox_md.png) ;
+}
+
+#CQ div.cg-treeview-container > span.guideRadioButton {
+    background-image: url(../images/C_sbradiobuttonset_md.png) ;
+}
+
+#CQ li.cg-treeview-child > span.guideButton {
+    background-image: url(../images/C_button_md.bmp) ;
+}
+
+#CQ li.cg-treeview-child > span.guideTextDraw {
+    background-image: url(../images/C_textbox_md.png);
+}
+
+#CQ li.cg-treeview-child > span.guideScribble {
+    background-image: url(../images/C_scribble_md.png);
+}
+
+ #CQ span.guidePanel, #CQ span.guideAdModuleGroup {
+    background-image: url(../images/C_subform_md.png);
+     margin-left:5px;
+}
+#CQ span.guidePanel.guideFragment {
+    background-image: url(../images/C_SubformRefFrag_md.png);
+    margin-left:5px;
+}
+
+
+.cg-treeview-move{
+    opacity: 0.5 ;
+    z-index:10000 ;
+}
+
+#CQ #search input {
+    width:100%;
+    padding: 10px;
+    display:block;
+}
+
+#CQ  div.cg-treeview-body > div.cg-treeview-container {
+    margin-left: 15px;
+}
+
+#CQ li.cg-treeview-child-added {
+    background-color: gray;
+}
+
+#CQ  .cg-treeview-child > .x-tool{
+    float:left;
+    margin-left:-15px;
+    margin-top:6px;
+}
+
+#CQ  .cg-treeview-child > .x-tool-toggle:hover{
+    background-position:-15px -255px;
+}
+
+.guide-metadata-popover {
+    position: absolute;
+    z-index: 1010;
+    display: none;
+    max-width: 276px;
+    min-width: 100px;
+    padding: 1px;
+    text-align: left;
+    white-space: normal;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    word-wrap:break-word;
+    margin-left: 10px;
+}
+.guide-metadata-popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.guide-metadata-popover-content {
+    padding: 9px 14px;
+    font-size: 14px;
+    line-height: 18px;
+
+}
+
+.guide-metadata-popover-close {
+    float: right;
+    margin-top: -4px;
+    margin-right: -8px;
+    font-size: 10px;
+}
+

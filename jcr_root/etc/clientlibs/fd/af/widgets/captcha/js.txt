@@ -1,0 +1,3 @@
+#base=javascript
+GuideCaptchaWidget.js
+ReCaptchaWidget.js

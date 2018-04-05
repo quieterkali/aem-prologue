@@ -1,0 +1,58 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.guideFieldWidget.guideNumericStepper {
+   width: 40%;
+   min-width: 200px;
+   background-color: #FFFFFF;
+
+  input[type='text'].ui-spinner-input, .ui-spinner-input {
+    border-width: 0px;
+    width: calc(100% - 5rem);
+    border-radius: 0.25rem;
+  }
+
+  a.ui-spinner-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+  }
+
+  a.ui-spinner-button.i-spinner-up {
+    float: right;
+    background: url(/etc/clientlibs/fd/af/widgets/numericStepper/less/images/Plus.svg) center center / 0.75rem 0.75rem;
+
+    :hover, :focus {
+      background: url(/etc/clientlibs/fd/af/widgets/numericStepper/less/images/Plus_Hover.svg) center center / 0.75rem 0.75rem;
+    }
+  }
+
+  a.ui-spinner-button.ui-spinner-down {
+    float: left;
+    background: url(/etc/clientlibs/fd/af/widgets/numericStepper/less/images/Minus.svg) center center / 0.75rem 0.75rem;
+
+    :hover, :focus {
+      background: url(/etc/clientlibs/fd/af/widgets/numericStepper/less/images/Minus_Hover.svg) center center / 0.75rem 0.75rem;
+    }
+  }
+
+  a.ui-spinner-button .ui-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <deny
+        jcr:primaryType="rep:DenyACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:read]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="user-administrators"
+        rep:privileges="{Name}[jcr:all]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="workflow-user-service"
+        rep:privileges="{Name}[jcr:read]"/>
+    <allow3
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="security-userproperties-service"
+        rep:privileges="{Name}[jcr:modifyAccessControl,jcr:read,jcr:readAccessControl]"/>
+    <allow4
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:read]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob="*/profiles/public"/>
+    </allow4>
+    <allow5
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:read]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob="*/profiles/public/*"/>
+    </allow5>
+    <allow6
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="communities-user-admin"
+        rep:privileges="{Name}[jcr:all]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob="*/activities/*"/>
+    </allow6>
+</jcr:root>

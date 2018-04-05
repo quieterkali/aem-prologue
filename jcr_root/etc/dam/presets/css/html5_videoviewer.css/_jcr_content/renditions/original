@@ -1,0 +1,553 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2013 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+.s7videoviewer {
+	width:100%;
+	height:100%;
+}
+.s7videoviewer .s7videoplayer {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+}
+
+.s7tooltip {
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border-color:#999999;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+/*************************************************************************/
+/* VideoControlBar - common styles */
+.s7videoviewer .s7controlbar {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	height: 36px;
+	background-image:url(../../viewers/s7viewers/html5/images/v2/Dot0x000000opacity75.png);
+	background-color: transparent;
+}
+
+/* VideoControlBar - desktop size and art */
+.s7videoviewer.s7mouseinput .s7controlbar {
+	height: 36px;
+}
+
+/* VideoControlBar - touch device size and art */
+.s7videoviewer.s7touchinput .s7controlbar {
+	height: 72px;
+}
+
+
+/*************************************************************************/
+/* PlayPauseButton - common styles */
+.s7videoviewer .s7playpausebutton {
+	position:absolute;
+	background-size:336px;
+}
+
+.s7videoviewer .s7playpausebutton[selected][state],.s7videoviewer .s7playpausebutton[selected][state][replay]{
+	background-image: url(../../viewers/s7viewers/html5/images/v2/PlayPauseButton_sprite.png);
+}
+
+/* PlayPauseButton - desktop size and art */
+.s7videoviewer.s7mouseinput .s7playpausebutton {
+	top:4px;
+	left:4px;
+	width:28px;
+	height:28px;
+}
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][state='up'] { background-position: -28px -1204px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][state='over'] { background-position: -0px -1204px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][state='down'] { background-position: -28px 1176px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][state='disabled'] { background-position: -0px -1176px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='false'][state='up'] { background-position: -28px -1148px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='false'][state='over'] { background-position: -0px -1148px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='false'][state='down'] { background-position: -28px -1120px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='false'][state='disabled'] { background-position: -0px -1120px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][replay='true'][state='up'] { background-position: -28px -1260px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][replay='true'][state='over'] { background-position: -0px -1260px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][replay='true'][state='down'] { background-position: -28px -1232px; }
+.s7videoviewer.s7mouseinput .s7playpausebutton[selected='true'][replay='true'][state='disabled'] { background-position: -0px -1232px; }
+
+/* PlayPauseButton - touch device size and art */
+.s7videoviewer.s7touchinput .s7playpausebutton {
+	top:8px;
+	left:8px;
+	width:56px;
+	height:56px;
+}
+
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='up'] { background-position: -0px -840px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='over'] { background-position: -0px -784px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='down'] { background-position: -0px -728px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='disabled'] { background-position: -0px -672px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='up'] { background-position: -0px -616px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='over'] { background-position: -0px -560px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='down'] { background-position: -0px -504px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='disabled'] { background-position: -0px -448px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='up'] { background-position: -0px -1064px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='over'] { background-position: -0px -1008px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='down'] { background-position: -0px -952px; }
+.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='disabled'] { background-position: -0px -896px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7playpausebutton {
+		background-size:168px;
+	}
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='up'] { background-position: -56px -112px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='over'] { background-position: -0px -112px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='down'] { background-position: -112px -56px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][state='disabled'] { background-position: -56px -56px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='up'] { background-position: -0px -56px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='over'] { background-position: -112px -0px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='down'] { background-position: -0px -0px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='false'][state='disabled'] { background-position: -56px -0px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='up'] { background-position: -112px -168px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='over'] { background-position: -56px -168px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='down'] { background-position: -0px -168px; }
+	.s7videoviewer.s7touchinput .s7playpausebutton[selected='true'][replay='true'][state='disabled'] { background-position: -112px -112px; }
+}
+
+/*************************************************************************/
+/* FullScreenButton - common styles */
+.s7videoviewer .s7fullscreenbutton {
+	background-size:112px;
+}
+
+.s7videoviewer .s7fullscreenbutton[state][selected]{
+	background-image: url(../../viewers/s7viewers/html5/images/v2/FullScreenButton_dark_sprite.png);
+}
+
+/* FullScreenButton - desktop size and art */
+.s7videoviewer.s7mouseinput .s7fullscreenbutton {
+	top:4px;
+	right:5px;
+	width:28px;
+	height:28px;
+}
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -84px -1148px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -56px -1148px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='down'] { background-position: -28px -1148px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -1148px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -84px -1120px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -56px -1120px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -28px -1120px; }
+.s7videoviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -1120px; }
+
+/* FullScreenButton - touch device size and art */
+.s7videoviewer.s7touchinput .s7fullscreenbutton {
+	top:8px;
+	right:8px;
+	width:56px;
+	height:56px;
+}
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -56px -1064px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -0px -1064px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='down'] { background-position: -56px -1008px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -1008px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -56px -952px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -0px -952px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -56px -896px; }
+.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -896px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7fullscreenbutton {
+		background-size:56px;
+	}
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -0px -392px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -0px -336px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='down'] { background-position: -0px -280px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -224px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -0px -168px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -0px -112px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -0px -56px; }
+	.s7videoviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -0px; }
+}
+
+/*************************************************************************/
+/* ClosedCaptionButton - common styles */
+.s7videoviewer .s7closedcaptionbutton  {
+	background-size:112px;
+}
+
+.s7videoviewer .s7closedcaptionbutton[state][selected] {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/ClosedCaptionButton_sprite.png); 
+}
+
+/* ClosedCaptionButton - desktop size and art */
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton {
+	top:4px;
+	right:68px;
+	width:28px;
+	height:28px;
+}
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='true'][state='up'] { background-position: -84px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='true'][state='over'] { background-position: -56px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='true'][state='down'] { background-position: -28px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='true'][state='disabled'] { background-position: -0px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='false'][state='up'] { background-position: -0px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='false'][state='over'] { background-position: -56px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='false'][state='down'] { background-position: -28px -560px; }
+.s7videoviewer.s7mouseinput .s7closedcaptionbutton[selected='false'][state='disabled'] { background-position: -0px -560px; }
+
+/* ClosedCaptionButton - touch device size and art */
+.s7videoviewer.s7touchinput .s7closedcaptionbutton {
+	top:8px;
+	right:128px;
+	width:56px;
+	height:56px;
+}
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='up'] { background-position: -56px -504px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='over'] { background-position: -0px -504px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='down'] { background-position: -56px -448px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='disabled'] { background-position: -0px -448px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='up'] { background-position: -0px -448px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='over'] { background-position: -0px -504px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='down'] { background-position: -56px -448px; }
+.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='disabled'] { background-position: -0px -448px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton {
+		background-size:56px;
+	}
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='up'] { background-position: -0px -168px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='over'] { background-position: -0px -112px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='down'] { background-position: -0px -56px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='true'][state='disabled'] { background-position: -0px -0px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='up'] { background-position: -0px -0px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='over'] { background-position: -0px -112px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='down'] { background-position: -0px -56px; }
+	.s7videoviewer.s7touchinput .s7closedcaptionbutton[selected='false'][state='disabled'] { background-position: -0px -0px; }	
+}
+
+/*************************************************************************/
+/* VideoScrubber - common styles */
+.s7videoviewer .s7videoscrubber  {
+	position:absolute;
+}
+.s7videoviewer .s7videoscrubber .s7videotime, .s7videoviewer .s7videoscrubber .s7navigation[state], .s7videoviewer .s7videoscrubber .s7knob {
+    background-image: url(../../viewers/s7viewers/html5/images/v2/VideoScrubber_sprite.png);
+    background-size: 60px;
+}
+.s7videoviewer .s7videoscrubber .s7videotime {
+	position:absolute;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	width:58px;
+	padding:0px;
+	background-position: -0px -288px;
+	align:center;
+	text-align:center;
+	vertical-align:middle;
+	line-height:24px;		/* centers the text vertically in the bubble */
+	color:#ffffff;
+}
+.s7videoviewer .s7videoscrubber .s7track {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#555555;
+}
+.s7videoviewer .s7videoscrubber .s7trackloaded {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#666666;
+}
+.s7videoviewer .s7videoscrubber .s7trackplayed {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:8px;
+	background-color:#999999;
+}
+.s7videoviewer .s7videoscrubber .s7navigation {
+	position:absolute;
+	top:0px;
+	height:8px;
+}
+
+.s7videoviewer .s7videoscrubber .s7chapter {
+	max-width:235px;
+	bottom:8px;
+}
+.s7videoviewer .s7videoscrubber .s7chapter .s7header {
+	height:22px;
+	background-color:rgb(51,51,51,0.8);
+}
+.s7videoviewer .s7videoscrubber .s7chapter .s7header .s7starttime {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	color:#dddddd;
+	padding-right: 10px;
+}
+.s7videoviewer .s7videoscrubber .s7chapter .s7header .s7title {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#ffffff;
+}
+.s7videoviewer .s7videoscrubber .s7chapter .s7description {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	background-color:rgba(221,221,221,0.9);
+	padding:12px 12px 9px 12px;
+	line-height:15px;	
+}
+.s7videoviewer .s7videoscrubber .s7knob {
+	position:absolute;
+	width:14px;
+	height:24px;
+	top:-8px;
+}
+
+/* VideoScrubber - desktop size and art */
+.s7videoviewer.s7mouseinput .s7videoscrubber  {
+	top:14px;
+	left:40px;
+	width:340px;
+	height:8px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7videotime {
+	height:35px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7knob {
+	left:-3px;
+	background-position: -0px -389px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7navigation {
+	width:5px;
+}
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7navigation[state='default'] { background-position: -28px -389px; }
+.s7videoviewer.s7mouseinput .s7videoscrubber .s7navigation[state='over'] { background-position: -33px -389px; }
+
+/* VideoScrubber - touch device size and art */
+.s7videoviewer.s7touchinput .s7videoscrubber {
+	top:32px;
+	left:72px;
+	height:8px;
+}
+.s7videoviewer.s7touchinput .s7videoscrubber .s7videotime {
+	/*height:29px; Make the height taller than the image so it floats above the scrubber knob by a few px*/
+	height:40px;
+}
+
+.s7videoviewer.s7touchinput .s7videoscrubber .s7knob {
+	left:0px;
+	background-position: -14px -389px;
+}
+
+.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation {
+	width:30px;
+	height:72px;
+	margin:-32px 0px 0px 0px;
+}
+.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='default'] {	background-position: -30px -317px;}
+.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='over'] { background-position: -0px -317px;}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation {
+		background-size:30px;
+	}
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='default'] { background-position: -0px -72px; }
+	.s7videoviewer.s7touchinput .s7videoscrubber .s7navigation[state='over'] { background-position: -0px -0px; }
+}
+
+/*************************************************************************/
+/* VideoTime - common styles */
+.s7videoviewer .s7videotime {
+	position:absolute;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999999;
+	line-height: normal;		
+	/* Need to add an explicit width to enable scrubber resizing due to getComputedStyle not working in IE8 (IE uses currentStyle, which returns "auto" and breaks our layout math) */
+	/* Info on this hack here: http://webdesignerwall.com/tutorials/css-specific-for-internet-explorer */
+	width:60px\9;
+}
+
+/* VideoTime - desktop size and art */
+.s7videoviewer.s7mouseinput .s7videotime {
+	top:8px;
+	right:98px;
+	font-size:10px;
+}
+
+/* VideoTime - touch device size and art */
+.s7videoviewer.s7touchinput .s7videotime {
+	top:25px;
+	right:188px;
+	font-size:18px;
+}
+
+/*************************************************************************/
+/* Caption - common styles */
+.s7videoviewer .s7videoplayer .s7caption {
+	background-color: rgba(0,0,0,0.75);
+	color: #e6e6e6;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+/*************************************************************************/
+/* MutableVolume - common styles */
+.s7videoviewer .s7mutablevolume {
+	position:absolute;
+}
+.s7videoviewer .s7mutablevolume .s7mutebutton, .s7videoviewer .s7mutablevolume .s7verticalvolume .s7knob {
+    background-size:120px;
+}
+
+.s7videoviewer .s7mutablevolume .s7mutebutton[state][selected], .s7videoviewer .s7mutablevolume .s7verticalvolume .s7knob {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/MutableVolume_sprite.png);
+}
+
+.s7videoviewer .s7mutablevolume .s7verticalvolume {
+	position:absolute;
+	background-color:#dddddd;
+	left:0px;
+}
+.s7videoviewer .s7mutablevolume .s7verticalvolume .s7track {
+	position:absolute;
+	top:11px;
+	width:8px;
+	height:61px;
+	background-color:#666666;
+}
+.s7videoviewer .s7mutablevolume .s7verticalvolume .s7filledtrack {
+	position:absolute;
+	width:8px;
+	height:61px;
+	background-color:#ababab;
+}
+.s7videoviewer .s7mutablevolume .s7verticalvolume .s7knob {
+	top:11px;
+	left:8px;
+	position:absolute;
+}	
+
+/* MutableVolume - desktop size and art */
+.s7videoviewer.s7mouseinput .s7mutablevolume {
+	top:4px;
+	right:35px;
+	width:30px;
+	height:28px;
+}
+
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='true'][state='up'] { background-position: -90px -1148px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='true'][state='over'] { background-position: -60px -1148px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='true'][state='down'] { background-position: -30px -1148px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='true'][state='disabled'] { background-position: -0px -1148px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='false'][state='up'] { background-position: -90px -1120px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='false'][state='over'] { background-position: -60px -1120px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='false'][state='down'] { background-position: -30px -1120px; }
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7mutebutton[selected='false'][state='disabled'] { background-position: -0px -1120px; }
+
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7verticalvolume {
+	width:30px;
+	height:83px;
+}
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7verticalvolume .s7track {
+	left:11px;
+}
+.s7videoviewer.s7mouseinput .s7mutablevolume .s7verticalvolume .s7knob {
+	width:14px;
+	height:8px;
+	background-position: -24px -1176px;
+}	
+
+/* MutableVolume - touch device size and art */
+.s7videoviewer.s7touchinput .s7mutablevolume {
+	top:8px;
+	right:68px;
+	width:60px;
+	height:56px;
+}
+
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='up'] { background-position: -60px -1064px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='over'] { background-position: -0px -1064px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='down'] { background-position: -60px -1008px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='disabled'] { background-position: -0px -1008px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='up'] { background-position: -60px -952px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='over'] { background-position: -0px -952px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='down'] { background-position: -60px -896px; }
+.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='disabled'] { background-position: -0px -896px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7mutablevolume, .s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton {
+		background-size:60px;
+	}
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='up'] { background-position: -0px -392px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='over'] { background-position: -0px -336px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='down'] { background-position: -0px -280px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='true'][state='disabled'] { background-position: -0px -224px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='up'] { background-position: -0px -168px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='over'] { background-position: -0px -112px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='down'] { background-position: -0px -56px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7mutebutton[selected='false'][state='disabled'] { background-position: -0px -0px; }
+	.s7videoviewer.s7touchinput .s7mutablevolume .s7verticalvolume .s7knob {
+		left: 18px;
+	}
+}
+
+.s7videoviewer.s7touchinput .s7mutablevolume .s7verticalvolume {
+	width:60px;
+	height:83px;
+}
+.s7videoviewer.s7touchinput .s7mutablevolume .s7verticalvolume .s7track {
+	left:26px;
+}
+.s7videoviewer.s7touchinput .s7mutablevolume .s7verticalvolume .s7knob {
+	left: 18px;
+	width:24px;
+	height:14px;
+	background-position: -0px -1176px;
+}	
+	
+/*************************************************************************/
+/* IconEffect - common styles */
+.s7videoviewer .s7videoplayer .s7iconeffect {
+	width:80px;
+	height:80px;
+	background-size: 160px;
+}
+.s7videoviewer .s7videoplayer .s7iconeffect[state] {
+	background-image: url(../../viewers/s7viewers/html5/images/v2/IconEffect_video_sprite.png);
+}
+
+/* IconEffect - desktop size and art */
+.s7videoviewer.s7mouseinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -320px; }
+.s7videoviewer.s7mouseinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -80px -320px; }
+
+/* IconEffect - touch device size and art */
+.s7videoviewer.s7touchinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -320px; }
+.s7videoviewer.s7touchinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -80px -320px; }	
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7videoviewer.s7touchinput .s7videoplayer .s7iconeffect{
+		background-size:80px;	
+	}
+	.s7videoviewer.s7touchinput .s7videoplayer .s7iconeffect[state='play']{ background-position: -0px -0px; }
+	.s7videoviewer.s7touchinput .s7videoplayer .s7iconeffect[state='replay']{ background-position: -0px -80px; }		
+}
+
+/*************************************************************************/
+/* SocialShare - disable default styles */
+.s7videoviewer .s7socialshare {
+	display: none;
+}
+	

@@ -1,0 +1,326 @@
+/*
+ * If we want to use default bootstrap less vars or vars from a theme
+ * in individual components those vars will need to be referenced here.
+ * Less code that can be shared between components can also be placed
+ * here.
+ *
+ * This file needs to be imported by the theme that will be used
+ */
+
+@import (once) "/etc/clientlibs/wcm/foundation/grid/grid_base.less";
+
+@icon-font-path: "/etc/clientlibs/social/thirdparty/bootstrap3/fonts/";
+//** File name for all font files.
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+
+/* code moved from scfskin.less */
+
+.scf {
+    font-family: helvetica, arial;
+    color: @text-color;
+}
+
+.scf h4 {
+    font-size: 14px;
+    color: @headings-color;
+    margin: 10px 0;
+}
+
+.scf h3 {
+    color: @headings-color;
+}
+
+.scf h2 {
+    font-size: 24px;
+    color: @headings-color;
+    margin: 0px;
+    font-weight: 100;
+}
+
+.scf .scf-link {
+    font-size: 14px;
+    color: @link-color;
+    cursor: pointer;
+}
+
+.scf .scf-link:visited {
+    color: @text-color;
+}
+
+.scf .scf-link:hover {
+    text-decoration: underline;
+    color: @link-hover-color;
+}
+
+.scf .scf-quiet {
+    font-size: 12px;
+    color: @brand-primary;
+}
+
+.scf-is-new {
+    background-color: @gray-lighter;
+    padding: @panel-body-padding;
+    border-radius: @panel-border-radius;
+    color: @gray-darker;
+}
+
+.scf-modal-screen {
+    z-index: @zindex-modal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: @modal-backdrop-bg;
+}
+
+.scf-modal-dialog {
+    z-index: @zindex-modal;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    padding: @modal-inner-padding;
+    background-color: @modal-content-bg;
+    color: @text-color;
+    text-align: center;
+    border: 1px solid @modal-content-border-color;
+    border-radius: @border-radius-large;
+}
+
+.scf-modal-dialog input,
+.scf-modal-dialog select,
+.scf-modal-dialog option,
+.scf-modal-dialog textarea {
+    color: @input-color;
+}
+
+.scf-modal-dialog h2 {
+    color: @headings-color;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 24px;
+    line-height: @modal-title-line-height;
+    border-bottom: 1px solid @modal-header-border-color;
+}
+
+.scf-modal-close {
+    font-size: (@font-size-base * 1.5);
+    font-weight: @close-font-weight;
+    line-height: 1;
+    color: @close-color;
+    text-shadow: @close-text-shadow;
+    .opacity(.2);
+    &:hover,
+    &:focus {
+        color: @close-color;
+        text-decoration: none;
+        cursor: pointer;
+        .opacity(.5);
+    }
+}
+
+.scf-error {
+    border: 2px solid !important;
+    border-color: @brand-danger !important;
+}
+
+.scf-js-error-message {
+    background-color: @brand-danger;
+    color: @text-color;
+    border-radius: 6px;
+}
+
+.scf-selected-tag {
+    padding: 5px;
+    margin-right: 5px;
+    background-color: @btn-info-bg;
+    color: @btn-info-color;
+    font-size: 13px;
+}
+
+
+/****** pagination styles **********/
+
+.scf-pages-list:first-child {
+    border-top: solid;
+    border-width: 1px;
+    border-color: @pagination-border;
+}
+
+.scf-pages-list:last-child {
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: @pagination-border;
+}
+
+.scf-page {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1px 3px;
+    border: 1px solid @pagination-border;
+    min-width: 16px;
+    text-align: center;
+}
+
+a.scf-currentPage {
+    color: @pagination-active-color;
+    border: none;
+    background: @pagination-active-bg;
+    cursor: default;
+}
+
+a.scf-disabledLink {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.scf-captcha .form_captcha_refresh input[type="button"] {
+    .btn;
+    .btn-default;
+}
+
+.scf-captcha .form_captcha_input input[type="text"] {
+    .form-control;
+}
+
+@media (min-width: @screen-lg-min) {
+    .scf-site-body-content-container {
+        width: @container-lg;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+/* maximum amount of grid cells to be provided */
+
+@max_col: 12;
+
+/* default breakpoint */
+[class^="scf"] {
+    .aem-Grid {
+        .generate-grid(default, @max_col);
+    }
+
+
+    /* phone breakpoint */
+
+    @media (max-width: (@screen-sm-min - 1)) {
+        .aem-Grid {
+            .generate-grid(phone, @max_col);
+        }
+    }
+
+
+    /* tablet breakpoint */
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        .aem-Grid {
+            .generate-grid(tablet, @max_col);
+        }
+    }
+
+
+    /* Medium screen breakpoint */
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        .aem-Grid {
+            .generate-grid(mediumscreen, @max_col);
+        }
+    }
+
+
+    /* Large Screen breakpoint */
+
+    @media (min-width: @screen-lg-min) {
+        .aem-Grid {
+            .generate-grid(largescreen, @max_col);
+        }
+    }
+}
+
+/* quick search */
+
+.scf-quicksearch-form-group .ui-autocomplete .ui-menu-item a {
+    color: @dropdown-link-color;
+}
+
+.scf-quicksearch-form-group .ui-autocomplete .ui-menu-item a.ui-state-focus {
+    background: @dropdown-link-hover-bg none;
+    color: @dropdown-link-hover-color;
+    border: 1px solid @dropdown-border;
+}
+
+
+/* end code moved from scfskin.less */
+
+
+/* resource type icons */
+
+.scf-icon-social-forum-components-hbs-topic:before {
+    &:extend(.glyphicon-edit:before);
+    /* content: "\e065"; */
+}
+
+.scf-icon-social-journal-components-hbs-entry_topic:before {
+    &:extend(.glyphicon-book:before);
+}
+
+.scf-icon-social-ideation-components-hbs-idea:before {
+    &:extend(.glyphicon-flash:before);
+}
+
+.scf-icon-social-filelibrary-components-hbs-document:before {
+    &:extend(.glyphicon-file:before);
+    /* content: "\e022"; */
+}
+
+.scf-icon-social-filelibrary-components-hbs-folder:before {
+    &:extend(.glyphicon-folder-open:before);
+    /* content: "\e118"; */
+}
+
+.scf-icon-social-qna-components-hbs-post:before {
+    &:extend(.glyphicon-ok:before);
+    /* content: "\e013"; */
+}
+
+.scf-icon-social-calendar-components-hbs-event:before {
+    &:extend(.glyphicon-calendar:before);
+    /* content: "\e109"; */
+}
+
+.scf-icon-social-commons-components-hbs-comments-comment:before,
+.scf-icon-social-calendar-components-hbs-event_comment:before,
+.scf-icon-social-ideation-components-hbs-comment:before,
+.scf-icon-social-journal-components-hbs-comment:before,
+.scf-icon-social-forum-components-hbs-post:before {
+    &:extend(.glyphicon-comment:before);
+    /* content: "\e111"; */
+}
+
+.scf-icon-social-qna-components-hbs-topic:before {
+    &:extend(.glyphicon-question-sign:before);
+    /* content: "\e085"; */
+}
+
+
+/* end resource type icons */
+
+
+/* not a bootstrap standard container
+   requires custom styling */
+
+.scf-num-items {
+    padding: 1.2% 0 0.8% 0;
+    border-bottom: 1px solid @gray-lighter;
+}
+
+/* marking a form-group as required */
+[class^="scf"] .form-group.required .control-label:after {
+   content: " *";
+   color: @brand-danger;
+}

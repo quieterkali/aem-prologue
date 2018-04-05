@@ -1,0 +1,379 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/* custom styles */
+
+.upperToolbar {
+  width: 60%;
+  margin-top: 0px;
+  .nextButton, .previousButton {
+    > .guideFieldWidget > .button, .moveNext, .movePrev {
+      background-color: @navigation-button-bg-color;
+      border-width: 0px;
+      border-radius: 0px;
+      outline: none;
+      &:hover, &:focus {
+        background: @navigation-button-bg-hover-color;
+      }
+    }
+  }
+}
+
+.triangleCommon() {
+  float: left;
+  display: block;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  content: "";
+  cursor: pointer;
+}
+
+.triangleNext() {
+  &:after {
+    .triangleCommon();
+    border-left: 20px solid @navigation-button-bg-color;
+  }
+}
+
+.trianglePrevious() {
+  &:before {
+    .triangleCommon();
+    border-right: 20px solid @navigation-button-bg-color;
+  }
+
+}
+
+.nextButton {
+  padding-right: 10px;
+  > .guideFieldWidget {
+    width: auto;
+    border: none;
+    .triangleNext();
+    button {
+      float: left;
+    }
+    &:hover, &:focus {
+      border-right-color: @navigation-button-bg-hover-color;
+      &:after {
+        border-left-color: @navigation-button-bg-hover-color;
+      }
+    }
+  }
+}
+
+.previousButton {
+  padding-left: 10px;
+  > .guideFieldWidget {
+    width: auto;
+    border: none;
+    .trianglePrevious();
+    button {
+      float: left;
+    }
+    &:hover, &:focus {
+      border-left-color: @navigation-button-bg-hover-color;
+      &:before {
+        border-right-color: @navigation-button-bg-hover-color;
+      }
+    }
+  }
+}
+
+.upperToolbar
+.guidetoolbar {
+  input[type="button"], button, .button {
+    text-transform: uppercase;
+    border-radius: 4px;
+    height: 42px;
+    width: auto;
+  }
+}
+
+.guidetoolbar {
+  input[type="button"], button, .button {
+    .rounded-corners (@button-radius);
+    &:hover {
+      background-color: @button-hover-bg-color;
+    }
+    &:focus {
+      background-color: @button-focus-bg-color;
+    }
+  }
+}
+
+.guide-header-bar {
+  text-transform: uppercase;
+}
+
+.guideCheckBoxItem,
+.guideRadioButtonItem {
+  margin-top: 0px;
+  .guideFieldWidget {
+    margin-top: 0px;
+  }
+}
+
+.guideFieldWidget.multiline {
+  min-height: 60px;
+}
+
+.guideFieldNode {
+  .clearfix();
+}
+
+.guideFieldLabel {
+  padding-top: 8px;
+  height: @widget-height;
+}
+
+.guideFieldWidget  {
+    &.multiline > textarea,
+    .guide-tnc-content {
+        padding-top: 8px;
+    }
+}
+
+.guideformtitle {
+  padding-left: @padding-large-horizontal;
+}
+
+.wizard-navigators {
+  text-transform: uppercase;
+  > li {
+    border: none;
+    outline: none;
+    &:before {
+      border-width: 0px;
+      margin-right: 10px;
+      content: counter(item);
+      .rounded-corners(5px);
+      padding: 3px 8px;
+      color: #ffffff;
+      font-size: @tabs-font-size;
+      background-color: @wizard-tabs-font-color;
+    }
+    > a {
+      margin-top: 20px;
+    }
+    &.stepped {
+      .progress {
+        background-color: @wizard-tabs-stepped-font-color;
+      }
+      &:before {
+        background-color: @wizard-tabs-stepped-font-color;
+      }
+    }
+    &.completed {
+      .progress {
+        background-color: @wizard-tabs-completed-font-color;
+      }
+      &:before {
+        background-color: @wizard-tabs-completed-font-color;
+      }
+    }
+    &.active {
+      color: @active-nav-color;
+      .progress {
+        background: @active-nav-color;
+      }
+      &:before {
+        background-color: @active-nav-color;
+      }
+    }
+  }
+}
+
+.navigator-toggle {
+  background-color: @navigation-button-bg-color;
+  color: white;
+  &:hover {
+    background-color: @navigation-button-bg-hover-color;
+    color: white;
+  }
+}
+
+.tab-content {
+  border-left: 1px solid @tabs-bifercating-border-color;
+  .tab-content {
+    border: none;
+  }
+}
+
+.guideTabbedPanelLayout {
+  border: 1px solid @tabs-bifercating-border-color;
+  .active {
+    .guideNavIcon {
+      background-image: url("../images/tick-active.png");
+      > .guideNavIcon .active {
+        background-image: url("../images/tick.png");
+      }
+      &.nested_true {
+        background-image: url("../images/tick-active.png"), url("../images/down-arrow.png");
+      }
+      &.cert_nav {
+        background-image: url("../images/cert-active.png");
+      }
+    }
+
+    li.active > .guideNavIcon {
+      background-image: url("../images/arrow-blue.png");
+    }
+    li > .guideNavIcon {
+      background-position: 3% 50%;
+      background-image: url("../images/arrow-black.png");
+    }
+  }
+
+  .guideNavIcon {
+    background-image: url("../images/tick.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    &.nested_true {
+      background-image: url("../images/tick.png"), url("../images/up-arrow.png");
+      background-position: left center, 97% 50%;
+    }
+    &.cert_nav {
+      background-image: url("../images/cert.png");
+    }
+  }
+}
+
+.tab-navigators-vertical {
+  .tab-navigators-vertical {
+    border: none;
+    li, li .active {
+      color: @tabs-font-color;
+      background-color: @tabs-child-nav-bg-color;
+      > a, > a:hover {
+        color: @tabs-font-color;
+        background-color: @tabs-child-nav-bg-color;
+        font-size: @tabs-font-size;
+      }
+    }
+  }
+  > li {
+    border-bottom: 2px solid @tabs-navigator-separator-color;
+  }
+}
+
+.tab-navigators {
+  border-right: 1px solid @tabs-bifercating-border-color;
+}
+
+.tab-navigators > li {
+  > a {
+    font-size: @tabs-font-size;
+    padding-left: 30px;
+  }
+}
+
+.panel {
+  .box-shadow(none);
+}
+
+.upperNavigation {
+  padding-left: 32px;
+  > li {
+    display: inline-block;
+    height: 40px;
+    margin-top: 9px;
+    margin-right: 3px;
+    background: rgb(102, 102, 102);
+    border-radius: 0;
+    position: relative;
+    background-image: url("../images/reason.png");
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    border: solid 2px rgb(102, 102, 102);
+    > a {
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 12px 15px;
+      display: table-cell;
+      line-height: 100%;
+    }
+  }
+}
+
+.externalNavIcon {
+  cursor: pointer;
+  &.cert_external_nav {
+    background-image: url("../images/certify.png");
+  }
+}
+
+.bottomToolbar {
+  margin-left: 20%;
+}
+
+.guide-tab-scroller {
+  margin-top: 10px;
+}
+
+.wizard-nav-arrow {
+  display: none;
+}
+
+/* this is to give illusion of two column layout for label and widget */
+@media (min-width: @screen-md-min) {
+  .guideFieldLabel {
+    float: left;
+    width: 30%;
+    padding-right: 30px;
+    white-space: normal;
+    word-break: break-word;
+    word-wrap: break-word;
+    text-align: right;
+  }
+
+  .guideFieldWidget {
+    float: left;
+    width: 60%;
+  }
+
+  .guideCheckBoxGroupItems,
+  .guideRadioButtonGroupItems{
+    float: left;
+    width: 60%;
+  }
+
+  .guideFieldNode .guideHelpQuestionMark {
+    font-size: 1.2em;
+    padding-left: 2px;
+    position: relative;
+    width: 5%;
+    margin-left: 10px;
+  }
+
+  /* this is to match with the theme, label 20% widget 40% */
+  .guideFieldNode .guideFieldDescription {
+    width: 60%;
+    margin-left: 30%;
+  }
+
+  .guideFieldError {
+    margin-left: 30%;
+    clear: both;
+  }
+}
+
+@import "ipadStyles.less";
+@import "iPhoneStyles.less";

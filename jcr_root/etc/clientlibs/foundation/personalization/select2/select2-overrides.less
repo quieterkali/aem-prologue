@@ -1,0 +1,144 @@
+@lineHeight: 16px;
+@textColor: #adadad;
+@activeTextColor: #fff;
+@backgroundColor: #232323;
+@fontSize: 12px;
+
+// we target both the client context and the experiences carousel
+// however, we are careful to not override generic styles in the following block
+.cq-cc-store, #CQ .cq-targeting-editor {
+
+	// style input field
+	.select2-container .select2-choice {
+	    height: @lineHeight;
+	    line-height: @lineHeight;
+	    color: @activeTextColor;
+	    background: @backgroundColor;
+	    border: none;
+	    filter: ~"progid:DXImageTransform.Microsoft.gradient(enabled='false')";
+	}
+
+	// inherit background color for the 'click to open' affordance
+	// also disable the thin line between the click to open affordance and the option text
+	.select2-container .select2-choice div {
+		background: inherit;
+		border-left: none;
+		filter: ~"progid:DXImageTransform.Microsoft.gradient(enabled='false')";
+	}
+
+	// disable focus decoration
+	.select2-container-active .select2-choice, .select2-container-active .select2-choices {
+		border: none;
+	}
+
+	// use our own chevron
+	.select2-container .select2-choice div b {
+		background: url('chevron.png') no-repeat 4px 6px;
+	}
+
+    /* 1.25 dpr */
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        .select2-container .select2-choice div b {
+            background: url('chevron.png') no-repeat 0px -4px;
+        }
+    }
+
+	// prevent box shadown when the dropdown is open
+	.select2-dropdown-open .select2-choice  {
+		box-shadow: none;
+	}
+
+	.select2-choice {
+		font-size: @fontSize;
+	}
+
+	// starting from here some styles from select2.css are duplicated
+	// to have a higher CSS selector specificity when included under #CQ
+
+	.select2-container .select2-choice span {
+	    margin-right: 26px;
+	    display: block;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+
+	    line-height: @lineHeight;
+	    color: @activeTextColor;
+	}
+
+	.select2-container {
+	    position: relative;
+	    display: inline-block;
+	    /* inline-block for ie7 */
+	    zoom: 1;
+	    *display: inline;
+	    vertical-align: middle;
+	}
+
+	.select2-container .select2-choice div {
+	    display: block;
+	    width: 18px;
+	    height: 100%;
+	    position: absolute;
+	    right: 0px;
+	    top: 0px;
+	    border-radius: 0px 4px 4px 0px;
+	}
+
+	.select2-container a.select2-choice {
+		text-decoration: none;
+		display: block;
+		padding: 0 0 0 8px;
+	}
+
+	.select2-container .select2-choice b {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// make really sure that offscreen elements are not rendered
+#CQ {
+	.select2-offscreen {
+	    border: 0px none;
+	    clip: rect(0px, 0px, 0px, 0px);
+	    height: 1px;
+	    margin: -1px;
+	    overflow: hidden;
+	    padding: 0px;
+	    position: absolute;
+	    width: 1px;
+	}
+}
+
+// some components are absolutely positioned and placed under the body tag
+// so we can't wrap then inside the .cq-cc-store declaration
+
+#select2-drop.cq-cc-campaign-store-dropdown {
+
+	border-width: 0px;
+    background-color: @backgroundColor;
+    color: @textColor;
+
+	.select2-drop.select2-drop-above {
+		border-top-color: @backgroundColor;
+	}
+
+	// do not display search row
+	.select2-search {
+		display: none;
+	}
+
+	.select2-results {
+		font-size: @fontSize;
+	}
+
+	// custom highlight colors
+	.select2-results .select2-highlighted {
+	    background-color: #454545;
+	    color: @activeTextColor;
+	}
+}

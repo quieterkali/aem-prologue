@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:crx="http://www.day.com/crx/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <deny
+        jcr:primaryType="rep:DenyACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:versionManagement,jcr:modifyAccessControl,jcr:read,jcr:namespaceManagement,jcr:addChildNodes,rep:userManagement,jcr:readAccessControl,jcr:nodeTypeDefinitionManagement,jcr:lifecycleManagement,jcr:retentionManagement,jcr:lockManagement,jcr:nodeTypeManagement,jcr:removeNode,jcr:modifyProperties,rep:indexDefinitionManagement,rep:privilegeManagement,crx:replicate,jcr:workspaceManagement]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:removeChildNodes]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="social-enablement-tmp-manager"
+        rep:privileges="{Name}[jcr:all]"/>
+</jcr:root>

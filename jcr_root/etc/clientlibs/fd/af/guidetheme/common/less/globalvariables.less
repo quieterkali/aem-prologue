@@ -1,0 +1,202 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@import "../../../third-party/less/variables.less";
+
+//Components
+
+@container-bgColor : #cccccc;
+@container-padding : @padding-large-vertical @padding-large-horizontal @padding-large-vertical @padding-large-horizontal;
+@container-margin : auto;
+@container-fontColor : #000000;
+
+@field-padding: @padding-small-vertical;
+
+@field-error-font-color:#ccc;
+@field-error-font-size:@font-size-base;
+
+@widgets-bg-color: #f3f3f3;
+@widgets-border-color: #CDE0EC;
+@widgets-border-thickness: 1px;
+@widgets-border-radius: 4px;
+@widgets-border-type: solid;
+@widgets-border: @widgets-border-type @widgets-border-thickness @widgets-border-color;
+@widgets-font-color: #333333;
+@widgets-font-size: @font-size-base;
+@widgets-line-height: @line-height-base;
+@widgets-padding: @padding-xs-vertical;
+
+@widgets-focus-border-color: darken(@widgets-border-color, 20%);
+
+@widgets-mandatory-border-color: @brand-danger;
+@widgets-mandatory-bg-color: @widgets-bg-color;
+
+@widgets-disabled-bg-color: darken(@widgets-bg-color,20%);
+@widgets-disabled-font-color: @gray-light;
+@widgets-disabled-border-color: darken(@widgets-border-color, 20%);
+
+@widgets-help-long-bg-color: rgb(238, 238, 238);
+@widgets-help-long-border-color: rgb(214, 214, 214);
+@widgets-help-long-border-indicator-color: rgb(0, 127, 162);
+@widgets-help-short-bg-color: #ffffff;
+@widgets-help-short-color: #333333;
+@widgets-help-short-tooltip-bg-color: rgba(0,0,0,0.8);
+@widgets-help-short-tooltip-color: #ffffff;
+
+@widget-height:38px;
+@listboxwidget-height: 100px;
+@checkbutton-height:@widget-height;
+
+
+@table-collapsible-desktop-columns : 5;
+@table-collapsible-medium-desktop-columns : 4;
+@table-collapsible-tablet-columns : 4;
+@table-collapsible-medium-tablet-columns : 2;
+@table-collapsible-mobile-columns : 2;
+
+@table-collapsible-cell-desktop-min-width : round(@screen-lg-min/@table-collapsible-desktop-columns);
+@table-collapsible-cell-medium-desktop-min-width : round(@screen-md-min/@table-collapsible-medium-desktop-columns);
+@table-collapsible-cell-tablet-min-width  : round(@screen-sm-min/@table-collapsible-tablet-columns);
+@table-collapsible-cell-medium-tablet-min-width  : round(@screen-xs/@table-collapsible-medium-tablet-columns);
+@table-collapsible-cell-mobile-min-width  : round(@screen-xs-min/@table-collapsible-mobile-columns);
+
+@table-header-bg-color: #333;
+@table-odd-row-bg-color: rgb(255, 255, 255);
+@table-even-row-bg-color: #eee;
+
+@tnc-visited-color: #C0C0C0;
+
+@button-border-size: 2px;
+@button-border-type: outset;
+@widget-border-focus-type:inset;
+
+@button-padding: @padding-base-vertical;
+@button-font-size: @font-size-base;
+
+@button-large-padding: @padding-large-vertical;
+@button-large-font-size: @font-size-large;
+
+@button-small-padding: @padding-small-vertical;
+@button-small-font-size: @font-size-small;
+
+@button-background-color: buttonface;
+@button-font-color: buttontext;
+@button-border-color: buttonface;
+
+@button-info-background-color: @brand-info;
+@button-info-font-color: #fff;
+@button-info-border-color: darken(@brand-info,5%);
+
+@button-alert-background-color: @brand-danger;
+@button-alert-font-color: #fff;
+@button-alert-border-color: darken(@brand-danger,5%);
+
+@button-warning-background-color: @brand-warning;
+@button-warning-font-color: #fff;
+@button-warning-border-color: darken(@brand-warning,5%);
+
+@guideSeparatorStyle : solid;
+@guideSeparatorColor : #CCC;
+
+@label-font-color:#333333;
+@label-font-size: @font-size-base;
+@label-line-height: @line-height-base;
+@label-font-weight: bold;
+@label-margin: @padding-small-vertical;
+
+@tnc-unvisited:@widgets-font-color;      /* unvisited link */
+@tnc-visited:@tnc-visited-color;       /* visited link */
+
+@questionmark-font-color:#ccc;
+@questionmark-hover-font-color:#000;
+
+@fileItemPadding: 10px;
+@fileItemBackground : #fff;
+@fileItemBorderColor: #dddddd;
+@fileItemColor: #000000;
+@filePreviewIconColor: @fileItemColor;
+@fileItemCommentHeight:25px;
+
+@panel-font-color:#333333;
+@panel-font-size:@font-size-base;
+@panel-background-color:#ffffff;
+@panel-padding-horizontal:@padding-small-horizontal;
+@panel-padding-vertical:  0px;
+@panel-padding: @panel-padding-horizontal @panel-padding-vertical;
+
+@panel-description-font-size:@font-size-large;
+@panel-description-padding: @padding-large-vertical;
+
+@panel-help-bg-color: rgb(211, 211, 211);
+@panel-help-border-indicator-color: rgb(0, 191, 255);
+
+@heirarichal-indent:5px;
+
+@scrollIndicatorBottom: 20px;
+@scrollIndicatorRight: 0px;
+@scrollIndicatorWidth: 50px;
+@scrollIndicatorHeight: 50px;
+@mobileToolbarBottom: 0px;
+@mobileToolbarTop: inherit;
+@mobileToolbarLeft: 0px;
+@mobileToolbarRight: 0px;
+@mobileButtonIconTopMargin: 0px;
+@mobileButtonIconHeight: 25px;
+@mobileButtonIconWidth: 25px;
+@mobile-fixed-toolbar-bg-color: rgb(1, 56, 83);
+
+@headerbar-background-color: @brand-danger;
+@headerbar-font-color: white;
+@headerbar-padding: 0px;
+
+@navigator-bg-color: inherit;
+@tabs-bg-color:#FFFFFF;
+@tabs-font-color: #333333;
+@tabs-hover-bg-color: @gray-light;
+@tabs-hover-font-color: #FFF;
+@tabs-active-bg-color: @gray-darker;
+@tabs-active-font-color: @tabs-hover-font-color;
+@tabs-completed-bg-color: @gray;
+@tabs-completed-font-color: @tabs-hover-font-color;
+@tabs-stepped-bg-color: @gray;
+@tabs-stepped-font-color: @tabs-hover-font-color;
+@tabs-border-color:#000000;
+@tabs-font-size: @font-size-base;
+@tabs-padding: @padding-large-vertical @padding-large-horizontal @padding-large-vertical @padding-large-horizontal;
+@tabs-margin:0px 2px 0px 2px;
+@tabs-vertical-margin:0px 0px 2px 0px;
+@tabs-border-thickness:1px;
+@tabs-min-height:60px;
+
+
+/** Global Error specific styling **/
+// Specficies the background color of the global error div
+@global-error-bg-color: #fdf7f7;
+// Border color of the global error div
+@global-error-border-color: #d9534f;
+// Left border color of the div
+@global-error-border-left-color: #a94442;
+// Color of the errors present in the global error div
+@global-error-text-color: #a94442;
+// Color of the icon present just besides each error
+@global-error-remove-icon-color: #a94442;
+// padding of the error from the parent div
+@global-error-padding: 20px;
+// Distance between errors present inside the global error div
+@margin-between-errors: 15px;

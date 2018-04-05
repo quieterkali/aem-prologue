@@ -1,0 +1,130 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2016 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.guideESignComponent, .guideVerifyComponent, .guideSummaryComponent {
+    text-align : center;
+    max-width  : 100%;
+    position   : relative;
+    height     : 500px;
+    border     : 1px solid;
+    overflow   : auto;
+    -webkit-overflow-scrolling :touch;
+}
+.guideVerifyWarningMessage, .guideESignWarningMessage {
+    background : url(../../../images/warning.png) no-repeat;
+    display    : inline-block;
+    float      : left;
+    margin     : 10px 0px 0px 10px;
+    height     : 20px;
+    width      : 20px;
+}
+.guideESignSignablePdf, .guideVerifiableForm, .guideSummaryMessage, .guideSummaryErrorMessage {
+    width      : 100%;
+    height     : calc(~"100% - 3.5em");
+}
+.guideESignTemplateMessage, .guideVerifyTemplateMessage, .guideESignErrorMessage, .guideVerifyErrorMessage {
+    text-align : left;
+    border     : 1px solid grey;
+    font-size  : 1.2em;
+    padding    : 1em;
+    overflow   : auto;
+    width      : 100%;
+    height     : 90%;
+}
+.guideESignTitle, .guideVerifyTitle, .guideSummaryTitle {
+    padding                    : 0.05em;
+    font-size                  : 2em;
+    background-color           : rgba(255,255,255,0);
+}
+.guideESignNextScribble, .guideESignCompleteScribble {
+    position                   : absolute;
+    top                        : 6em;
+    left                       : 0em;
+    width                      : 6em;
+    height                     : 4em;
+    background-color           : #C790F4;
+    background-repeat          : no-repeat;
+    color                      : #000000;
+    font-size                  : 1.2em;
+    font-weight                : bold;
+    line-height                : 4em;
+    cursor                     : pointer;
+    z-index                    : 49;
+    text-align                 : center;
+    text-indent                : 0;
+    border-top-right-radius    : 1.5em;
+    border-bottom-right-radius : 1.5em;
+}
+.guideESignScribbleCompleteMessage {
+    position    : absolute;
+    top         : 40%;
+    width       : 50%;
+    height      : 4em;
+    text-align  : center;
+    line-height : 4em;
+    background  : #C790F4;
+    left        : 20%;
+    z-index     : 100;
+    border      : 1px solid;
+    font-size   : 1.8em;
+    min-width   : 500px;
+}
+.guideESignScribbleCompleteMessageClose {
+    float       : right;
+    cursor      : pointer;
+    color       : #fff;
+    border      : 1px solid #AEAEAE;
+    background  : black;
+    font-size   : 19px;
+    font-weight : bold;
+    display     : inline-block;
+    line-height : 0px;
+    padding     : 7px 4px 10px 4px;
+}
+.signing_hidden {
+    display    : none !important;
+}
+.signing_client_error {
+    text-align : center;
+    color      : red;
+}
+.guideESignMaxResize, .guideVerifyMaxResize, .guideESignMinResize, .guideVerifyMinResize {
+    float      : left;
+    height     : 30px;
+    width      : 30px;
+    margin     : 10px 0px 0px 10px;
+    cursor     : pointer;
+}
+.guideESignMaxResize, .guideVerifyMaxResize {
+    background : url(../../../images/maximize.png) no-repeat;
+}
+.guideESignMinResize, .guideVerifyMinResize {
+    background : url(../../../images/minimize.png) no-repeat;
+}
+.maximized_view {
+    position   : fixed;
+    height     : 100%;
+    width      : 100%;
+    left       : 0px;
+    top        : 0px;
+    z-index    : 1100;
+}
+.hidePdfFrame {
+    height: 0px !important;
+}

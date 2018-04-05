@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="53001999-54b4-37f4-988e-21159ef15a30"
+    rep:authorizableId="community-community-vdfvb-wintersports-n2q40-members"
+    rep:members="{WeakReference}[a98365a4-0eed-3671-905c-80e467968d54,69bb6b5d-7e97-3387-a70a-b3829f80778e]"
+    rep:principalName="community-community-vdfvb-wintersports-n2q40-members"
+    liveCopyPath="/content/we-retail/us/en/community/groups/wintersports">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        givenName="Community Community Wintersports N2q40 Members"/>
+</jcr:root>

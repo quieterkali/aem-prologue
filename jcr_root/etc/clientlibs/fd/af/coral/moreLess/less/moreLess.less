@@ -1,0 +1,63 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+[data-style-more-less-button] {
+  cursor: pointer;
+  text-align: center;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0,0,0,0.05);
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.styleDemarker.styleMore {
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+[data-style-more-less-button] {
+  color: #969696;
+  span {
+    font-weight: bold;
+    font-size: .625rem;
+    letter-spacing: 1px;
+  }
+}
+
+[data-styleMoreLess="more"] {
+  [data-style-more-less-button="more"] {
+    display: none ;
+  }
+  [data-style-more-less-button="less"] {
+    display: block;
+  }
+}
+
+[data-styleMoreLess="less"] {
+  [data-style-more-less-button="more"] {
+    display: block ;
+  }
+  .styleMore,
+  [data-style-more-less-button="less"] {
+    display: none;
+  }
+}

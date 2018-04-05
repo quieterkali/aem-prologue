@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:description="Catalog Function"
+    jcr:mixinTypes="[mix:lockable]"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Catalog"
+    sling:resourceType="social/console/components/hbs/catalogcommunityfunction"
+    component="social/enablement/components/hbs/view/catalog"
+    functionicon="book"
+    sitePath="/content/communities/templates/functions/catalog"/>

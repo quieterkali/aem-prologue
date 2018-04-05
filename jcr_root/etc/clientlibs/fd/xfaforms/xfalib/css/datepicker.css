@@ -1,0 +1,161 @@
+/*************************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ *  Copyright 2013 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by all applicable intellectual property
+ * laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.datetimepicker {
+    border: none;
+    background-color: #FFF;
+    display: none;
+    position: absolute;
+    cursor: default;
+    z-index: 100;
+    outline: solid #CCCCCC 2px;
+}
+
+.datetimepicker .dp-clear {
+    overflow: auto;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.datetimepicker .dp-clear a {
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #969696;
+}
+
+.datetimepicker-notouch .dp-close a:hover {
+    color: #c8bbff;
+}
+
+.datetimepicker .dp-header {
+    height: 40px;
+    line-height: 40px;
+    color: #555555;
+    margin-bottom: 5px;
+    background-color: #E6E6E6;
+}
+
+.datetimepicker .dp-header .dp-leftnav,
+.datetimepicker .dp-header .dp-rightnav,
+.datetimepicker .dp-header .dp-caption {
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+}
+
+.datetimepicker-notouch .dp-header .dp-caption:not(.disabled):hover {
+    color: #969696;
+}
+
+.datetimepicker .dp-header .dp-rightnav {
+    float: right;
+    background: url(../images/rightnav.png) no-repeat center center;
+    width: 40px;
+}
+
+.datetimepicker .dp-header .dp-leftnav {
+    width: 40px;
+    background: url(../images/leftnav.png) no-repeat center center;
+}
+
+.datetimepicker .dp-header .dp-rightnav:hover {
+    background: url(../images/rightnav_hover.png) no-repeat center center;
+}
+
+.datetimepicker .dp-header .dp-leftnav:hover {
+    background: url(../images/leftnav_hover.png) no-repeat center center;
+}
+
+.datetimepicker .view {
+    display: none;
+}
+
+.datetimepicker .view ul {
+    display: block;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.datetimepicker .view ul li {
+    float: left;
+    padding: 0px;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #666666;
+}
+
+.datetimepicker .view ul.header li {
+    color: #555555;
+}
+
+.datetimepicker .view ul:not(.header) li:not(.disabled) {
+    cursor: pointer;
+}
+
+.datetimepicker .view ul.header {
+    color: #000;
+    background-color: #FFF;
+    border-bottom: #E6E6E6 1px solid;
+}
+
+.datetimepicker-notouch .view ul:not(.header) li:not(.disabled):hover {
+    color: black;
+    background-color: #E6E6E6;
+    opacity: 0.5;
+}
+
+.datetimepicker .view ul li.disabled {
+    color: #CCCCCC;
+}
+
+.datetimepicker .view ul li.dp-selected {
+    outline: none;
+    background-color: #666666;
+    color: #FFFFFF;
+    opacity: 1.0;
+}
+
+.datetimepicker .view ul li.dp-focus {
+    border: 1px dashed black;
+}
+
+.datepicker-calendar-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100%;
+    background: url(../images/calendar.png) no-repeat center center;
+    background-size: contain;
+}
+
+.datefieldwidget.widgetreadonly .datepicker-calendar-icon {
+    display: none;
+}

@@ -1,0 +1,250 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+
+.guideFieldNode {
+  width: auto;
+  padding:@field-padding;
+  position: relative;
+}
+
+.guideFieldNode {
+  &[data-disabled="true"] {
+    input[type="date"], input[type="text"], input[type="password"], select,
+    input[type="checkbox"],input[type="radio"], textarea {
+      background-color: @widgets-disabled-bg-color;
+      border-color: @widgets-disabled-border-color;
+      color: @widgets-disabled-font-color;
+    }
+  }
+  &[data-mandatory="true"] {
+    input[type="date"], input[type="text"], input[type="password"], select,
+    input[type="checkbox"],input[type="radio"], textarea{
+      border-color: @widgets-mandatory-border-color;
+    }
+  }
+  .guideFieldError {
+    color:@field-error-font-color;
+    font-size:@field-error-font-size;
+    padding-top:@padding-small-vertical;
+    display: none;
+  }
+
+  .guideFieldDescription {
+    margin: 0px;
+    clear: both;
+    border-radius: 4px 4px 3px 3px;
+    .transition(all 2s);
+    &.long{
+      display:none;
+      padding: 10px 15px;
+      border: 1px solid @widgets-help-long-border-color;
+      border-left: 3px solid @widgets-help-long-border-indicator-color;
+      background-color: @widgets-help-long-bg-color;
+    }
+    &.short {
+      color:  @widgets-help-short-color;
+      padding: 5px;
+      background-color: @widgets-help-short-bg-color;
+    }
+    p {
+      margin:0px;
+      padding:0px;
+    }
+  }
+}
+
+.guideFieldWidget.multiline{
+  height: 2*@widget-height;
+  > textarea {
+    resize: none;
+  }
+}
+
+.guideFieldWidget.fileUpload{
+  height:auto;
+}
+
+.guideFieldWidget {
+  width:100%;
+  height:@widget-height;
+  &.left{
+    float:left;
+  }
+  &.listBoxWidget {
+    height: auto;
+    > ol {
+        margin:0px;
+        width: 100%;
+        height: 100%;
+        max-height: @listboxwidget-height;
+        overflow: auto;
+        .widget-border;
+        .rounded-corners(@widgets-border-radius);
+        .widget-background;
+     > li {
+       padding:@widgets-padding;
+       .widget-focus-style;
+     }
+    }
+  }
+  input[type="date"], input[type="text"],input[type="password"],select, textarea {
+    .size(100%,100%);
+    .widget-border;
+    .rounded-corners(@widgets-border-radius);
+    .widget-font-style;
+    .widget-background;
+    .widget-focus-style;
+    padding: 2px;
+    margin:0px;
+  }
+  input[type="checkbox"],input[type="radio"] {
+    margin:0px;
+    vertical-align: -webkit-baseline-middle;
+    float: none;
+    height:@checkbutton-height;
+    .widget-border;
+    .widget-background;
+    .widget-focus-style;
+  }
+  input[type="button"], button, .button {
+    margin:0px;
+    .guidebutton;
+  }
+}
+
+.guideFieldWidget.dropDownList[data-multiple-selection="true"]{
+    height: auto;
+}
+
+.guideFieldWidget.dropDownList{
+  option {
+    color : @widgets-font-color;
+  }
+}
+
+.guideFieldWidget .multiDropdown {
+  max-height: @listboxwidget-height;
+  overflow: auto;
+  position: inherit !important;
+}
+
+.guideFieldLabel {
+  width:auto;
+  margin:@label-margin;
+  color:@label-font-color;
+  font-size: @label-font-size;
+  line-height: @label-line-height;
+  font-weight: @label-font-weight;
+  label{
+    color:inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+  &.top {
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+  }
+  &.left {
+    float:left;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+  }
+}
+
+.guideWidgetLabel {
+  margin:@label-margin;
+  float:left;
+  label {
+    color:@label-font-color;
+    font-size: @label-font-size;
+    line-height: @label-line-height;
+    font-weight: @label-font-weight;
+  }
+  &.right, &.left {
+    margin-top:0px;
+    margin-bottom:0px;
+    label {
+      line-height: @checkbutton-height;
+    }
+  }
+  &.right {
+    margin-right:0px;
+  }
+  &.left {
+    margin-left:0px;
+  }
+}
+
+.guideImage,
+.guideChart {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: inherit;
+  }
+}
+
+.guideButton {
+  .iconButton-icon {
+    height: @mobileButtonIconHeight;
+    width: @mobileButtonIconWidth;
+    display: none;                    // we show icons only in mobile layout
+    background-repeat: no-repeat;
+  }
+  .btn-icon(reset);                 // icon for reset button type
+  .btn-icon(submit);                // icon for submit button type
+  .btn-icon(save);                  // icon for save button type
+  .btn-icon(moveNext);           // icon for nextitemnav button type
+  .btn-icon(movePrev);           // icon for previtemnav button type
+  .btn-icon(fileattachmentlisting); // icon for fileattachmentlisting button type
+}
+
+div.guideScribble div.guideFieldWidget {
+  .widget-border;
+  .rounded-corners(@widgets-border-radius);
+  .widget-focus-style;
+  img {
+    .size(100%, 100%);
+  }
+}
+
+.guideFieldHorizontalAlignment {
+  display: inline-block;
+  clear: none;
+}
+
+.guideFieldVerticalAlignment {
+  display: block;
+  clear: both;
+}
+
+.guideAdModule .guideFieldWidget {
+  height: auto;
+}
+
+.guideDatePicker input[type=text]::-ms-clear {
+  display: none
+}
+
+@import "datepicker.less";

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="this badge has been provided for your convenience"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Gold badge"
+    sling:resourceType="social/gamification/components/hbs/badgecollection/badge"
+    displayName="Gold"
+    image="/etc/community/badging/images/gold-badge/gold.png">
+    <gold.png/>
+</jcr:root>

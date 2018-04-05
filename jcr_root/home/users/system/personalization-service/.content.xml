@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="784eb433-354d-336f-aa1f-c178de1a3330"
+    rep:authorizableId="personalization-service"
+    rep:principalName="personalization-service"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <jcr:content
+        dam:s7damType="ViewerPreset"
+        jcr:primaryType="nt:unstructured"
+        category="CAROUSEL_SET"
+        isactive="{Boolean}true"
+        platform="HTML5">
+        <userdata
+            jcr:primaryType="nt:unstructured"
+            SetIndicator.mode="dotted"
+            style="etc/dam/presets/css/html5_carouselviewer_dotted_dark.css"/>
+    </jcr:content>
+</jcr:root>

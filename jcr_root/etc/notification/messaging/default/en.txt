@@ -1,0 +1,7 @@
+subject=Delivery Failure of : ${subject}
+
+message=Unable to send message to : ${undeliveredToIds} [${undeliveredToNames}]<br\>\n\
+\n\
+Original message follows \n\
+<br\>\n\
+${message}

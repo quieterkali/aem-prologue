@@ -1,0 +1,14 @@
+#base=javascript
+init.js
+FormBridge.js
+FormBridgeInternal.js
+FormCalc.js
+#base=util/javascript
+xfalibUtil.js
+#base=widgets/javascript
+xfalibWidgets.js
+#base=model/javascript
+xfalibCoreModel.js
+xfalibDomModel.js
+#base=javascript
+xfaview.js

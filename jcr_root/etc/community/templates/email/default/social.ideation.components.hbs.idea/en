@@ -1,0 +1,19 @@
+subject=[Ideation Event] {{{object.displayName}}}
+
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{objectUrl}}\n\n \
+{{#equals this.verb "post"}}\
+   A new ideation event was posted by {{{user.name}}}.\n\n \
+{{/equals}}\
+{{#equals this.verb "add"}}\
+   A new ideation event was added by {{{user.name}}}.\n\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+   A new ideation event was updated by {{{user.name}}}.\n\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+    A new ideation event was deleted by {{{user.name}}}.\n\n \
+{{/equals}}\
+Please follow this link to view all ideation events or modify your notification preferences.\n \
+{{targetUrl}}\n \

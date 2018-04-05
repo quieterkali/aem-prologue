@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[coralui.components.fd]"
+    embed="[coralui.components.fd.adapter,coralui.components.fd.autocomplete,coralui.components.fd.backgroundContainer,coralui.components.fd.buttongroupfield,coralui.components.fd.colorpicker,coralui.components.fd.metadata,coralui.components.fd.multivaluefield,coralui.components.fd.numericspinner,coralui.components.fd.slider,coralui.components.fd.symmetricfield,coralui.components.fd.initiatewait,coralui.components.fd.moreless,coralui.components.fd.shadowContainer,coralui.components.fd.shadowPopover,imageUpload]"/>

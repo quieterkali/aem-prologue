@@ -1,0 +1,217 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ * Copyright 2014 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ *************************************************************************/
+
+  .guide-fu-fileItem {
+    .close {
+      float: right;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1;
+      color: #000000;
+      text-shadow: 0 1px 0 #ffffff;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
+  }
+  .pdc {
+    margin-bottom: 20px;
+    font-weight: 200;
+    line-height: 1.4;
+    background: #FFF;
+    -moz-box-shadow: 0 0 10px #1E4D65;
+    -webkit-box-shadow: 0 0 10px #1E4D65;
+    box-shadow: 0 0 10px #ccc;
+    border: 1px solid #fff;
+    padding: 6px 6px;
+    font: 16px Adobe Clean, Arial;
+    position: relative;
+  }
+
+  .guideContainerNode {
+    padding: 0px;
+  }
+
+  .guideFieldLabel label{
+    margin-right: 20px;
+  }
+
+  .guideImage img {
+    height: inherit;
+  }
+
+  .pdcTitle {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #66b9e3;
+  }
+
+ .pdcActiveRepeatableControl {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  [data-guide-progressive-controls] {
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+  }
+
+  [data-guide-progressive-controls] > button {
+    background: #37699b;
+    background: -moz-linear-gradient(top, #37699b 0%, #436fa2 34%, #7492be 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #37699b), color-stop(34%, #436fa2), color-stop(100%, #7492be));
+    background: -webkit-linear-gradient(top, #37699b 0%, #436fa2 34%, #7492be 100%);
+    background: -o-linear-gradient(top, #37699b 0%, #436fa2 34%, #7492be 100%);
+    background: -ms-linear-gradient(top, #37699b 0%, #436fa2 34%, #7492be 100%);
+    background: linear-gradient(to bottom, #37699b 0%, #436fa2 34%, #7492be 100%);
+    color: #fff;
+    border: 1px solid #336699;
+    border-radius: 4px;
+    line-height: 22px;
+    padding: 3px 10px;
+    height: 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .row.pdcRepeatableControls {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  [data-guide-repeatable="browse"],
+  [data-guide-repeatable="back"],
+  [data-guide-repeatable="remove"],
+  [data-guide-repeatable="add"] {
+    background-image: url('../images/multiple-copies.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+  }
+
+  [data-guide-repeatable="add"].addZero {
+    background-image: url('../images/add-zero.png');
+    width: 35px;
+    float: right;
+    margin-top: 4px;
+  }
+
+  [data-guide-repeatable="add"] {
+    background-image: url('../images/plus-light.png');
+  }
+  [data-guide-repeatable="remove"] {
+    background-image: url('../images/minus-light.png');
+  }
+  [data-guide-repeatable="browse"],
+  [data-guide-repeatable="back"] {
+    background-image: url('../images/multiple-copies.png');
+    float: right;
+    margin-top: 4px;
+  }
+  [data-guide-repeatable="back"] {
+    background-image: url('../images/back.png');
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 6px;
+    padding-left: 4px;
+    color: #66b9e3;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  .progressiveSectionTitle {
+    float: left;
+    padding-bottom: 20px;
+  }
+
+  .sectionFieldContainer {
+    overflow: auto;
+  }
+
+  .repeatableButtons {
+    padding-left: 3px;
+  }
+
+  .pdcRepeatable {
+    display: none;
+    &.active {
+      display: block;
+      .repeatableButtons {
+        display: none;
+      }
+      .sectionFieldContainer {
+        display: block;
+      }
+    }
+    &.browse {
+      display: block;
+      .sectionTitle {
+        background: -moz-linear-gradient(top,  #f3f3f3 0%, #e0e0e0 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e0e0e0)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #f3f3f3 0%,#e0e0e0 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #f3f3f3 0%,#e0e0e0 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #f3f3f3 0%,#e0e0e0 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #f3f3f3 0%,#e0e0e0 100%); /* W3C */
+        border: 1px solid #d4d4d4;
+        color: #646464;
+      }
+      .repeatableButtons {
+        display: block;
+      }
+      .sectionFieldContainer {
+        display: none;
+      }
+    }
+  }
+
+  .progressiveSectionField {
+    &.pdcFieldHide {
+      display: none;
+    }
+    &.pdcCurrentPanelField {
+      display: block;
+    }
+  }
+
+  [data-guide-progressive-completion-message] {
+    text-align: center;
+    font-style: italic;
+    padding: 23px 0;
+  }
+
+  // from bootstrap
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }

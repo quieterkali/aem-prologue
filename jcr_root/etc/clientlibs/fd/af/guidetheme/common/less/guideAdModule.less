@@ -1,0 +1,67 @@
+/*
+ * **********************************************************************
+ *  ADOBE CONFIDENTIAL
+ *  __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ *  NOTICE:  All information contained herein is, and remains
+ *  the property of Adobe Systems Incorporated and its suppliers,
+ *  if any.  The intellectual and technical concepts contained
+ *  herein are proprietary to Adobe Systems Incorporated and its
+ *  suppliers and may be covered by U.S. and Foreign Patents,
+ *  patents in process, and are protected by trade secret or copyright law.
+ *  Dissemination of this information or reproduction of this material
+ *  is strictly forbidden unless prior written permission is obtained
+ *  from Adobe Systems Incorporated.
+ *  **********************************************************************
+ */
+
+.guideAdModule,
+.guideAdModuleGroup {
+  height: auto;
+
+  .ad-list-style-type-lower-alpha {
+    list-style-type:lower-alpha;
+  }
+  .ad-list-style-type-upper-alpha {
+    list-style-type:upper-alpha;
+  }
+  .ad-list-style-type-lower-roman {
+    list-style-type:lower-roman;
+  }
+  .ad-list-style-type-upper-roman {
+    list-style-type:upper-roman;
+  }
+  .ad-list-style-type-square {
+    list-style-type:square;
+  }
+  .ad-list-style-type-circle {
+    list-style-type:circle;
+  }
+  .ad-list-style-type-disc {
+    list-style-type: disc;
+  }
+  .ad-list-style-type-decimal {
+    list-style-type: decimal;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: inherit;
+  }
+}
+
+.guideAdModule .guideAdModule,
+.guideAdModuleGroup .guideAdModuleGroup {
+  overflow: auto;
+}
+
+.guideAdModule:focus,
+.guideAdModuleGroup:focus,
+[data-disabled|="true"]:focus {
+  outline: none;
+}

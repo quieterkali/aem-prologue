@@ -1,0 +1,8 @@
+#base=less
+styles.less
+
+#base=/etc/clientlibs/fd/xfaforms/xfalib/css
+datepicker.css
+listboxwidget.css
+scribble.css
+dialog.css

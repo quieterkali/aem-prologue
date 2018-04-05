@@ -1,0 +1,214 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2016 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+ @import "../../../../af/guideCommonAuthoring/less/coralClassConstants.less";
+
+.sidepanel-tree-searchField .@{coral-decoratedtextfield} {
+    width: 100%;
+}
+
+.sidepanel-tree-component{
+    height: 98%;
+    max-height: 100% !important;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.sidepanel-tree-component .toplevel-list,
+.sidepanel-tree-component .toplevel-element {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.sidepanel-tree-component li {
+    list-style-type:none;
+}
+
+
+.sidepanel-tree-component li.is-found > .sidepanel-tree-item-div{
+    background-color: rgba(250,210,105,0.2);
+}
+
+.sidepanel-tree-component li.is-searchSelected > .sidepanel-tree-item-div{
+    background-color: rgba(250,210,105,0.5);
+}
+
+.sidepanel-tree-component li > .sidepanel-tree-item-div:hover{
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.sidepanel-tree-component li.is-selected > .sidepanel-tree-item-div{
+    background-color: rgba(50,110,200,0.08);
+}
+
+.sidepanel-tree-component li ul {
+    padding-left: 1rem;
+}
+
+.sidepanel-tree-component li .sidepanel-tree-item-button {
+    visibility: hidden;
+    position: relative;
+    float: left;
+    line-height: 40px;
+ }
+
+.sidepanel-tree-component li .sidepanel-tree-item-label {
+    position: relative;
+    line-height: 41px;
+    display: inline-block;
+    width: calc(~"100% - 7rem");
+}
+
+.sidepanel-tree-component li .sidepanel-tree-item-label label.name {
+    width: 100%;
+}
+
+.sidepanel-tree-component .toplevel-element > div .sidepanel-tree-item-button {
+    width: 0.5rem;
+}
+
+.sidepanel-tree-component li .sidepanel-tree-item-button coral-icon {
+    min-width: 1.5rem;
+    padding: 0 0 0 4px;
+    font-size: 0.6rem;
+    color: black;
+}
+
+.sidepanel-tree-component li div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sidepanel-tree-component li div {
+    border-bottom:.0625rem solid #e1e1e1;
+}
+
+.sidepanel-tree-component li label,
+.sidepanel-tree-component-search-panel li label{
+    font-size: 0.8125rem;
+    color: black;
+    font-weight: normal;
+    padding-right: 6px;
+}
+
+.sidepanel-tree-component li label.type,
+.sidepanel-tree-component-search-panel li label.type{
+    color: #969696;
+    font-size: 0.625rem;
+    float: right;
+    position: relative;
+}
+
+.sidepanel-tree-component li label.name,
+.sidepanel-tree-component-search-panel li label.name{
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(~"100% - 5rem");
+    text-overflow: ellipsis;
+}
+
+
+.sidepanel-tree-component li.is-searchSelected > .sidepanel-tree-item-div label.name,
+.sidepanel-tree-component li.is-searchSelected > .sidepanel-tree-item-div .tree-item-coral-icon,
+.sidepanel-tree-component li.is-selected > .sidepanel-tree-item-div label.name,
+.sidepanel-tree-component li.is-selected > .sidepanel-tree-item-div .tree-item-coral-icon{
+    color: #326EC8;
+}
+
+.sidepanel-tree-component .sidepanel-tree-expand-buttton {
+    color: #707070;
+    font-size: 0.725rem;
+    float:right;
+    line-height: 40px;
+    margin-right: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sidepanel-tree-component .sidepanel-tree-expand-buttton:hover {
+    color: #326EC8;
+}
+
+.sidepanel-tree-component-searchfield input {
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-style: italic;
+}
+
+.sidepanel-tree-component-items {
+    overflow: auto;
+    height: 85vh;
+    margin-top:1rem;
+}
+
+.sidepanel-tree-searchField button {
+    position: absolute;
+    min-width: 2.375rem;
+    background: none;
+    border-color: transparent;
+}
+
+.sidepanel-tree-searchField button.up {
+    right: 4.75rem;
+ }
+
+.sidepanel-tree-searchField button.close {
+    right: 0rem;
+}
+
+.sidepanel-tree-searchField button.down {
+    right: 2.375rem;
+}
+
+.sidepanel-tree-searchField button coral-icon {
+    margin-right: 0px !important;
+}
+
+.sidepanel-tree-searchField button:hover,
+.sidepanel-tree-searchField button coral-icon:hover {
+    color:black !important;
+}
+
+.toplevel-element>div label.name {
+    width: calc(~"100% - 11rem");
+}
+
+.sidepanel-tree-component .tree-item-coral-icon{
+    position: relative;
+    height: 1rem;
+    float: left;
+    line-height: 40px;
+    margin-right: 20px;
+    width: 1rem;
+    color: #999999;
+}
+.sidepanel-tree-item {
+    outline:none;
+}
+
+.sidepanel-tree-component li .sidepanel-tree-item-button.sidepanel-tree-item-button-isVisible {
+    visibility: visible;
+}

@@ -1,0 +1,168 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.wsdl-url-no-selection{
+    font-style : italic;
+}
+
+.wsdl-url-selection{
+}
+
+.wsdl-url.coral-Textfield {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    margin-bottom: 2rem;
+    color: #326EC8
+}
+
+.wsdl-common {
+    background-color: #fafafa;
+    border-style: solid;
+    border-color: #efefef;
+    vertical-align: top;
+}
+
+.wsdl-operation-list-wrapper {
+    margin: 0 2rem 2rem 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.wsdl-operation-list-wrapper > .coral-InputGroup {
+    width: 13rem;
+}
+
+.wsdl-operation-list-wrapper input{
+    background: none;
+    border: none !important;
+    border-bottom: 1px solid #C2C5CA !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    width: 10.7rem;
+}
+
+.wsdl-operation-list-no-selection{
+    font-style : italic;
+}
+
+.wsdl-operation-list-selection{
+}
+
+.wsdl-operation-list-wrapper button {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #C2C5CA !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.wsdl-title {
+    text-align : left;
+    margin-top : 11px;
+    margin-left : 16.5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.wsdl-inputs-list {
+    margin-left : 16px;
+    margin-bottom: 2rem;
+    display : inline-block;
+    min-width:250px;
+    max-height:400px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 4px;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.wsdl-inputs-list .PARAMETER > .choice-view,
+.wsdl-inputs-list .PARAMETER > .choice-view > .child-selected-view {
+    padding: 0;
+}
+
+.wsdl-hr {
+    color: rgba(0,0,0,0.05);
+}
+
+.wsdl-input-width {
+    max-width:22rem;
+}
+
+.wsdl-output-width {
+    max-width:22rem;
+}
+
+.wsdl-helping-text {
+    display : block;
+    font: bold;
+    color : #969696;
+}
+
+.wsdl-margin {
+    margin : 15px;
+}
+
+.wsdl-param-title {
+    color : #969696;
+    font-weight : bold;
+    margin-bottom : 3.5px;
+    margin-top : 16px;
+    display: inline-block;
+    padding-right: 0.2rem;
+}
+
+hr {
+	margin:0;
+	padding:0;
+}
+
+.exp-wizard > coral-alert {
+    top: 0 !important;
+    position: absolute;
+    left: 37%;
+    cursor: pointer;
+}
+
+.wsdl-operation-list-wrapper .coral-Textfield::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.wsdl-operation-list-wrapper .coral-Textfield::-moz-placeholder {
+    font-style: italic;
+}
+.wsdl-operation-list-wrapper .coral-Textfield::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.wsdl-param-desc {
+    display: block;
+    color: #969696;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.wsdl-param > .choice-model,
+.wsdl-param > .terminal-view {
+    display: block;
+}

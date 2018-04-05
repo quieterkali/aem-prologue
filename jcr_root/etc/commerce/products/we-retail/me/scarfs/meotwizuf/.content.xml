@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:apparel/scarf,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
+    jcr:description="scarf"
+    jcr:lastModified="{Date}2016-01-11T16:14:13.617-08:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Zurich Wool Scarf"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&lt;li>&#x9;Lightweight merino wool design offers soft and luxurious warmth&lt;/li>&lt;/ul>"
+    identifier="meotwizuf"
+    inventory="418"
+    margin="0.41"
+    price="{Decimal}45"
+    rating="4"
+    reviews="This item is not yet reviewed.  Be the first to write a review."
+    summary="Warp yourself in warmth this winter with the Zurich Scarf, woven in natural wool"
+    textIsRich="[true,true]">
+    <size-one-size
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.276-07:00"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="One size"/>
+    <image
+        jcr:lastModified="{Date}2016-01-11T16:14:13.580-08:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/we-retail/en/products/apparel/scarfs/source/Zurich.jpg"
+        height="300"
+        jpegQuality="85"
+        unsharpMaskAmount="0"
+        unsharpMaskRadius="0"
+        unsharpMaskThreshold="0"
+        width="300"/>
+</jcr:root>

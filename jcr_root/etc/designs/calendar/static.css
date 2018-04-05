@@ -1,0 +1,444 @@
+/* @override http://localhost:4502/etc/designs/calendar/static.css */
+
+/* @group overall calendar layout */
+
+.cq-calendar .sidebox {
+    float: left;
+}
+
+.cq-calendar .sidebox .querybuilder {
+	width: 400px;
+}
+
+.cq-calendar .content {
+	width: 100%;
+	clear: both;
+    border-top: 3px solid #DDDDDD;
+    padding-top: 1px;
+}
+
+/*
+calendar box temporary disabled
+
+.cq-calendar .box {
+    float: left;
+    width: 150px;
+}    
+
+.cq-calendar .box .calendar-list {
+    height: 300px;
+    border: 1px solid;
+    background: #ddd;
+}
+
+.cq-calendar .content {
+    margin-left: 160px;
+}
+
+*/
+
+/* @end */
+
+/* @group top navigation bar */
+
+.cq-calendar .navbar {
+    overflow: hidden;
+    width:100%;
+    height: 35px;
+    margin-bottom: 1px;
+    padding: 0 10px 0 10px;
+    background-color: #DDDDDD;
+	font-size: 9pt;
+    font-weight: bold;
+    color: #535353;
+}
+
+.cq-calendar .navbar .left {
+	width: 40%;
+	white-space: nowrap;
+}
+	
+.cq-calendar .navbar .center {
+    width: 20%;
+    text-align: center;
+}
+    
+.cq-calendar .navbar .right {
+    width: 40%;
+}
+
+/* @group search & date display */
+
+.cq-calendar .navbar .search {
+	padding: 0px;
+	margin-right: 10px;
+	display: inline;
+}
+
+.cq-calendar .navbar .search input {
+}
+
+.cq-calendar .navbar .date {
+	padding-left: 6px;
+	font-size: 9pt;
+	font-weight: normal;
+    color: #535353;
+	vertical-align: middle;
+}
+
+.cq-calendar .navbar .date b {
+	font-size: 9pt;
+    color: #535353;
+}
+
+.cq-calendar .navbar .create {
+    float: left;
+    margin-left: 10px;
+}
+
+/* @end */
+
+/* @group calendar navigation */
+
+.cq-calendar .navbar .previous,
+.cq-calendar .navbar .next {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.cq-calendar .navbar .previous,
+.cq-calendar .navbar .next,
+.cq-calendar .navbar .today {
+	text-decoration: none;
+	font-size: 9pt;
+    font-weight: bold;
+    color: #535353;
+}
+
+.cq-calendar .navbar .today {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/* @end */
+
+/* @group lens buttons */
+
+#cq-calendar-lensdeck-buttons {
+    float: right;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn {
+    float: left;
+    margin-left:1px;
+}
+
+/* @group general button styles */
+
+#cq-calendar-lensdeck-buttons .x-btn-tl, #cq-calendar-lensdeck-buttons .x-btn-tc, #cq-calendar-lensdeck-buttons .x-btn-tr,
+#cq-calendar-lensdeck-buttons .x-btn-bl, #cq-calendar-lensdeck-buttons .x-btn-bc, #cq-calendar-lensdeck-buttons .x-btn-br {
+    height: 0;
+    background: none;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-tr i, #cq-calendar-lensdeck-buttons .x-btn-tl i,
+#cq-calendar-lensdeck-buttons .x-btn-br i, #cq-calendar-lensdeck-buttons .x-btn-bl i {
+    height: 0;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-ml{
+    background:url(../default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 0;
+}
+#cq-calendar-lensdeck-buttons .x-btn-mr{
+    background:url(../default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -21px;
+}
+#cq-calendar-lensdeck-buttons .x-btn-mc{
+    background:url(../default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -42px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .x-btn-ml{
+    background: url(../default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -63px;
+}
+#cq-calendar-lensdeck-buttons .x-btn-pressed .x-btn-mr{
+    background: url(../default/images/dam/assetshare/lenses/btn_sprite.gif) no-repeat 0 -84px;
+}
+#cq-calendar-lensdeck-buttons .x-btn-pressed .x-btn-mc{
+    background: url(../default/images/dam/assetshare/lenses/btn_sprite.gif) repeat-x 0 -126px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-icon .x-btn-text,
+#cq-calendar-lensdeck-buttons .x-btn-text-icon .x-btn-text {
+    height: 21px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-icon .x-btn-text {
+    width: 17px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .x-btn-text {
+	color: white;
+}
+
+/* @end */
+
+/* @group lens button icons */
+
+#cq-calendar-lensdeck-buttons .x-btn .month {
+    background:url(resources/lenses/btn_month.png) no-repeat 2px 4px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .month {
+    background:url(resources/lenses/btn_month_pressed.png) no-repeat 1px 3px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn .agenda {
+    background:url(resources/lenses/btn_agenda.png) no-repeat 2px 4px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .agenda {
+    background:url(resources/lenses/btn_agenda_pressed.png) no-repeat 1px 3px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn .day {
+    background:url(../../../libs/collab/calendar/components/lenses/day/btn_day.png) no-repeat 2px 4px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .day {
+    background:url(../../../libs/collab/calendar/components/lenses/day/btn_day_pressed.png) no-repeat 1px 3px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn .week {
+    background:url(../../../libs/collab/calendar/components/lenses/week/btn_week.png) no-repeat 2px 4px;
+}
+
+#cq-calendar-lensdeck-buttons .x-btn-pressed .week {
+    background:url(../../../libs/collab/calendar/components/lenses/week/btn_week_pressed.png) no-repeat 1px 3px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @end */
+
+/* @group lensdeck */
+
+#cq-calendar-lensdeck-lenses {
+	border-top: 1px dotted #919398;
+	padding-top: 5px;
+}
+
+#cq-calendar-lensdeck-lenses .x-panel-bwrap,
+#cq-calendar-lensdeck-lenses .x-panel-body {
+    overflow:visible;
+    /*height:auto;*/
+}
+
+#cq-calendar-lensdeck-parsys {
+    width:50%;
+    min-width: 300px;
+}
+
+.cq-wcm-edit #cq-calendar-lensdeck-parsys {
+	margin-top: 10px;
+}
+
+/* @end */
+
+/* @group month lens */
+
+.prev-month-day,
+.next-month-day {
+    background-color: #e1e1e1;
+    height: 100%;
+}
+
+.cq-calendar-month table,
+.cq-calendar-month td,
+.cq-calendar-month th {
+    border-style: solid;
+    border-color: #9d9d9d;
+    padding: 0px;
+    margin: 0px;
+}
+.cq-calendar-month table {
+	border-spacing: 0;
+    border-width: 1px 1px 0 0;
+}
+
+.cq-calendar-month td,
+.cq-calendar-month th {
+	vertical-align: top;
+	border-width: 0 0 1px 1px;
+}
+
+.current-day {
+    background-color: rgb(228,238,250);
+}
+
+.cq-calendar-month-dayname {
+	text-align: center;
+}
+
+.cq-calendar-month-dayname .x-panel-body {
+	line-height: 20px;
+}
+
+.cq-calendar-month-day.cq-calendar-create-event-highlight:hover {
+	background-color: #f1f1f1;
+}
+
+.cq-calendar-month-daybar {
+    width: 100%;
+}
+
+.cq-calendar-month-day-number {
+    padding-right: 4px;
+	text-align:right;
+    background-color: #eee;
+}
+
+.cq-calendar-month-event {
+    display: block;
+    cursor:pointer;
+    margin: 0 3px;
+    height: 1.25em;
+    text-decoration: none;
+	font-size: 8pt;
+}
+
+a.cq-calendar-month-event:hover {
+    text-decoration: none;
+}
+
+.cq-calendar-month-event.all-day {
+    color: white;
+    margin: 0;
+}
+
+.cq-calendar-month-day-morelink {
+    display: block;
+    width: 100%;
+	text-align: center;
+}
+
+.cq-calendar-month-day-morepopup {
+	background-color: white;
+	border: 2px solid black;
+	top: -1px !important;
+	left: -1px !important;
+}
+
+.cq-calendar-month-day-morepopup .cq-calendar-month-event {
+    margin: 5px 0 5px 0;
+}
+	
+.cq-calendar-month-day-closemorelink {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+/* @end */
+
+/* @group agenda lens */
+
+.cq-calendar-agenda-dataview {
+	padding: 4px;
+}
+
+.cq-calendar-agenda-item {
+	border-color:#FFFFFF #FFFFFF #EEEEEE;
+	border-style:solid;
+	border-width:1px;
+	color:#555555;
+	font-family:tahoma,arial,helvetica,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	padding:3px 10px;
+	white-space:normal;
+
+    cursor:pointer;
+    height: 1.5em;
+}
+
+.cq-calendar-agenda-item:hover {
+    color: blue;
+}
+
+.cq-calendar-agenda-date {
+    font-weight:bold;	
+}
+
+.cq-calendar-agenda-time {
+    display:block;
+	margin-left:80px;
+	margin-top:-15px;
+}
+
+.cq-calendar-agenda-title {
+	display:block;
+	font-weight:bold;
+	margin-left:200px;
+    margin-top:-1.3em;
+	/*margin-bottom:4px;*/
+}
+
+/* @end */
+
+/* @group event popup */
+
+#CQ .cq-calendar-event-popup {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #9d9d9d;
+}
+
+#CQ .cq-calendar-event-popup .ext-el-mask {
+    background-color: white;
+}
+
+/* @end */
+
+/* @group misc */
+
+.lenses.parsys div.section {
+	margin: 0;
+	padding: 0;
+}
+
+.predicates.parsys div.section {
+    margin-bottom: 8px;
+}
+
+#CQ .cq-editrollover-insert-container {
+    overflow:hidden;
+}
+
+/* make table of a table layout stretch the whole element of its widget */ 
+.x-table-layout {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+/* fix border color on safari */
+.cq-calendar .content .x-panel-body {
+    border-color:#99BBE8;
+}
+
+/* editbar links */
+#CQ .cq-editbar .xtb-text a {
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}
+
+/* @end */
+

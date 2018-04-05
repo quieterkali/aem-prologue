@@ -1,0 +1,16 @@
+subject=Password has been updated
+message=<!doctype html>\n \
+<html>\n \
+<head>\n \
+<meta name="viewport" content="width=device-width">\n \
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n \
+<title>Update Password Request</title>\n \
+</head>\n \
+<body>\n \
+<div>\n \
+<p>Hello {{{givenName}}}</p>\n \
+<p>Your password was changed on {{dateUtil passwordChangeDate format="EEE, d MMM yyyy HH:mm:ss z"}} </p>\n \
+<p>If you did this, you can safely disregard this email.</p>\n \
+</div>\n \
+</body>\n \
+</html>\n \

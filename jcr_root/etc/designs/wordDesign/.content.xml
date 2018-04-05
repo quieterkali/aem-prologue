@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-05-28T15:28:16.730-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Word Design"
+        sling:resourceType="wcm/core/components/designer">
+        <wordPage jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2012-05-28T15:28:16.730-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/libs/foundation/components/image,/libs/foundation/components/text,/libs/foundation/components/textimage]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </wordPage>
+    </jcr:content>
+</jcr:root>

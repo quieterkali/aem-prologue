@@ -1,0 +1,28 @@
+subject=[Forum Post] {{#if this.target.properties.[jcr:title]}}{{{target.displayName}}}{{else}}{{{object.displayName}}}{{/if}}
+message=<!doctype html>\n \
+<html>\n \
+<head>\n \
+<meta name="viewport" content="width=device-width">\n \
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n \
+</head>\n \
+<body>\n \
+<div>{{{objectContent}}}</div>\n \
+<div>\n \
+<hr>\n \
+{{#equals this.verb "post"}}\
+A new forum topic "{{{object.displayName}}}" was posted by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+{{#equals this.verb "add"}}\
+A new forum post to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} was added by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+The forum post to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} was updated by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+The forum post was deleted to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
+{{/equals}}\
+<hr>\n \
+<a href="{{objectUrl}}">Click this link</a> to view all forum posts to this topic or modify your subscription.\n \
+</div>\n \
+</body>\n \
+</html>\n \

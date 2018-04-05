@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="8d0ac984-5b4b-3cf0-9692-d6795b9fc5b3"
+    rep:authorizableId="hierarchymodification-listener-service"
+    rep:principalName="hierarchymodification-listener-service"/>

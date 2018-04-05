@@ -1,0 +1,128 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+ul.commentsystem {
+    list-style-type: none;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.comment {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px 0px 20px 0px;
+}
+
+.comment-data {
+    display: table;
+    margin-bottom: 5px;
+}
+
+.comment-data > * {
+    display: table-row;
+}
+
+
+/*.comment :first-child{
+    padding: 0px 10px 0px 10px;
+}*/
+
+.comment .reply-box {
+    padding: 0px 20px 0px 20px;
+}
+
+.comment .voting {
+    height: 75px;
+}
+
+.comment .voting .voting-input {
+    vertical-align: middle;
+}
+
+.comment-content {
+    margin-left: 10px;
+}
+
+.comment-avatar-img {
+    border-radius: 5px;
+    width: 105px;
+    height: 105px;
+}
+
+.comment-content > * {
+    display: table-cell;
+}
+
+.comment-detail {
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.comment-detail p {
+    margin: 2px;
+}
+
+.comment-time {
+    color: #bdbdbd;
+}
+
+.voting {
+    display: table;
+    width: 100%
+}
+
+.replies .voting-input {
+    background-color: white;
+}
+
+.replies .comment {
+    padding-left: 0px;
+    margin-bottom: 3px;
+}
+
+.voting-input {
+    background-color: #e6e6e6;
+    display: table-cell;
+    padding: 10px;
+}
+
+.comment-composer .comment-avatar-img {
+    border-radius: 5px;
+    width: 83px;
+    height: 83px;
+}
+
+.comment-composer {
+    display: table;
+    background-color: white;
+}
+
+.comment-composer > * {
+    display: table-cell;
+}
+
+.comment-composer > form {
+    padding-top: 30px;
+    padding-left: 20px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.comment-composer-input {
+    width: 100%;
+}

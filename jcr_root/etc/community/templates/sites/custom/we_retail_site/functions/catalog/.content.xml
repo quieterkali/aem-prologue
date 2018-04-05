@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="oak:Unstructured"
+    function="/etc/community/templates/functions/reference/catalog"
+    title="Catalog"
+    url="catalog">
+    <configuration
+        jcr:primaryType="oak:Unstructured"
+        tagNamespaces="[/etc/tags/we-retail]"/>
+</jcr:root>

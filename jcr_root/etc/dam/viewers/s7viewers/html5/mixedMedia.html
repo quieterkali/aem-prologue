@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2012 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>		
+		<meta name="viewport" content="user-scalable=no, height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+		<!-- Hiding the Safari on iPhone OS UI components -->
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="apple-touch-fullscreen" content="no"/>
+
+		<!-- Specifying a per-page Home screen icon -->
+		<link rel="apple-touch-icon" href=""/>
+	    <link rel="apple-touch-startup-image" href=""/>
+		
+		<title></title>
+		<script language="javascript" type="text/javascript"  src="/s7sdk/2.4/js/s7sdk/utils/Utils.js"></script> 
+		<script language="javascript" type="text/javascript">
+			s7sdk.Util.css.defaultCSS = "mixedMedia.css";
+			s7sdk.Util.lib.include('s7sdk.common.Button');
+			s7sdk.Util.lib.include('s7sdk.common.Container');
+			s7sdk.Util.lib.include('s7sdk.set.MediaSet');
+			s7sdk.Util.lib.include('s7sdk.set.SpinView');
+			s7sdk.Util.lib.include('s7sdk.image.ZoomView');
+			s7sdk.Util.lib.include('s7sdk.set.Swatches');
+		</script>
+	</head>
+<body>	
+		
+<div id="unitTestController"></div>
+
+<script language="JavaScript" type="text/javascript">
+	var s7zoomview, s7spinview, s7swatches, s7videoplayer, s7closeButton, s7visibility;
+	var container, s7mediaset, s7mediasetDesc, videoPath, videoPreview;
+	// initialize the SDK
+	s7sdk.Util.init();
+	// create ParameterManager instance that will handle modifiers
+	var s7params = new s7sdk.ParameterManager();
+	//set viewer type & version. For genericZoomMobile type == "505" 
+	s7params.setViewer("505,5.7.1");	 
+	s7params.push("swatches.tmblayout", "0,1");
+	s7params.push("swatches.resizable", "0");	
+	s7params.push("swatches.orientation", "0");	
+	
+	var trackingManager = new s7sdk.TrackingManager();
+
+	// set up a function that will initialize the viewer
+	function initViewer(){
+		// hardcoded modifiers
+		s7params.push("serverurl", "/is/image");
+		s7params.push("videoserverurl", "/is/content/");
+		s7params.push("zoomView.iconeffect", "0");
+		s7params.push("swatches.cellspacing", "10,0");	
+		s7params.push("swatches.textpos", "none");	
+		s7params.push("title", "Adobe Scene7 Mixed Media");	
+
+		// Create a viwer container
+		container = new s7sdk.Container(null, s7params, "s7container");
+		container.addEventListener(s7sdk.ResizeEvent.COMPONENT_RESIZE, onResize, false);
+		//container.addEventListener(s7sdk.ResizeEvent.WINDOW_RESIZE, onResize, false);
+
+		s7visibility = new s7sdk.VisibilityManager();//initialize visibility manager
+
+		s7closeButton = new s7sdk.CloseButton("s7container", s7params, "closeButton");
+		s7closeButton.addEventListener("click", closeWindow);
+		s7visibility.attach(s7closeButton);//attach the close button component with visibility manager
+
+		s7zoomview = null; 
+		s7spinview = null;
+		s7videoplayer = null;
+		videoPreview = null;
+		
+		s7swatches = new s7sdk.Swatches("s7container", s7params, "swatches");
+		trackingManager.attach(s7swatches);
+		s7swatches.addEventListener(s7sdk.AssetEvent.SWATCH_SELECTED_EVENT, swatchSelected, false);
+		s7visibility.attach(s7swatches);//attach swatches						
+
+		// MediaSet does not require the first or last parameter
+		s7mediaset = new s7sdk.MediaSet(null, s7params, null);
+
+		// The NOTF_SET_PARSED event will be sent each time a new asset is loaded.
+		s7mediaset.addEventListener(s7sdk.AssetEvent.NOTF_SET_PARSED,onSetParsed, false);
+	}
+
+	// the ParameterManager will dispatch SDK_READY when all modifiers have been processed
+	// and it is safe to initalize the viewer
+	s7params.addEventListener(s7sdk.Event.SDK_READY,initViewer,false);
+
+	// now it is safe to process the modifiers, the callbacks have been defined
+	// this will trigger the SDK_READY event
+	s7params.init();
+
+	//integrate SiteCatalyst logging
+	//strip modifier from asset and take the very first entry from the image list, and the first element in combination from that entry
+	var siteCatalystAsset = s7params.get("asset").split(',')[0].split(':')[0];
+	var isConfig2Exist = false;
+	if (siteCatalystAsset.indexOf('/') != -1) {
+		var company = siteCatalystAsset.split('/')[0];
+		var config2 = s7params.get("config2");
+		isConfig2Exist = (config2 != '' && typeof config2 != "undefined");
+		if (isConfig2Exist){
+			document.write('<script type="text/javascript" src="../s_code.jsp?company=' + company + (config2 == '' ? '' : '&preset=' + config2) +  '"><\/script>');
+		}	
+	}
+
+	// s7ComponentEvent function handles all the output from the SDK viewers.  The user can directly access
+	// the tracking events if lower level control is desired - see UserEvent documentation.  
+	//
+	function s7ComponentEvent(objID, compClass, instName, timeStamp, eventData) {
+		//console.log("s7ComponentEvent(" + objID + ", " + compClass + ", " + instName + ", " + timeStamp + ", " + eventData + ")");
+		// s7track() passes the eventData param to SiteCatalyst tracking through s_code.jsp
+		if (typeof s7track == "function"){
+			s7track(eventData);
+		}
+	}
+	
+
+	function playVideo() {
+		window.location.href = videoPath;
+	}
+	
+	function centerPreview(obj) {
+		obj.style.marginTop = -obj.clientHeight / 2 + 'px';
+	}
+	
+	function displayElement(elementId, show) {
+		var element = document.getElementById(elementId);
+		if (element) {
+			element.style.display = show ? 'block' : 'none';
+		}
+	}
+	
+	function alignSwatches(inSwatches,inMediaSetDesc,inParams){
+		var tw = parseInt(s7sdk.Util.css.getCss("s7thumb", "width", inSwatches.id, "s7swatches"));
+		var dw = Number(inSwatches.cellSpacing.horizontalSpacing);
+		var width = inMediaSetDesc.items.length * (tw +	dw) + dw;
+		var swWidth = width; 
+		var swHeight = inSwatches.obj.getHeight();
+		var contr = document.getElementById("s7container");
+		if((width >  contr.offsetWidth)){
+			swWidth = contr.offsetWidth;
+		}else if((width <= contr.offsetWidth)){
+			swWidth = width;
+		}
+
+		if(contr.offsetHeight < inSwatches.obj.getHeight()){
+			swHeight = contr.offsetHeight; 
+		}
+		inSwatches.resize(swWidth, swHeight);
+		inSwatches.obj.style.left = (contr.offsetWidth - inSwatches.obj.getWidth()) / 2+"px";
+	}
+
+	function onResize(event) {
+		if (s7zoomview){
+			s7zoomview.resize(event.s7event.w, event.s7event.h);
+		}
+
+		if (s7spinview){
+			s7spinview.resize(event.s7event.w, event.s7event.h);
+		}
+
+		if (s7swatches && s7mediasetDesc && s7mediasetDesc.items){
+			alignSwatches(s7swatches,s7mediasetDesc,s7params);
+		}
+	}
+
+	// once the set is parsed, assign it to the SpinView
+	function onSetParsed(event) {
+		s7mediasetDesc = event.s7event.asset;
+		var compAsset = new s7sdk.MediaSetDesc(s7mediasetDesc.parent, s7mediasetDesc.level, s7mediasetDesc.type, s7mediasetDesc.name, s7mediasetDesc.swatch);
+		for (var i = 0; i < s7mediasetDesc.items.length; i++) {
+			if (s7mediasetDesc.items[i].type == 4) {
+				for (var j = 0; j < s7mediasetDesc.items[i].items.length; j++) {
+					compAsset.items.push(s7mediasetDesc.items[i].items[j]);
+				}
+			}else{
+				compAsset.items.push(s7mediasetDesc.items[i]);
+			}
+		}
+		s7mediasetDesc = compAsset;
+		// set media set for Swatches to display
+		s7swatches.setMediaSet(s7mediasetDesc);
+		alignSwatches(s7swatches,s7mediasetDesc,s7params);
+
+		// select the first swatch
+		s7swatches.selectSwatch(0, true);
+	}
+
+	// change the image displayed in the main view every time the swatch selection changes
+	function swatchSelected(event) {
+		var asset = event.s7event.asset;
+		var type = asset.type;
+		var zmvw, spvw;
+
+		// Hide all
+		displayElement("testZoomView", false);
+		displayElement("testSpinview", false);
+		displayElement("testVideoView", false);
+		
+		if (type == 1) { // ImageSet
+			if (s7zoomview == null){ // Create the viewer on demand
+				s7zoomview = new s7sdk.ZoomView("s7container", s7params, "testZoomView");
+				trackingManager.attach(s7zoomview);
+				s7visibility.reference(s7zoomview); //reference it to the viewer click
+				s7visibility.attach(s7zoomview.iconEffect);//attach icon effect						
+			}
+			s7zoomview.setItem(asset);
+			displayElement("testZoomView", true);
+			return;
+		}
+
+		if (type == 2) { // Video
+			if (s7videoplayer == null) {
+				videoPreview = document.createElement("div");
+
+				s7videoplayer = document.createElement("div");
+				s7videoplayer.setAttribute("id", "testVideoView");
+				s7videoplayer.setAttribute("class", "s7videoplayer");
+				s7videoplayer.innerHTML = "<a href='#' onclick='playVideo.call()'><div class='s7iconeffect iconContainer' ></div></a>";
+				s7videoplayer.appendChild(videoPreview);
+				
+				var s7container = document.getElementById("s7container");
+				if (s7container.firstChild)
+					s7container.insertBefore(s7videoplayer, s7container.firstChild);
+				else
+					s7container.appendChild(s7videoplayer);
+			}
+
+       		if (s7params.params.videoserverurl.lastIndexOf('/') != (s7params.params.videoserverurl.length - 1)) {
+	            s7params.params.videoserverurl += "/";
+	        }
+			videoPath = s7params.params.videoserverurl + asset.name;
+			videoPreview.innerHTML = '<div class="s7container"><img id="testVideoPreview" class="videoPreview" src="' + s7params.params.serverurl + "/" + asset.swatch.image + '" onload="centerPreview(this)" onclick="playVideo.call()"/></div>';
+
+			displayElement("testVideoView", true);
+			return;
+		}
+
+		if (type == 128) { // VideoSet
+			if (s7videoplayer == null) {
+				videoPreview = document.createElement("div");
+
+				s7videoplayer = document.createElement("div");
+				s7videoplayer.setAttribute("id", "testVideoView");
+				s7videoplayer.setAttribute("class", "s7videoplayer");
+				s7videoplayer.innerHTML = "<a href='#' onclick='playVideo.call()'><div class='s7iconeffect iconContainer' ></div></a>";
+				s7videoplayer.appendChild(videoPreview);
+				
+				var s7container = document.getElementById("s7container");
+				if (s7container.firstChild)
+					s7container.insertBefore(s7videoplayer, s7container.firstChild);
+				else
+					s7container.appendChild(s7videoplayer);
+			}
+
+			if (s7params.params.videoserverurl.lastIndexOf('/') != (s7params.params.videoserverurl.length - 1)) {
+				s7params.params.videoserverurl += "/";
+			}
+			
+			function compareWidth(a, b) {
+				return (a.width - b.width);
+			}
+
+			function choiceVideo(width,items){
+				var choice = -1;
+				var chW = [];
+				for(var i=0; i<items.length; i++){
+					if (items[i].width > width){
+						choice = i;
+						break;
+					}else{
+						chW.push(items[i]);
+					}
+				}
+
+				if (choice != -1){
+					return items[choice];
+				}else if(chW.length > 1){
+					for(var i=0; i<chW.length-1; i++){
+						if ((chW[i].width == chW[i+1].width) && (chW[i].bitrate < chW[i+1].bitrate)){
+							var x = chW[i];   
+							chW[i] = chW[i+1];   
+							chW[i+1] = x;   
+						}
+					}
+					return chW[chW.length-1];
+				}else{
+					return items[items.length-1];
+				}
+			}
+
+			asset.items.sort(compareWidth);//asset.items[0] - min width
+			for(var i=0; i<asset.items.length-1; i++){
+				if ((asset.items[i].width == asset.items[i+1].width) && (asset.items[i].bitrate > asset.items[i+1].bitrate)){
+					var x = asset.items[i];   
+					asset.items[i] = asset.items[i+1];   
+					asset.items[i+1] = x;   
+				}
+			}
+			
+			//choose the video which width is the closest to device width and the bit rate 
+			var choiceItem = choiceVideo(document.getElementById("s7container").offsetWidth,asset.items);
+			videoPath = s7params.params.videoserverurl + choiceItem.name;
+			videoPreview.innerHTML = '<div class="s7container"><img id="testVideoPreview" class="videoPreview" src="' + s7params.params.serverurl + "/" + asset.swatch.image + '" onload="centerPreview(this)" onclick="playVideo.call()"/></div>';
+
+			displayElement("testVideoView", true);
+			return;
+		}
+		
+		if (type == 8) { // SpinView
+			if (s7spinview == null) { // Create the viewer on demand
+				s7params.params.asset = asset.name;
+				s7spinview = new s7sdk.SpinView("s7container", s7params, "testSpinview");
+				trackingManager.attach(s7spinview);
+				s7spinview.setDragToSpin(true);
+				s7visibility.reference(s7spinview); //reference it to the viewer click
+				s7visibility.attach(s7spinview.iconEffect);//attach icon effect						
+			}
+			s7spinview.setMediaSet(asset);
+			displayElement("testSpinview", true);
+			return;
+		}
+	}
+	
+	function closeWindow() {
+		try{
+			if(s7sdk.browser.name != "firefox") {
+				window.open("s7sdkclose.html","_self"); //workaround for close self window with JS
+			} else {
+				window.close(); // Firefox does not allow workaround so we fall back to window.close to cover pop-up case
+			} 
+		}
+		catch(e){
+			s7sdk.Logger.log(s7sdk.Logger.WARN,"Cannot close the window");
+		}
+	}
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="06dd4a8e-3e0a-3c20-b2ca-18f9ab4f5c4d"
+    rep:authorizableId="device-identification-service"
+    rep:principalName="device-identification-service"/>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:crx="http://www.day.com/crx/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:ACL">
+    <allow
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="dam-replication-service"
+        rep:privileges="{Name}[jcr:modifyAccessControl,jcr:modifyProperties,jcr:read,crx:replicate,jcr:readAccessControl]"/>
+    <allow1
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="tag-administrators"
+        rep:privileges="{Name}[jcr:versionManagement,jcr:modifyAccessControl,jcr:read,jcr:readAccessControl,crx:replicate,rep:write,jcr:lockManagement]"/>
+    <allow2
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="everyone"
+        rep:privileges="{Name}[jcr:read]">
+        <rep:restrictions
+            jcr:primaryType="rep:Restrictions"
+            rep:glob=""/>
+    </allow2>
+    <allow3
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="tag-garbage-collection-service"
+        rep:privileges="{Name}[jcr:read,crx:replicate,rep:write]"/>
+    <allow4
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="tag-validation-service"
+        rep:privileges="{Name}[jcr:read]"/>
+    <allow5
+        jcr:primaryType="rep:GrantACE"
+        rep:principalName="translation-job-service"
+        rep:privileges="{Name}[jcr:modifyProperties,jcr:read]"/>
+</jcr:root>

@@ -1,0 +1,133 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/*
+ * Should ideally add these selectors to Theme Editor (currently only top level exposed - same selector as dropdown)
+ */
+.guideFieldWidget {
+  &.listBoxWidget {
+    height: auto;
+    > ol {
+        margin:0px;
+        width: 100%;
+        height: 100%;
+        max-height: @listboxwidget-height;
+        overflow: auto;
+        .widget-border;
+        .rounded-corners(@widgets-border-radius);
+        .widget-background;
+     > li {
+       padding:@widgets-padding;
+       .widget-focus-style;
+     }
+    }
+  }
+}
+
+.guideFieldWidget .multiDropdown {
+  max-height: @listboxwidget-height;
+  overflow: auto;
+  position: inherit !important;
+}
+
+/*
+ * Ideally for new Themes should try to remove this and see the impact (user can style this from Theme, but no option for styling differently for
+ * top and left)
+ */
+.guideFieldLabel {
+  &.top {
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+  }
+  &.left {
+    float:left;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+  }
+}
+
+.guideWidgetLabel {
+
+  &.right, &.left {
+    margin-top:0px;
+    margin-bottom:0px;
+    label {
+      line-height: @checkbutton-height;
+    }
+  }
+  &.right {
+    margin-right:0px;
+  }
+  &.left {
+    margin-left:0px;
+  }
+}
+
+/*
+ * This is functional - and controlled from Form Editor
+ */
+.guideFieldHorizontalAlignment {
+  display: inline-block;
+  clear: none;
+}
+
+.guideFieldVerticalAlignment {
+  display: block;
+  clear: both;
+}
+
+.guideAdModule .guideFieldWidget {
+  height: auto;
+}
+
+/*
+ * Move to Theme...
+ */
+.guideFieldWidget input,
+.guideFieldWidget select,
+.guideFieldWidget textarea,
+.guideScribble img {
+  width: 100%;
+}
+
+.guideFieldLabel {
+  vertical-align: top;
+  label {
+    display: block;
+  }
+}
+
+/*
+ * More of functional items which need to stay here ?
+ */
+.guideDatePicker input[type=text]::-ms-clear {
+  display: none
+}
+
+.guideFieldError {
+    visibility:hidden;
+}
+
+.validation-failure .guideFieldError {
+    visibility:visible;
+}
+
+@import "datepicker.less";

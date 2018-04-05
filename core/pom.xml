@@ -6,7 +6,7 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>`com.adobe.prologue</groupId>
+        <groupId>com.adobe.prologue</groupId>
         <artifactId>prologue</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -93,6 +93,10 @@
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.core</artifactId>
+        </dependency>
     </dependencies>
 
     <!-- ====================================================================== -->
@@ -106,7 +110,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>`com.adobe.prologue.prologue</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>com.adobe.prologue.prologue</Bundle-SymbolicName>
 
                         <Sling-Model-Packages>
                           com.adobe.prologue.models

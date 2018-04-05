@@ -1,0 +1,75 @@
+/*
+ * ***********************************************************************
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ * Copyright 2015 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ * ***********************************************************************
+ */
+
+ /*CSS variables*/
+@import "../../../../../af/guideCommonAuthoring/less/coralClassConstants.less";
+
+coral-numericspinner.@{coral-input-group} {
+  width: 122px;
+  min-width: 122px;
+  max-width: 134px;
+  position: relative;
+  float: right;
+  margin-top: 5px;
+
+  input {
+    width: 6em;
+    min-width: 6em;
+    text-align: right;
+    float: right;
+    background-color: transparent;
+    border-width: 0px;
+  }
+
+  .@{coral-button}:not(:disabled):not(.is-disabled),
+  button, .@{coral-button}    {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+    position: absolute;
+    clear: both;
+    background-color: #F0F0F0;
+    visibility: hidden;
+    right: -40px;
+
+    &[handle="stepUp"] {
+      top: 0;
+    }
+
+    &[handle="stepDown"] {
+      bottom: 0;
+    }
+
+  }
+}
+
+coral-numericspinner:hover {
+  input {
+    background-color: white;
+    border-width: 1px;
+  }
+
+  .@{coral-button}:not(:disabled):not(.is-disabled),
+  button, .@{coral-button} {
+    visibility: visible;
+    background-color: transparent;
+  }
+}

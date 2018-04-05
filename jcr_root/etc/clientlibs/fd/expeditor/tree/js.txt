@@ -1,0 +1,4 @@
+#base=js
+model.js
+view.js
+component.js

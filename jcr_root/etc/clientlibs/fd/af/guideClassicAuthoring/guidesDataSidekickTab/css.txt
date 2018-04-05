@@ -1,0 +1,2 @@
+#base=/etc/clientlibs/fd/af/guideClassicAuthoring/guidesDataSidekickTab/css
+DataSidekickTab.css

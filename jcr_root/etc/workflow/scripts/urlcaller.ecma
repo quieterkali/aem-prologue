@@ -1,0 +1,69 @@
+/*
+ * Helper method to evaluate script arguments.
+ * 
+ */
+function getArgs(metaData){
+	
+	log.debug("metaData used: " + metaData);
+	
+	var PROCESS_ARGS = "PROCESS_ARGS";
+	var URL = "URL";
+	var PW = "PW";
+	var UID = "UID";
+	
+	// legacy, using 'PROCESS_ARGS' if set
+	if(metaData.get(PROCESS_ARGS)){
+		log.debug("using PROCESS_ARGS metaData = " + metaData.get(PROCESS_ARGS));
+		return metaData.get(PROCESS_ARGS).split(",");
+	}
+	else if(metaData.get(URL)){
+		log.debug("using URL meataData = " + metaData.get(URL));
+		var argsString = metaData.get(URL);
+		
+		if(metaData.get(UID)){
+			log.debug("using UID meataData = " + metaData.get(UID));
+			argsString = argsString + " " + metaData.get(UID);
+		}
+
+		if(metaData.get(PW)){	
+			log.debug("using PW meataData = " + metaData.get(PW));
+			argsString = argsString + " " + metaData.get(PW);
+		}
+		
+		return new Array(argsString);
+	}
+	else{
+		log.error("not able to evaluate args, return empty array instead.");
+		return new Array();
+	}
+	
+}
+
+args = getArgs(metaData);
+log.debug("using args: " + args);
+
+var a = args[0].split(" ");
+var url = a[0];
+var login = "";
+var pwd = "";
+if( a.length > 2) {
+    login = a[1];
+    pwd = a[2];
+}
+
+log.debug("using url " + url);
+log.debug("using login " + login);
+log.debug("using pwd " + pwd);
+
+var client = new Packages.org.apache.commons.httpclient.HttpClient();
+var method = new Packages.org.apache.commons.httpclient.methods.GetMethod(url);
+
+var params = new Packages.org.apache.commons.httpclient.params.HttpClientParams();
+params.setAuthenticationPreemptive(true);
+client.setParams(params);
+
+var state = new Packages.org.apache.commons.httpclient.HttpState();
+state.setCredentials(Packages.org.apache.commons.httpclient.auth.AuthScope.ANY, new Packages.org.apache.commons.httpclient.UsernamePasswordCredentials(login,pwd));
+client.setState(state);
+
+client.executeMethod(method);

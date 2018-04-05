@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:importCount="{Long}6"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Winter Sports">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <eqwrsnbd
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:season/winter,we-retail:activity/skiing,we-retail:equipment]"
+        jcr:description="equipment"
+        jcr:lastModified="{Date}2016-01-26T13:41:07.536-08:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Flying Snowboard"
+        sling:resourceType="commerce/components/product"
+        features="&lt;p>Since its humble beginnings, innovation has defined the Flying Snowboard series and set it apart as the most popular, versatile, and mimicked board in snowboarding. These days, the one-board answer to all terrain celebrates its 20-year reign with a proven formula that combines time-honored design and envelope-pushing ingredients for a lightweight, poppy, and stable snowboard that were unheard of two decades ago.&lt;br>&lt;/p>"
+        identifier="eqwrsnbd"
+        inventory="67"
+        margin="0.75"
+        price="{Decimal}599"
+        rating="5"
+        reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+        summary="&lt;p>Often imitated, never outdone, and backed by a 20-year legacy as snowboarding’s one-board answer to all terrain.&lt;/p>&#xd;&#xa;"
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-26T13:41:07.514-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/activities/winter-sports/Snowboard.jpg"/>
+        <size-one-size
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.305-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="One size"/>
+    </eqwrsnbd>
+</jcr:root>

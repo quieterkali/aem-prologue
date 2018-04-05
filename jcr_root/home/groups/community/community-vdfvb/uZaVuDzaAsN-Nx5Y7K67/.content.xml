@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="efddfb1d-2053-325c-8c42-6a7168f0e5a1"
+    rep:authorizableId="community-community-vdfvb-siteenablementmanagers"
+    rep:members="{WeakReference}[79eb763f-4a7f-3772-ab8b-77278e3ae9f3]"
+    rep:principalName="community-community-vdfvb-siteenablementmanagers"
+    path="/content/we-retail/us/en/community">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        aboutMe="siteenablementmanagers for site /content/we-retail/us/en/community"
+        givenName="Community Community Siteenablementmanagers"/>
+</jcr:root>

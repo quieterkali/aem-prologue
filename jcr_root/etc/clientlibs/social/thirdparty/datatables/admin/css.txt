@@ -1,0 +1,2 @@
+#base=css
+extensions/dataTables.colPin.css

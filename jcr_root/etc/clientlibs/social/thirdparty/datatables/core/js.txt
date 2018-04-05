@@ -1,0 +1,9 @@
+#base=js
+datatables.js
+extensions/dataTables.colVis.js
+extensions/dataTables.scroller.js
+extensions/dataTables.colResize.js
+extensions/dataTables.responsive.js
+extensions/dataTables.colReorder.js
+extensions/dataTables.fixedColumns.js
+extensions/dataTables.colPin.js

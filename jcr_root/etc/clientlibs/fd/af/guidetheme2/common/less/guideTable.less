@@ -1,0 +1,133 @@
+/*
+Generic Styling, for Desktops/Laptops
+*/
+.guideTableNode[data-editpath]{
+  // hacky: In authoring, table layout is fixed, this is done since the width of rows were different in authoring mode
+  table {
+    table-layout: fixed;
+  }
+}
+
+/*
+ * This has been asked by RefSite for some time now, do we want to expose the selectors for field inside tables.
+ */
+.guideTableNode {
+  table {
+    &.nowrap {
+       td:not(.child) {
+         white-space: nowrap;
+         // all input should have background transparent
+         input {
+           background: transparent;
+           border: solid 0px transparent
+         }
+         .guidefield {
+           // no border image required for guide field
+           -webkit-border-image: initial;
+         }
+         // Enforcing width of adaptive forms component inside cell to be 100%
+         .guideFieldWidget{
+             width: 100%;
+         }
+       }
+    }
+
+    /*
+     * Ideally should be done through Themes only, but Left and Right parent controls are not exposed. Should we expose them in hierarchy,
+     * or retain it in common.css (how big is the use-case)
+     */
+    .guideTableRuntimeLeftControls {
+      padding-top: 3px;
+      float: left;
+      display: none;
+    }
+    .guideTableRuntimeRightControls {
+      float: right;
+      .guideTableRuntimeEditControl {
+        display: none;
+      }
+    }
+    width: 100% !important;
+    border-collapse: collapse;
+    &.collapsibleColumns {
+        tr{
+          &.child {
+              ul {
+                width: 100% !important;
+              }
+          }
+        }
+        /* Zebra striping in runtime*/
+        // In runtime, we have only one tbody
+        // In collapsible columns we have an extra tr with class child
+        tbody {
+          tr:not([data-editpath]):nth-of-type(4n-3) {
+            background: @table-even-row-bg-color;
+          }
+          tr:not([data-editpath]):nth-of-type(4n-1) {
+            background: @table-odd-row-bg-color;
+          }
+        }
+    }
+
+
+    &[id$="_guide-item-container"] > thead {
+      display: table-header-group !important;
+    }
+    &[id$="_guide-item-container"] > tbody {
+      display: table-row-group !important;
+    }
+    // for tr and td
+    [id$="_guide-item-container"] > [id$="_guide-item"] {
+      display: table-cell;
+    }
+
+    &.headersLeft {
+      // Required else it looks distorted in runtime
+      table-layout: fixed;
+    }
+    // Wrapping text inside table cell
+    .guideFieldNode, .guideAdModuleGroup, .guideAdModule {
+      word-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+  }
+
+  .tableControl, .tableControlElement {
+    display: none;
+    .tableControlElement {
+      span {
+        left: 50%;
+      }
+    }
+  }
+
+  .tableControl {
+    height: 25px;
+    .tableControlElement:first-child {
+      width: 30px;
+    }
+  }
+
+  .tableControlElement {
+    background: #eee;
+    height: 10px;
+    text-align: "center";
+    padding: 4px;
+    border: 3px solid;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .contextMenuEdit {
+    display: none;
+  }
+
+  .tableSelectedItem {
+    background: rgba(0, 0, 0, .4) !important;
+  }
+}
+

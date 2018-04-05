@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2017-03-14T16:55:32.845-07:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:description="We.Retail demo community group template"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="sling:Folder"
+    jcr:title="We.Retail Group"
+    sling:resourceType="social/console/components/hbs/grouptemplates/grouptemplate"
+    isDisabled="{Boolean}false"
+    sitePath="/content/communities/templates/grouptemplate"/>

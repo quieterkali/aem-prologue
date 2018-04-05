@@ -1,0 +1,90 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+ul.guide-fu-fileItemList {
+  padding-left: 0px;
+  margin:0px;
+  list-style: none;
+}
+
+li.guide-fu-fileItem{
+  display: block;
+  padding: @fileItemPadding;
+  background-color: @fileItemBackground;
+  border-top: 1px solid @fileItemBorderColor;
+  color: @fileItemColor;
+}
+
+span.guide-fu-filePreview{
+  margin-right: 10px;
+  float: left;
+  color: @filePreviewIconColor;
+}
+
+span.guide-fu-fileName {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+div.guide-fu-comment[contenteditable="true"] {
+  border: 1px solid;
+  margin-top:5px;
+}
+
+div.guide-fu-comment {
+  .size(100%,@fileItemCommentHeight);
+  margin-top: 5px;
+  padding: 2px 30px 2px 5px;
+  word-break: break-word;
+  border-style: groove;
+}
+
+div.fileAttachmentListingCloseButton {
+  float: right;
+}
+
+div.guideFileUpload div.guideFieldWidget > input[type="file"] {
+  visibility:hidden !important;
+  top:-2000px !important;
+  left:-2000px !important;
+  position:absolute !important;
+}
+
+div.guideFileUpload div.guideFieldWidget {
+  overflow: auto;
+   label {
+     background-color: #00283c;
+     cursor: pointer;
+     border-color: buttonface;
+     color: #ffffff;
+     padding: 10px 15px 10px 15px;
+     font-size: 14px;
+     line-height: normal;
+     border-radius: 0;
+     height: @widget-height;
+   }
+}
+span.non-preview-fileName{
+  text-decoration: none;
+  opacity: 0.4;
+}
+
+.guide-fu-disabled li.guide-fu-fileItem .guide-fu-fileClose{
+  visibility: hidden;
+}

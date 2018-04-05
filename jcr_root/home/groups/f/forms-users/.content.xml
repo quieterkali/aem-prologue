@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="aa79250f-e000-3e3b-b0d8-d14c68ca99d0"
+    rep:authorizableId="forms-users"
+    rep:members="{WeakReference}[bd2c399e-1a6a-3842-81be-06ac9db629b4,7da66560-c4a9-3ee7-86d2-d9a3beeb56d2]"
+    rep:principalName="forms-users">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/security/components/profile"
+        aboutMe="Group for all user who must be able to access the AEM Forms UI."
+        givenName="AEM Forms Users"/>
+</jcr:root>

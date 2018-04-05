@@ -1,0 +1,332 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@import "../../../af/guideCommonAuthoring/less/coralClassConstants.less";
+
+/*CSS variables*/
+@color-granite:#2d5e8b;
+@dialog-header-color:#fafafa;
+@cancel-background-color:#f5f5f5;
+@submit-color:#FFFFFF;
+@submit-background-color:#326EC8;
+@submit-disable-background-color:#efefef;
+@cancel-close-icon-color:#6f6f6f;
+@submit-disable-check-icon-color:#bdbdbd;
+@coral-check-color:#FFFFFF;
+@submit-enable-check-icon-color: #FFFFFF;
+
+
+/*Touch Authoring Dialog CSS
+Adding vertical Scroll bar in dialog*/
+#sidepanel-guide-properties .cq-dialog-content,
+#sidepanel-dor-properties .cq-dialog-content {
+  overflow-y: auto;
+  height: calc(~"100vh - 5.6875rem");
+  min-width: 5rem;
+  margin-right: -1rem;
+}
+
+#sidepanel-guide-properties .coral-Dialog-header,
+#sidepanel-dor-properties .coral-Dialog-header {
+  margin-top: -65px;
+}
+
+#sidepanel-guide-properties coral-dialog-content {
+  margin-top: 2.5rem;
+  background-color: inherit;
+  border-top : 1px solid rgba(0,0,0,0.1);
+  padding : 0;
+}
+
+#sidepanel-dor-properties coral-dialog-content {
+  padding-top: 0;
+  padding-left: 0;
+  background-color: inherit;
+  margin-top: 1rem;
+}
+/*Changing the left panel header bar styling*/
+#sidepanel-guide-properties .cq-dialog-header,
+#sidepanel-dor-properties .cq-dialog-header {
+  padding-right: 0.9375rem;
+  display: block;
+  box-sizing: border-box;
+  .guidePropertiesAlert {
+    float: left;
+    line-height:1.75rem;
+    coral-alert-content {
+        white-space: normal;
+    }
+  }
+}
+
+div > form > nav > h2.u-coral-pullLeft {
+  color: @color-granite;
+  display: none;
+}
+
+.afHidden {
+  display: none ;
+}
+
+.afRepostionOverlay {
+  left: 0px !important;
+}
+
+.afActionCustomFont {
+  font-size: 11px !important;
+  text-align: left !important;
+}
+
+.afMoreAction {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#afMoreActionsPopover .coral-BasicList-item {
+  padding: 0px;
+}
+
+
+#sidepanel-guide-properties .coral-RichText-toolbar,
+#sidepanel-dor-properties .coral-RichText-toolbar {
+  position: relative !important;
+}
+
+.coral-RichText {
+  height: 6.1rem;
+  max-height: 6.1rem;
+  overflow-y: auto;
+}
+
+.afToolTipClass {
+  display: block;
+}
+
+.enableAfTouchDialogSubmitButton {
+  color: @submit-color;
+  background-color: @submit-background-color;
+  border: 1px solid #1d5ebd;
+}
+
+.disableAfTouchDialogSubmitButton {
+  background-color: @submit-disable-background-color;
+  border: 1px solid #e5e5e5;
+}
+
+.enableAfTouchDialogSubmitButton,
+.disableAfTouchDialogSubmitButton {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  width: 2.685rem;
+  padding: 0px !important;
+  line-height: normal !important;
+}
+
+.afTouchDialogCancelButton {
+  background-color: transparent;
+  margin-bottom: 16px;
+  width: 2.675rem;
+  padding: 0px !important;
+  line-height: normal !important;
+}
+
+#sidepanel-guide-properties .afCoralIconClose,
+#sidepanel-dor-properties .afCoralIconClose {
+  color: @cancel-close-icon-color !important;
+  opacity: 1;
+}
+
+#sidepanel-guide-properties .enableAfCoralIconCheck,
+#sidepanel-dor-properties .enableAfCoralIconCheck {
+  color: @submit-enable-check-icon-color !important;
+}
+
+#sidepanel-guide-properties .disableAfCoralIconCheck,
+#sidepanel-dor-properties .disableAfCoralIconCheck {
+  color: @submit-disable-check-icon-color !important;
+}
+
+#sidepanel-guide-properties .enableAfCoralIconCheck,
+#sidepanel-dor-properties .enableAfCoralIconCheck,
+#sidepanel-guide-properties .disableAfCoralIconCheck,
+#sidepanel-dor-properties .disableAfCoralIconCheck {
+  opacity: 1;
+  line-height: 2.275rem;
+}
+
+#sidepanel-guide-properties .@{coral-icon-info-circle},
+#sidepanel-dor-properties .@{coral-icon-info-circle} {
+  font-size: 1rem;
+  float:right;
+}
+
+#sidepanel-guide-properties .global-lazy-field-margin,
+#sidepanel-dor-properties .global-lazy-field-margin {
+  margin-bottom: 6px !important;
+}
+
+#sidepanel-guide-properties coral-select-listoverlay,
+#sidepanel-dor-properties coral-select-listoverlay {
+  left : 0px !important;
+}
+
+#sidepanel-guide-properties coral-selectlist,
+#sidepanel-dor-properties coral-selectlist {
+  max-height: 700px !important;
+}
+
+#sidepanel-guide-properties .borderFieldSet coral-selectlist,
+#sidepanel-dor-properties .borderFieldSet coral-selectlist {
+  max-height: 250px !important;
+}
+
+#sidepanel-guide-properties .borderFieldSet .cq-dialog-content.guide-dialog,
+#sidepanel-dor-properties .borderFieldSet .cq-dialog-content.guide-dialog {
+  overflow-y : visible;
+  margin-right : 0rem;
+}
+
+#sidepanel-guide-properties coral-tabview,
+#sidepanel-dor-properties coral-tabview {
+  height: calc(~"100vh - 150px");
+  overflow-y: auto;
+}
+
+#sidepanel-guide-properties coral-accordion,
+#sidepanel-dor-properties coral-accordion {
+    border: 0px;
+    border-bottom: .0625rem solid #e9e9e9;
+}
+
+#sidepanel-guide-properties .empty-message coral-icon,
+#sidepanel-dor-properties .empty-message coral-icon {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.title-placeholder{
+  height:65px;
+}
+
+.label-date{
+  display:block;
+}
+
+.title-placeholder{
+  height:65px;
+}
+
+.label-date{
+  display:block;
+}
+
+.@{coral-form--vertical} .@{coral-form-field}.@{coral-textfield}.placeholder-date{
+  position:relative;
+  left:50%;
+  top:-44px;
+  width:45%;
+}
+
+section.borderFieldSet .title-placeholder input.title-date{
+  width:45%;
+}
+.afDialogItemBoundary {
+  border: .0625rem solid #e9e9e9;
+  padding: .625rem;
+}
+
+/*Fixing styling issues in the independent dialogs*/
+.guideIndependentDialog {
+  overflow: auto;
+  min-width:40rem;
+  height: 22.5rem;
+}
+
+.guideIndependentDialog .coral-InputGroup-button {
+  width: 3rem;
+}
+
+.guideIndependentDialog .@{coral-form-fieldwrapper} {
+  margin-left: 3rem;
+  margin-right:3rem;
+}
+
+/*To avoid extra scrollbar problem inside accordion */
+#sidepanel-guide-properties .cq-dialog-content .guide-dialog,
+#sidepanel-dor-properties .cq-dialog-content .guide-dialog {
+  height : 100%;
+}
+/* Added to show the tool tip properly */
+.coral-Form-fieldset {
+  .guide-dialog {
+    padding-top : 10px;
+  }
+}
+
+/*To avoid tooltip position problem on UI*/
+#sidepanel-guide-properties coral-tooltip,
+#sidepanel-dor-properties coral-tooltip {
+  left: 0px !important;
+}
+
+#dorShowSelectedOptions {
+  height: auto;
+}
+
+#dorSelectOptionSeparator, #dorOptionSeparator {
+  margin-bottom: 1.0rem;
+}
+
+#dor-template-selection .coral3-SelectList {
+  max-height: 252px !important;
+}
+
+#dor-template-selection .coral3-SelectList-item {
+  cursor: pointer;
+  padding: .75rem .625rem;
+  min-height: 1.125rem;
+  line-height: 1.125rem;
+}
+
+#dor-template-selection .coral3-SelectList-item .path {
+  font-size: 13px;
+  color: #868686;
+  width: 10rem;
+  text-align: left;
+  display: inline-block;
+  float: left;
+  margin-left: 2px;
+}
+
+#dor-template-selection .coral3-SelectList-item .path > span {
+  width: 92%;
+  float: right;
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#afMoreActionsPopover .@{coral-BasicList-item-contentContainer} {
+  width: auto;
+}
+
+#afMoreActionsPopover .@{coral-ButtonList-item},
+#afMoreActionsPopover .afMoreAction{
+  width: 100%;
+}

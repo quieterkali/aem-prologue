@@ -1,0 +1,124 @@
+/*
+ * **********************************************************************
+ *  ADOBE CONFIDENTIAL
+ *  __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ *  NOTICE:  All information contained herein is, and remains
+ *  the property of Adobe Systems Incorporated and its suppliers,
+ *  if any.  The intellectual and technical concepts contained
+ *  herein are proprietary to Adobe Systems Incorporated and its
+ *  suppliers and may be covered by U.S. and Foreign Patents,
+ *  patents in process, and are protected by trade secret or copyright law.
+ *  Dissemination of this information or reproduction of this material
+ *  is strictly forbidden unless prior written permission is obtained
+ *  from Adobe Systems Incorporated.
+ *  **********************************************************************
+ */
+
+body {
+  font-family: "myriadProRegular", Adobe Clean, Arial;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+.panel {
+  counter-reset:section;
+}
+
+.header {
+  background-color: rgb(0, 121, 193);
+  color:#ffffff;
+  height:75px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 28px;
+  padding: 15px;
+  padding-left: 45px;
+  width: 50%;
+}
+
+.titleLinks {
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+  width: 40%;
+  text-align: right;
+  > a {
+    color: white;
+    padding: 10px;
+  }
+}
+
+.titleDivider {
+  display: inline-block;
+  background-color: gray;
+  width: 2px;
+  height: 25px;
+}
+
+.guideTableNode {
+  table {
+    .guidefield {
+      // In table we don't need counter number before each label
+      .guideFieldLabel:before {
+        content : none;
+      }
+    }
+  }
+}
+
+.panel .guidefield .guideFieldLabel:before {
+  counter-increment: section;
+  content: counter(section) ". ";
+  padding-right: 5px;
+  font-size: 17px;
+}
+
+.guidetoolbar {
+  input[type="button"], button, .button {
+    .rounded-corners (4px);
+    &:hover {
+      background-color: rgb(1, 56, 83);
+    }
+    &:focus {
+      background-color: #3276b1;
+    }
+  }
+}
+
+.guideFieldWidget.multiline {
+  min-height:80px;
+  margin-bottom: 10px;
+}
+
+.guideCheckBoxItem,
+.guideRadioButtonItem {
+  margin-top: 0px;
+  .guideFieldWidget {
+    margin-top: 0px;
+    width: auto;
+  }
+}
+
+#guide-mobile-navigator-wrapper {
+  display: none;
+}
+
+@media(max-width:@screen-sm-max) {
+  .guidetoolbar,
+  .guidetoolbar .guideFieldNode,
+  .guidetoolbar .fileattachmentlisting {
+    padding:0px;
+    margin:0px;
+  }
+}
+@media(max-width:@screen-xs-min) {
+  .header {
+    height: auto;
+  }
+}

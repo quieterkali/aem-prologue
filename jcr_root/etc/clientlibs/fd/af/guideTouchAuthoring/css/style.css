@@ -1,0 +1,134 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+#af-expression-editor {
+    position: absolute;
+    z-index: 1000;
+}
+
+img.emptyimage {
+    width: 100%;
+    display: block;
+}
+
+.coral-RichText-sourceEditor {
+    height: 12.8rem;
+    width: 98% !important;
+    background-color: #fff !important;
+}
+
+.coral-RichText-editable {
+    background-color: #fff !important;
+}
+
+div#RTEFullScreenMode {
+    z-index: 1000;
+}
+
+/** CSS for the Replace Dialog which we show **/
+.ReplaceComponentDialog-components {
+    padding: 0;
+}
+
+.ReplaceComponentDialog-component {
+    width: 100%;
+    text-align: left;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+    color: #323232;
+}
+
+.ReplaceComponentDialog-list {
+    position: static;
+    margin: 0;
+    max-height: 400px;
+    border-radius: 0;
+    overflow-y: auto;
+}
+
+.ReplaceComponentDialog {
+    top : 25%;
+}
+
+.ReplaceComponentDialog-search {
+    width: 100%;
+}
+
+.ReplaceComponentDialog-search, .ReplaceComponentDialog-search > coral-icon {
+    padding: 0 .625rem .625rem .625rem;
+}
+
+.card-asset > div.cq-cft-participant-title {
+    background: #fff;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.card-asset > div.cq-cft-participant-title h4{
+    display: table-cell;
+    vertical-align: bottom;
+    white-space: normal;
+    padding: 0 0.375rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    color: #777777;
+}
+.logoImage.guideImageEmpty[data-emptytext]{
+        width: 2.5rem;
+        height: 2.5rem;
+ }
+.guideImageEmpty{
+    margin-top:0.75rem;
+    margin-left:0.75rem;
+    margin-right:0.75rem;
+    margin-bottom:0.75rem;
+ }
+.guideChartEmpty{
+    margin-top:0.75rem;
+    margin-left:0.75rem;
+    margin-right:0.75rem;
+    margin-bottom:0.75rem;
+}
+.highlightAncestorPanel{
+    background-color: rgba(49,109,200,0.05);
+    border: solid 2px rgba(29,95,190,0.3);
+    margin: -0.125rem;
+}
+.highlightTargetPanel{
+    background-color: rgba(49,109,200,0.3);
+    border: solid 2px rgb(29,95,190);
+    margin: -0.125rem;
+}
+.ancestorPanelTitle{
+    background-color: rgba(49,109,200,0.5);
+    font-weight: bold;
+}
+.targetPanelTitle{
+    background-color: rgb(49,109,200);
+    font-weight: bold;
+}
+.targetPanelTitle, .ancestorPanelTitle{
+    position:absolute;
+    display:block;
+    float:none;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    padding: 0rem 1rem 0rem 1rem;
+}

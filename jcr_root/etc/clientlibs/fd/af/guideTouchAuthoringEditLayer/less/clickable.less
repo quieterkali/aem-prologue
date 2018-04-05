@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ * Copyright 2015 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by all applicable intellectual property
+ * laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+.clickable-overlay {
+    position : absolute;
+    cursor : pointer;
+    z-index : 500;
+}
+/*-.125rem margin and .125rem border-width is put to align it with normal overlay*/
+.currentDialogEditable {
+    border: solid 0.125rem;
+    margin: -0.125rem;
+    border-color: #afd2fa;
+}
+
+/*height and width is derived from normal toolbar button*/
+.placeholderOverlayButton {
+    position: absolute;
+    height: 2.75rem;
+    min-width: 3.75rem;
+    background-color: #afd2fa;
+    opacity: .5;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.placeholderOverlayButton-current{
+    color: #ffffff;
+    background-color: rgba(49,109,199, 0.8);
+    opacity: 1;
+}
+.placeholderOverlayButton-current:hover{
+    color: #4b4b4b;
+}
+
+.placeholderOverlayButton.coral-Button:not(:disabled):not(.is-disabled):hover {
+    background-color: #afd2fa;
+    cursor: default;
+}
+
+.placeholderOverlayButton.coral-Button:not(:disabled):not(.is-disabled).is-selected,
+.placeholderOverlayButton.coral-Button:not(:disabled):not(.is-disabled):active {
+    background-color: #afd2fa;
+    cursor: default;
+}

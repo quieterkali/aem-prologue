@@ -1,0 +1,3 @@
+#if you are adding any file here please add the entry in xfalib/js.txt as well
+#base=javascript
+xfalibUtil.js

@@ -1,0 +1,874 @@
+/*
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ * Copyright 2012-2013 Adobe Systems Incorporated
+ * All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ *
+ */
+/*Portal title*/
+.__FP_title-forms{
+    color: #000000;
+    font: normal normal 30px/34px 'Myriad Pro', Arial, sans-serif;
+    width: 60%;
+}
+/*Filter and Close image*/
+.__FP_close-image{
+    background: url('images/close.png');
+    height: 50px;
+    width: 45px;
+}
+.__FP_close-image:focus{
+    border: 1px #000000 dotted;
+}
+.__FP_filter-image{
+    background: url('images/filter.png');
+    width: 22px;
+    height: 22px;
+    margin-left: 32px;
+}
+
+.__FP_filter-image:focus{
+    border: 1px #000000 dotted;
+}
+/*Top Border*/
+.__FP_container_forms{
+    border-top: 3px solid #00457c;
+    width: 100%;
+    margin-top: 0px;
+    padding-left: 0px;
+    min-height: 0px;
+    padding-top: 0px;
+    background: transparent;
+}
+
+/*Pagination*/
+.__FP_results-text-color{
+    color:#000000;
+}
+
+/*Card view start*/
+/*Properties of boxes in card view*/
+.__FP_boxes{
+    border-radius: 12px;
+    width: 182px;
+    height: auto;
+    background-color: #ffffff;
+    opacity: 0.8;
+    font-family: 'Adobe Clean', Arial;
+    /*box-shadow: rgba(34,53,77,0.2) 0px 2px 5px, inset #6f6f6f 0px 15px 45px 10px;*/
+}
+
+.__FP_boxes:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+
+.__FP_boxes:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.__FP_boxes-thumbnail{
+    /*    height: 204px;
+        background-size: 100% 100%;
+        background-image: url('../../../../widgets/themes/default/widgets/images/thumb.png');*/
+}
+/*On hovering on any of the boxes*/
+.__FP_boxes:hover{
+    box-shadow: rgba(0,0,0,0.2) 0px 10px 10px, inset rgba(0,0,0,0.2) 0px -1px 50px;
+    background-color: #ffffff;
+}
+
+.__FP_boxes:hover h3{
+    color: rgb(0, 0, 0);
+}
+
+.__FP_boxes:hover p{
+    color: rgb(0, 0, 0);
+}
+/*
+.__FP_boxes:hover .__FP_boxes-description{
+    display: none;
+}
+
+.__FP_boxes:hover .boxes-icon-cont {
+    display :block;
+} */
+
+/*Name of the form in card view*/
+.__FP_boxes h3{
+    color: #000000;/*rgb(155, 195, 195);*/
+    font: normal normal 18px/35px 'Adobe Clean', 'Myriad Pro', Arial,sans-serif;
+    margin-left: 12px;
+    margin-right: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+/*Description of the form in card view*/
+.__FP_boxes p{
+    font: normal normal 14px/15px 'Adobe Clean', 'Myriad Pro', Arial,sans-serif;
+    color: #000000;
+    max-height: 48px;
+    min-height: 48px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    height: 100%;
+}
+
+/*Arrow link to expand the options menu*/
+.__FP_boxes-arrow-link{
+    background-color: #000000;
+}
+/*Submit Button styles*/
+.__FP_in-sub{
+    background: #a9a9a9;
+    height: 29px;
+    width: 80px;
+    font: 19px Adobe Clean !important;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.__FP_in-sub:focus{
+    border: 1px dotted #000000;
+}
+/*Card view end*/
+
+/*Grid view start*/
+
+.__FP_grid-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*Even numbered rows of the form grid*/
+.__FP_grid-table tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+/*Odd numbered rows of the form grid*/
+.__FP_grid-table tr:nth-child(odd){
+    background-color: #f8f8f8;
+}
+
+/*padding of open & download images*/
+.__FP_grid_open-download-image{
+    padding-top: 5px;
+    /* width: 20%; */
+}
+/* Zebra striping */
+.__FP_grid-table tr:nth-of-type(odd){
+    background: #eee;
+}
+.__FP_grid-table th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+.__FP_grid-table td, .__FP_grid-table th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/*Grid view end*/
+
+
+/*Search box title*/
+.__FP_Search-box-title-text{
+    color: #000000;
+    margin-top: 0px;
+    font: 28px Adobe Clean, Arial;
+    border: none;
+}
+
+/*Search Box predicates start*/
+
+/*Titles of Search Box Predicates */
+.open-form .__FP_search-box-predicates-titles{
+    color:#000000;
+    font: 20px Adobe Clean !important;
+    border-bottom: 1px solid #cccccc;
+}
+
+/*Subtitles of Search Box Predicates */
+.open-form .__FP_Search-box-predicates-subtitles{
+    color : #000000;
+    font: 16px Adobe Clean !important;
+    border: none;
+}
+
+/* Text Box of Search Box Predicates */
+.__FP_Search-box-input-box{
+    color: #000000;
+    width: 95%;
+}
+
+/*Search Box predicates ends*/
+
+/*Open and Download Icons starts*/
+
+/* View and Downloading icons */
+.__FP_boxes-icon-cont{
+    position: relative;
+    height: 48px;
+    border-top : 1px solid #000000;
+    margin-top: 20px;
+    /* display: none;   */
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffffff;
+}
+
+.__FP_boxes:hover .__FP_custom-download{
+    background-position: 100% 100%;
+}
+
+.__FP_custom-download:hover{
+    background-position: 100% 100%;
+}
+/*Open and Download Icons end*/
+
+
+/*Predicate Specific */
+
+/*Full Text Predicate heading on the advanced search panel*/
+.__FP_fulltext-predicate{
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.__FP_tags-predicate{
+    color: #ffffff;
+}
+
+/*Properties Predicate heading on the advanced search panel*/
+.__FP_properties-predicate{
+    color:#000000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*Date Predicate heading on the advanced search panel*/
+.__FP_date-predicate{
+    color:#000000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Full panel*/
+.__FP_panel{
+    margin-bottom:2px;
+    width: auto;
+    background-color: transparent;
+    padding-bottom: 40px;
+    color: white;
+    font: 30px Adobe Clean, Arial !important;
+}
+
+.__FP_panel-icon-cont{
+    background-color:inherit;
+    border-top:none;
+    margin-right: 21px;
+}
+
+
+.__FP_panel-box{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    background-color: white;
+    padding-top: 21px;
+    padding-left: 26px;
+    padding-right: 40px;
+    border-radius: 5px;
+    height: auto;
+    border: 1px solid black;
+}
+
+/* Name of the form */
+.__FP_panel-box-title{
+    font: 17px Adobe Clean, Arial !important;
+    color: #000000;
+}
+
+/* Description of the form */
+.__FP_panel-box-description{
+    color: #797979;
+    font: 14px Adobe Clean, Arial !important;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 55px;
+    margin-bottom: 18px;
+    padding-top: 5px;
+}
+
+/* Open and download buttons */
+.__FP_panel-box-open-download{
+    margin-top: -15px;
+
+}
+
+/* Sidebar in each cell */
+
+
+.__FP_panel-box-icons{
+    display :none;
+    left: 20px;
+    width: 43px;
+    float: right;
+    margin-right: -40px;
+    margin-top: -21px;
+    background: rgb(230, 230, 230);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-repeat: repeat-y;
+    height: 130px;
+    border-left: 1px solid rgb(230, 230, 230);
+}
+
+/* Sidebar in each cell */
+
+.__FP_panel-box-rating{
+    display:none;
+    height: 26px;
+    margin: 8px;
+    margin-top: 30px;
+    width: 20px;
+    display: none;
+    background: url("images/rating.png") no-repeat;
+}
+
+/* Sidebar in each cell */
+
+.__FP_panel-box-comment{
+    display: none;
+    height: 26px;
+    margin: 8px;
+    margin-top: 30px;
+    width: 20px;
+    display: none;
+    background: url("images/comment.png") no-repeat;
+}
+
+#search {
+
+}
+
+/* Sidebar in each cell */
+
+.__FP_stars{
+    display:none;
+    color:black;
+    font: 12px Adobe Clean, Arial;
+    width: 100px;
+    background: grey;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    right: 100px;
+    border-radius: 5px;
+    top: 2px;
+    padding-top: 5px;
+}
+
+/* Search form text box */
+.__FP_textSearch input[type="text"] {
+    background: url(images/search.png) no-repeat 10px 6px rgb(241, 241, 241);
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #d7d7d7;
+    width: 96%;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    /*    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;*/
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    height: 35px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.__FP_textSearch input[type="text"]:focus {
+    color: #00457c;
+    width: 97% !important;
+    /*   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+       text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);*/
+}
+
+.__FP_search-open{
+    background: #ffffff;
+    position: absolute;
+}
+
+.__FP_search-collapse{
+    margin-top: -38px;
+    position: relative;
+}
+
+/*.__FP_panel-box-rating:hover .__FP_stars{
+    display: block;
+
+}   */
+
+/* Sidebar in each cell */
+/*
+.__FP_comment{
+    display: none;
+    position: relative;
+    right: 307px;
+    top: 10px;
+    border: 5px solid #e0e0e0;
+    width: 260px;
+    font: 14px Adobe Clean, Arial !important;
+}*/
+
+.__FP_comment-submit{
+    display: none;
+    position: relative;
+    right: 52px;
+    top: -17px;
+    border: 5px solid #e0e0e0;
+    font: 14px Adobe Clean, Arial !important;
+}
+/*.__FP_panel-box-comment:hover .__FP_comment-submit{
+    display: block;
+}
+
+.__FP_panel-box-comment:hover .__FP_comment {
+    display: block;
+}     */
+
+/* Icon to render the form in HTML5*/
+.__FP_panel-html-open{
+    background: url('images/panel-html.png') 100% 100% no-repeat;
+    height: 24px;
+    display: inline-block;
+    width: 30px;
+}
+
+.__FP_panel-html-open:hover{
+    background-image: url('images/panel_html_hover.png');
+    transition: 1s;
+}
+
+.__FP_panel-html-open:focus{
+    background-image: url('images/panel_html_hover.png');
+    transition: 0s;
+}
+
+/* Icon to render the form in PDF*/
+.__FP_panel-pdf-open{
+    background: url('images/panel-pdf.png') 100% 100% no-repeat;
+    height: 24px;
+    display: inline-block;
+    width: 30px;
+}
+.__FP_panel-pdf-open:hover{
+    background-image: url('images/panel-pdf_hover.png');
+    transition: 1s;
+}
+.__FP_panel-pdf-open:focus{
+    background-image: url('images/panel-pdf_hover.png');
+    transition: 0s;
+}
+.__FP_panel-guide-open{
+    background:  url('images/panel-guide.png') 100% 100% no-repeat;
+    height: 24px;  display: inline-block;  width: 30px;
+}
+
+.__FP_panel-guide-open:hover{
+    background-image: url('images/panel-guide_hover.png');
+    transition: 1s;
+}
+.__FP_panel-guide-open:focus{
+    background-image: url('images/panel-guide_hover.png');
+    transition: 0s;
+}
+
+.__FP_panel-print{
+    background: url('images/Print.png') 100% 100% no-repeat;
+    height: 24px;
+    display: inline-block;
+    width: 30px;
+}
+
+.__FP_panel-print:hover{
+    background-image: url('images/Print-hover.png');
+    transition: 1s;
+}
+
+.__FP_panel-print:focus{
+    background-image: url('images/Print-hover.png');
+    transition: 0s;
+}
+
+/* Icon to download the form as PDF*/
+.__FP_panel-download{
+    background:  url('images/Download.png') 100% 100% no-repeat;
+    height: 24px;  display: inline-block;  width: 30px;
+}
+
+.__FP_panel-download:hover{
+    background-image: url('images/Download-hover.png');
+    transition: 1s;
+}
+
+.__FP_panel-download:focus{
+    background-image: url('images/Download-hover.png');
+    transition: 0s;
+}
+
+/* Open and download form icons */
+.__FP_panel-box-open-download a{
+    margin-right:20px;
+}
+
+/* Folded form image */
+.__FP_corner-image{
+    background-image:url('images/form-folding.png');
+    width:25px;
+    height:25px;
+    position:relative;
+    float:right;
+    top: 0px;
+    display: none;
+}
+.__FP_semiTransparentBackground{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 500;
+    position: absolute;
+}
+
+/* Container for boxes in Card Layout View */
+.__FP_boxes-container{
+    background: transparent;
+    padding: 10px;
+}
+
+.__FP_subsection{
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Horizontal Ruler */
+.__FP_horizontalRuler{
+    min-height: 1px;
+    clear:both;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    height: 1px; padding-top:5px;
+    margin-top:-6px;
+    margin-bottom: 20px;
+}
+
+.__FP_clicked-color{
+    color: #9ce4f2;
+}
+
+/* Next Page Arrow text */
+#__FP_forward:active{
+    color: #ffffff !important;
+}
+
+/* Previous Page Arrow text */
+#__FP_backward:active{
+    color: #ffffff !important;
+}
+
+#__FP_forward:focus{
+    border: 1px #000000 dotted;
+}
+
+#__FP_backward:focus{
+    border: 1px #000000 dotted;
+}
+
+/* Hidden Elements */
+.__FP_visibilityNone{
+    visibility: hidden;
+}
+.__FP_panel-box-name{
+    height:20px;
+    color: black;
+}
+.__FP_panel-box-assetType{
+    height:20px;
+    color: black;
+}
+.__FP_grid-name{
+    /*width: 15%;*/
+}
+.__FP_grid-assetType{
+    width: 6%;
+}
+.__FP_grid-title{
+    width: 25%;
+}
+.__FP_grid-description{
+}
+.__FP_boxes-img{
+    width: 179px !important;
+    height: 125px !important;
+}
+
+.__FP_querybuilder_form{
+    position: relative;
+}
+
+.__FP_display_none{
+    display: none;
+}
+.__FP_grid_sort{
+    cursor: pointer;
+}
+.x-form-date-trigger{
+    border-collapse: collapse;
+    background: url('images/date-trigger.gif') no-repeat transparent 0 0;
+    right: auto;
+    width: 17px;
+    height: 21px;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    zoom: 1;
+    white-space: nowrap;
+    top: 6px;
+    border-bottom: 1px solid #777777;
+}
+
+.x-form-field-trigger-wrap{
+    width: 100% !important;
+}
+.x-hide-label .x-form-element {
+    padding-left: 0 !important;
+}
+.x-form-item label.x-form-item-label {
+    display:block;
+    float:left;
+    width:100px;
+    padding:3px;
+    padding-left:0;
+    clear:left;
+    z-index:2;
+    position:relative;
+}
+.x-hide-label label.x-form-item-label {
+    display:none;
+}
+.x-hide-label .x-form-element {
+    padding-left: 0 !important;
+    padding-bottom: 5px !important;
+}
+.x-panel.cq-selection .x-form-cb-label-hidden {
+    margin:2px 0 0 5px;
+    position:absolute;
+    display: inline-block;
+    color: #000000;
+}
+
+/*Single Color*/
+.__FP_single-color,
+.__FP_single-color h3,
+.__FP_single-color h1,
+.__FP_single-color p,
+.__FP_single-color tr td,
+.__FP_single-color tr th,
+.__FP_single-color div{
+
+}
+
+/*Specific to table view only*/
+@media only screen
+and (max-width: 767px) {
+
+    /* Force table to not be like tables anymore */
+    .__FP_grid-table table, .__FP_grid-table thead, .__FP_grid-table tbody, .__FP_grid-table th, .__FP_grid-table td, .__FP_grid-table tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .__FP_grid-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .__FP_grid-table tr {
+        border: 1px solid grey;
+    }
+
+    .__FP_grid-table td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #cccccc;
+        position: relative;
+        padding-left: 50%;
+        min-height: 25px;
+    }
+
+    .__FP_grid-table td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    .__FP_grid-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+    }
+    .__FP_search-open{
+        width: 321px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (min-width : 480px)
+and (max-width : 767px) {
+    .__FP_boxes{
+        border-radius: 12px;
+        width: 160px;
+        height: auto;
+        background-color: #ffffff;
+        opacity: 0.8;
+        font-family: 'Adobe Clean', Arial;
+    }
+    .__FP_container_forms{
+        border: 0px;
+    }
+    .__FP_boxes h3{
+        font: normal normal 18px/20px 'Adobe Clean', 'Myriad Pro', Arial,sans-serif;
+        white-space: initial;
+        word-wrap: break-word;
+    }
+    .content-form{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .__FP_boxes p{
+        font: normal normal 10px/12px 'Adobe Clean', 'Myriad Pro', Arial,sans-serif;
+        color: #000000;
+        height: auto;
+    }
+    .__FP_textSearch input[type="text"] {
+        width: 93%;
+    }
+
+    .__FP_textSearch input[type="text"]:focus {
+        width: 94%;
+    }
+    .__FP_search-open{
+        width: 48%;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width : 479px) {
+    .__FP_boxes{
+        width: 120px;
+        height: auto;
+        background-color: #ffffff;
+        opacity: 0.8;
+        font-family: 'Adobe Clean', Arial;
+    }
+    .__FP_boxes h3{
+        font: normal normal 18px/20px 'Adobe Clean', 'Myriad Pro', Arial,sans-serif;
+        white-space: initial;
+        word-wrap: break-word;
+    }
+    .__FP_container_forms{
+        border: 0px;
+    }
+    .content-form{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .__FP_boxes p{
+        font: normal normal 11px/12px Adobe Clean, Myriad Pro, Arial sans-serif;
+        color: #000000;
+        height: auto ;
+    }
+    .__FP_panel-box{
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        background-color: white;
+        padding-top: 9px;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: auto;
+        border: 1px solid black;
+        padding-bottom: 9px;
+    }
+    .__FP_panel-box:nth-child(even) {
+        background-color: #f8f8f8;
+    }
+    .__FP_panel-box-description{
+        color: #797979;
+        font: 11px Adobe Clean, Myriad Pro, Arial sans-serif !important;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 30px;
+        margin-bottom: 18px;
+        padding-top: 5px;
+    }
+    .__FP_panel-box-title{
+        font: 14px Adobe Clean, Arial !important;
+        color: #000000;
+    }
+
+    .__FP_textSearch input[type="text"] {
+        width: 93%;
+    }
+
+    .__FP_textSearch input[type="text"]:focus {
+        width: 94%;
+    }
+    .__FP_search-open{
+        width: 78%;
+    }
+}

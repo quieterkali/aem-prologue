@@ -1,0 +1,9 @@
+#base=.
+lib/codemirror.js
+mode/xml/xml.js
+mode/javascript/javascript.js
+mode/css/css.js
+mode/htmlmixed/htmlmixed.js
+mode/htmlembedded/htmlembedded.js
+addon/edit/matchbrackets.js
+addon/lint/css-lint.js

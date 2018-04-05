@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[we.retail.app.all]"
+    dependencies="[we.retail.ionic-1.3.1]"
+    embed="[cq.mobile.content-sync-2,cq.mobileapps,cq.mobile.foundation.angular,cq.mobile.maps.angular,cq.mobile.toast.angular,cq.mobileapps.angular,we.retail.moment,we.retail.angular,we.retail.app,cq.articleReader.coverParallax,cq.mobile.push,cq.mobile.push.amazon]"
+    jsProcessor="[min:gcc]"/>

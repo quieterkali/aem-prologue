@@ -1,0 +1,7 @@
+message=${modifiedBy.fullName} wrote on ${modifiedOn.Date} :<br\>\n\
+\n\
+${post.message} \n\
+<br\>\n\
+Post URL : <a href="${host.prefix}${post.url}"> ${host.prefix}${post.url} </a> \n\
+
+separator=\n<br\>------------------------------------------<br\>\n\n

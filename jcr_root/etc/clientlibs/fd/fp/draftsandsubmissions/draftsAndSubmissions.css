@@ -1,0 +1,274 @@
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2014 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+.__FP_draftlink, .__FP_submittedFormLink, .__FP_pendingSignFormLink {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(133, 213, 209);
+    font: 19px Adobe Clean, Arial;
+    height: 22px;
+    cursor: pointer;
+}
+
+.__FP_draftPanel, .__FP_submittedFormPanel, ._FP_pendingSignFormPanel {
+    z-index: 1000;
+    background: white;
+    width: 100%;
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-right-radius: 5px;*/
+    /*border-bottom-left-radius: 5px;*/
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.__FP_draftContainer, .__FP_submittedFormContainer, .__FP_pendingSignFormContainer {
+    width: 100%;
+}
+.__FP_drafts, .__FP_submittedForms, ._FP_pendingSignForms {
+    padding: 0px !important;
+}
+.__FP_draftsTitle, .__FP_submittedFormTitle, ._FP_pendingSignFormTitle {
+    color: rgb(133, 213, 209);
+    margin-top: 0px;
+    font: 28px Adobe Clean, Arial;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.__FP_draftDesc, .__FP_submittedFormDesc , .__FP_pendingSignFormDesc {
+    margin-right: 70px;
+    min-height: 30px;
+}
+.__FP_draftlinkTime, .__FP_submittedFormLinkTime, .__FP_pendingSignFormLinkTime {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    font: 13px Adobe Clean, Arial;
+    float: right;
+    margin-right: 18px;
+}
+.__FP_eachDraftLink, .__FP_eachSubmittedFormLink,  .__FP_eachPendingSignFormLink {
+    padding-left: 15px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+.__FP_actions{
+    font: 12px Adobe Clean, Arial;
+    margin-right: 15px;
+    margin-top: -30px;
+    height: 30px;
+    width: 82px;
+    float: right;
+}
+.__FP_deleteDraft, .__FP_deleteSubmission{
+    float: right;
+    font: 12px Adobe Clean, Arial;
+    background: url("../images/delete-up.png") no-repeat;
+    height: 25px;
+    width: 25px;
+}
+
+.__FP_newInstance{
+    float: right;
+    font: 12px Adobe Clean, Arial;
+    background: url("../images/prefill-up.png") no-repeat;
+    height: 25px;
+    width: 25px;
+    margin-right: 7px;
+}
+.__FP_newInstance:hover{
+    background: url("../images/prefill-hover.png") no-repeat;
+}
+.__FP_newInstance:focus{
+    background: url("../images/prefill-down.png") no-repeat;
+}
+.__FP_deleteDraft:hover, .__FP_deleteSubmission:hover{
+    background: url("../images/delete-hover.png") no-repeat;
+}
+
+.__FP_deleteDraft:focus, .__FP_deleteSubmission:focus{
+    background: url("../images/delete-down.png") no-repeat;
+}
+
+.__FP_dor{
+    float: right;
+    font: 12px Adobe Clean, Arial;
+    background: url("../images/getpdf-up.png") no-repeat;
+    height: 25px;
+    width: 25px;
+    margin-right: 0px;
+}
+
+.__FP_dor:hover{
+    background: url("../images/getpdf-hover.png") no-repeat;
+}
+.__FP_dor:focus{
+    background: url("../images/getpdf-down.png") no-repeat;
+}
+.__FP_semiTransparentBackground{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 500;
+    position: absolute;
+}
+.__FP_horizontalRuler{
+    min-height: 1px;
+    clear:both;
+    width: 99%;
+    border-bottom: 1px solid #1E90FF;
+    height: 1px; padding-top:5px;
+    margin-top:-6px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.__FP_cancelPendingSign{
+    float: right;
+    margin-top: 6px;
+    font: 12px Adobe Clean, Arial;
+    background: url("../images/abandon_Default.png") no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+.__FP_cancelPendingSign:hover{
+    background: url("../images/abandon_Hover.png") no-repeat;
+}
+
+.__FP_cancelPendingSign:focus{
+    background: url("../images/abandon_Active.png") no-repeat;
+}
+
+.__FP_pendingSignFormStatus{
+    margin-right: 70px;
+    min-height: 30px;
+    font-size: small;
+}
+
+
+.__FP_more{
+    margin-top: -4px;
+    height: 24px;
+    background: rgb(133, 213, 209);
+    text-align: center;
+}
+.__FP_draftTextSearch, .__FP_submittedFormsTextSearch, .__FP_pendingSignFormsTextSearch {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+.__FP_draftTextSearch input[type="text"], .__FP_submittedFormsTextSearch input[type="text"], .__FP_pendingSignFormsTextSearch input[type="text"] {
+    background: url(../images/search.png) no-repeat 10px 6px rgb(241, 241, 241);
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: black;
+    width: 97%;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    height: 35px;
+    margin-bottom: 25px;
+    margin-top: -10px;
+    box-sizing: border-box;
+}
+
+.__FP_draftTextSearch input[type="text"]:focus, .__FP_submittedFormsTextSearch input[type="text"]:focus, .__FP_pendingSignFormsTextSearch input[type="text"]:focus {
+    color: black;
+    width: 99%;
+}
+.__FP_contentRemaining{
+    margin-left: 60px;
+}
+.__FP_iconClass{
+    float: left;
+    height: 44px;
+    width: 44px;
+    font: 35px/44px Adobe Clean, Arial;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4px;
+}
+
+.__FP_iconClassPendingSign{
+    float: left;
+    height: 75px;
+    width: 44px;
+    font: 40px/65px Adobe Clean, Arial;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4px;
+}
+
+.__FP_iconClass0{
+    background: #ff9933;
+}
+
+.__FP_iconClass1{
+    background: #ff6600;
+}
+
+.__FP_iconClass2{
+    background: #cc0000;
+}
+
+.__FP_iconClass3{
+    background: #a1c554;
+}
+
+.__FP_iconClass4{
+    background: #3e6bc0;
+}
+
+.__FP_iconClass5{
+    background: #6c3696;
+}
+
+.__FP_display_none, .ABORTED{
+    display: none
+}
+
+@media only screen
+and (max-width : 479px) {
+    .__FP_draftlink, .__FP_submittedFormLink, .__FP_pendingSignFormLink {
+        white-space: nowrap;
+        overflow: hidden;              /* "overflow" value must be different from "visible" */
+        display: block;
+        text-overflow: ellipsis;
+        color: rgb(133, 213, 209);
+        font: 13px Adobe Clean, Arial;
+        height: 22px;
+        cursor: pointer;
+    }
+    .__FP_draftDesc, .__FP_submittedFormDesc, .__FP_pendingSignFormDesc {
+        font: 11px Adobe Clean, Arial;
+    }
+    .ui-widget-header{
+        font: 14px Adobe Clean, Aria;
+    }
+    .__FP_draftlinkTime, .__FP_submittedFormLinkTime, .__FP_pendingSignFormLinkTime {
+        top: 4px;
+    }
+}

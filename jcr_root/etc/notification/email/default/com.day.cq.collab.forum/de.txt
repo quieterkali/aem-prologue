@@ -1,0 +1,11 @@
+subject=[CQ Forum Notifikation]
+
+header=-------------------------------------------------------------------------------------\n \
+Zeit: ${event.TimeStamp}\n \
+Forum Pfad: ${forum.path}\n \
+
+message=Seite: ${host.prefix}${forum.path}.html\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+Dies ist eine automatisch generierte Nachricht. Bitte nicht antworten.

@@ -1,0 +1,381 @@
+/*!************************************************************************
+*
+* ADOBE SYSTEMS INCORPORATED
+*  Copyright 2013 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  Adobe permits you to use, modify, and distribute this file in 
+* accordance with the terms of the Adobe license agreement accompanying it. 
+* If you have received this file from a source other than Adobe, then your 
+* use, modification, or distribution of it requires the prior written 
+* permission of Adobe.
+**************************************************************************/
+
+/*
+	CSS for desktop systems goes here.
+	This section is always processed by the web browser, both for desktop systems and touch devices. Touch-specific
+	CSS rules should be defined in the sections below.
+*/
+
+.s7tooltip {
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border-color:#999999;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.s7spinviewer {
+	width:100%;
+	height:100%;
+}
+
+.s7spinviewer .s7spinview {
+	position: absolute;	
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+/**
+ * Buttons component  
+ */
+
+/*************************************************************************/
+ /* ZoomInButton - common styles */
+.s7spinviewer .s7zoominbutton  {
+	position:absolute;
+	bottom: 20px;
+	z-index:1;
+	background-size:112px;
+ }
+
+.s7spinviewer .s7zoominbutton[state]  {
+    background-image: url(images/v2/ZoomInButton_light_sprite.png);
+}
+ 
+/* ZoomInButton - desktop size and art */
+.s7spinviewer.s7mouseinput .s7zoominbutton  {
+    left: 20px;
+    width:28px;
+    height:28px;
+}
+.s7spinviewer.s7mouseinput .s7zoominbutton[state='up'] { background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7zoominbutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7zoominbutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7zoominbutton[state='disabled'] { background-position: -0px -560px; }
+
+/* ZoomInButton - touch device size and art */
+.s7spinviewer.s7touchinput .s7zoominbutton  {
+    left: 20px;
+    width:56px;
+    height:56px;
+}
+.s7spinviewer.s7touchinput .s7zoominbutton[state='up'] { background-position: -56px -504px; }
+.s7spinviewer.s7touchinput .s7zoominbutton[state='over'] { background-position: -0px -504px; }
+.s7spinviewer.s7touchinput .s7zoominbutton[state='down'] { background-position: -56px -448px; }
+.s7spinviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-position: -0px -448px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7spinviewer.s7touchinput .s7zoominbutton  {
+		background-size:56px;
+	}
+    .s7spinviewer.s7touchinput .s7zoominbutton[state='up'] { background-position: -0px -168px; }
+    .s7spinviewer.s7touchinput .s7zoominbutton[state='over'] { background-position: -0px -112px; }
+    .s7spinviewer.s7touchinput .s7zoominbutton[state='down'] { background-position: -0px -56px; }
+    .s7spinviewer.s7touchinput .s7zoominbutton[state='disabled'] { background-position: -0px -0px; }
+}
+
+/* ZoomInButton - hide on smartphone */
+.s7spinviewer.s7size_small.s7touchinput .s7zoominbutton  {
+    visibility:hidden;
+}
+
+/*************************************************************************/
+/* ZoomOutButton - common styles */
+.s7spinviewer .s7zoomoutbutton  {
+	position:absolute;
+	bottom: 20px;
+	z-index:1;
+	background-size:112px;
+ }
+ 
+.s7spinviewer .s7zoomoutbutton[state]  {
+    background-image: url(images/v2/ZoomOutButton_light_sprite.png);
+}
+
+/* ZoomOutButton - desktop size and art */
+.s7spinviewer.s7mouseinput .s7zoomoutbutton  {
+    left: 50px;
+    width:28px;
+    height:28px;
+}
+.s7spinviewer.s7mouseinput .s7zoomoutbutton[state='up'] { background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomoutbutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomoutbutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomoutbutton[state='disabled'] { background-position: -0px -560px; }
+
+/* ZoomOutButton - touch device size and art */
+.s7spinviewer.s7touchinput .s7zoomoutbutton  {
+    left: 77px;
+    width:56px;
+    height:56px;
+}
+.s7spinviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-position: -56px -504px; }
+.s7spinviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-position: -0px -504px; }
+.s7spinviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-position: -56px -448px; }
+.s7spinviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-position: -0px -448px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7spinviewer.s7touchinput .s7zoomoutbutton {
+		background-size:56px;
+	}
+    .s7spinviewer.s7touchinput .s7zoomoutbutton[state='up'] { background-position: -0px -168px; }
+    .s7spinviewer.s7touchinput .s7zoomoutbutton[state='over'] { background-position: -0px -112px; }
+    .s7spinviewer.s7touchinput .s7zoomoutbutton[state='down'] { background-position: -0px -56px; }
+    .s7spinviewer.s7touchinput .s7zoomoutbutton[state='disabled'] { background-position: -0px -0px; }
+}
+
+/* ZoomOutButton - hide on smartphone */
+.s7spinviewer.s7size_small.s7touchinput .s7zoomoutbutton{
+    visibility:hidden;
+}
+
+/*************************************************************************/
+/* ZoomResetButton - common styles */
+.s7spinviewer .s7zoomresetbutton  {
+	position:absolute;
+	bottom: 20px;
+	z-index:1;
+	background-size:112px;
+ }
+ 
+.s7spinviewer .s7zoomresetbutton[state]  {
+    background-image: url(images/v2/ZoomResetButton_light_sprite.png);
+}
+
+/* ZoomResetButton - desktop size and art */
+.s7spinviewer.s7mouseinput .s7zoomresetbutton  {
+    left: 80px;
+    width:28px;
+    height:28px;
+}
+.s7spinviewer.s7mouseinput .s7zoomresetbutton[state='up'] {	background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomresetbutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomresetbutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7zoomresetbutton[state='disabled'] { background-position: -0px -560px; }
+
+/* ZoomResetButton - touch device size and art */
+.s7spinviewer.s7touchinput .s7zoomresetbutton  {
+    left: 135px;
+    width:56px;
+    height:56px;
+}
+.s7spinviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-position: -56px -504px; }
+.s7spinviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-position: -0px -504px; }
+.s7spinviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-position: -56px -448px; }
+.s7spinviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-position: -0px -448px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.s7spinviewer.s7touchinput .s7zoomresetbutton {
+		background-size:56px;
+	}
+    .s7spinviewer.s7touchinput .s7zoomresetbutton[state='up'] { background-position: -0px -168px; }
+    .s7spinviewer.s7touchinput .s7zoomresetbutton[state='over'] { background-position: -0px -112px; }
+    .s7spinviewer.s7touchinput .s7zoomresetbutton[state='down'] { background-position: -0px -56px; }
+    .s7spinviewer.s7touchinput .s7zoomresetbutton[state='disabled'] { background-position: -0px -0px; }
+}
+
+/* ZoomResetButton - center on smartphones */
+.s7spinviewer.s7size_small.s7touchinput .s7zoomresetbutton {
+    left:50%;
+    bottom: 20px;
+}
+.s7spinviewer.s7size_small.s7touchinput .s7zoomresetbutton {
+    margin-left: -28px;
+}
+.s7spinviewer.s7size_small.s7touchinput .s7zoomresetbutton[state='disabled'] { visibility:hidden; }
+
+/*************************************************************************/
+/* FullScreenButton - common styles */
+.s7spinviewer .s7fullscreenbutton{
+    position:absolute;
+    bottom: 20px;
+    z-index:1;
+	background-size:112px;
+}
+
+.s7spinviewer .s7fullscreenbutton[selected][state]  {
+    background-image: url(images/v2/FullScreenButton_light_sprite.png);
+}
+
+/* FullScreenButton - desktop size and art */
+.s7spinviewer.s7mouseinput .s7fullscreenbutton{
+    right: 20px;
+    width:28px;
+    height:28px;
+}
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -84px -1148px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -56px -1148px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='down'] {	background-position: -28px -1148px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -1148px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -84px -1120px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -56px -1120px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -28px -1120px; }
+.s7spinviewer.s7mouseinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -1120px; }
+
+/* FullScreenButton - touch device size and art */
+.s7spinviewer.s7touchinput .s7fullscreenbutton{
+    right: 20px;
+    width:56px;
+    height:56px;
+}
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -56px -1064px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -0px -1064px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='down'] { background-position: -56px -1008px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -1008px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -56px -952px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -0px -952px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -56px -896px; }
+.s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -896px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)
+{
+ 	.s7spinviewer.s7touchinput .s7fullscreenbutton {
+		background-size:56px;
+	}
+   .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='up'] { background-position: -0px -392px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='over'] { background-position: -0px -336px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='down'] { background-position: -0px -280px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='true'][state='disabled'] { background-position: -0px -224px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='up'] { background-position: -0px -168px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='over'] { background-position: -0px -112px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='down'] { background-position: -0px -56px; }
+    .s7spinviewer.s7touchinput .s7fullscreenbutton[selected='false'][state='disabled'] { background-position: -0px -0px; }
+}
+
+/*************************************************************************/
+/* CloseButton - common styles */
+.s7spinviewer .s7closebutton{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    z-index:1;
+	background-size:112px;
+}
+
+.s7spinviewer .s7closebutton[state]  {
+    background-image: url(images/v2/CloseButton_light_sprite.png);
+}
+
+/* CloseButton - desktop size and art  */
+.s7spinviewer.s7mouseinput .s7closebutton{
+    width:28px;
+    height:28px;
+}
+.s7spinviewer.s7mouseinput .s7closebutton[state='up'] { background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7closebutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7closebutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7closebutton[state='disabled'] { background-position: -0px -560px; }
+/* CloseButton - touch device size and art */
+.s7spinviewer.s7touchinput .s7closebutton{
+    width:56px;
+    height:56px;
+}
+.s7spinviewer.s7touchinput .s7closebutton[state='up'] { background-position: -56px -504px; }
+.s7spinviewer.s7touchinput .s7closebutton[state='over'] { background-position: -0px -504px; }
+.s7spinviewer.s7touchinput .s7closebutton[state='down'] { background-position: -56px -448px; }
+.s7spinviewer.s7touchinput .s7closebutton[state='disabled'] { background-position: -0px -448px; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
+ 	.s7spinviewer.s7touchinput .s7closebutton {
+		background-size:56px;
+	}
+    .s7spinviewer.s7touchinput .s7closebutton[state='up'] { background-position: -0px -168px; }
+    .s7spinviewer.s7touchinput .s7closebutton[state='over'] { background-position: -0px -112px;	}
+    .s7spinviewer.s7touchinput .s7closebutton[state='down'] { background-position: -0px -56px; }
+    .s7spinviewer.s7touchinput .s7closebutton[state='disabled'] { background-position: -0px -0px; }
+}
+
+/******************************************************************************/
+/* spin buttons container - common styles */
+.s7spinviewer .s7spinbuttons {
+	z-index: 2;
+	position:absolute;
+	left:50%;
+	width:70px;
+	margin-left:-36px;
+	bottom: 48px;
+}
+
+/* spin buttons container - - hide on tablets and smartphones */
+.s7spinviewer.s7touchinput .s7spinbuttons {
+	visibility: hidden;
+}
+
+/* spin left button - common styles */
+.s7spinviewer .s7spinbuttons .s7panleftbutton {
+	position:absolute;
+	left: 0px;
+	background-size:112px;
+}
+
+.s7spinviewer .s7spinbuttons .s7panleftbutton[state] {
+	background-image: url(images/v2/SpinLeftButton_light_sprite.png); 
+}
+
+/* spin left button - desktop size and art */
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panleftbutton {
+	width:28px;
+	height:28px;
+}
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='up'] { background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panleftbutton[state='disabled'] { background-position: -0px -560px; }
+
+/* spin right button - common styles */
+.s7spinviewer .s7spinbuttons .s7panrightbutton {
+	position:absolute;
+	right: 0px;
+	background-size:112px;
+}
+
+.s7spinviewer .s7spinbuttons .s7panrightbutton[state] {
+	background-image: url(images/v2/SpinRightButton_light_sprite.png); 
+}
+
+/* spin right button - desktop size and art */
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panrightbutton {
+	width:28px;
+	height:28px;
+}
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='up'] { background-position: -84px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='over'] { background-position: -56px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='down'] { background-position: -28px -560px; }
+.s7spinviewer.s7mouseinput .s7spinbuttons .s7panrightbutton[state='disabled'] { background-position: -0px -560px; }
+
+/******************************************************************************/
+/* IconEffect - common styles */
+.s7spinviewer  .s7spinview .s7iconeffect{
+	width:100px;
+	height:100px;
+	background-size:200px;
+}
+.s7spinviewer  .s7spinview .s7iconeffect[media-type] {
+    background-image: url(images/v2/IconEffect_spin_sprite.png);
+}
+
+/* IconEffect - desktop size and art */
+.s7spinviewer.s7mouseinput .s7spinview .s7iconeffect[state='spin_1D'] { background-position: -0px -500px; }
+.s7spinviewer.s7mouseinput .s7spinview .s7iconeffect[state='spin_2D'] { background-position: -0px -400px; }
+
+/* IconEffect - touch device size and art */
+.s7spinviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_1D'] { background-position: -100px -500px; }
+.s7spinviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_2D'] { background-position: -100px -400px; }	
+@media only screen and (-webkit-min-device-pixel-ratio:1.5)	{
+	.s7spinviewer.s7touchinput .s7spinview .s7iconeffect[state] { 
+		background-size:100px;
+	}
+	.s7spinviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_1D'] { background-position: -0px -100px; }
+	.s7spinviewer.s7touchinput .s7spinview .s7iconeffect[state='spin_2D'] { background-position: -0px -0px; }	
+}
+

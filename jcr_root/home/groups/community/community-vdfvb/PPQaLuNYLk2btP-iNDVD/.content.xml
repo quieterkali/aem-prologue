@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="e7888395-4ae4-3058-9d9b-774c78cc7466"
+    rep:authorizableId="community-community-vdfvb-hiking-txpk7-moderators"
+    rep:members="{WeakReference}[5e9e6224-74f7-319e-b614-eb097b85c774,0196eb71-7b9c-3238-a314-3c67f5676881]"
+    rep:principalName="community-community-vdfvb-hiking-txpk7-moderators"
+    liveCopyPath="/content/we-retail/us/en/community/groups/hiking">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        givenName="Community Community Hiking Txpk7 Moderators"/>
+</jcr:root>

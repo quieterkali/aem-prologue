@@ -1,0 +1,14 @@
+subject=[CQ Page Event Notification]: Page Event
+
+header=-------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+User: ${userFullName} (${userId})\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=The following pages were affected by the event: \n \
+ \n \
+${modifications} \n \
+ \n\n
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

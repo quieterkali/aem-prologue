@@ -1,0 +1,223 @@
+/*******************************************************************************
+ * ADOBE CONFIDENTIAL
+ *   ___________________
+ *
+ *    Copyright 2013 Adobe Systems Incorporated
+ *    All Rights Reserved.
+ *
+ *   NOTICE:  All information contained herein is, and remains
+ *   the property of Adobe Systems Incorporated and its suppliers,
+ *   if any.  The intellectual and technical concepts contained
+ *   herein are proprietary to Adobe Systems Incorporated and its
+ *   suppliers and are protected by all applicable intellectual property
+ *   laws, including trade secret and copyright laws.
+ *   Dissemination of this information or reproduction of this material
+ *   is strictly forbidden unless prior written permission is obtained
+ *   from Adobe Systems Incorporated.
+ ******************************************************************************/
+
+
+
+div#iEBox_container {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    min-width: 300px; /* Dialog will be no smaller than this */
+   /* Dialog will wrap after this width */
+    background: #FFF;
+    border: solid 2px #999;
+    color: #000;
+    
+    
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+   
+    display:none;
+    /* the shadow */
+    -moz-box-shadow: 10px 10px 5px #888888;
+    -webkit-box-shadow: 10px 10px 5px #888888;
+     box-shadow: 0px 0px 15px #888888;
+     
+    /* make dialog a non-selectatable thing */
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+    
+     position: absolute;
+     z-index: 99998;
+     padding: 0;
+     margin: 0;
+	 
+	 line-height:0;
+}
+
+#iEBox_title {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.75em;
+    color: #555555;
+    background: #FFFFFF  top repeat-x;
+    cursor: default;
+    padding: 10px;
+    margin: 0em;
+    display:inline-block;
+   /* border-left:2px ridge gray; */
+    vertical-align:middle;
+}
+
+#iEBox_content {
+    background: 16px 16px no-repeat ;
+    padding: 10px 10px;
+    margin: 0em;
+	min-width:300px;
+}
+
+#iEBox_canvas {
+  border:4px #AAAAAA dashed;
+  -ms-touch-action:pinch-zoom;
+  touch-action:pinch-zoom;
+}
+
+#iEBox_panel {
+    text-align: center;
+    margin: 0em 0em 0em 0em;
+    background-color:black;
+    
+    -moz-border-top-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    border-top-right-radius: 8px;
+    -moz-border-top-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
+    
+    overflow:hidden;
+    
+    /* title bar color */
+    background: #AFB0B5;
+	
+    -ms-touch-action:pinch-zoom;
+    touch-action:pinch-zoom;
+}
+
+#iEBox_prompt {
+    margin: .5em 0em;
+}
+
+div.iEBox_button {
+   background:no-repeat;
+   width:40px;
+   height:40px;
+   background-size:40px 40px;
+   display:inline-block;
+   margin:10px;
+}
+div#iEBox_Geo{
+  background-image:url('../images/iEBox_geo.png');
+   width:40px;
+   height:40px;
+   background-size:40px 40px;
+   display:none;
+   vertical-align:middle;
+}
+div#iEBox_Brush{
+   background-image:url('../images/iEBox_brush.png');
+   width:40px;
+   height:40px;
+   background-size:40px 40px;
+
+   vertical-align:middle;
+}
+div#iEBox_incBrush{
+   background-image:url('../images/iEBox_geo.png');
+   width:40px;
+   height:40px;
+   background-size:40px 40px;
+   
+   vertical-align:middle;
+}
+div#iEBox_Ok {
+    background-image:url('../images/iEBox_ok.png');
+     vertical-align:middle;
+     float:right;
+}
+div#iEBox_Clear {
+    background-image:url('../images/iEBox_clear.png');
+     vertical-align:middle;
+}
+div#iEBox_Cancel {
+    background: url('../images/iEBox_close.png') center no-repeat;
+    float:right;
+}
+div#iEBox_moveframe{
+padding:0px;
+margin:0px;
+    border:0px dotted rgba(0,0,0,0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-box-shadow: 10px 10px 5px #888888;
+    -webkit-box-shadow: 10px 10px 5px #888888;
+     box-shadow: 0px 0px 15px #888888;
+     
+   display:none;
+   position:absolute;
+}
+div.disable_button {
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+   filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+div.sc_popUpMenu {
+    display:none;
+    width:20px;
+    height:20px;
+    background:no-repeat;
+    background-size:20px 20px; 
+    background-image:url('../images/iEBox_no.png');
+   
+    z-index:9999;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+div#iEBox_brushList{
+    position:absolute;
+    z-index:99999;
+    background-color:white;
+    -moz-box-shadow: 10px 10px 5px #888888;
+    -webkit-box-shadow: 10px 10px 5px #888888;
+    box-shadow: 0px 0px 15px #888888;
+    display:none;
+}
+div#iEBox_brushList div:hover{
+    background-color:gray;
+}
+fieldset#iEBox_caption {
+    border:4px dashed #AAAAAA;
+    border-bottom:0px;
+    border-left:0px;
+    border-right:0px;
+    margin-right:4px;
+    margin-left:1px;
+    margin-top:0px;
+    text-align:center;
+    padding:0px;
+}
+fieldset#iEBox_caption > legend {
+   width:auto;
+   background-color: #FFFFFF;
+   padding: 2px;
+}
+.emptyScribble {
+    background: url(../images/signature.png) no-repeat;
+}
+
+div#iEBox_canvases {
+    white-space:nowrap;
+}

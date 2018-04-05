@@ -1,0 +1,207 @@
+/*************************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ *  Copyright 2013 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by all applicable intellectual property
+ * laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/* this works only for MWS app. In IE behavior remains same
+  with horizontal scrollbar appearing for content-width greater than device-width */
+@-ms-viewport{
+   width: device-width;
+}
+
+.formLoading{
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+.xfaform {
+    position: relative;
+}
+
+
+input:not([type="radio"]),select,textarea {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background-color: rgba(255,255,255,0);
+}
+
+input[type="radio"] {
+    padding: 0px;
+    margin: 0px;
+}
+
+.widgetError {
+    background-color: #D3D3D3 !important;
+}
+
+.widgetMandatoryBorder {
+    outline: 1.5px solid red;
+}
+
+.dataInvalid  {
+    outline: 2px solid orange;
+}
+
+#xfa_ui_freeze {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /*dim the background*/
+    cursor: wait !important; /* busy cursor */
+    z-index: 100000;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    cursor: auto;
+}
+
+input[readonly="readonly"][type="text"]:focus, textarea[readonly="readonly"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus, select:focus, .imagefieldwidget > img:focus, .listBoxWidget > ol > li:focus {
+    outline: #000000 dashed 1px;
+}
+
+input[type="button"]:focus {
+    outline: #000000 dashed 2px;
+}
+
+.page {
+    background-color: rgba(255,255,255,1);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffffffff);
+    overflow: hidden;
+}
+
+/*#######################################################################*/
+/*#  Html-XFA Layout specific styles                                                                     */
+/*#######################################################################*/
+
+.page > div, .field > div, .draw > * {
+    position: absolute
+}
+
+/* must exclude date picker icons from aligning to top left*/
+table .field > *, table .draw > *, table .field div > *:not(.datepicker-calendar-icon) {
+    top: 0;
+    left: 0;
+}
+
+/* LC-5561 : Override the 1em extra line space between paragraphs introduced by browser user agent */
+.draw p {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+/*####################################### Html-XFA Layout specific styles End ##################### */
+
+.subform {
+    overflow: visible;
+}
+
+div.widget > textarea , table.widget > textarea
+{
+    resize: none;
+    overflow: hidden;
+}
+
+
+
+svg|rect
+{
+    fill-opacity: 0.0
+}
+
+svg|text
+{
+    white-space: pre;
+    -webkit-text-size-adjust: auto;
+}
+
+svg|tspan
+{
+    white-space: pre;
+    -webkit-text-size-adjust: auto;
+}
+
+input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.neutral {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#error-msg {
+    background-color: #ee0101;
+    z-index:990;
+    display:none;
+    position:absolute;
+    opacity:0.85;
+    color:#FFFFFF;
+    font-size: 21px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px #000;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    padding: 4px 10px 4px 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+#warning-msg {
+    background-color: #FFA500;
+    z-index:990;
+    display:none;
+    position:absolute;
+    opacity:0.85;
+    color:#FFFFFF;
+    font-size: 21px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px #000;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    padding: 4px 10px 4px 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+input[type="button"]:active {
+    background-color: rgba(0,0,0,0.21)
+}
+
+.dateTimeEdit input
+{
+    width:100%;
+    height:100%;
+}
+.hideElement {
+	visibility: hidden !important;
+}

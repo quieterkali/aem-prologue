@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="granite:Task"
+    jcr:uuid="588dd924-486e-4810-a81e-b28c03aed3c7"
+    assignee="administrators"
+    createdBy="admin"
+    description="It is highly recommended to configure HTTPS for production systems. Please log in as the admin user and use the SSL Configuration Wizard to configure HTTPS."
+    name="Configure HTTPS"
+    nameHierarchy="Configure HTTPS"
+    priority="{Long}200"
+    status="ACTIVE"
+    taskTypeName="security:configure-ssl"/>

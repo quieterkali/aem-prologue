@@ -1,0 +1,151 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+#af-overlay-selector-text {
+
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+background-color: rgb(75, 75, 75);
+box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px 0px;
+box-sizing: border-box;
+color: rgb(75, 75, 75);
+display: block;
+float: none;
+font-family: adobe-clean, Helvetica, Arial, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: normal;
+position: absolute;
+z-index: 9999;
+
+}
+
+
+#af-overlay-selector-text button{
+    padding-left : 0.75rem;
+    padding-right : 0.75rem;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    align-items: flex-start;
+    background-clip: border-box;
+    background: rgba(0, 0, 0, 0) none scroll;
+    background-origin: padding-box;
+    background-size: auto;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border: 1.11111px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: adobe-clean, Helvetica, Arial, sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height:40px;
+    letter-spacing: normal;
+    margin: 0px;
+    min-width: 0px;
+    opacity: 0.9;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0px 8px;
+    text-align: center;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    vertical-align: top;
+    word-spacing: 0px;
+    -webkit-writing-mode: horizontal-tb;
+    border-right: solid 1px rgba(255,255,255,0.7);
+}
+
+#af-overlay-selector-text button.af-overlay-selector-button.overlay-active{
+	background-color: #000000;
+}
+
+#af-overlay-selector-text button.af-overlay-selector-button.af-overlay-selector-parent{
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #fafafa;
+    cursor: pointer;
+    display: inline-block;
+    font-family: AdobeIcons;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    opacity: 0.6;
+    position: static;
+    text-align: center;
+    text-indent: 0px;
+    text-rendering: optimizeLegibility;
+    text-shadow: none;
+    text-transform: none;
+    top: auto;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-spacing: 0px;
+}
+
+#af-overlay-selector-text button.af-overlay-selector-button:hover{
+    color: #ffffff;
+}
+.af-overlay-selector-top, .af-overlay-selector-bottom {
+	background: #1E5FBE;
+	height:2px;
+	position: absolute;
+    z-index: 9999;
+}
+.af-overlay-selector-left, .af-overlay-selector-right {
+	background: #1E5FBE;
+	width:2px;
+	position: absolute;
+    z-index: 9999;
+}
+
+#af-active-overlay-selector .af-overlay-selector-top, #af-active-overlay-selector .af-overlay-selector-bottom,
+#af-active-overlay-selector .af-overlay-selector-left, #af-active-overlay-selector .af-overlay-selector-right {
+    background-color: #afd2fa;
+}
+
+#af-overlay-hover-top, #af-overlay-hover-bottom {
+	background: blue;
+	height:1px;
+	position: absolute;
+    z-index: 9999;
+}
+#af-overlay-hover-left, #af-overlay-hover-right {
+	background: blue;
+	width:1px;
+	position: absolute;
+    z-index: 9999;
+}
+
+.overlayFieldsHighlight {
+	outline-color: rgba(0,0,255,0.3);
+	outline-style: solid;
+	outline-width:2px;
+}

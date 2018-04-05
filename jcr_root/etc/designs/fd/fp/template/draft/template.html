@@ -1,0 +1,13 @@
+<div class="__FP_eachDraftLink" data-repeatable="true">
+    <div tabindex='0' class='__FP_iconClass ${iconClass}'>${firstLetter}</div>
+    <div class="__FP_contentRemaining">
+        <div class="__FP_draftlinkTime" tabindex='0' title="${FD.FP.Util.getLocalizedValue('At')} ${Today} ${TimeNow}" target='_self'>${diffTime}</div>
+        <a tabindex='0' class="__FP_draftlink" title="${FD.FP.Util.getLocalizedValue('Show saved form')}" href="${renderPath}.html/draft/${draftID}?wcmmode=disabled" target="_blank">${name}</a>
+        <div tabindex='0' class="__FP_draftDesc" title="${description}">${description}</div>
+        <span class="__FP_actions">
+            <a class="__FP_deleteDraft" tabindex='0' formType = '${formType}' formpath = '${formPath}' draftID='${draftID}' title="${FD.FP.Util.getLocalizedValue('Delete')}"></a>
+            <a class="__FP_newInstance" tabindex="0" href="${renderPath}.html/draft/${draftID}?fpNewInstance=true&wcmmode=disabled" target="_blank" title="${FD.FP.Util.getLocalizedValue('Start a new form using this form data')}"></a>
+        </span>
+    </div>
+    <div class="__FP_horizontalRuler"></div>
+</div>

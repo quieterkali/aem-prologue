@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="oak:Unstructured"
+    function="/etc/community/templates/functions/reference/activitystream"
+    title="Activities"
+    url="activities">
+    <configuration
+        jcr:primaryType="oak:Unstructured"
+        allowAllActivities="true"
+        allowMyActivities="true"
+        allowNewsFeed="true"/>
+</jcr:root>

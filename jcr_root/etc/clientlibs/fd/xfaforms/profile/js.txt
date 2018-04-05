@@ -1,0 +1,5 @@
+#base=javascript
+settitle.js
+
+#base=../noConflict/javascript
+noConflict.js

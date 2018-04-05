@@ -1,0 +1,80 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+#codeeditor .cm-s-expeditor {
+    width: 100%;
+    height: calc(100% - 2.5rem);
+    max-width: none;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.scriptarea {
+    position: relative;
+    padding: 0 1rem 1rem 0;
+    height: calc(100vh - 12rem);
+}
+
+.scriptarea .edit-codeeditor {
+    margin: 6px 0;
+}
+
+#codeeditor-toolbar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 10px 0 0 16px;
+
+}
+
+#codeeditor-toolbar label {
+    display: flex;
+    align-items: center;
+}
+
+#event-select > .coral-Button {
+    width: auto;
+    border: none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+#event-select span {
+    margin-right: 0;
+    float: left;
+    display: inline-block;
+}
+
+#event-select coral-icon {
+    position: relative;
+    display: inline-block;
+    line-height: 1.2rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+#event-select:after {
+    opacity: 0.2 !important;
+    width: 12px !important;
+}
+
+#codeeditor-toolbar .coral-SelectList {
+    left: 0 !important;
+}

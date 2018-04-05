@@ -1,0 +1,66 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.wizard-navigators > li {
+  display: inline-block;
+}
+
+.wizard-navigators > li > a {
+  width: 100%;
+}
+
+[id$="_guide-item-container"] > [id$="_guide-item"].active {
+    display: block;
+}
+
+[id$="_guide-item-container"] > [id$="_guide-item"] {
+    display: none;
+}
+
+.wizard .progress-bar-warning {
+    background: @wizard-progress-color;
+}
+
+.wizard-tab-disabled {
+    opacity: 0.5;
+}
+
+/*
+ * Below would remain in common.css, but user should be able to override the same through Theme Editor
+ */
+
+/*
+ * This is required for backward compatibility - classes added based on number of tabs in wizard layout.
+ * Theme editor can update the width by setting the title width of Wizard Navigation Title
+ */
+.wizard-navigators  > li.af-widget-itemnav-4 {
+  width:23%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-3 {
+  width:31%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-2 {
+  width:47%;
+}
+
+.wizard-navigators  > li.af-widget-itemnav-1 {
+  width:94%;
+}

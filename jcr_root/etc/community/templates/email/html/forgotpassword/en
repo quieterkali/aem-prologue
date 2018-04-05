@@ -1,0 +1,15 @@
+subject=Update password Request
+message=<!doctype html>\n \
+<html>\n \
+<head>\n \
+<meta name="viewport" content="width=device-width">\n \
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n \
+<title>Update Password Request</title>\n \
+</head>\n \
+<body>\n \
+<div>\n \
+<p>Hello {{{givenName}}}</p>\n \
+<a href="{{forgotPasswordUrl}}">Click this link to reset your password</a>\n \
+</div>\n \
+</body>\n \
+</html>\n \

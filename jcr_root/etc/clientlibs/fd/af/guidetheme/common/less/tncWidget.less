@@ -1,0 +1,178 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+.guide-tnc-document-unvisited {
+  color:@tnc-unvisited;
+}
+
+.guide-tnc-document-visited{
+  color:@tnc-visited;
+}
+
+div.guide-tnc-content{
+  height: 100%;
+  max-height: inherit;
+}
+
+// this is done to make sure that it does not take the entire height that is available
+div.guide-tnc-link{
+  max-height: inherit;
+}
+
+div.guideTermsAndConditions div.guideFieldWidget {
+  max-height: 100px;
+  height: auto;
+}
+
+.guide-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.guideFieldWidget{
+  .guide-tnc-checkbox{
+    overflow: auto;
+  }
+
+  .guide-tnc-checkboxwidget{
+    &.left {
+      float:left;
+      margin-top:0px;
+      margin-bottom:0px;
+      margin-right:0px;
+    }
+  }
+  .guide-tnc-content{
+    .widget-border;
+    overflow: auto;
+    padding: 5px;
+    padding-bottom: 3px;
+    .widget-background;
+  }
+}
+
+.guideTermsAndConditions div.guideFieldWidget > div {
+  overflow: auto;
+}
+
+//for popup tnc
+.guide-modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.guide-close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.guide-close:hover,
+.guide-close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.guide-modal-open {
+  overflow: hidden;
+}
+
+.guide-modal.guide-fade .guide-modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.guide-modal.in .guide-modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.guide-modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.guide-modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: none;
+}
+.guide-modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+  background-color: #AFB0B5;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.guide-modal-header .guide-close {
+  margin-top: -2px;
+}
+
+.guide-modal-body {
+  position: relative;
+  padding: 20px;
+  .guide-tnc-content {
+    height : auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .guide-modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .guide-modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}

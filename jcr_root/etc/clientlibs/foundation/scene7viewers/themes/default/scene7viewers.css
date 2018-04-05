@@ -1,0 +1,253 @@
+
+/*************************************
+ *   CSS FOR S7 DHTML FLYOUT ZOOM VIEWER
+ *   Copied from advancedflyout.css in the s7viewers distribution
+ ***************************************/
+ 
+/*
+The size of the static image
+*/
+.multiscreenflyoutzoom .s7flyoutStaticImage {
+    width : 360px;
+    height : 480px;
+}
+
+/*
+The size of the flyout view. Must not be higher than static image
+*/
+.multiscreenflyoutzoom .s7flyoutFlyoutView {
+    width : 600px;
+    height : 480px;
+}
+
+/*
+Flyout view border.
+*/
+.multiscreenflyoutzoom .s7flyoutFlyoutViewBorder {
+    border : 1px solid #c2c2c2;
+}
+
+/*
+Horizontal offest of the top left flyout view corner from the top right static image corner. Negative values for "top" are permitted.
+*/
+.multiscreenflyoutzoom .s7flyoutFlyoutViewOffset {
+    left : 8px;
+    top : 0px;
+}
+
+/*
+The size of swatches container. Normallty the width should match the width of the static image.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatches {
+    width : 360px;
+    height : 100px;
+}
+
+/*
+Swatches background is designed to be dynamic inwidth and fixed height. It is cut into three pieces: left (fixed-size), middle (fixed-height, variable-width) and right (fixed-size).
+Viewer always spans the background across the width defined in s7flyoutSwatches, and resizes the middle portion as needed.
+*/
+/*
+Left part of the swatches background.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchesBackgroundLeft {
+    width : 7px;
+    height : 100px;
+    background-image : url(images/flyout/swatches-background-left-1x.png);
+}
+
+/*
+Right part of the swatches background.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchesBackgroundRight {
+    width : 7px;
+    height : 100px;
+    background-image : url(images/flyout/swatches-background-right-1x.png);
+}
+
+/*
+Middle part of the swatches background.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchesBackgroundMiddle {
+    background-repeat : repeat-x;
+    height : 100px;
+    background-image : url(images/flyout/swatches-background-middle-1x.png);
+    -webkit-background-size : 100% 100%;
+}
+
+/*
+The size of a single swatch. Does not include borders.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatch {
+    width : 54px;
+    height : 72px;
+}
+
+/*
+Swatch background and border, visible in all states (up, over, down). "filter" is for IE7 and IE8, "box-shadow" is for other browsers. background-color is must-have for IE7 and IE8.
+When using 'filter' make sure that the filter applied adds identical marging on top/bottom and on left/right.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchBackground {
+    -webkit-box-shadow : 0px 1px 1px #a9a9a9; 
+    box-shadow : 0px 1px 1px 0px #a9a9a9; 
+    filter : progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=0,strength=2) progid:DXImageTransform.Microsoft.Shadow(color=#a9a9a9,direction=90,strength=1) progid:DXImageTransform.Microsoft.Shadow(color=#a9a9a9,direction=180,strength=2) progid:DXImageTransform.Microsoft.Shadow(color=#a9a9a9,direction=270,strength=1);
+    background-color : #ffffff;
+}
+
+/*
+Swatch active border. "filter" is for IE7 and IE8, "opacity" is for other browsers.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchActiveBorder {
+    border-width : 2px;
+    border-color : rgb(0, 151, 193);
+    border-style : solid;
+    opacity : 0.9;
+    filter : alpha(opacity=90);
+}
+
+/*
+Swatch roll over border. "filter" is for IE7 and IE8, "opacity" is for other browsers.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchOverBorder {
+    border-width : 2px;
+    border-color : rgb(0, 151, 193);
+    border-style : solid;
+    opacity : 0.9;
+    filter : alpha(opacity=90);
+}
+
+/*
+Configures inner-swatch spacing.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchInnerSpacer {
+    width : 15px;
+}
+
+/*
+Configures the spacing between side swatches and the edges of swatch container. It is recommended to set this value at least as large as the size of swatch highlight or shadow.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchOuterSpacer {
+    width : 4px;
+}
+
+/*
+The size of the swatch scroll button.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButton {
+    width : 32px;
+    height : 72px;
+}
+
+/*
+Spacing between the edge of the swatches cntainer and scroll button.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonOuterSpacer {
+    width : 8px;
+}
+
+/*
+Spacing between the scroll button and actual swatches.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonInnerSpacer {
+    width : 4px;
+}
+
+/*
+Different artwork is used for default, "over", "down" and "disabled" button states.
+*/
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonLeft {
+    background-image : url(images/flyout/scroll-button-left-up.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonLeft[state = 'over'] {
+    background-image : url(images/flyout/scroll-button-left-over.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonLeft[state = 'down'] {
+    background-image : url(images/flyout/scroll-button-left-down.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonLeft[state = 'disabled'] {
+    background-image : url(images/flyout/scroll-button-left-disabled.png);
+}
+
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonRight {
+    background-image : url(images/flyout/scroll-button-right-up.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonRight[state = 'over'] {
+    background-image : url(images/flyout/scroll-button-right-over.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonRight[state = 'down'] {
+    background-image : url(images/flyout/scroll-button-right-down.png);
+}
+.multiscreenflyoutzoom .s7flyoutSwatchScrollButtonRight[state = 'disabled'] {
+    background-image : url(images/flyout/scroll-button-right-disabled.png);
+}
+
+.multiscreenflyoutzoom .s7flyoutFrame {
+    border : 1px #a9a9a9 solid;
+}
+
+/*
+Zoom cursor for desktop mode.
+*/
+.multiscreenflyoutzoom .s7flyoutCursorDesktop {
+    width : 80px;
+    height : 80px;
+    background-image : url(images/flyout/zoom-cursor-desktop.png);
+}
+
+/*
+Shading applied to the static image around the zoom cursor in desktop mode. "filter" is for IE7 and IE8, "opacity" is for other browsers.
+*/
+.multiscreenflyoutzoom .s7flyoutShading {
+    background-color : #ffffff;
+    opacity : 0.7;
+    filter : alpha(opacity=70);
+}
+
+/*
+Zoom cursor for tablet mode.
+*/
+.multiscreenflyoutzoom .s7flyoutCursorTouch {
+    width : 80px;
+    height : 100px;
+    background-image : url(images/flyout/zoom-cursor-tablet-1x.png);
+}
+
+@media screen and (-webkit-device-pixel-ratio:1.5) {
+    .s7flyoutCursorTouch {
+        background-image : url(images/flyout/zoom-cursor-tablet-1.5x.png);
+        -webkit-background-size : 80px 100px;
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio:2) {
+    .s7flyoutCursorTouch {
+        background-image : url(images/flyout/zoom-cursor-tablet-2x.png);
+        -webkit-background-size : 80px 100px;
+    }
+}
+
+/*
+Info message font settings, padding and location. Only vertical offset may be configured, viewer will automatically center the message horizontally.
+*/
+.multiscreenflyoutzoom .s7flyoutInfoMessage {
+    bottom : 50px;
+    color : #ffffff;
+    font-family : Arial;
+    font-size : 12px;
+    padding-bottom : 10px;
+    padding-top : 10px;
+    padding-left : 12px;
+    padding-right : 12px;
+}
+
+/*
+Info message background. Viewer will automatically position it to be behind actual message. "filter" is for IE7 and IE8, "opacity" is for other browsers. Rounded corners are not
+supported on IE7 and IE8.
+*/
+.multiscreenflyoutzoom .s7flyoutInfoMessageBackground {
+    border-radius : 4px;
+    background-color : #000000;
+    opacity : 0.5;
+    filter : alpha(opacity=50);
+}
+

@@ -1,0 +1,6 @@
+#base=js
+TouchDialogBehavior.js
+AdobeSignTouchDialogBehavior.js
+TouchDialogValidations.js
+DoRTouchDialogBehavior.js
+

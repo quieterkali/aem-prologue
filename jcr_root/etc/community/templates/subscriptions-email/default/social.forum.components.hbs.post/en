@@ -1,0 +1,21 @@
+subject=[Forum Post] {{#if this.target.properties.[jcr:title]}}{{{target.displayName}}}{{else}}{{{object.displayName}}}{{/if}}
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{objectUrl}}\n\n \
+{{#equals this.verb "post"}}\
+A new forum topic "{{{object.displayName}}}" was posted by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "add"}}\
+A new forum post to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} was added by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+The forum post to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} was updated by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+The forum post to the topic {{#if this.target.properties.[jcr:title]}}"{{{target.displayName}}}"{{else}}"{{{target.properties.eventTopic}}}"{{/if}} was deleted by {{{user.name}}}.\n \
+{{/equals}}\
+-------------------------------------------------------------------------------------\n \
+{{{object.content}}}\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all posts to this forum topic or modify your subscription.\n \
+{{objectReferrer}}\n \

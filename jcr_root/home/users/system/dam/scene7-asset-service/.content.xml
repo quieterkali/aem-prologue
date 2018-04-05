@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="9c7db59a-26aa-3f39-b91b-68180db1087b"
+    rep:authorizableId="scene7-asset-service"
+    rep:principalName="scene7-asset-service"/>

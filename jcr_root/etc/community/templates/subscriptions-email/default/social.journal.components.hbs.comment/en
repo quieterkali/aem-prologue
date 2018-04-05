@@ -1,0 +1,19 @@
+subject={{#if this.target.properties.[jcr:title]}}[Blog Comment] {{{target.displayName}}}{{else}}[Blog Comment]{{/if}} \
+
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{objectUrl}}\n\n \
+{{#equals this.verb "add"}}\
+   A new blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was added by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+   The blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was updated by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+   The blog comment {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was deleted by {{{user.name}}}.\n \
+{{/equals}}\
+-------------------------------------------------------------------------------------\n \
+{{{object.content}}}\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all comments to this blog article or modify your subscription.\n \
+{{objectReferrer}}\n \

@@ -1,0 +1,3 @@
+#base=javascript
+GuidePreviewLayerConstants.js
+GuidePreviewLayer.js

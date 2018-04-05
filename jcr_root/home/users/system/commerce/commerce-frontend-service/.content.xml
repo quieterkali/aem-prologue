@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:primaryType="rep:SystemUser"
+    jcr:uuid="9400a0e8-5d7e-36ad-bb8a-2ce8783a9281"
+    rep:authorizableId="commerce-frontend-service"
+    rep:principalName="commerce-frontend-service"/>

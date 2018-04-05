@@ -1,0 +1,15 @@
+subject=${item.name}: Task Updated
+
+header=-------------------------------------------------------------------------------------\n \
+Task: ${item.name}\n \
+Description: ${item.description}\n \
+User: ${participant.name} (${participant.id})\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Content: ${host.prefix}${payload.path.open}\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+View the overview in your ${host.prefix}/aem/inbox\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

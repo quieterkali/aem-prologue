@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[fd.expeditor.main]"
+    dependencies="[guides.3rdparty.codeMirror,guides.3rdparty.jshint,cq.jquery,underscore,cq.siteadmin.common,granite.ui.notifications,aem.fdm.services]"
+    embed="[fd.expeditor.base,fd.expeditor.model,fd.expeditor.view,fd.expeditor.component,fd.expeditor.core,fd.expeditor.rulebuilder,fd.expeditor.tree,fd.expeditor.codeeditor]"/>

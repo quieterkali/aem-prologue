@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="Coats">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <wootwisot
+        cq:commerceType="product"
+        cq:productVariantAxes="[color,size]"
+        cq:tags="[we-retail:season/winter,we-retail:activity/others,we-retail:apparel/coat,we-retail:gender/women]"
+        jcr:description="coat"
+        jcr:lastModified="{Date}2016-01-11T16:44:04.442-08:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Sonja Insulated Jacket"
+        sling:resourceType="commerce/components/product"
+        features="&lt;ul>&lt;li>Synthetic shell features waterproof, breathable coating; taped critical seams add weather protection&#xd;&#xa;&lt;/li>&lt;li>Polyester insulation hoards warmth on the inside&#xd;&#xa;&lt;/li>&lt;li>Integrated hood features removable faux fur trim for a dash of style&#xd;&#xa;&lt;/li>&lt;li>Stretch inner cuffs with thumbholes add warmth and an extra barrier against snow entry&lt;/li>&lt;/ul>"
+        identifier="wootwisot"
+        inventory="67"
+        margin="0.42"
+        price="{Decimal}189"
+        rating="5"
+        reviews="By lsu8861&#xa;from New York, NY&#xa;&#xa;I'm about 4'11&quot; at 100lbs and bought the extra small. Since I'm short, this jacket was a little big on me, but I prefer jackets a little bigger so I can layer and it covers the butt to keep you warmer in the winter. The sleeves were long too, but that's to be expected when you're my height, and that never bothers me. Anyone who is taller this jacket will fit better on them.&#xa;&#xa;I bought this jacket to go snowboarding for the first time, and needed a warm, but breathable jacket that wasn't too bulky. This was my 4th jacket this year. I wanted a jacket that I could wear casually on the weekends in the New York winter when it snows or rains. This jacket is perfect. It's warm with mesh ventilation if needed, secret pockets that your things won't fall out of (because of the velcro and buttons) It gives you extra room to layer underneath and won't be too bulky."
+        summary="Warm and waterproof mountain performance is enhanced with stylish accents like faux fur trim, for wear both on the mountain and après-ski."
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-11T09:21:56.041-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/coats/Sonja Green.jpg"/>
+        <wootwisot.1
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2016-01-11T16:44:00.754-08:00"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Sonja Insulated Jacket Green"
+            sling:resourceType="commerce/components/product"
+            color="darkgreen"
+            identifier="wootwisot.1"
+            textIsRich="[true,true]">
+            <image
+                jcr:lastModified="{Date}2016-01-11T16:44:00.732-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/en/products/apparel/coats/Sonja Green.jpg"/>
+            <size-xs
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.478-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="XS"/>
+            <size-s
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.478-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="S"/>
+            <size-m
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.478-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="M"/>
+            <size-l
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.478-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="L"/>
+            <size-xl
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.478-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="XL"/>
+        </wootwisot.1>
+        <wootwisot.2
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2016-01-11T16:44:04.442-08:00"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Sonja Insulated Jacket Purple"
+            sling:resourceType="commerce/components/product"
+            color="purple"
+            identifier="wootwisot.2"
+            textIsRich="[true,true]">
+            <image
+                jcr:lastModified="{Date}2016-01-11T16:44:04.423-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/en/products/apparel/coats/Sonja Purple.jpg"/>
+            <size-xs
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.479-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="XS"/>
+            <size-s
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.479-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="S"/>
+            <size-m
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.479-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="M"/>
+            <size-l
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.480-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="L"/>
+            <size-xl
+                cq:commerceType="variant"
+                jcr:lastModified="{Date}2015-09-08T17:10:12.480-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product"
+                size="XL"/>
+        </wootwisot.2>
+    </wootwisot>
+    <woskwislt
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:activity/skiing,we-retail:apparel/coat,we-retail:season/winter,we-retail:gender/women]"
+        jcr:description="coat"
+        jcr:lastModified="{Date}2016-01-14T15:06:54.842-08:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Sleek Insulated Coat"
+        sling:resourceType="commerce/components/product"
+        features="&lt;ul>&lt;li>Water and stain-resistant&#xd;&#xa;&lt;/li>&lt;li>Lightweight primaloft insulation is quick drying, insulates when wet&#xd;&#xa;&lt;/li>&lt;li>Imported.&#xd;&#xa;&lt;/li>&lt;li>Machine wash and dry.&lt;/li>&lt;/ul>"
+        identifier="woskwislt"
+        inventory="88"
+        margin="0.36"
+        price="{Decimal}75"
+        rating="5"
+        reviews="By Carri U&#xa;from Philadelphia&#xa;&#xa;I got this as a gift for my Mom. She absolutely loves it! She has had an issue with finding just the right winter coat. This one is lightweight, yet warm. Stylish, not too puffy. Kudos for pleasing a hard to please Mom!"
+        summary="Stay warm but avoid that 'overstuffed' look with our Sleek Insulated Coat. It offers warmth without bulk."
+        textIsRich="[true,true]">
+        <image
+            jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
+        <size-xs
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.481-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XS"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.481-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.482-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.482-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+        <size-xl
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.482-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XL"/>
+    </woskwislt>
+</jcr:root>

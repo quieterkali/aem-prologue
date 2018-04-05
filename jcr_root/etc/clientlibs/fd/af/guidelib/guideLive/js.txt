@@ -1,0 +1,5 @@
+#base=../javascript
+GuideLiveData.js
+GuideLiveJson.js
+GuideLiveXml.js
+GuideLiveModel.js

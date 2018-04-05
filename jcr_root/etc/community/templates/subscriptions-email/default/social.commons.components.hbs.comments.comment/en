@@ -1,0 +1,21 @@
+subject=[Comment] {{{target.displayName}}}
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}\n \
+URL: {{targetUrl}}\n\n \
+{{#equals this.verb "post"}}\
+A new comment to the "{{{target.displayName}}}" was posted by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "add"}}\
+A new comment to the "{{{target.displayName}}}" was added by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "update"}}\
+The comment to the "{{{target.displayName}}}" was updated by {{{user.name}}}.\n \
+{{/equals}}\
+{{#equals this.verb "delete"}}\
+The comment to the "{{{target.displayName}}}" was deleted by {{{user.name}}}.\n \
+{{/equals}}\
+-------------------------------------------------------------------------------------\n \
+{{{object.content}}}\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all comments or modify your subscription.\n \
+{{objectReferrer}}\n \

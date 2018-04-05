@@ -1,0 +1,88 @@
+div.dashboards a.cq-dashboard-item {
+    display: block;
+    float: left;
+    margin: 30px 0px 10px 0px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;   
+}
+
+div.toolbar,
+div.breadcrumb {
+    margin: 10px 0 10px 0;
+}
+
+/* parsys component */
+div.par, div.rightpar {
+    clear: both;
+    
+}
+div.parsys_column {
+    height: 100%;
+    width: 100%;
+    float: left;
+    border: 0;
+    vertical-align:top;
+    padding: 0;
+    margin: 0;
+}
+
+div.section {
+    /* Property added to avoid IE hasLayout issue on paragraphs
+       see #20817 - IE6: div around Drag Components image not big enough
+    */
+    zoom: 1;
+}
+
+
+/* column control layouts */
+div.cq-colctrl-cols {width: 100%; float: left; }
+
+div.cq-colctrl-default { width: 100%;}
+
+/* layout 0 : 50% 50% ( grid6 + grid6 ) */
+div.cq-colctrl-lt0 { }
+div.cq-colctrl-lt0-c0 { width: 840px; margin-right:10px}
+div.cq-colctrl-lt0-c1 { width: 340px; margin-left: 10px}
+
+/* layout 1 : 33% 33% 33%( grid4 + grid4 + grid4 ) */
+div.cq-colctrl-lt1 { }
+div.cq-colctrl-lt1-c0 { width: 220px; margin-right: 10px;}
+div.cq-colctrl-lt1-c1 { width: 220px; margin-left: 10px; margin-right: 10px;}
+div.cq-colctrl-lt1-c2 { width: 220px; margin-left: 10px; }
+
+/* layout 2: 16% 16% 16% 33% ( grid2.6 + grid2.6 + grid2.6 + grid4 ) */
+div.cq-colctrl-lt2 { }
+div.cq-colctrl-lt2-c0 { width: 140px; margin-right: 10px;}
+div.cq-colctrl-lt2-c1 { width: 140px; margin-left: 10px; margin-right: 10px}
+div.cq-colctrl-lt2-c2 { width: 140px; margin-left: 10px; margin-right: 10px}
+div.cq-colctrl-lt2-c3 { width: 220px; margin-left: 10px }
+
+/* layout 3: 4 x 25% ( grid3 + grid3 + grid3 + grid3 ) */
+div.cq-colctrl-lt3 { }
+div.cq-colctrl-lt3-c0 { width: 320px; margin-left: 3px; margin-right: 3px;}
+div.cq-colctrl-lt3-c1 { width: 320px; margin-left: 3px; margin-right: 3px;}
+div.cq-colctrl-lt3-c2 { width: 320px; margin-left: 3px; margin-right: 3px;}
+div.cq-colctrl-lt3-c3 { width: 320px; margin-left: 3px; margin-right: 3px; }
+
+/* layout 4: 5 x 20% ( grid2.5 + grid2.5 + grid2.5 + grid2.5 + grid2.5 ) */
+div.cq-colctrl-lt4 { }
+div.cq-colctrl-lt4-c0 { width: 124px; margin-right: 10px;}
+div.cq-colctrl-lt4-c1 { width: 124px; margin-left: 10px; margin-right: 10px;}
+div.cq-colctrl-lt4-c2 { width: 124px; margin-left: 10px; margin-right: 10px;}
+div.cq-colctrl-lt4-c3 { width: 124px; margin-left: 10px; margin-right: 10px;}
+div.cq-colctrl-lt4-c4 { width: 124px; margin-left: 10px; }
+
+/* widepage layouts */
+
+/* layout 5 : 50% 50% ( grid8 + grid8 ) */
+div.cq-colctrl-lt5 { }
+div.cq-colctrl-lt5-c0 { width: 460px; margin-right:10px}
+div.cq-colctrl-lt5-c1 { width: 460px; margin-left: 10px}
+
+/* layout 6 : 25% 25% ( grid4 + grid4 + grid4 + grid4) */
+div.cq-colctrl-lt6 { }
+div.cq-colctrl-lt6-c0 { width: 220px; margin-right:10px}
+div.cq-colctrl-lt6-c1 { width: 220px; margin-left: 10px; margin-right:10px}
+div.cq-colctrl-lt6-c2 { width: 220px; margin-left: 10px; margin-right:10px}
+div.cq-colctrl-lt6-c3 { width: 220px; margin-left: 10px}

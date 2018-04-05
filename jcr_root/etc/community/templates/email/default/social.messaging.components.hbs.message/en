@@ -1,0 +1,8 @@
+subject=[Private Message] {{object.component.subject}}
+
+message=\n \
+Date: {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}\n\n \
+A new message was sent by {{user.name}}.\n \
+-------------------------------------------------------------------------------------\n\n \
+Please follow this link to view all messages or modify your notification preferences.\n \
+{{targetUrl}}\n \

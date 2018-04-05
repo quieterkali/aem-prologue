@@ -1,0 +1,142 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+/*
+ * These are just mixins - add can be carried forward
+ */
+
+@import "../../../third-party/less/mixins.less";
+
+.rounded-corners (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.border(@color, @type, @size) {
+   border: @color @size @type;
+}
+
+.widget-border() {
+  .border(@widgets-border-color, @widgets-border-type, @widgets-border-thickness)
+}
+
+.font-style(@font-size,@font-color, @line-height) {
+  font-size:@font-size;
+  color:@font-color;
+  line-height: @line-height;
+}
+
+.widget-font-style() {
+  .font-style(@widgets-font-size, @widgets-font-color,@widgets-line-height)
+}
+
+.background(@background-image, @background-color, @background-repeat) {
+  background-image: @background-image;
+  background-color: @background-color;
+  background-repeat: @background-repeat;
+}
+
+.widget-background() {
+  .background(none,@widgets-bg-color,no-repeat);
+}
+
+.widget-focus-style(@border-focus-color: @widgets-focus-border-color) {
+  &:focus {
+    outline-color:@border-focus-color;
+  }
+}
+
+.button-style() {
+  box-sizing: border-box;
+  cursor:pointer;
+  border-style:@button-border-type;
+  border-width: @button-border-size;
+  &:active {
+     border-style:@widget-border-focus-type;
+  }
+  .widget-focus-style(@button-border-color);
+}
+
+.button-color(@border,@font-color,@background) {
+  border-color: @border;
+  color: @font-color;
+  background-color:@background;
+}
+
+.guidebutton() {
+  .button-style;
+  .button-color(@button-border-color,@button-font-color, @button-background-color);
+  .button-size(@button-padding, @button-padding, @button-font-size, normal, 0);
+  &.button-large {
+    .button-size(@button-large-padding, @button-large-padding, @button-large-font-size, normal, 0);
+  }
+  &.button-small {
+    .button-size(@button-small-padding, @button-small-padding, @button-small-font-size, normal, 0);
+  }
+  &.button-informative {
+    .button-color(@button-info-border-color, @button-info-font-color, @button-info-background-color);
+  }
+  &.button-warning {
+    .button-color(@button-warning-border-color, @button-warning-font-color, @button-warning-background-color);
+  }
+  &.button-alert {
+    .button-color(@button-alert-border-color, @button-alert-font-color, @button-alert-background-color);
+  }
+}
+
+.makeVerticalTabs(@cls) {
+  .@{cls} {
+    > li {
+      float: none;
+      display: block;
+      > a {
+        width:100%;
+        margin: @tabs-vertical-margin;
+      }
+      &.active {
+        > .@{cls} {
+          li {
+            padding-left:@heirarichal-indent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-font-color(@font-color,@bg-color) {
+    color:@font-color;
+    background-color:@bg-color;
+}
+
+.color-hover-normal(@f-c,@bg-c,@f-h-c,@bg-h-c) {
+  .bg-font-color(@f-c,@bg-c);
+  &:hover{
+    .bg-font-color(@f-h-c,@bg-h-c);
+  }
+}
+
+.btn-icon(@btnType) {
+  .@{btnType} .iconButton-icon {
+    background-image: url('../../../images/@{btnType}-ip.png');
+  }
+}

@@ -1,0 +1,73 @@
+.flexbox
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex(@val)
+{
+    -webkit-box-flex: @val;
+    -moz-box-flex:  @val;
+    -webkit-flex:  @val;
+    -ms-flex:  @val;
+    flex:  @val;
+}
+
+.flex-row
+{
+    .flexbox;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: horizontal;
+    -ms-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-column
+{
+    .flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.order(@val)
+{
+    -webkit-box-ordinal-group: @val;
+    -moz-box-ordinal-group: @val;
+    -ms-flex-order: @val;
+    -webkit-order: @val;
+    order: @val;
+}
+
+.flex-align-items(@val)
+{
+    -webkit-box-align: @val;
+    -moz-box-align: @val;
+    -webkit-align-items: @val;
+    -ms-flex-align: @val;
+    align-items: @val;
+}
+
+.flex-align-self(@val)
+{
+    -webkit-align-self: @val;
+    -mx-flex-item-align: @val;
+    align-self: @val;
+}
+
+.fixed-weight-column
+{
+    .flex-column;
+    .flex(1);
+}
+
+.flex-locked-dimensions
+{
+    .flex(none);
+}

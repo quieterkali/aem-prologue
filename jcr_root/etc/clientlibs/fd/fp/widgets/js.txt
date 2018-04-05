@@ -1,0 +1,42 @@
+# ADOBE CONFIDENTIAL
+# ___________________
+#
+#  Copyright 2012-2013 Adobe Systems Incorporated
+#  All Rights Reserved.
+#
+# NOTICE:  All information contained herein is, and remains
+# the property of Adobe Systems Incorporated and its suppliers,
+# if any.  The intellectual and technical concepts contained
+# herein are proprietary to Adobe Systems Incorporated and its
+# suppliers and are protected by trade secret or copyright law.
+# Dissemination of this information or reproduction of this material
+# is strictly forbidden unless prior written permission is obtained
+# from Adobe Systems Incorporated.
+
+#base=source
+
+#license
+license.js
+
+#head
+CQ.formsearch.js
+
+
+#widgets
+widgets/QueryBuilder.js
+widgets/Lens.js
+widgets/DataViewLens.js
+widgets/IFrameLens.js
+widgets/LensContainer.js
+widgets/LensDeck.js
+
+widgets/SearchOptionsPredicate.js
+widgets/SearchColumnsSelectorPredicate.js
+widgets/SearchCustomActions.js
+widgets/PageController.js
+
+#utils
+utils/FormsPortalClickable.js
+utils/Util.js
+utils/ModifiedDateHider.js
+utils/TemplateSelector.js

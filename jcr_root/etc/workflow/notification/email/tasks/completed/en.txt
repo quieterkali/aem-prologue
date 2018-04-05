@@ -1,0 +1,13 @@
+subject=${item.name}: Task Completed
+
+header=-------------------------------------------------------------------------------------\n \
+Comment: ${item.comment}\n \
+Task: ${item.name}\n \
+Description: ${item.description}\n \
+User: ${participant.name} (${participant.id})\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Content: ${host.prefix}${payload.path.open}\n
+
+footer=\n \
+This is an automatically generated message. Please do not reply.

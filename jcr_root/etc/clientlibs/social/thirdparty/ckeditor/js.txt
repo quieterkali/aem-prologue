@@ -1,0 +1,4 @@
+#base=.
+#rootpath.js
+#ckeditor.js
+#install.js

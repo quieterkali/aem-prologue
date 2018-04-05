@@ -1,0 +1,127 @@
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+@brand-primary: #428bca;
+@font-size-base:14px;
+@font-size-small: ceil((@font-size-base * 0.85)); // ~12px
+@brand-danger: #d9534f;
+
+@import "../../third-party/less/mixins.less";
+#guide_statusbar {
+  background: white;
+  width: 100%;
+  .panel-heading {
+    .clearfix();
+    h3 {
+      margin: 0px;
+      padding: 5px;
+      float: left;
+      font-size: @font-size-base;
+    }
+    .glyphicon {
+      opacity: 0.2;
+      font-weight: bold;
+      font-size: @font-size-small;
+      line-height: 18px;
+      color: #000000;
+      filter: alpha(opacity=20);
+      display: none;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+    }
+    .badge {
+      font-size: @font-size-base;
+    }
+  }
+  .panel-body {
+    height: 100px;
+    overflow: auto;
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      li {
+        font-size: @font-size-base;
+        color: @brand-danger;
+        cursor: pointer;
+        margin: 5px 0px 5px 0px;
+        &:focus {
+          outline: dashed 1px @brand-primary;
+        }
+      }
+      li.syncMessage {
+        cursor: default;
+        a {
+          cursor: pointer;
+          margin: 0px 5px 0px 5px;
+          text-decoration: underline;
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+}
+
+#sidepanel-guide-errors {
+  width: 100%;
+  .panel-body {
+    margin: 0px 5px;
+    overflow: auto;
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      li {
+        font-size: 14px;
+        color: #4b4b4b;
+        cursor: pointer;
+        padding: 1rem;
+        &:focus, &:active{
+          background-color: #e1e7f0;
+          border: none;
+        }
+      }
+      li.active{
+        background-color: rgba(50,110,200,0.08);
+        border: none;
+      }
+      li:hover{
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+      li.syncMessage {
+        cursor: default;
+        a {
+          cursor: pointer;
+          margin: 0px 5px 0px 5px;
+          text-decoration: underline;
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.errorCounter{
+  background-color: #EB372D;
+  padding: 2px 4px 2px 4px;
+  border-radius: 3px;
+}

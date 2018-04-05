@@ -1,0 +1,299 @@
+/*
+ * **********************************************************************
+ *  ADOBE CONFIDENTIAL
+ *  __________________
+ *
+ *  Copyright 2014 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ *  NOTICE:  All information contained herein is, and remains
+ *  the property of Adobe Systems Incorporated and its suppliers,
+ *  if any.  The intellectual and technical concepts contained
+ *  herein are proprietary to Adobe Systems Incorporated and its
+ *  suppliers and may be covered by U.S. and Foreign Patents,
+ *  patents in process, and are protected by trade secret or copyright law.
+ *  Dissemination of this information or reproduction of this material
+ *  is strictly forbidden unless prior written permission is obtained
+ *  from Adobe Systems Incorporated.
+ *  **********************************************************************
+ */
+
+/*
+ *  Required as AD component may be used in AF which are based on new template
+ */
+
+.makeLayoutUniform(@layoutClass) {
+  .@{layoutClass}:focus,
+  .@{layoutClass}Item:focus,
+  .@{layoutClass}ItemTitle:focus {
+    outline-width: 0px;
+  }
+
+  .@{layoutClass} {
+    list-style-type: none;
+    background-color: #ffffff;
+    padding: 10px;
+
+    &.ad-list-style-type-lower-alpha,
+    &.ad-list-style-type-upper-alpha,
+    &.ad-list-style-type-lower-roman,
+    &.ad-list-style-type-upper-roman,
+    &.ad-list-style-type-square,
+    &.ad-list-style-type-circle,
+    &.ad-list-style-type-disc,
+    &.ad-list-style-type-decimal {
+      list-style-type: none;
+    }
+  }
+
+  .@{layoutClass}Item {
+    margin: auto;
+    padding: 20px;
+    white-space: normal;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+
+  .@{layoutClass}Title {
+    display: none;
+  }
+
+  .@{layoutClass}ItemTitle {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 1.3125em;
+    min-width: 10px;
+    min-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    margin: 0px 10px;
+    padding: 0px;
+    color: #777777;
+  }
+
+  .@{layoutClass}ItemTitle.active,
+  .@{layoutClass}ItemTitle:focus,
+  .@{layoutClass}ItemTitle:hover {
+    color: #444444;
+  }
+
+  .@{layoutClass}ItemTitle:focus:not(:active) {
+    box-shadow: 1px 1px 2px 2px rgba(40, 150, 200, 0.15);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.makeLayoutUniform(adTabbed);
+.makeLayoutUniform(adCard);
+.makeLayoutUniform(adAccordion);
+
+.adTabbedItemTitleContainer {
+  list-style-type: none;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+  margin: 10px;
+  padding: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 90%;
+}
+
+.adTabbedItemTitleContainer > .adTabbedItemTitle {
+  cursor: pointer;
+  max-width: 200px;
+  vertical-align: top;
+  margin-top: 2px;
+  padding: 5px;
+  &.active {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+  }
+}
+
+.adCardItem .adTabbedItemTitleContainer {
+  width: 80%;
+}
+
+.adTabScroller {
+  background-repeat: no-repeat;
+  cursor: pointer;
+  min-height: 60px;
+  min-width: 17px;
+  display: inline-block;
+  &.adTabLeft {
+    background-position: left center;
+    background-image: url(../../../images/moduleTabLeft.png);
+  }
+  &.adTabRight {
+    background-position: right center;
+    background-image: url(../../../images/moduleTabRight.png);
+  }
+}
+
+.adTabbedItem .adCard {
+  padding: 0px;
+}
+
+.adCardItemTitle {
+  margin: 0px;
+}
+
+.adCard .adCardItem {
+  border-color: #d2d2d2;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  min-height: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+
+  &.adCardMobile {
+    height: 300px;
+  }
+
+  &.adCardFull {
+    height: auto;
+  }
+
+  .adCardExpand {
+    width: 94%;
+    position: absolute;
+    bottom: 0px;
+    height: 70px;
+    cursor: pointer;
+
+    .adCardShade {
+      height: 50px;
+      background-color: white;
+      opacity: 0.8;
+    }
+
+    .adCardIcon {
+      background-image: url(../../../images/moduleCardExpand.png);
+      height: 20px;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-position: 48.5% center;
+      opacity: 1;
+    }
+
+    &.adCardCollapse {
+      height: 20px;
+      .adCardShade {
+        height: 0px;
+      }
+      .adCardIcon {
+        background-image: url(../../../images/moduleCardCollapse.png);
+      }
+    }
+  }
+}
+
+.adCard .adCardItem.adCardMobile {
+  display: none;
+}
+
+.adCard .adCardItem {
+    display: block;
+    width: 98%;
+    margin: 10px;
+}
+
+.adCard .adCardDesktop {
+  &[data-adCardCol] [data-adCardColNum]{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &[data-adCardCol='2'] [data-adCardColNum]{
+    width: 48%;
+  }
+
+  &[data-adCardCol='3'] [data-adCardColNum] {
+    width: 31%;
+  }
+}
+
+.adCardItemTitle {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.adCardItem.adAccordion {
+  padding: 20px;
+}
+
+.adAccordionItemTitle {
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+  margin-bottom: -10px;
+  background-repeat: no-repeat;
+  background-position:left 47%;
+  background-image: url(../../../images/moduleAccordion.png);
+  &.active {
+    background-image: url(../../../images/moduleAccordionOpen.png);
+  }
+}
+
+.adCardItem, .adAccordionItem {
+  .adAccordionItemTitle {
+    background-image: url(../../../images/moduleAccordionNested.png);
+    &.active {
+      background-image: url(../../../images/moduleAccordionNestedOpen.png);
+    }
+  }
+}
+
+.adAccordion > li,
+.adAccordion > div.adAccordionItem.active,
+.adAccordion > div.adAccordionItemTitle {
+  border-bottom-style: solid;
+  border-bottom-color: #f2f2f1;
+  border-bottom-width: 2px;
+}
+
+.adAccordion > div.adAccordionItemTitle.active {
+  border-bottom-width: 0px;
+}
+
+.adAccordion > li:last-child,
+.adAccordion > div.adAccordionItemTitle:nth-last-child(2),
+.adCardItem.adAccordion > div.adAccordionItemTitle:nth-last-child(3){
+  border-bottom-width: 0px;
+}
+
+@media (max-width: @screen-xs-max) {
+  .adCard .adCardItem.adCardMobile {
+    display: inline-block;
+  }
+  .adCardDesktop {
+    display: none;
+  }
+
+  .adTabbedItemTitleContainer {
+    width: 85%;
+  }
+
+  .adCard > .adCardItem {
+    width: 90%;
+  }
+}
+
+@media (max-width: @screen-xs-min) {
+  .adTabbedItemTitleContainer {
+    width: 80%;
+  }
+}

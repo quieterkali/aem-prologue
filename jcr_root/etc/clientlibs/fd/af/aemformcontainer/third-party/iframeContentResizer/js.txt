@@ -1,0 +1,2 @@
+#base=js
+iframeResizer.contentWindow.min.js

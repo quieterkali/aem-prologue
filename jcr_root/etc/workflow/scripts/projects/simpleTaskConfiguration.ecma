@@ -1,0 +1,14 @@
+// sample script to use the values stored as workflow metadata originally posted by the sample startWorkflow wizard
+
+var dueDate = workflowData.getMetaDataMap().get("taskDueDate", Packages.java.util.Date);
+if (dueDate != null) {
+    task.setProperty("taskDueDate", dueDate);
+}
+
+var assignee = workflowData.getMetaDataMap().get("assignee", Packages.java.lang.String);
+task.setCurrentAssignee(assignee);
+
+var taskPriority = workflowData.getMetaDataMap().get("taskPriority", "Medium");
+task.setProperty("taskPriority", taskPriority);
+
+

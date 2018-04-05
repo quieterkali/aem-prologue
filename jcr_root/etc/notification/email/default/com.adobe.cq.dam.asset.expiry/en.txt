@@ -1,0 +1,22 @@
+subject=Some of your assets are expired
+
+header=\ -------------------------------------------------------------------------------------\n \
+Time: ${time}\n \
+-------------------------------------------------------------------------------------\n \
+
+message=\ Hi ${inviteeFirstName}, \n \
+ \n \
+Some of your assets have expired. Please check and take necessary actions. \n \
+\n \
+Expired Assets: \n \
+${assetpaths} \n \
+\n \
+Goto ${assetlink} for more details. \n \
+\n \
+Thanks, \n \
+${hostUserFullName} \n \
+ \n \
+ \n \
+
+footer=\ -------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

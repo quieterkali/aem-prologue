@@ -1,0 +1,187 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property
+* laws, including trade secret and copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.BOOLEAN_BINARY_EXPRESSION {
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    
+    border: solid 1px rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell > .OPERATOR > .default {
+    border-bottom: none;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell > .OPERATOR > .choice-view {
+    padding-left: 0.5rem;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell:nth-child(even) > .choice-model{
+    margin-left: 30px;
+    background: #eee;
+    z-index: 10;
+}
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell:nth-child(even) > .choice-model{
+    padding: 0;
+}
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell:nth-child(odd) {
+    width: 100%;
+    padding-right: 0;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell > .choice-model{
+    border:solid 1px rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 4px;
+    margin : 8px 0px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    display: inline-block;
+    padding-left: 1.5rem;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell:after {
+    display: none;
+    background-color: #326ec8;
+    content: '';
+    padding: 1px;
+}
+
+/* Placeholder indicating if the condition will be inserted after the selected condition*/
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertAfter > .choice-model {
+    border-bottom-color: #2583D8;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 2px;
+}
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertAfter > .BOOLEAN_BINARY_EXPRESSION {
+    border-bottom-color: #2583D8;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 2px;
+    margin-bottom: 0.6rem;
+}
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertAfter:after {
+    display: block;
+    bottom: 0.6rem;
+    content: "\25BC";
+    border-radius: 0 0 1.375rem 1.375rem;
+    position: relative;
+    left: 50%;
+    margin-left: -1.375rem;
+    line-height: 22px;
+    text-align: center;
+    background: #2583D8;
+    color: #FFFFFF;
+    height: 1.375rem;
+    width: 2.75rem;
+}
+
+/* Placeholder indicating if the condition will be inserted before the selected condition*/
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertBefore > .choice-model {
+    border-top-color: #2583D8;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-width: 2px;
+}
+
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertBefore > .BOOLEAN_BINARY_EXPRESSION {
+    border-top-color: #2583D8;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-width: 2px;
+    margin-top:0.6rem;
+}
+.BOOLEAN_BINARY_EXPRESSION > .sequence-view-cell.insertBefore:before {
+    display: block;
+    top: 0.6rem;
+    content: "\25B2";
+    border-radius: 1.375rem 1.375rem 0 0;
+    position: relative;
+    left: 50%;
+    margin-left: -1.375rem;
+    line-height: 22px;
+    text-align: center;
+    background: #2583D8;
+    color: #FFFFFF;
+    height: 1.375rem;
+    width: 2.75rem;
+}
+.BOOLEAN_BINARY_EXPRESSION .choice-model.EXPRESSION{
+    padding: 0;
+}
+
+.BOOLEAN_BINARY_EXPRESSION .sequence-view-cell {
+    padding-bottom: 0;
+}
+
+/* Condition Drag handle icon*/
+.BOOLEAN_BINARY_EXPRESSION .sequence-view-cell > coral-icon {
+    float: left;
+    margin: 2.875rem -1rem 0rem 0.5rem;
+    position: relative;
+}
+
+.BOOLEAN_BINARY_EXPRESSION .BOOLEAN_BINARY_EXPRESSION {
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+/** Condition toolbar **/
+.addOr-statement-options {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 5px 20px 0;
+    height: 2.15rem;
+    display: none;
+}
+
+.CONDITION > .expand-option {
+    margin-top: 25px;
+    margin-left: -40px;
+}
+
+.CONDITION > .choice-view {
+    display: inline-block;
+}
+
+.delete-statement-button {
+    float: right;
+}
+
+.terminal-view.AND,
+.terminal-view.OR {
+    line-height: 1rem;
+}
+
+.andor-options {
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+    display: none;
+}
+
+.drop-disabled .choice-model > * {
+    opacity: 0.5;
+}

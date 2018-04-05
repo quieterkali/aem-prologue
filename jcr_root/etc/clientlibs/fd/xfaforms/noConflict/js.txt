@@ -1,0 +1,2 @@
+#base=javascript
+noConflict.js

@@ -1,0 +1,102 @@
+/*************************************************************************
+ * ADOBE CONFIDENTIAL
+ * ___________________
+ *
+ *  Copyright 2013 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by all applicable intellectual property
+ * laws, including trade secret and copyright laws.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+
+
+
+#msgBox_container {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    min-width: 300px; /* Dialog will be no smaller than this */
+    max-width: 600px; /* Dialog will wrap after this width */
+    background: #FFF;
+    border: solid 5px #999;
+    color: #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#msgBox_title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.75em;
+    color: #666;
+    background: #CCC  top repeat-x;
+    border: solid 1px #FFF;
+    border-bottom: solid 1px #999;
+    cursor: default;
+    padding: 0em;
+    margin: 0em;
+}
+
+#msgBox_content {
+    background: 16px 16px no-repeat ;
+    padding: 1em 1.75em;
+    margin: 0em;
+}
+
+#msgBox_message {
+    padding-left: 48px;
+}
+
+#msgBox_panel {
+    text-align: center;
+    margin: 1em 0em 0em 1em;
+}
+
+#msgBox_prompt {
+    margin: .5em 0em;
+}
+
+input#msgBox_Ok,input#msgBox_Yes,input#msgBox_No,input#msgBox_Cancel{
+   background-color: buttonFace;
+   padding: 5px 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: buttonText;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   outline:none;
+   border: 2px outset buttonface;
+}
+
+input#msgBox_Ok:focus,input#msgBox_Yes:focus,input#msgBox_No:focus,input#msgBox_Cancel:focus{
+outline:highlight;
+}
+
+input#msgBox_Ok:hover,input#msgBox_Yes:hover,input#msgBox_No:hover,input#msgBox_Cancel:hover{
+outline:none;
+border: 2px outset buttonface;
+}
+.msgBoxType0{
+    background-image: url(/etc/clientlibs/fd/xfaforms/xfalib/images/A_Warning_Lg_N.png);
+}
+.msgBoxType1{
+    background-image: url(/etc/clientlibs/fd/xfaforms/xfalib/images/A_Alert2_Lg_N.png);
+}
+.msgBoxType2{
+    background-image: url(/etc/clientlibs/fd/xfaforms/xfalib/images/C_QuestionBubble_Xl_N.png);
+}
+.msgBoxType3{
+    background-image: url(/etc/clientlibs/fd/xfaforms/xfalib/images/A_InfoBlue_32x32_N.png);
+}

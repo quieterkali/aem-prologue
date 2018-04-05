@@ -1,0 +1,3 @@
+#base=javascript
+autocomplete.js
+autocompleteConstant.js

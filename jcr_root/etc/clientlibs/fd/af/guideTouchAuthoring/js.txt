@@ -1,0 +1,7 @@
+#base=javascript
+GuideReplaceComponentMap.js
+GuideTouchAuthoringEditListeners.js
+GuideTouchInitialization.js
+GuideTouchAuthoringToolbarActions.js
+SwitchMultifieldHandler.js
+GuideComponentDragAndDrop.js

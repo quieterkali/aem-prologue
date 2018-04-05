@@ -1,0 +1,112 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+.we-retail-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.list {
+    h2 {
+        font-size: 1.0rem;
+    }
+    .ion-chevron-right {
+        font-size: 1.0rem;
+    }
+}
+
+ion-slides.page-slider, .page-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.nativeChrome .content-par,
+.nativeChrome .articles {
+    margin-top: 0;
+}
+.platform-ios .nativeChrome .content-par,
+.platform-ios .nativeChrome .articles {
+    margin-top: 0;
+}
+
+.platform-ios .nativeChrome .list {
+    padding-top: 20px;
+}
+
+.event-details {
+    margin-top: 54px;
+}
+
+.platform-ios .event-details {
+    margin-top: 74px;
+}
+
+/* nav bar fade in/out */
+.bar-header {
+    -webkit-transition: opacity linear 0.5s;
+    transition: opacity linear 0.5s;
+    opacity: 1;
+}
+.bar-header.fade-out {
+    opacity: 0;
+}
+
+.news, ion-side-menu-content.dark-bg {
+    background-color: #000;
+}
+
+.news, ion-side-menu-content.light-bg {
+    background-color: #fff;
+}
+
+.news {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 20px, center;
+}
+
+.platform-browser .news {
+    background-position: 0px 44px, center;
+}
+
+.platform-ios .news {
+    background-position: 0px 64px, center;
+}
+
+.list-placeholder {
+    margin-top: 44px;
+    color: #FFF;
+}
+
+.event-description p {
+    padding: 0;
+	margin: 1em 0;
+}
+
+.contentfragment {
+    background-color: #fff;
+    color: #000;
+}
+
+.contentfragment p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
