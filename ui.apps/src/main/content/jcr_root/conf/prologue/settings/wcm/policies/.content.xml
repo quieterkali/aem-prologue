@@ -1,4 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
-    jcr:primaryType="cq:Page"/>
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_1522977889545
+                        jcr:description="Template structure allowed components"
+                        jcr:lastModified="{Date}2018-04-05T23:49:20.721-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="PROLOGUE Structure"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:PROLOGUE.Structure]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1522977889545>
+                    <policy_10920598164583
+                        jcr:description="Prologue content allowed components"
+                        jcr:lastModified="{Date}2018-04-05T23:59:01.788-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="PROLOGUE Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:PROLOGUE.Content]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_10920598164583>
+                    <policy_11196451724658
+                        jcr:description="Prologue sidebar menu"
+                        jcr:lastModified="{Date}2018-04-06T00:08:10.810-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="PROLOGUE Sidebar - menu"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="/apps/prologue/components/structure/navigation">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_11196451724658>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+</jcr:root>
