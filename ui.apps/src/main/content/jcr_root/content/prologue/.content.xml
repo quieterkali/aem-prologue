@@ -9,4 +9,7 @@
         sling:resourceType="foundation/components/redirect"
         redirectTarget="/content/prologue/en"/>
     <intro/>
+    <portfolio/>
+    <about-me/>
+    <contact/>
 </jcr:root>

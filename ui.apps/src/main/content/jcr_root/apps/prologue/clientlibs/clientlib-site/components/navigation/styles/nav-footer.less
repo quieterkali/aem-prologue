@@ -1,0 +1,56 @@
+/* PROLOGUE Navigation Footer Style */
+ 
+.cmp-navigation--footer {
+     
+      .cmp-navigation {
+        width: 100%;
+        text-align: center;
+        float: left;
+        margin-top: 0em;
+         
+        .cmp-navigation__group {
+            
+            display: flex;
+            align-items: stretch; /* Default */
+    		justify-content: space-between;
+            margin-top:18px;
+         
+          .cmp-navigation__item {
+             
+            display: block;
+            flex: 0 1 auto; /* Default */
+             
+            .cmp-navigation__item-link {
+                font-size: @font-size-xsmall;
+                text-transform: uppercase;
+                color: @navbar-inverse-color;
+                
+                text-align: center;
+                text-decoration: none;
+                float:left;
+                 
+                &:hover,
+                &:focus {
+                    color: @brand-primary;
+                }
+             
+                 
+            }
+             
+        }
+         
+        li.cmp-navigation__item--active .cmp-navigation__item-link {
+            // background-color: @navbar-inverse-bg;
+            color: @brand-primary;
+        }
+     
+         @media (max-width: @grid-float-breakpoint) {
+            margin-top: 2em;    
+        }
+    }
+     
+    } 
+     
+         
+     
+}

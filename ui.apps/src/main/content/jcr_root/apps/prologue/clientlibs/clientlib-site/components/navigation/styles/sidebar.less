@@ -1,0 +1,53 @@
+/* PROLOGUE Navigation Sidebar Style */
+ 
+.cmp-navigation--sidebar {
+     
+      .cmp-navigation {
+        width: 100%;
+        text-align: center;
+        height: 500px; 
+        
+        .cmp-navigation__group {
+            
+            display: flex;
+            align-items: stretch; /* Default */
+    		flex-direction: column;
+            margin-top:5px;
+            min-height: 100%;
+         
+          .cmp-navigation__item {
+             
+            display: block;
+            flex: 0 1 auto; /* Default */
+             
+            .cmp-navigation__item-link {
+                font-size: @font-size-xsmall;
+                text-transform: uppercase;
+                color: @navbar-inverse-color;
+                
+                text-align: center;
+                text-decoration: none;
+                float:left;
+                 
+                &:hover,
+                &:focus {
+                    color: @brand-primary;
+                }
+             
+                 
+            }
+             
+        }
+         
+        li.cmp-navigation__item--active .cmp-navigation__item-link {
+            // background-color: @navbar-inverse-bg;
+            color: @brand-primary;
+        }
+     
+         @media (max-width: @grid-float-breakpoint) {
+            margin-top: 2em;    
+        }
+    }
+     
+    }
+}
